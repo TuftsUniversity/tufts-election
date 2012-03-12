@@ -18,3 +18,18 @@
  *= require_self
  *= require_tree .
 */
+
+/* The following lines are in place just to override blacklight */
+body {
+  background: none;
+  padding: 0;
+}
+
+table {
+  border-collapse: separate;
+}
+
+td{
+  border-width: 0;
+  padding: 0;
+}

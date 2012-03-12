@@ -1,0 +1,89 @@
+#project-progress {
+   border: thin solid #e3e3c8;
+   background-color: #f4f4e9;
+   width: 195px;
+   margin-top: 25px;
+   margin-left: auto;
+   margin-right: auto;
+   padding: 0px 0.75em;
+}
+
+#quick-search {
+   background-image: url(/assets/parchment_bg.gif);
+   width: 228px;
+   height: 313px;
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+#quick-search-img {
+   height: 30px;
+   width: 92px;
+   padding-top: 30px;
+   margin-left: auto;
+   margin-right: auto;
+   display: block;
+}
+
+#quick-search-table {
+   margin-left:8px;
+   border-spacing: 4px 10px;
+   width: 210px;
+}
+
+#quick-search-submit {
+   margin-left: 175px;
+   margin-right: auto;
+   width: 21px;
+   height: 22px;
+}
+
+#quick-search-text {
+   margin-left : 25px;
+   margin-right: 25px;
+}
+
+
+div.browse-box {
+   position: relative;
+   height: 10em;
+   width: 18em;
+}
+
+div.browse-box p {
+   margin-left: 1em;
+   margin-right: 1em;
+   margin-top: 0.5em;
+   margin-bottom: 0.75em;
+}
+
+div.browse-submit {
+   position: absolute;
+   top : 6.5em;
+   left: auto;
+   right: auto;
+   width: 18em;
+}
+
+div.browse-submit p {
+   text-align: center;
+}
+
+div.browse-submit input {
+   vertical-align:top;
+}
+
+#browse-boxes-table {
+   margin-right: auto;
+   margin-left: auto;
+   border-spacing: 18px 10px;
+   width: 410px;
+}
+
+#browse-boxes-table td {
+   background-color: #f4f4e9;
+   height: 95px;
+   width: 185px;
+   border: thin solid #e3e3c8;
+   vertical-align:top;
+}

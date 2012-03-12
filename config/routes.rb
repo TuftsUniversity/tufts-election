@@ -1,7 +1,7 @@
 TuftsElection::Application.routes.draw do
   Blacklight.add_routes(self)
 
-  root :to => "catalog#index"
+  root :to => "welcome#index"
 
   devise_for :users
 

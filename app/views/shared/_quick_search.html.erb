@@ -1,0 +1,20 @@
+      <div id="quick-search">
+        <img id="quick-search-img" alt="Quick Search" src="/assets/subtitle_quicksearch.gif" />
+        <form action="advanced-search.xq" method="post"><table id="quick-search-table"><tr><td class="text2">Keywords:</td><td><input style="width: 120px;" type="text" name="keywords" /></td></tr><tr><td class="text2">State:</td><td>
+          <select name="state">
+            <option /><%= render :partial=>'shared/state_options' %>
+          </select>
+          </td></tr><tr><td class="text2">Year:</td><td>
+          <select name="start-year">
+            <%= options_for_select([ 1787..1825 ], 1787) %>
+          </select>
+          <span class="text2"> to </span>
+          <select name="end-year">
+            <%= options_for_select([ 1787..1825 ], 1825) %>
+          </select></td></tr></table><div id="quick-search-submit"><input type="image" alt="submit" name="submit" value="submit" src="/assets/button_arrow.gif" /></div>
+        </form>
+        
+        <p id="quick-search-text" class="text6">For more search options, go to
+                 <a class="link1" href="advanced-search.xq">advanced search</a>.</p>
+      </div>
+
