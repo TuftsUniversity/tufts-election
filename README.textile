@@ -1,0 +1,5 @@
+h1. Setting up Tufts Election search:
+
+# Clone the submodule
+<pre>git submodule init; git submodule update</pre>
+
