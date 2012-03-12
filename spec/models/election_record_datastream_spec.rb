@@ -27,11 +27,11 @@ describe Datastreams::ElectionRecord do
       @potus_solr["office_role_title_t"].should == ["President of the United States"]
       @potus_solr["office_role_title_facet"].should == ["President of the United States"]
       @potus_solr["office_role_scope_t"].should == ["Federal"]
-      @potus_solr["candidate_name_t"].should == ["George Washington", "John Adams", "..."]
-      @potus_solr["candidate_name_facet"].should == ["George Washington", "John Adams", "..."]
-      @potus_solr["candidate_id_s"].should == ["WG0011", "AJ0076", "..."]
+      @potus_solr["candidate_name_t"].should == ["George Washington", "John Adams", "George Clinton", "Thomas Jefferson", "Aaron Burr"]
+      @potus_solr["candidate_name_facet"].should == ["George Washington", "John Adams", "George Clinton", "Thomas Jefferson", "Aaron Burr"]
+      @potus_solr["candidate_id_s"].should == ["WG0011", "AJ0076", "CG0080", "JT0012", "BA0134"]
       
-      @county_solr["page_image_urn_s"].should == ["tufts:central:dca:MS115:MS115.001.DO.11024"]
+      @county_solr["page_image_urn_s"].should == ["tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024"]
       @county_solr["date_t"].should == ["1820"]
 
       @county_solr["state_name_t"].should == ["Alabama"]
