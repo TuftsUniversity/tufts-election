@@ -1,0 +1,294 @@
+
+<aas:election_record xmlns:aas="http://dca.tufts.edu/aas" date="1820" election_id="al.staterepresentative.madisoncounty.1820" handle="10427/55818" iteration="First Ballot" label="Alabama 1820 House of Representatives, Madison County" schemaLocation="http://dca.tufts.edu/aas http://dca.tufts.edu/schema/aas/electionRecord.xsd" type="General">
+  <aas:office name="House of Representatives" office_id="ON057" scope="State">
+    <aas:role scope="County" title="State Representative">
+      <aas:ballot>
+        <aas:candidate affiliation="null" affiliation_id="null" candidate_num="1" name="John Vining" name_id="VJ0000"></aas:candidate>
+        <aas:candidate affiliation="null" affiliation_id="null" candidate_num="2" name="Henry Chambers" name_id="CH0000"></aas:candidate>
+        <aas:candidate affiliation="null" affiliation_id="null" candidate_num="3" name="John M. Leake" name_id="LJ0001"></aas:candidate>
+        <aas:candidate affiliation="null" affiliation_id="null" candidate_num="4" name="David Moore" name_id="MD0000"></aas:candidate>
+        <aas:candidate affiliation="null" affiliation_id="null" candidate_num="5" name="Samuel Chapman" name_id="CS0001"></aas:candidate>
+        <aas:candidate affiliation="null" affiliation_id="null" candidate_num="6" name="Samuel Walker" name_id="WS0000"></aas:candidate>
+        <aas:candidate affiliation="null" affiliation_id="null" candidate_num="7" name="John MacKinley" name_id="MJ0006"></aas:candidate>
+        <aas:candidate affiliation="null" affiliation_id="null" candidate_num="8" name="Fred K. Weedon" name_id="WF0001"></aas:candidate>
+        <aas:candidate affiliation="null" affiliation_id="null" candidate_num="9" name="James G. Birney" name_id="BJ0003"></aas:candidate>
+        <aas:candidate affiliation="null" affiliation_id="null" candidate_num="10" name="William Nesmith" name_id="NW0000"></aas:candidate>
+        <aas:candidate affiliation="null" affiliation_id="null" candidate_num="11" name="Thomas Miller" name_id="MT0000"></aas:candidate>
+        <aas:candidate affiliation="null" affiliation_id="null" candidate_num="12" name="Beverly Hughes" name_id="HB0000"></aas:candidate>
+        <aas:candidate affiliation="null" affiliation_id="null" candidate_num="13" name="Isaac Lanier" name_id="LI0001"></aas:candidate>
+        <aas:candidate affiliation="null" affiliation_id="null" candidate_num="14" name="William Fleming" name_id="FW0000"></aas:candidate>
+        <aas:candidate affiliation="null" affiliation_id="null" candidate_num="15" name="Benjamin Franks" name_id="FB0000"></aas:candidate>
+        <aas:candidate affiliation="null" affiliation_id="null" candidate_num="16" name="James C. Sharpe" name_id="SJ0005"></aas:candidate>
+        <aas:candidate affiliation="null" affiliation_id="null" candidate_num="17" name="Thomas Eldrege" name_id="ET0001"></aas:candidate>
+        <aas:candidate affiliation="null" affiliation_id="null" candidate_num="18" name="Drury M. Allen" name_id="AD0000"></aas:candidate>
+        <aas:candidate affiliation="null" affiliation_id="null" candidate_num="19" name="Henry Brown" name_id="BH0000"></aas:candidate>
+        <aas:candidate affiliation="null" affiliation_id="null" candidate_num="20" name="Nathaniel Power" name_id="PN0001"></aas:candidate>
+        <aas:candidate affiliation="null" affiliation_id="null" candidate_num="21" name="Jacob Abbot" name_id="AJ0003"></aas:candidate>
+        <aas:candidate affiliation="null" affiliation_id="null" candidate_num="22" name="Ezekiel Craft" name_id="CE0000"></aas:candidate>
+        <aas:candidate affiliation="null" affiliation_id="null" candidate_num="23" name="V. Hargrove" name_id="HV0000"></aas:candidate>
+        <aas:candidate affiliation="null" affiliation_id="null" candidate_num="24" name="Joseph Mason" name_id="MJ0004"></aas:candidate>
+        <aas:candidate affiliation="null" affiliation_id="null" candidate_num="25" name="Woody Loyd" name_id="LW0002"></aas:candidate>
+      </aas:ballot>
+      <aas:overview modified="2007-06-08" status="Version 1.0">
+        <aas:candidate_summary candidate_ref="1" resp="Philip Lampi" vote_total="1439"></aas:candidate_summary>
+        <aas:candidate_summary candidate_ref="2" resp="Philip Lampi" vote_total="1309"></aas:candidate_summary>
+        <aas:candidate_summary candidate_ref="3" resp="Philip Lampi" vote_total="1306"></aas:candidate_summary>
+        <aas:candidate_summary candidate_ref="4" resp="Philip Lampi" vote_total="1257"></aas:candidate_summary>
+        <aas:candidate_summary candidate_ref="5" resp="Philip Lampi" vote_total="1098"></aas:candidate_summary>
+        <aas:candidate_summary candidate_ref="6" resp="Philip Lampi" vote_total="1136"></aas:candidate_summary>
+        <aas:candidate_summary candidate_ref="7" resp="Philip Lampi" vote_total="1112"></aas:candidate_summary>
+        <aas:candidate_summary candidate_ref="8" resp="Philip Lampi" vote_total="985"></aas:candidate_summary>
+        <aas:candidate_summary candidate_ref="9" resp="Philip Lampi" vote_total="974"></aas:candidate_summary>
+        <aas:candidate_summary candidate_ref="10" resp="Philip Lampi" vote_total="936"></aas:candidate_summary>
+        <aas:candidate_summary candidate_ref="11" resp="Philip Lampi" vote_total="829"></aas:candidate_summary>
+        <aas:candidate_summary candidate_ref="12" resp="Philip Lampi" vote_total="763"></aas:candidate_summary>
+        <aas:candidate_summary candidate_ref="13" resp="Philip Lampi" vote_total="618"></aas:candidate_summary>
+        <aas:candidate_summary candidate_ref="14" resp="Philip Lampi" vote_total="366"></aas:candidate_summary>
+        <aas:candidate_summary candidate_ref="15" resp="Philip Lampi" vote_total="356"></aas:candidate_summary>
+        <aas:candidate_summary candidate_ref="16" resp="Philip Lampi" vote_total="314"></aas:candidate_summary>
+        <aas:candidate_summary candidate_ref="17" resp="Philip Lampi" vote_total="241"></aas:candidate_summary>
+        <aas:candidate_summary candidate_ref="18" resp="Philip Lampi" vote_total="231"></aas:candidate_summary>
+        <aas:candidate_summary candidate_ref="19" resp="Philip Lampi" vote_total="216"></aas:candidate_summary>
+        <aas:candidate_summary candidate_ref="20" resp="Philip Lampi" vote_total="194"></aas:candidate_summary>
+        <aas:candidate_summary candidate_ref="21" resp="Philip Lampi" vote_total="171"></aas:candidate_summary>
+        <aas:candidate_summary candidate_ref="22" resp="Philip Lampi" vote_total="168"></aas:candidate_summary>
+        <aas:candidate_summary candidate_ref="23" resp="Philip Lampi" vote_total="59"></aas:candidate_summary>
+        <aas:candidate_summary candidate_ref="24" resp="Philip Lampi" vote_total="54"></aas:candidate_summary>
+        <aas:candidate_summary candidate_ref="25" resp="Philip Lampi" vote_total="29"></aas:candidate_summary>
+        <aas:reference resp="Philip Lampi" type="page_image" urn="tufts:central:dca:MS115:MS115.001.DO.11024"></aas:reference>
+        <aas:note resp="Philip Lampi">John Vining, Henry Chambers, John M. Leake, David Moore, Samuel Chapman, Samuel Walker, John MacKinley, and Fred K. Weedon were elected as state representatives.</aas:note>
+        <aas:note resp="Philip Lampi">The Republican (Huntsville) of August 11, 1820 lists William Nesmith with 934 total votes.  The vote counts from the seven different polling places, however, add up to 936 votes total, which is the number that I have included.</aas:note>
+      </aas:overview>
+      <aas:admin_unit geog_id="als" name="Alabama" type="State">
+        <aas:sub_unit geog_id="null" name="Madison" type="County">
+          <aas:result candidate_ref="1" resp="Philip Lampi" vote="1439"></aas:result>
+          <aas:result candidate_ref="2" resp="Philip Lampi" vote="1309"></aas:result>
+          <aas:result candidate_ref="3" resp="Philip Lampi" vote="1306"></aas:result>
+          <aas:result candidate_ref="4" resp="Philip Lampi" vote="1257"></aas:result>
+          <aas:result candidate_ref="5" resp="Philip Lampi" vote="1098"></aas:result>
+          <aas:result candidate_ref="6" resp="Philip Lampi" vote="1136"></aas:result>
+          <aas:result candidate_ref="7" resp="Philip Lampi" vote="1112"></aas:result>
+          <aas:result candidate_ref="8" resp="Philip Lampi" vote="985"></aas:result>
+          <aas:result candidate_ref="9" resp="Philip Lampi" vote="974"></aas:result>
+          <aas:result candidate_ref="10" resp="Philip Lampi" vote="936"></aas:result>
+          <aas:result candidate_ref="11" resp="Philip Lampi" vote="829"></aas:result>
+          <aas:result candidate_ref="12" resp="Philip Lampi" vote="763"></aas:result>
+          <aas:result candidate_ref="13" resp="Philip Lampi" vote="618"></aas:result>
+          <aas:result candidate_ref="14" resp="Philip Lampi" vote="366"></aas:result>
+          <aas:result candidate_ref="15" resp="Philip Lampi" vote="356"></aas:result>
+          <aas:result candidate_ref="16" resp="Philip Lampi" vote="314"></aas:result>
+          <aas:result candidate_ref="17" resp="Philip Lampi" vote="241"></aas:result>
+          <aas:result candidate_ref="18" resp="Philip Lampi" vote="231"></aas:result>
+          <aas:result candidate_ref="19" resp="Philip Lampi" vote="216"></aas:result>
+          <aas:result candidate_ref="20" resp="Philip Lampi" vote="194"></aas:result>
+          <aas:result candidate_ref="21" resp="Philip Lampi" vote="171"></aas:result>         
+ <aas:result candidate_ref="22" resp="Philip Lampi" vote="168"></aas:result>
+          <aas:result candidate_ref="23" resp="Philip Lampi" vote="59"></aas:result>
+          <aas:result candidate_ref="24" resp="Philip Lampi" vote="54"></aas:result>
+          <aas:result candidate_ref="25" resp="Philip Lampi" vote="29"></aas:result>
+          <aas:sub_unit geog_id="null" name="Brazelton&apos;s" type="Populated Place">
+            <aas:result candidate_ref="1" resp="Philip Lampi" vote="75"></aas:result>
+            <aas:result candidate_ref="2" resp="Philip Lampi" vote="37"></aas:result>
+            <aas:result candidate_ref="3" resp="Philip Lampi" vote="53"></aas:result>
+            <aas:result candidate_ref="4" resp="Philip Lampi" vote="65"></aas:result>
+            <aas:result candidate_ref="5" resp="Philip Lampi" vote="38"></aas:result>
+            <aas:result candidate_ref="6" resp="Philip Lampi" vote="76"></aas:result>
+            <aas:result candidate_ref="7" resp="Philip Lampi" vote="26"></aas:result>
+            <aas:result candidate_ref="8" resp="Philip Lampi" vote="64"></aas:result>
+            <aas:result candidate_ref="9" resp="Philip Lampi" vote="16"></aas:result>
+            <aas:result candidate_ref="10" resp="Philip Lampi" vote="76"></aas:result>
+            <aas:result candidate_ref="11" resp="Philip Lampi" vote="27"></aas:result>
+            <aas:result candidate_ref="12" resp="Philip Lampi" vote="21"></aas:result>
+            <aas:result candidate_ref="13" resp="Philip Lampi" vote="30"></aas:result>
+            <aas:result candidate_ref="14" resp="Philip Lampi" vote="18"></aas:result>
+            <aas:result candidate_ref="15" resp="Philip Lampi" vote="3"></aas:result>
+            <aas:result candidate_ref="16" resp="Philip Lampi"></aas:result>
+            <aas:result candidate_ref="17" resp="Philip Lampi" vote="20"></aas:result>
+            <aas:result candidate_ref="18" resp="Philip Lampi" vote="16"></aas:result>
+            <aas:result candidate_ref="19" resp="Philip Lampi" vote="68"></aas:result>
+            <aas:result candidate_ref="20" resp="Philip Lampi" vote="19"></aas:result>
+            <aas:result candidate_ref="21" resp="Philip Lampi"></aas:result>
+            <aas:result candidate_ref="22" resp="Philip Lampi" vote="54"></aas:result>
+            <aas:result candidate_ref="23" resp="Philip Lampi"></aas:result>
+            <aas:result candidate_ref="24" resp="Philip Lampi" vote="9"></aas:result>
+            <aas:result candidate_ref="25" resp="Philip Lampi"></aas:result>
+            <aas:reference resp="Philip Lampi" type="page_image" urn="tufts:central:dca:MS115:MS115.001.DO.11024"></aas:reference>
+          </aas:sub_unit>
+          <aas:sub_unit geog_id="null" name="Griffin&apos;s" type="Populated Place">
+            <aas:result candidate_ref="1" resp="Philip Lampi" vote="102"></aas:result>          
+  <aas:result candidate_ref="2" resp="Philip Lampi" vote="71"></aas:result>
+            <aas:result candidate_ref="3" resp="Philip Lampi" vote="71"></aas:result>
+            <aas:result candidate_ref="4" resp="Philip Lampi" vote="63"></aas:result>
+            <aas:result candidate_ref="5" resp="Philip Lampi" vote="35"></aas:result>
+            <aas:result candidate_ref="6" resp="Philip Lampi" vote="64"></aas:result>
+            <aas:result candidate_ref="7" resp="Philip Lampi" vote="58"></aas:result>
+            <aas:result candidate_ref="8" resp="Philip Lampi" vote="70"></aas:result>
+            <aas:result candidate_ref="9" resp="Philip Lampi" vote="49"></aas:result>
+            <aas:result candidate_ref="10" resp="Philip Lampi" vote="72"></aas:result>
+            <aas:result candidate_ref="11" resp="Philip Lampi" vote="45"></aas:result>
+            <aas:result candidate_ref="12" resp="Philip Lampi" vote="46"></aas:result>
+            <aas:result candidate_ref="13" resp="Philip Lampi" vote="35"></aas:result>
+            <aas:result candidate_ref="14" resp="Philip Lampi" vote="6"></aas:result>
+            <aas:result candidate_ref="15" resp="Philip Lampi" vote="29"></aas:result>
+            <aas:result candidate_ref="16" resp="Philip Lampi" vote="6"></aas:result>
+            <aas:result candidate_ref="17" resp="Philip Lampi" vote="17"></aas:result>
+            <aas:result candidate_ref="18" resp="Philip Lampi" vote="1"></aas:result>
+            <aas:result candidate_ref="19" resp="Philip Lampi" vote="15"></aas:result>
+            <aas:result candidate_ref="20" resp="Philip Lampi" vote="6"></aas:result>
+            <aas:result candidate_ref="21" resp="Philip Lampi" vote="2"></aas:result>
+            <aas:result candidate_ref="22" resp="Philip Lampi" vote="33"></aas:result>
+            <aas:result candidate_ref="23" resp="Philip Lampi" vote="2"></aas:result>
+            <aas:result candidate_ref="24" resp="Philip Lampi" vote="17"></aas:result>
+            <aas:result candidate_ref="25" resp="Philip Lampi"></aas:result>
+            <aas:reference resp="Philip Lampi" type="page_image" urn="tufts:central:dca:MS115:MS115.001.DO.11024"></aas:reference>
+          </aas:sub_unit>
+          <aas:sub_unit geog_id="null" name="Hazelgreen" type="Populated Place">
+            <aas:result candidate_ref="1" resp="Philip Lampi" vote="261"></aas:result>
+            <aas:result candidate_ref="2" resp="Philip Lampi" vote="73"></aas:result>
+            <aas:result candidate_ref="3" resp="Philip Lampi" vote="127"></aas:result>
+            <aas:result candidate_ref="4" resp="Philip Lampi" vote="132"></aas:result>
+            <aas:result candidate_ref="5" resp="Philip Lampi" vote="129"></aas:result>
+            <aas:result candidate_ref="6" resp="Philip Lampi" vote="225"></aas:result>
+            <aas:result candidate_ref="7" resp="Philip Lampi" vote="62"></aas:result>
+            <aas:result candidate_ref="8" resp="Philip Lampi" vote="161"></aas:result>
+            <aas:result candidate_ref="9" resp="Philip Lampi" vote="83"></aas:result>
+            <aas:result candidate_ref="10" resp="Philip Lampi" vote="148"></aas:result>
+            <aas:result candidate_ref="11" resp="Philip Lampi" vote="205"></aas:result>
+            <aas:result candidate_ref="12" resp="Philip Lampi" vote="47"></aas:result>
+            <aas:result candidate_ref="13" resp="Philip Lampi" vote="139"></aas:result>
+            <aas:result candidate_ref="14" resp="Philip Lampi" vote="14"></aas:result>
+            <aas:result candidate_ref="15" resp="Philip Lampi" vote="73"></aas:result>
+            <aas:result candidate_ref="16" resp="Philip Lampi" vote="41"></aas:result>
+            <aas:result candidate_ref="17" resp="Philip Lampi" vote="8"></aas:result>
+            <aas:result candidate_ref="18" resp="Philip Lampi" vote="127"></aas:result>
+            <aas:result candidate_ref="19" resp="Philip Lampi" vote="5"></aas:result>
+            <aas:result candidate_ref="20" resp="Philip Lampi" vote="70"></aas:result>
+            <aas:result candidate_ref="21" resp="Philip Lampi" vote="126"></aas:result>
+            <aas:result candidate_ref="22" resp="Philip Lampi" vote="15"></aas:result>
+            <aas:result candidate_ref="23" resp="Philip Lampi" vote="2"></aas:result>
+            <aas:result candidate_ref="24" resp="Philip Lampi" vote="1"></aas:result>
+            <aas:result candidate_ref="25" resp="Philip Lampi" vote="5"></aas:result>
+            <aas:reference resp="Philip Lampi" type="page_image" urn="tufts:central:dca:MS115:MS115.001.DO.11024"></aas:reference>
+          </aas:sub_unit>
+          <aas:sub_unit geog_id="null" name="Hillsborough" type="Town">
+            <aas:result candidate_ref="1" resp="Philip Lampi" vote="111"></aas:result>
+            <aas:result candidate_ref="2" resp="Philip Lampi" vote="37"></aas:result>
+            <aas:result candidate_ref="3" resp="Philip Lampi" vote="84"></aas:result>
+            <aas:result candidate_ref="4" resp="Philip Lampi" vote="54"></aas:result>
+            <aas:result candidate_ref="5" resp="Philip Lampi" vote="25"></aas:result>
+            <aas:result candidate_ref="6" resp="Philip Lampi" vote="66"></aas:result>
+            <aas:result candidate_ref="7" resp="Philip Lampi" vote="29"></aas:result>
+            <aas:result candidate_ref="8" resp="Philip Lampi" vote="74"></aas:result>
+            <aas:result candidate_ref="9" resp="Philip Lampi" vote="26"></aas:result>
+            <aas:result candidate_ref="10" resp="Philip Lampi" vote="43"></aas:result>
+            <aas:result candidate_ref="11" resp="Philip Lampi" vote="136"></aas:result>
+            <aas:result candidate_ref="12" resp="Philip Lampi" vote="17"></aas:result>
+            <aas:result candidate_ref="13" resp="Philip Lampi" vote="15"></aas:result>
+            <aas:result candidate_ref="14" resp="Philip Lampi" vote="2"></aas:result>
+            <aas:result candidate_ref="15" resp="Philip Lampi" vote="83"></aas:result>
+            <aas:result candidate_ref="16" resp="Philip Lampi" vote="20"></aas:result>
+            <aas:result candidate_ref="17" resp="Philip Lampi" vote="15"></aas:result>
+            <aas:result candidate_ref="18" resp="Philip Lampi" vote="11"></aas:result>
+            <aas:result candidate_ref="19" resp="Philip Lampi" vote="4"></aas:result>
+            <aas:result candidate_ref="20" resp="Philip Lampi" vote="43"></aas:result>
+            <aas:result candidate_ref="21" resp="Philip Lampi" vote="8"></aas:result>
+            <aas:result candidate_ref="22" resp="Philip Lampi"></aas:result>
+            <aas:result candidate_ref="23" resp="Philip Lampi"></aas:result>
+            <aas:result candidate_ref="24" resp="Philip Lampi" vote="7"></aas:result>
+            <aas:result candidate_ref="25" resp="Philip Lampi"></aas:result>
+            <aas:reference resp="Philip Lampi" type="page_image" urn="tufts:central:dca:MS115:MS115.001.DO.11024"></aas:reference>
+          </aas:sub_unit>
+          <aas:sub_unit geog_id="null" name="Huntsville" type="Town">
+            <aas:result candidate_ref="1" resp="Philip Lampi" vote="701"></aas:result>
+            <aas:result candidate_ref="2" resp="Philip Lampi" vote="942"></aas:result>
+            <aas:result candidate_ref="3" resp="Philip Lampi" vote="838"></aas:result>
+            <aas:result candidate_ref="4" resp="Philip Lampi" vote="791"></aas:result>
+            <aas:result candidate_ref="5" resp="Philip Lampi" vote="711"></aas:result>
+            <aas:result candidate_ref="6" resp="Philip Lampi" vote="536"></aas:result>
+            <aas:result candidate_ref="7" resp="Philip Lampi" vote="835"></aas:result>
+            <aas:result candidate_ref="8" resp="Philip Lampi" vote="442"></aas:result>
+            <aas:result candidate_ref="9" resp="Philip Lampi" vote="710"></aas:result>
+            <aas:result candidate_ref="10" resp="Philip Lampi" vote="492"></aas:result>
+            <aas:result candidate_ref="11" resp="Philip Lampi" vote="296"></aas:result>
+            <aas:result candidate_ref="12" resp="Philip Lampi" vote="598"></aas:result>
+            <aas:result candidate_ref="13" resp="Philip Lampi" vote="289"></aas:result>   
+         <aas:result candidate_ref="14" resp="Philip Lampi" vote="316"></aas:result>
+            <aas:result candidate_ref="15" resp="Philip Lampi" vote="108"></aas:result>
+            <aas:result candidate_ref="16" resp="Philip Lampi" vote="170"></aas:result>
+            <aas:result candidate_ref="17" resp="Philip Lampi" vote="167"></aas:result>
+            <aas:result candidate_ref="18" resp="Philip Lampi" vote="47"></aas:result>
+            <aas:result candidate_ref="19" resp="Philip Lampi" vote="79"></aas:result>
+            <aas:result candidate_ref="20" resp="Philip Lampi" vote="29"></aas:result>
+            <aas:result candidate_ref="21" resp="Philip Lampi" vote="27"></aas:result>
+            <aas:result candidate_ref="22" resp="Philip Lampi" vote="38"></aas:result>
+            <aas:result candidate_ref="23" resp="Philip Lampi" vote="10"></aas:result>
+            <aas:result candidate_ref="24" resp="Philip Lampi" vote="18"></aas:result>
+            <aas:result candidate_ref="25" resp="Philip Lampi" vote="7"></aas:result>
+            <aas:reference resp="Philip Lampi" type="page_image" urn="tufts:central:dca:MS115:MS115.001.DO.11024"></aas:reference>
+          </aas:sub_unit>
+          <aas:sub_unit geog_id="null" name="Leonard&apos;s" type="Populated Place">
+            <aas:result candidate_ref="1" resp="Philip Lampi" vote="101"></aas:result>
+            <aas:result candidate_ref="2" resp="Philip Lampi" vote="48"></aas:result>
+            <aas:result candidate_ref="3" resp="Philip Lampi" vote="92"></aas:result>
+            <aas:result candidate_ref="4" resp="Philip Lampi" vote="84"></aas:result>
+            <aas:result candidate_ref="5" resp="Philip Lampi" vote="55"></aas:result>
+            <aas:result candidate_ref="6" resp="Philip Lampi" vote="92"></aas:result>
+            <aas:result candidate_ref="7" resp="Philip Lampi" vote="58"></aas:result>
+            <aas:result candidate_ref="8" resp="Philip Lampi" vote="107"></aas:result>
+            <aas:result candidate_ref="9" resp="Philip Lampi" vote="26"></aas:result>
+            <aas:result candidate_ref="10" resp="Philip Lampi" vote="73"></aas:result>
+            <aas:result candidate_ref="11" resp="Philip Lampi" vote="79"></aas:result>
+            <aas:result candidate_ref="12" resp="Philip Lampi" vote="11"></aas:result>
+            <aas:result candidate_ref="13" resp="Philip Lampi" vote="35"></aas:result>
+            <aas:result candidate_ref="14" resp="Philip Lampi"></aas:result>
+            <aas:result candidate_ref="15" resp="Philip Lampi" vote="13"></aas:result>
+            <aas:result candidate_ref="16" resp="Philip Lampi" vote="25"></aas:result>
+            <aas:result candidate_ref="17" resp="Philip Lampi" vote="9"></aas:result>
+            <aas:result candidate_ref="18" resp="Philip Lampi" vote="42"></aas:result>
+            <aas:result candidate_ref="19" resp="Philip Lampi"></aas:result>
+            <aas:result candidate_ref="20" resp="Philip Lampi" vote="26"></aas:result>
+            <aas:result candidate_ref="21" resp="Philip Lampi"></aas:result>
+            <aas:result candidate_ref="22" resp="Philip Lampi" vote="28"></aas:result>
+            <aas:result candidate_ref="23" resp="Philip Lampi" vote="44"></aas:result>
+            <aas:result candidate_ref="24" resp="Philip Lampi" vote="1"></aas:result>
+            <aas:result candidate_ref="25" resp="Philip Lampi" vote="17"></aas:result>
+            <aas:reference resp="Philip Lampi" type="page_image" urn="tufts:central:dca:MS115:MS115.001.DO.11024"></aas:reference>
+          </aas:sub_unit>
+          <aas:sub_unit geog_id="null" name="Triana" type="Town">
+            <aas:result candidate_ref="1" resp="Philip Lampi" vote="88"></aas:result>
+            <aas:result candidate_ref="2" resp="Philip Lampi" vote="101"></aas:result>
+            <aas:result candidate_ref="3" resp="Philip Lampi" vote="41"></aas:result>
+            <aas:result candidate_ref="4" resp="Philip Lampi" vote="68"></aas:result>
+            <aas:result candidate_ref="5" resp="Philip Lampi" vote="105"></aas:result>
+            <aas:result candidate_ref="6" resp="Philip Lampi" vote="77"></aas:result>
+            <aas:result candidate_ref="7" resp="Philip Lampi" vote="44"></aas:result>
+            <aas:result candidate_ref="8" resp="Philip Lampi" vote="67"></aas:result>
+            <aas:result candidate_ref="9" resp="Philip Lampi" vote="64"></aas:result>
+            <aas:result candidate_ref="10" resp="Philip Lampi" vote="32"></aas:result>
+            <aas:result candidate_ref="11" resp="Philip Lampi" vote="41"></aas:result>
+            <aas:result candidate_ref="12" resp="Philip Lampi" vote="23"></aas:result>
+            <aas:result candidate_ref="13" resp="Philip Lampi" vote="75"></aas:result>
+            <aas:result candidate_ref="14" resp="Philip Lampi" vote="10"></aas:result>
+            <aas:result candidate_ref="15" resp="Philip Lampi" vote="47"></aas:result>
+            <aas:result candidate_ref="16" resp="Philip Lampi" vote="32"></aas:result>
+            <aas:result candidate_ref="17" resp="Philip Lampi" vote="9"></aas:result>
+            <aas:result candidate_ref="18" resp="Philip Lampi" vote="3"></aas:result>
+            <aas:result candidate_ref="19" resp="Philip Lampi" vote="45"></aas:result>
+            <aas:result candidate_ref="20" resp="Philip Lampi" vote="1"></aas:result>
+            <aas:result candidate_ref="21" resp="Philip Lampi" vote="8"></aas:result>
+            <aas:result candidate_ref="22" resp="Philip Lampi"></aas:result>
+            <aas:result candidate_ref="23" resp="Philip Lampi" vote="1"></aas:result>
+            <aas:result candidate_ref="24" resp="Philip Lampi" vote="1"></aas:result>
+            <aas:result candidate_ref="25" resp="Philip Lampi"></aas:result>
+            <aas:reference resp="Philip Lampi" type="page_image" urn="tufts:central:dca:MS115:MS115.001.DO.11024"></aas:reference>
+          </aas:sub_unit>
+        </aas:sub_unit>
+      </aas:admin_unit>
+    </aas:role>
+  </aas:office>
+  <aas:reference resp="Philip Lampi" type="citation" urn="tufts:central:dca:MS115:MS115.001.DO.11024">Alabama Republican (Huntsville), August 11, 1820. (Phil&apos;s typewritten notes.)</aas:reference>
+  <aas:reference resp="Philip Lampi" type="citation">Election Record from Alabama State Archives.</aas:reference>
+  <aas:reference resp="Philip Lampi" type="citation">The Republican (Huntsville). August 11, 1820.</aas:reference>
+  <aas:reference resp="Philip Lampi" type="citation">The Republican (Huntsville). September 1, 1820.</aas:reference>
+  <aas:reference resp="Philip Lampi" type="citation">The Halcyon (Saint Stephens).  August 21, 1820.</aas:reference>
+</aas:election_record>
