@@ -25,6 +25,11 @@ gem 'jquery-rails'
 gem 'blacklight'
 gem 'devise'
 gem 'jettywrapper'
+gem 'active-fedora', :git=>'git://github.com/mediashelf/active_fedora.git'
+
+group :test, :development do
+  gem 'rspec-rails'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

@@ -1,10 +1,10 @@
 require 'spec_helper'
 
-describe ElectionRecordDatastream do
+describe Datastreams::ElectionRecord do
   
   before(:each) do
-    @potus_1792 = ElectionRecordDatastream.from_xml( fixture("election_records/us_potus_1792_RECORD-XML.xml") )
-    @madisoncounty_1820 = ElectionRecordDatastream.from_xml( fixture("election_records/al_staterepresentative_madisoncounty_1820_RECORD-XML.xml") )
+    @potus_1792 = Datastreams::ElectionRecord.from_xml( fixture("election_records/us_potus_1792_RECORD-XML.xml") )
+    @madisoncounty_1820 = Datastreams::ElectionRecord.from_xml( fixture("election_records/al_staterepresentative_madisoncounty_1820_RECORD-XML.xml") )
   end
   
   describe "to_solr" do
