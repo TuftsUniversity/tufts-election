@@ -7,6 +7,7 @@ class CatalogController < ApplicationController
 
   configure_blacklight do |config|
     config.default_solr_params = { 
+      :q => '*:*',
       :qt => 'search',
       :rows => 10 
     }
