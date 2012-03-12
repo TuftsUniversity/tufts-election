@@ -7,15 +7,12 @@ namespace :index do
 
   desc "index elections fixtures"
   task :elections => :environment do
-    # buff = DTU::ShardedIndexer.new
-    # Nokogiri::XML(File.open("spec/fixtures/records.txt")).root.xpath('/*/sf:art', {'sf'=>'http://schema.cvt.dk/art_oai_sf/2009'}).each do |l|
-    #   buff.add(DTU::ArticleEncoder.solrize('article_fixture', l.to_xml))
-    # end
-    # Nokogiri::XML(File.open("spec/fixtures/article_with_links_and_recommendations.xml")).root.xpath('//sf:art', {'sf'=>'http://schema.cvt.dk/art_oai_sf/2009'}).each do |l|
-    #   buff.add(DTU::ArticleEncoder.solrize('article_fixture', l.to_xml))
-    # end
-    # buff.flush
-    # Blacklight.solr.commit
+    e = Election.new(:pid=>'tufts:1')
+    e.RECORD_XML = Datastreams::ElectionRecord.from_xml( fixture("election_records/us_potus_1792_RECORD-XML.xml") )
+    e.save()
+    e = Election.new(:pid=>'tufts:2')
+    e.RECORD_XML = Datastreams::ElectionRecord.from_xml( fixture("election_records/al_staterepresentative_madisoncounty_1820_RECORD-XML.xml") )
+    e.save()
   end
 
 end

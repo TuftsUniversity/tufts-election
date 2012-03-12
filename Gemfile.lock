@@ -1,23 +1,3 @@
-GIT
-  remote: git://github.com/mediashelf/active_fedora.git
-  revision: 4155c481b5d72a9e49683deb7ec0f77afa82babe
-  specs:
-    active-fedora (4.0.0.rc9)
-      activeresource (>= 3.0.0)
-      activesupport (>= 3.0.0)
-      equivalent-xml
-      mediashelf-loggable
-      mime-types (>= 1.16)
-      multipart-post (= 1.1.2)
-      nokogiri
-      om (>= 1.5.3)
-      rdf
-      rdf-rdfxml
-      rsolr
-      rubydora (~> 0.5.4)
-      solrizer (~> 1.2.0)
-      xml-simple (>= 1.0.12)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -34,6 +14,21 @@ GEM
       rack-cache (~> 1.1)
       rack-test (~> 0.6.1)
       sprockets (~> 2.1.2)
+    active-fedora (4.0.0.rc10)
+      activeresource (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      equivalent-xml
+      mediashelf-loggable
+      mime-types (>= 1.16)
+      multipart-post (= 1.1.2)
+      nokogiri
+      om (>= 1.5.3)
+      rdf
+      rdf-rdfxml
+      rsolr
+      rubydora (~> 0.5.4)
+      solrizer (~> 1.2.0)
+      xml-simple (>= 1.0.12)
     activemodel (3.2.2)
       activesupport (= 3.2.2)
       builder (~> 3.0.0)
@@ -240,7 +235,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  active-fedora!
+  active-fedora (= 4.0.0.rc10)
   blacklight
   coffee-rails (~> 3.2.1)
   devise
