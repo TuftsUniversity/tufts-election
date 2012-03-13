@@ -1,0 +1,28 @@
+
+<dca_dc:dc xmlns="http://www.fedora.info/definitions/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dca_dc="http://nils.lib.tufts.edu/dca_dc/" xmlns:dcadesc="http://nils.lib.tufts.edu/dcadesc/" xmlns:dcatech="http://nils.lib.tufts.edu/dcatech/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <dc:title>1792 President of the United States, Electoral College</dc:title>
+  <dc:creator>Philip Lampi</dc:creator>
+  <dc:creator>Tufts University Digital Collections and Archives</dc:creator>
+  <dc:creator>American Antiquarian Society</dc:creator>
+  <dc:subject>President of the United States</dc:subject>
+  <dc:subject>Election districts Electoral College</dc:subject>
+  <dc:date.created>1792</dc:date.created>
+  <dc:date.issued>2010-11-02</dc:date.issued>
+  <dc:temporal>1792</dc:temporal>
+  <dc:type>dataset</dc:type>
+  <dc:format>text/xml</dc:format>
+  <dc:source>MS115</dc:source>
+  <dc:bibliographicCitation>American Antiquarian Society and Tufts University Digital Collections and Archives. &quot;1792 President of the United States, Electoral College.&quot; 2010. Tufts University. Digital Collections and Archives. Medford, MA. http://hdl.handle.net/10427/65038</dc:bibliographicCitation>
+  <dc:publisher>Digital Collections and Archives, Tufts University</dc:publisher>
+  <dc:rights>http://dca.tufts.edu/ua/access/rights-pd.html</dc:rights>
+  <dc:identifier>http://hdl.handle.net/10427/65038</dc:identifier>
+  <dcterms:extent>38571 bytes</dcterms:extent>
+  <dcatech:fileSize>38571 bytes</dcatech:fileSize>
+  <dcadesc:geogname>Electoral College</dcadesc:geogname>
+  <dcadesc:funder>National Endowment for the Humanities</dcadesc:funder>
+  <dcadesc:persname>George Washington</dcadesc:persname>
+  <dcadesc:persname>John Adams</dcadesc:persname>
+  <dcadesc:persname>George Clinton</dcadesc:persname>
+  <dcadesc:persname>Thomas Jefferson</dcadesc:persname>
+  <dcadesc:persname>Aaron Burr</dcadesc:persname>
+</dca_dc:dc>

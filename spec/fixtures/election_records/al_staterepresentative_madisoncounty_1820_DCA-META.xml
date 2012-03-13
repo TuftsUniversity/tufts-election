@@ -1,0 +1,48 @@
+
+<dca_dc:dc xmlns="http://www.fedora.info/definitions/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dca_dc="http://nils.lib.tufts.edu/dca_dc/" xmlns:dcadesc="http://nils.lib.tufts.edu/dcadesc/" xmlns:dcatech="http://nils.lib.tufts.edu/dcatech/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <dc:title>Alabama 1820 House of Representatives, Madison County</dc:title>
+  <dc:creator>Philip Lampi</dc:creator>
+  <dc:creator>Tufts University Digital Collections and Archives</dc:creator>
+  <dc:creator>American Antiquarian Society</dc:creator>
+  <dc:subject>House of Representatives</dc:subject>
+  <dc:subject>Election districts Alabama</dc:subject>
+  <dc:date.created>1820</dc:date.created>
+  <dc:date.issued>2010-11-02</dc:date.issued>
+  <dc:temporal>1820</dc:temporal>
+  <dc:type>dataset</dc:type>
+  <dc:format>text/xml</dc:format>
+  <dc:source>MS115</dc:source>
+  <dc:bibliographicCitation>American Antiquarian Society and Tufts University Digital Collections and Archives. &quot;Alabama 1820 House of Representatives, Madison County.&quot; 2010. Tufts University. Digital Collections and Archives. Medford, MA. http://hdl.handle.net/10427/55818</dc:bibliographicCitation>
+  <dc:publisher>Digital Collections and Archives, Tufts University</dc:publisher>
+  <dc:rights>http://dca.tufts.edu/ua/access/rights-pd.html</dc:rights>
+  <dc:identifier>http://hdl.handle.net/10427/55818</dc:identifier>
+  <dcterms:extent>21040 bytes</dcterms:extent>
+  <dcatech:fileSize>21040 bytes</dcatech:fileSize>
+  <dcadesc:geogname>Alabama</dcadesc:geogname>
+  <dcadesc:funder>National Endowment for the Humanities</dcadesc:funder>
+  <dcadesc:persname>John Vining</dcadesc:persname>
+  <dcadesc:persname>Henry Chambers</dcadesc:persname>
+  <dcadesc:persname>John M. Leake</dcadesc:persname>
+  <dcadesc:persname>David Moore</dcadesc:persname>
+  <dcadesc:persname>Samuel Chapman</dcadesc:persname>
+  <dcadesc:persname>Samuel Walker</dcadesc:persname>
+  <dcadesc:persname>John MacKinley</dcadesc:persname>
+  <dcadesc:persname>Fred K. Weedon</dcadesc:persname>
+  <dcadesc:persname>James G. Birney</dcadesc:persname>
+  <dcadesc:persname>William Nesmith</dcadesc:persname>
+  <dcadesc:persname>Thomas Miller</dcadesc:persname>
+  <dcadesc:persname>Beverly Hughes</dcadesc:persname>
+  <dcadesc:persname>Isaac Lanier</dcadesc:persname>
+  <dcadesc:persname>William Fleming</dcadesc:persname>
+  <dcadesc:persname>Benjamin Franks</dcadesc:persname>
+  <dcadesc:persname>James C. Sharpe</dcadesc:persname>
+  <dcadesc:persname>Thomas Eldrege</dcadesc:persname>
+  <dcadesc:persname>Drury M. Allen</dcadesc:persname>
+  <dcadesc:persname>Henry Brown</dcadesc:persname>
+  <dcadesc:persname>Nathaniel Power</dcadesc:persname>
+  <dcadesc:persname>Jacob Abbot</dcadesc:persname>
+  <dcadesc:persname>Ezekiel Craft</dcadesc:persname>
+  <dcadesc:persname>V. Hargrove</dcadesc:persname>
+  <dcadesc:persname>Joseph Mason</dcadesc:persname>
+  <dcadesc:persname>Woody Loyd</dcadesc:persname>
+</dca_dc:dc>
