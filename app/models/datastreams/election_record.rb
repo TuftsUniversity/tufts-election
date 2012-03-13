@@ -32,7 +32,12 @@ module Datastreams
         }
       }
       
-      
+      t.admin_unit {
+        t.type(:path=>{:attribute=>"type"})
+        t.sub_unit {
+          t.type(:path=>{:attribute=>"type"})
+        }
+      }
       t.state(:path=>"admin_unit", :attributes=>{:type=>"State"}) {
         t.name(:path=>{:attribute=>"name"}, :index_as=>[:facetable])
         t.county(:path=>"sub_unit", :attributes=>{:type=>"County"}) {
@@ -47,6 +52,7 @@ module Datastreams
       t.election_type(:proxy=>[:election_record, :election_type])
       t.candidate_name(:proxy=>[:office, :role, :ballot, :candidate, :name])
       t.candidate_id(:proxy=>[:office, :role, :ballot, :candidate, :candidate_id])
+      t.jurisdiction(:proxy=>[:admin_unit, :sub_unit, :type])
 
     end
     
@@ -55,12 +61,19 @@ module Datastreams
     
     def to_solr(solr_doc=Hash.new)
       super
+      solr_doc["format"] = "Election Record"
       solr_doc["date_i"] = self.date.to_a
       solr_doc["election_id_s"] = self.election_id
       solr_doc["handle_s"] = self.handle
       solr_doc["office_id_s"] = self.office.office_id
       solr_doc["candidate_id_s"] = self.candidate_id
       solr_doc["page_image_urn_s"] = self.page_image.urn
+      if self.office.scope.include?("Federal")
+        solr_doc["jurisdiction_display"] = ["Federal"]
+      else
+        solr_doc["jurisdiction_display"] = self.admin_unit.sub_unit.type.to_a
+      end
+      
       solr_doc
     end
     
