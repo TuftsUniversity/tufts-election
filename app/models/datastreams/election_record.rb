@@ -63,10 +63,10 @@ module Datastreams
       super
       solr_doc["format"] = "Election Record"
       solr_doc["date_i"] = self.date.to_a
-      solr_doc["election_id_s"] = self.election_id
-      solr_doc["handle_s"] = self.handle
-      solr_doc["office_id_s"] = self.office.office_id
-      solr_doc["candidate_id_s"] = self.candidate_id
+      solr_doc["election_id_s"] = self.election_id.to_a
+      solr_doc["handle_s"] = self.handle.to_a
+      solr_doc["office_id_s"] = self.office.office_id.to_a
+      solr_doc["candidate_id_s"] = self.candidate_id.to_a
       solr_doc["page_image_urn_s"] = self.page_image.urn
       if self.office.scope.include?("Federal")
         solr_doc["jurisdiction_display"] = ["Federal"]

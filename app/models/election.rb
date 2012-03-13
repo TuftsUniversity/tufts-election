@@ -4,7 +4,7 @@ class Election < ActiveFedora::Base
   
   def to_solr(solr_doc=Hash.new)
     super
-    solr_doc["title_display"] = solr_doc["title_t"]
+    solr_doc["title_display"] = solr_doc["title_t"].first
     solr_doc
   end
 end

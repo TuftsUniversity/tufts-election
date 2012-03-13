@@ -37,6 +37,7 @@ describe Datastreams::ElectionRecord do
       
       @county_solr["format"].should == "Election Record"
       @county_solr["page_image_urn_s"].should == ["tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024"]
+      @county_solr["citation_t"].should == ["Alabama Republican (Huntsville), August 11, 1820. (Phil's typewritten notes.)", "Election Record from Alabama State Archives.", "The Republican (Huntsville). August 11, 1820.", "The Republican (Huntsville). September 1, 1820.", "The Halcyon (Saint Stephens). August 21, 1820."]
       @county_solr["date_t"].should == ["1820"]
 
       @county_solr["state_name_t"].should == ["Alabama"]

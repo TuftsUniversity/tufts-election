@@ -1,0 +1,39 @@
+<dl class="defList">
+  <dt>Office:</dt>
+  <dd><%= document.get("office_name_t") %></dd>
+  <dt>Title:</dt>
+  <dd><%= document.get("office_role_title_t") %></dd>
+  <dt>Jurisdiction:</dt>
+  <dd><%= document.get("jurisdiction_display") %></dd>
+</dl>
+
+<h3>Extended Info</h3>
+
+<dl class="defList">
+  <dt>Label:</dt>
+  <dd><%= document.get("label_t") %></dd>
+  <dt>Id:</dt>
+  <dd><%= document.get("election_id_s") %></dd>
+  <dt>Date:</dt>
+  <dd><%= document.get("date_i") %></dd>
+  <dt>State:</dt>
+  <dd><%= document.get("state_name_t") %></dd>
+  <dt>Type:</dt>
+  <dd><%= document.get("election_type_t") %></dd>
+  <dt>Iteration:</dt>
+  <dd><%= document.get("iteration_t") %></dd>
+  <dt>Office/Role:</dt>
+  <dd><%= document.get("office_name_t") + "/" + document.get("office_role_title_t") %></dd>
+  <dt>Candidates:</dt>
+  <dd><%= document.get("candidate_name_t") %></dd>
+</dl>
+
+{table here}
+<h3>Notes</h3>
+
+<h3>References</h3>
+<ul>
+<% document["citation_t"].each do |citation| %>
+  <li><%= citation %></li>
+<% end %>
+</ul>
