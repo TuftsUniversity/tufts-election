@@ -13,6 +13,7 @@ describe Datastreams::ElectionRecord do
       @county_solr = @madisoncounty_1820.to_solr
     end
     it "should set field values" do
+      @potus_solr["format"].should == "Election Record"
       @potus_solr["date_t"].should == ["1792"]
       @potus_solr["date_i"].should == ["1792"]
       @potus_solr["iteration_t"].should == ["First Ballot"]
@@ -21,6 +22,7 @@ describe Datastreams::ElectionRecord do
       @potus_solr["handle_s"].should == ["10427/65038"]
       @potus_solr["election_type_t"].should == ["Legislative"]
       @potus_solr["election_type_facet"].should == ["Legislative"]
+      @potus_solr["jurisdiction_display"].should == ["Federal"]
       
       @potus_solr["office_name_t"].should == ["President of the United States"]
       @potus_solr["office_name_facet"].should == ["President of the United States"]
@@ -33,6 +35,7 @@ describe Datastreams::ElectionRecord do
       @potus_solr["candidate_name_facet"].should == ["George Washington", "John Adams", "George Clinton", "Thomas Jefferson", "Aaron Burr"]
       @potus_solr["candidate_id_s"].should == ["WG0011", "AJ0076", "CG0080", "JT0012", "BA0134"]
       
+      @county_solr["format"].should == "Election Record"
       @county_solr["page_image_urn_s"].should == ["tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024"]
       @county_solr["date_t"].should == ["1820"]
 
@@ -40,6 +43,9 @@ describe Datastreams::ElectionRecord do
       @county_solr["state_name_facet"].should == ["Alabama"]
       @county_solr["state_county_name_t"].should == ["Madison"]
       @county_solr["state_county_name_facet"].should == ["Madison"]
+      debugger
+      @county_solr["jurisdiction_display"].should == ["County"]
+      
       
       @county_solr["office_name_t"].should == ["House of Representatives"]
       @county_solr["office_id_s"].should == ["ON057"]
