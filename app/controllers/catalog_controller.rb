@@ -7,7 +7,6 @@ class CatalogController < ApplicationController
 
   configure_blacklight do |config|
     config.default_solr_params = { 
-      :q => '*:*',
       :qt => 'search',
       :rows => 10 
     }
@@ -39,10 +38,10 @@ class CatalogController < ApplicationController
     # app code to actually have it echo'd back to see it.  
     config.add_facet_field 'format', :label => 'Format' 
     config.add_facet_field 'date_t', :label => 'Year' 
-    config.add_facet_field 'office_role_title_t', :label => 'Office', :limit => 20 
-    config.add_facet_field 'candidate_name_facet', :label => 'Candidate', :limit => true 
+    config.add_facet_field 'office_role_title_facet', :label => 'Office', :limit => 20 
+    config.add_facet_field 'candidate_name_facet', :label => 'Candidate', :limit => 20 
     config.add_facet_field 'state_name_facet', :label => 'State' 
-    config.add_facet_field 'election_type_t', :label => 'Election Type'  
+    config.add_facet_field 'election_type_facet', :label => 'Election Type'  
 
     # Have BL send all facet field names to Solr, which has been the default
     # previously. Simply remove these lines if you'd rather use Solr request

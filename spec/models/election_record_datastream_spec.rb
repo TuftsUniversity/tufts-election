@@ -19,6 +19,7 @@ describe Datastreams::ElectionRecord do
       @potus_solr["election_id_s"].should == ["us.potus.1792"]
       @potus_solr["handle_s"].should == ["10427/65038"]
       @potus_solr["election_type_t"].should == ["Legislative"]
+      @potus_solr["election_type_facet"].should == ["Legislative"]
       
       @potus_solr["office_name_t"].should == ["President of the United States"]
       @potus_solr["office_name_facet"].should == ["President of the United States"]
