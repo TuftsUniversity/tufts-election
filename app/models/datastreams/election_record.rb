@@ -14,7 +14,7 @@ module Datastreams
       t.election_id(:path=>{:attribute=>"election_id"})
       t.handle(:path=>{:attribute=>"handle"})
       t.election_record {
-        t.election_type(:path=>{:attribute=>"type"})
+        t.election_type(:path=>{:attribute=>"type"}, :index_as=>[:facetable])
       }
       t.office {
         t.name(:path=>{:attribute=>"name"}, :index_as=>[:facetable])
