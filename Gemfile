@@ -29,6 +29,9 @@ gem 'active-fedora', '4.0.0.rc11'
 
 group :test, :development do
   gem 'rspec-rails'
+  # To use debugger
+  # gem 'ruby-debug19', :require => 'ruby-debug'
+  gem "blacklight_range_limit"
 end
 
 # To use ActiveModel has_secure_password
@@ -43,7 +46,5 @@ gem 'unicorn'
 # Deploy with Capistrano
 # gem 'capistrano'
 
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
 
 gem "devise"

@@ -55,6 +55,7 @@ module Datastreams
     
     def to_solr(solr_doc=Hash.new)
       super
+      solr_doc["date_i"] = self.date.to_a
       solr_doc["election_id_s"] = self.election_id
       solr_doc["handle_s"] = self.handle
       solr_doc["office_id_s"] = self.office.office_id

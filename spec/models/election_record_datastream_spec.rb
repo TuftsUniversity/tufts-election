@@ -14,6 +14,7 @@ describe Datastreams::ElectionRecord do
     end
     it "should set field values" do
       @potus_solr["date_t"].should == ["1792"]
+      @potus_solr["date_i"].should == ["1792"]
       @potus_solr["iteration_t"].should == ["First Ballot"]
       @potus_solr["label_t"].should == ["1792 President of the United States, Electoral College"]
       @potus_solr["election_id_s"].should == ["us.potus.1792"]

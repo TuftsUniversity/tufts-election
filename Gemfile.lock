@@ -58,6 +58,9 @@ GEM
       rsolr-ext (~> 1.0.3)
       sass-rails (~> 3.1)
       unicode
+    blacklight_range_limit (1.2.0)
+      blacklight (~> 3.2)
+      rails (~> 3.0)
     builder (3.0.0)
     childprocess (0.3.1)
       ffi (~> 1.0.6)
@@ -240,6 +243,7 @@ PLATFORMS
 DEPENDENCIES
   active-fedora (= 4.0.0.rc11)
   blacklight
+  blacklight_range_limit
   coffee-rails (~> 3.2.1)
   devise
   jettywrapper
