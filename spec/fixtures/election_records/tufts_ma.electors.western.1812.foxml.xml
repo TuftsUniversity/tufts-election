@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<foxml:digitalObject VERSION="1.1" PID="tufts:ma.electors.western.1812"
+xmlns:foxml="info:fedora/fedora-system:def/foxml#"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="info:fedora/fedora-system:def/foxml# http://www.fedora.info/definitions/1/0/foxml1-1.xsd">
+<foxml:objectProperties>
+<foxml:property NAME="info:fedora/fedora-system:def/model#state" VALUE="Active"/>
+<foxml:property NAME="info:fedora/fedora-system:def/model#label" VALUE="Massachusetts Returns for Presidential Electors Western District 1812"/>
+<foxml:property NAME="info:fedora/fedora-system:def/model#ownerId" VALUE=""/>
+<foxml:property NAME="info:fedora/fedora-system:def/model#createdDate" VALUE="2006-08-29T12:58:31.542Z"/>
+<foxml:property NAME="info:fedora/fedora-system:def/view#lastModifiedDate" VALUE="2011-08-18T18:15:07.198Z"/>
+</foxml:objectProperties>
+<foxml:datastream ID="AUDIT" STATE="A" CONTROL_GROUP="X" VERSIONABLE="false">
+<foxml:datastreamVersion ID="AUDIT.0" LABEL="Audit Trail for this object" CREATED="2006-08-29T12:58:31.542Z" MIMETYPE="text/xml" FORMAT_URI="info:fedora/fedora-system:format/xml.fedora.audit">
+<foxml:xmlContent>
+<audit:auditTrail xmlns:audit="info:fedora/fedora-system:def/audit#">
+<audit:record ID="AUDREC1">
+<audit:process type="Fedora API-M"/>
+<audit:action>ingest</audit:action>
+<audit:componentID></audit:componentID>
+<audit:responsibility>fedoraAdmin</audit:responsibility>
+<audit:date>2010-11-08T20:52:13.518Z</audit:date>
+<audit:justification>Ingested from local file c:\20101104\objects\ma.electors.western.1812.xml</audit:justification>
+</audit:record>
+<audit:record ID="AUDREC2">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByValue</audit:action>
+<audit:componentID>DC</audit:componentID>
+<audit:responsibility>fedoraAdmin</audit:responsibility>
+<audit:date>2011-08-18T18:15:06.623Z</audit:date>
+<audit:justification>dringest-262</audit:justification>
+</audit:record>
+<audit:record ID="AUDREC3">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByValue</audit:action>
+<audit:componentID>DCA-META</audit:componentID>
+<audit:responsibility>fedoraAdmin</audit:responsibility>
+<audit:date>2011-08-18T18:15:06.736Z</audit:date>
+<audit:justification>dringest-262</audit:justification>
+</audit:record>
+<audit:record ID="AUDREC4">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByValue</audit:action>
+<audit:componentID>DCA-ADMIN</audit:componentID>
+<audit:responsibility>fedoraAdmin</audit:responsibility>
+<audit:date>2011-08-18T18:15:06.859Z</audit:date>
+<audit:justification>dringest-262</audit:justification>
+</audit:record>
+<audit:record ID="AUDREC5">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByValue</audit:action>
+<audit:componentID>RECORD-XML</audit:componentID>
+<audit:responsibility>fedoraAdmin</audit:responsibility>
+<audit:date>2011-08-18T18:15:07.047Z</audit:date>
+<audit:justification>dringest-262</audit:justification>
+</audit:record>
+<audit:record ID="AUDREC6">
+<audit:process type="Fedora API-M"/>
+<audit:action>modifyDatastreamByValue</audit:action>
+<audit:componentID>RELS-EXT</audit:componentID>
+<audit:responsibility>fedoraAdmin</audit:responsibility>
+<audit:date>2011-08-18T18:15:07.198Z</audit:date>
+<audit:justification>dringest-262</audit:justification>
+</audit:record>
+</audit:auditTrail>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+</foxml:datastream>
+<foxml:datastream ID="RECORD-XML" STATE="A" CONTROL_GROUP="X" VERSIONABLE="true">
+<foxml:datastreamVersion ID="RECORD-XML.0" LABEL="Voting record XML data" CREATED="2006-06-23T20:08:56.186Z" MIMETYPE="text/xml" SIZE="14286">
+<foxml:xmlContent>
+<aas:election_record xmlns:aas="http://dca.tufts.edu/aas" xmlns="http://www.fedora.info/definitions/" xmlns:xlink="http://www.w3.org/1999/xlink" label="Massachusetts Returns for Presidential Electors Western District 1812" type="General" iteration="First Ballot" date="1812" election_id="ma.electors.western.1812" handle="10427/27517" schemaLocation="http://dca.tufts.edu/aas http://dca.tufts.edu/schema/aas/electionRecord.xsd">
+	              <aas:office name="Electoral College" office_id="ON050" scope="Federal">
+	                 <aas:role title="Presidential Elector" scope="State">
+		                   <aas:ballot>
+			                     <aas:elector name="Eleazer James" name_id="null" affiliation="Federalist" affiliation_id="A0002" declared_for="DeWitt Clinton" elector_num="1"></aas:elector>
+			                     <aas:elector name="George Bliss" name_id="null" affiliation="Federalist" affiliation_id="A0002" declared_for="DeWitt Clinton" elector_num="2"></aas:elector>
+			                     <aas:elector name="Isaac Maltby" name_id="null" affiliation="Federalist" affiliation_id="A0002" declared_for="DeWitt Clinton" elector_num="3"></aas:elector>
+			                     <aas:elector name="Benjamin Haywood" name_id="null" affiliation="Federalist" affiliation_id="A0002" declared_for="DeWitt Clinton" elector_num="4"></aas:elector>
+			                     <aas:elector name="Epaphras Hoyt" name_id="null" affiliation="Federalist" affiliation_id="A0002" declared_for="DeWitt Clinton" elector_num="5"></aas:elector>
+			                     <aas:elector name="John W. Hulbert" name_id="null" affiliation="Federalist" affiliation_id="A0002" declared_for="DeWitt Clinton" elector_num="6"></aas:elector>
+			                     <aas:elector name="Thomas Shepherd" name_id="null" affiliation="Republican" affiliation_id="A0001" declared_for="James Madison" elector_num="7"></aas:elector>
+			                     <aas:elector name="Moses White" name_id="null" affiliation="Republican" affiliation_id="A0001" declared_for="James Madison" elector_num="8"></aas:elector>
+			                     <aas:elector name="Pliny Merrick" name_id="null" affiliation="Republican" affiliation_id="A0001" declared_for="James Madison" elector_num="9"></aas:elector>
+			                     <aas:elector name="William Walker" name_id="null" affiliation="Republican" affiliation_id="A0001" declared_for="James Madison" elector_num="10"></aas:elector>
+			                     <aas:elector name="Solomon Snead" name_id="null" affiliation="Republican" affiliation_id="A0001" declared_for="James Madison" elector_num="11"></aas:elector>
+			                     <aas:elector name="Jesse Stebbins" name_id="null" affiliation="Republican" affiliation_id="A0001" declared_for="James Madison" elector_num="12"></aas:elector>
+		                   </aas:ballot>
+		                   <aas:overview status="Version 0.5" modified="2006-12-08">
+			                     <aas:elector_summary elector_ref="1" vote_total="14821" resp="Philip Lampi"></aas:elector_summary>
+			                     <aas:elector_summary elector_ref="2" vote_total="14820" resp="Philip Lampi"></aas:elector_summary>
+			                     <aas:elector_summary elector_ref="3" vote_total="14820" resp="Philip Lampi"></aas:elector_summary>
+			                     <aas:elector_summary elector_ref="4" vote_total="14818" resp="Philip Lampi"></aas:elector_summary>
+			                     <aas:elector_summary elector_ref="5" vote_total="14816" resp="Philip Lampi"></aas:elector_summary>
+			                     <aas:elector_summary elector_ref="6" vote_total="14816" resp="Philip Lampi"></aas:elector_summary>
+			                     <aas:elector_summary elector_ref="7" vote_total="5585" resp="Philip Lampi"></aas:elector_summary>
+			                     <aas:elector_summary elector_ref="8" vote_total="5584" resp="Philip Lampi"></aas:elector_summary>
+			                     <aas:elector_summary elector_ref="9" vote_total="5583" resp="Philip Lampi"></aas:elector_summary>
+			                     <aas:elector_summary elector_ref="10" vote_total="5582" resp="Philip Lampi"></aas:elector_summary>
+			                     <aas:elector_summary elector_ref="11" vote_total="5577" resp="Philip Lampi"></aas:elector_summary>
+			                     <aas:elector_summary elector_ref="12" vote_total="5574" resp="Philip Lampi"></aas:elector_summary>
+			                     <aas:reference type="page_image" urn="tufts:central:dca:MS115:MS115.001.DO.00646" resp="Philip Lampi"></aas:reference>
+		                   </aas:overview>
+		                   <aas:admin_unit type="State" name="Massachusetts" geog_id="null">
+			                     <aas:sub_unit type="District" name="Western" geog_id="null">
+				                       <aas:result elector_ref="1" vote="14821" resp="Philip Lampi"></aas:result>
+				                       <aas:result elector_ref="2" vote="14820" resp="Philip Lampi"></aas:result>
+				                       <aas:result elector_ref="3" vote="14820" resp="Philip Lampi"></aas:result>
+				                       <aas:result elector_ref="4" vote="14818" resp="Philip Lampi"></aas:result>
+				                       <aas:result elector_ref="5" vote="14816" resp="Philip Lampi"></aas:result>
+				                       <aas:result elector_ref="6" vote="14816" resp="Philip Lampi"></aas:result>
+				                       <aas:result elector_ref="7" vote="5585" resp="Philip Lampi"></aas:result>
+				                       <aas:result elector_ref="8" vote="5584" resp="Philip Lampi"></aas:result>
+				                       <aas:result elector_ref="9" vote="5583" resp="Philip Lampi"></aas:result>
+				                       <aas:result elector_ref="10" vote="5582" resp="Philip Lampi"></aas:result>
+				                       <aas:result elector_ref="11" vote="5577" resp="Philip Lampi"></aas:result>
+				                       <aas:result elector_ref="12" vote="5574" resp="Philip Lampi"></aas:result>
+				                       <aas:reference type="page_image" urn="tufts:central:dca:MS115:MS115.001.DO.00646" resp="Philip Lampi"></aas:reference>
+				                       <aas:sub_unit type="County" name="Berkshire" geog_id="null">
+					                         <aas:result elector_ref="1" vote="2268" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="2" vote="2268" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="3" vote="2268" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="4" vote="2268" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="5" vote="2268" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="6" vote="2268" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="7" vote="1577" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="8" vote="1577" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="9" vote="1577" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="10" vote="1576" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="11" vote="1576" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="12" vote="1577" resp="Philip Lampi"></aas:result>
+					                         <aas:reference type="page_image" urn="tufts:central:dca:MS115:MS115.001.DO.00646" resp="Philip Lampi"></aas:reference>
+				                       </aas:sub_unit>
+				                       <aas:sub_unit type="County" name="Franklin" geog_id="null">
+					                         <aas:result elector_ref="1" vote="2381" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="2" vote="2380" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="3" vote="2381" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="4" vote="2380" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="5" vote="2379" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="6" vote="2378" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="7" vote="624" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="8" vote="624" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="9" vote="624" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="10" vote="619" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="11" vote="620" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="12" vote="613" resp="Philip Lampi"></aas:result>
+					                         <aas:reference type="page_image" urn="tufts:central:dca:MS115:MS115.001.DO.00646" resp="Philip Lampi"></aas:reference>
+				                       </aas:sub_unit>
+				                       <aas:sub_unit type="County" name="Hampden" geog_id="null">
+					                         <aas:result elector_ref="1" vote="1645" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="2" vote="1644" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="3" vote="1646" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="4" vote="1645" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="5" vote="1645" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="6" vote="1645" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="7" vote="846" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="8" vote="847" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="9" vote="846" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="10" vote="847" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="11" vote="847" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="12" vote="847" resp="Philip Lampi"></aas:result>
+					                         <aas:reference type="page_image" urn="tufts:central:dca:MS115:MS115.001.DO.00646" resp="Philip Lampi"></aas:reference>
+				                       </aas:sub_unit>
+				                       <aas:sub_unit type="County" name="Hampshire" geog_id="null">
+					                         <aas:result elector_ref="1" vote="2757" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="2" vote="2758" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="3" vote="2756" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="4" vote="2757" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="5" vote="2756" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="6" vote="2757" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="7" vote="308" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="8" vote="311" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="9" vote="311" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="10" vote="310" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="11" vote="311" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="12" vote="311" resp="Philip Lampi"></aas:result>
+					                         <aas:reference type="page_image" urn="tufts:central:dca:MS115:MS115.001.DO.00646" resp="Philip Lampi"></aas:reference>
+				                       </aas:sub_unit>
+				                       <aas:sub_unit type="County" name="Worcester" geog_id="null">
+					                         <aas:result elector_ref="1" vote="5770" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="2" vote="5770" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="3" vote="5769" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="4" vote="5768" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="5" vote="5768" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="6" vote="5768" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="7" vote="2230" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="8" vote="2225" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="9" vote="2225" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="10" vote="2230" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="11" vote="2223" resp="Philip Lampi"></aas:result>
+					                         <aas:result elector_ref="12" vote="2226" resp="Philip Lampi"></aas:result>
+					                         <aas:reference type="page_image" urn="tufts:central:dca:MS115:MS115.001.DO.00646" resp="Philip Lampi"></aas:reference>
+				                       </aas:sub_unit>
+			                     </aas:sub_unit>
+		                   </aas:admin_unit>
+		                </aas:role>
+	              </aas:office>
+	              <aas:reference type="citation" resp="Philip Lampi" urn="tufts:central:dca:MS115:MS115.001.DO.00646">Original Election Returns. State Archives, Boston.</aas:reference>
+	              <aas:reference type="citation" resp="Philip Lampi" urn="tufts:central:dca:MS115:MS115.001.DO.00649">Original Election Returns. State Archives, Boston.</aas:reference>
+            </aas:election_record>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="RECORD-XML.1" LABEL="Voting record XML data" CREATED="2011-08-18T18:15:07.047Z" MIMETYPE="text/xml" SIZE="12023">
+<foxml:xmlContent>
+<aas:election_record xmlns:aas="http://dca.tufts.edu/aas" date="1812" election_id="ma.electors.western.1812" handle="10427/27517" iteration="First Ballot" label="Massachusetts 1812 Electoral College, Western District" schemaLocation="http://dca.tufts.edu/aas http://dca.tufts.edu/schema/aas/electionRecord.xsd" type="General">
+  <aas:office name="Electoral College" office_id="ON050" scope="Federal">
+    <aas:role scope="District" title="Elector">
+      <aas:ballot>
+        <aas:elector affiliation="Federalist" affiliation_id="A0002" declared_for="DeWitt Clinton" elector_num="1" name="Eleazer James" name_id="JE0010"></aas:elector>
+        <aas:elector affiliation="Federalist" affiliation_id="A0002" declared_for="DeWitt Clinton" elector_num="2" name="George Bliss" name_id="BG0048"></aas:elector>
+        <aas:elector affiliation="Federalist" affiliation_id="A0002" declared_for="DeWitt Clinton" elector_num="3" name="Isaac Maltby" name_id="MI0022"></aas:elector>
+        <aas:elector affiliation="Federalist" affiliation_id="A0002" declared_for="DeWitt Clinton" elector_num="4" name="Benjamin Haywood" name_id="HB0067"></aas:elector>
+        <aas:elector affiliation="Federalist" affiliation_id="A0002" declared_for="DeWitt Clinton" elector_num="5" name="Epaphras Hoyt" name_id="HE0003"></aas:elector>
+        <aas:elector affiliation="Federalist" affiliation_id="A0002" declared_for="DeWitt Clinton" elector_num="6" name="John W. Hulbert" name_id="HJ0303"></aas:elector>
+        <aas:elector affiliation="Republican" affiliation_id="A0001" declared_for="James Madison" elector_num="7" name="Thomas Shepherd" name_id="ST0058"></aas:elector>
+        <aas:elector affiliation="Republican" affiliation_id="A0001" declared_for="James Madison" elector_num="8" name="Moses White" name_id="WM0026"></aas:elector>
+        <aas:elector affiliation="Republican" affiliation_id="A0001" declared_for="James Madison" elector_num="9" name="Pliny Merrick" name_id="MP0066"></aas:elector>
+        <aas:elector affiliation="Republican" affiliation_id="A0001" declared_for="James Madison" elector_num="10" name="William Walker" name_id="WW0422"></aas:elector>
+        <aas:elector affiliation="Republican" affiliation_id="A0001" declared_for="James Madison" elector_num="11" name="Solomon Snead" name_id="SS0117"></aas:elector>
+        <aas:elector affiliation="Republican" affiliation_id="A0001" declared_for="James Madison" elector_num="12" name="Jesse Stebbins" name_id="SJ0728"></aas:elector>
+      </aas:ballot>
+      <aas:overview modified="2006-12-08" status="Version 0.5">
+        <aas:elector_summary elector_ref="1" resp="Philip Lampi" vote_total="14821"></aas:elector_summary>
+        <aas:elector_summary elector_ref="2" resp="Philip Lampi" vote_total="14820"></aas:elector_summary>
+        <aas:elector_summary elector_ref="3" resp="Philip Lampi" vote_total="14820"></aas:elector_summary>
+        <aas:elector_summary elector_ref="4" resp="Philip Lampi" vote_total="14818"></aas:elector_summary>
+        <aas:elector_summary elector_ref="5" resp="Philip Lampi" vote_total="14816"></aas:elector_summary>
+        <aas:elector_summary elector_ref="6" resp="Philip Lampi" vote_total="14816"></aas:elector_summary>
+        <aas:elector_summary elector_ref="7" resp="Philip Lampi" vote_total="5585"></aas:elector_summary>
+        <aas:elector_summary elector_ref="8" resp="Philip Lampi" vote_total="5584"></aas:elector_summary>
+        <aas:elector_summary elector_ref="9" resp="Philip Lampi" vote_total="5583"></aas:elector_summary>
+        <aas:elector_summary elector_ref="10" resp="Philip Lampi" vote_total="5582"></aas:elector_summary>
+        <aas:elector_summary elector_ref="11" resp="Philip Lampi" vote_total="5577"></aas:elector_summary>
+        <aas:elector_summary elector_ref="12" resp="Philip Lampi" vote_total="5574"></aas:elector_summary>
+        <aas:reference resp="Philip Lampi" type="page_image" urn="tufts:central:dca:MS115:MS115.001.DO.00646"></aas:reference>
+      </aas:overview>
+      <aas:admin_unit geog_id="null" name="Massachusetts" type="State">
+        <aas:sub_unit geog_id="null" name="Western" type="District">
+          <aas:result elector_ref="1" resp="Philip Lampi" vote="14821"></aas:result>
+          <aas:result elector_ref="2" resp="Philip Lampi" vote="14820"></aas:result>
+          <aas:result elector_ref="3" resp="Philip Lampi" vote="14820"></aas:result>
+          <aas:result elector_ref="4" resp="Philip Lampi" vote="14818"></aas:result>
+          <aas:result elector_ref="5" resp="Philip Lampi" vote="14816"></aas:result>
+          <aas:result elector_ref="6" resp="Philip Lampi" vote="14816"></aas:result>
+          <aas:result elector_ref="7" resp="Philip Lampi" vote="5585"></aas:result>
+          <aas:result elector_ref="8" resp="Philip Lampi" vote="5584"></aas:result>
+          <aas:result elector_ref="9" resp="Philip Lampi" vote="5583"></aas:result>
+          <aas:result elector_ref="10" resp="Philip Lampi" vote="5582"></aas:result>
+          <aas:result elector_ref="11" resp="Philip Lampi" vote="5577"></aas:result>
+          <aas:result elector_ref="12" resp="Philip Lampi" vote="5574"></aas:result>
+          <aas:reference resp="Philip Lampi" type="page_image" urn="tufts:central:dca:MS115:MS115.001.DO.00646"></aas:reference>
+          <aas:sub_unit geog_id="null" name="Berkshire" type="County">
+            <aas:result elector_ref="1" resp="Philip Lampi" vote="2268"></aas:result>
+            <aas:result elector_ref="2" resp="Philip Lampi" vote="2268"></aas:result>
+            <aas:result elector_ref="3" resp="Philip Lampi" vote="2268"></aas:result>
+            <aas:result elector_ref="4" resp="Philip Lampi" vote="2268"></aas:result>
+            <aas:result elector_ref="5" resp="Philip Lampi" vote="2268"></aas:result>
+            <aas:result elector_ref="6" resp="Philip Lampi" vote="2268"></aas:result>
+            <aas:result elector_ref="7" resp="Philip Lampi" vote="1577"></aas:result>
+            <aas:result elector_ref="8" resp="Philip Lampi" vote="1577"></aas:result>
+            <aas:result elector_ref="9" resp="Philip Lampi" vote="1577"></aas:result>
+            <aas:result elector_ref="10" resp="Philip Lampi" vote="1576"></aas:result>
+            <aas:result elector_ref="11" resp="Philip Lampi" vote="1576"></aas:result>
+            <aas:result elector_ref="12" resp="Philip Lampi" vote="1577"></aas:result>
+            <aas:reference resp="Philip Lampi" type="page_image" urn="tufts:central:dca:MS115:MS115.001.DO.00646"></aas:reference>
+          </aas:sub_unit>
+          <aas:sub_unit geog_id="null" name="Franklin" type="County">
+            <aas:result elector_ref="1" resp="Philip Lampi" vote="2381"></aas:result>
+            <aas:result elector_ref="2" resp="Philip Lampi" vote="2380"></aas:result>
+            <aas:result elector_ref="3" resp="Philip Lampi" vote="2381"></aas:result>
+            <aas:result elector_ref="4" resp="Philip Lampi" vote="2380"></aas:result>
+            <aas:result elector_ref="5" resp="Philip Lampi" vote="2379"></aas:result>
+            <aas:result elector_ref="6" resp="Philip Lampi" vote="2378"></aas:result>
+            <aas:result elector_ref="7" resp="Philip Lampi" vote="624"></aas:result>
+            <aas:result elector_ref="8" resp="Philip Lampi" vote="624"></aas:result>
+            <aas:result elector_ref="9" resp="Philip Lampi" vote="624"></aas:result>
+            <aas:result elector_ref="10" resp="Philip Lampi" vote="619"></aas:result>
+            <aas:result elector_ref="11" resp="Philip Lampi" vote="620"></aas:result>
+            <aas:result elector_ref="12" resp="Philip Lampi" vote="613"></aas:result>
+            <aas:reference resp="Philip Lampi" type="page_image" urn="tufts:central:dca:MS115:MS115.001.DO.00646"></aas:reference>
+          </aas:sub_unit>
+          <aas:sub_unit geog_id="null" name="Hampden" type="County">
+            <aas:result elector_ref="1" resp="Philip Lampi" vote="1645"></aas:result>
+            <aas:result elector_ref="2" resp="Philip Lampi" vote="1644"></aas:result>
+            <aas:result elector_ref="3" resp="Philip Lampi" vote="1646"></aas:result>
+            <aas:result elector_ref="4" resp="Philip Lampi" vote="1645"></aas:result>
+            <aas:result elector_ref="5" resp="Philip Lampi" vote="1645"></aas:result>
+            <aas:result elector_ref="6" resp="Philip Lampi" vote="1645"></aas:result>
+            <aas:result elector_ref="7" resp="Philip Lampi" vote="846"></aas:result>
+            <aas:result elector_ref="8" resp="Philip Lampi" vote="847"></aas:result>
+            <aas:result elector_ref="9" resp="Philip Lampi" vote="846"></aas:result>
+            <aas:result elector_ref="10" resp="Philip Lampi" vote="847"></aas:result>
+            <aas:result elector_ref="11" resp="Philip Lampi" vote="847"></aas:result>
+            <aas:result elector_ref="12" resp="Philip Lampi" vote="847"></aas:result>
+            <aas:reference resp="Philip Lampi" type="page_image" urn="tufts:central:dca:MS115:MS115.001.DO.00646"></aas:reference>
+          </aas:sub_unit>
+          <aas:sub_unit geog_id="null" name="Hampshire" type="County">
+            <aas:result elector_ref="1" resp="Philip Lampi" vote="2757"></aas:result>
+            <aas:result elector_ref="2" resp="Philip Lampi" vote="2758"></aas:result>
+            <aas:result elector_ref="3" resp="Philip Lampi" vote="2756"></aas:result>
+            <aas:result elector_ref="4" resp="Philip Lampi" vote="2757"></aas:result>
+            <aas:result elector_ref="5" resp="Philip Lampi" vote="2756"></aas:result>
+            <aas:result elector_ref="6" resp="Philip Lampi" vote="2757"></aas:result>
+            <aas:result elector_ref="7" resp="Philip Lampi" vote="308"></aas:result>
+            <aas:result elector_ref="8" resp="Philip Lampi" vote="311"></aas:result>
+            <aas:result elector_ref="9" resp="Philip Lampi" vote="311"></aas:result>
+            <aas:result elector_ref="10" resp="Philip Lampi" vote="310"></aas:result>
+            <aas:result elector_ref="11" resp="Philip Lampi" vote="311"></aas:result>
+            <aas:result elector_ref="12" resp="Philip Lampi" vote="311"></aas:result>
+            <aas:reference resp="Philip Lampi" type="page_image" urn="tufts:central:dca:MS115:MS115.001.DO.00646"></aas:reference>
+          </aas:sub_unit>
+          <aas:sub_unit geog_id="null" name="Worcester" type="County">
+            <aas:result elector_ref="1" resp="Philip Lampi" vote="5770"></aas:result>
+            <aas:result elector_ref="2" resp="Philip Lampi" vote="5770"></aas:result>
+            <aas:result elector_ref="3" resp="Philip Lampi" vote="5769"></aas:result>
+            <aas:result elector_ref="4" resp="Philip Lampi" vote="5768"></aas:result>
+            <aas:result elector_ref="5" resp="Philip Lampi" vote="5768"></aas:result>
+            <aas:result elector_ref="6" resp="Philip Lampi" vote="5768"></aas:result>
+            <aas:result elector_ref="7" resp="Philip Lampi" vote="2230"></aas:result>
+            <aas:result elector_ref="8" resp="Philip Lampi" vote="2225"></aas:result>
+            <aas:result elector_ref="9" resp="Philip Lampi" vote="2225"></aas:result>
+            <aas:result elector_ref="10" resp="Philip Lampi" vote="2230"></aas:result>
+            <aas:result elector_ref="11" resp="Philip Lampi" vote="2223"></aas:result>
+            <aas:result elector_ref="12" resp="Philip Lampi" vote="2226"></aas:result>
+            <aas:reference resp="Philip Lampi" type="page_image" urn="tufts:central:dca:MS115:MS115.001.DO.00646"></aas:reference>
+          </aas:sub_unit>
+        </aas:sub_unit>
+      </aas:admin_unit>
+    </aas:role>
+  </aas:office>
+  <aas:reference resp="Philip Lampi" type="citation" urn="tufts:central:dca:MS115:MS115.001.DO.00646">Original Election Returns. State Archives, Boston.</aas:reference>
+  <aas:reference resp="Philip Lampi" type="citation" urn="tufts:central:dca:MS115:MS115.001.DO.00649">Original Election Returns. State Archives, Boston.</aas:reference>
+</aas:election_record>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+</foxml:datastream>
+<foxml:datastream ID="RELS-EXT" STATE="A" CONTROL_GROUP="X" VERSIONABLE="true">
+<foxml:datastreamVersion ID="RELS-EXT.0" LABEL="RDF Relationship Metadata" CREATED="2006-06-23T20:07:38.965Z" MIMETYPE="application/rdf+xml" FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0" SIZE="946">
+<foxml:xmlContent>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rel="info:fedora/fedora-system:def/relations-external#" xmlns="http://www.fedora.info/definitions/" xmlns:xlink="http://www.w3.org/1999/xlink">
+               <rdf:Description rdf:about="info:fedora/tufts:ma.electors.western.1812">
+                  <fedora-model:hasModel xmlns:fedora-model="info:fedora/fedora-system:def/model#" rdf:resource="info:fedora/cm:VotingRecord"></fedora-model:hasModel>
+                  <itemID xmlns="http://www.openarchives.org/OAI/2.0/">oai:tufts:ma.electors.western.1812</itemID>
+                  <rel:isMemberOfCollection rdf:resource="info:fedora/tufts:UA069.006.DO.MS115.002.MA.1812"></rel:isMemberOfCollection>
+                  <fedora-model:hasModel xmlns:fedora-model="info:fedora/fedora-system:def/model#" rdf:resource="info:fedora/cm:VotingRecord"></fedora-model:hasModel>
+               </rdf:Description>
+            </rdf:RDF>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="RELS-EXT.1" LABEL="RDF Relationship Metadata" CREATED="2011-08-18T18:15:07.198Z" MIMETYPE="application/rdf+xml" FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0" SIZE="906">
+<foxml:xmlContent>
+<rdf:RDF xmlns="http://www.fedora.info/definitions/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rel="info:fedora/fedora-system:def/relations-external#" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <rdf:Description rdf:about="info:fedora/tufts:ma.electors.western.1812">
+    <fedora-model:hasModel xmlns:fedora-model="info:fedora/fedora-system:def/model#" rdf:resource="info:fedora/cm:VotingRecord"></fedora-model:hasModel>
+    <itemID xmlns="http://www.openarchives.org/OAI/2.0/">oai:tufts:ma.electors.western.1812</itemID>
+    <rel:isMemberOfCollection rdf:resource="info:fedora/tufts:UA069.006.DO.MS115.002.MA.1812"></rel:isMemberOfCollection>
+    <fedora-model:hasModel xmlns:fedora-model="info:fedora/fedora-system:def/model#" rdf:resource="info:fedora/cm:VotingRecord"></fedora-model:hasModel>
+  </rdf:Description>
+</rdf:RDF>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+</foxml:datastream>
+<foxml:datastream ID="DC" STATE="A" CONTROL_GROUP="X" VERSIONABLE="true">
+<foxml:datastreamVersion ID="DC.0" LABEL="Dublin Core Metadata" CREATED="2006-06-23T20:08:15.351Z" MIMETYPE="text/xml" FORMAT_URI="http://www.openarchives.org/OAI/2.0/oai_dc/" SIZE="1224">
+<foxml:xmlContent>
+<oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+  <dc:title>Massachusetts Returns for Presidential Electors Western District 1812</dc:title>
+  <dc:creator>Philip Lampi</dc:creator>
+  <dc:creator>Tufts University Digital Collections and Archives</dc:creator>
+  <dc:creator>American Antiquarian Society</dc:creator>
+  <dc:subject>Electoral College</dc:subject>
+  <dc:subject>Massachusetts</dc:subject>
+  <dc:subject>Election districts Massachusetts</dc:subject>
+  <dc:description>Massachusetts Returns for Presidential Electors Western District 1812. The permanent URL for this resource is: http://hdl.handle.net/10427/27517</dc:description>
+  <dc:publisher>Digital Collections and Archives, Tufts University</dc:publisher>
+  <dc:date>1812</dc:date>
+  <dc:type>dataset</dc:type>
+  <dc:format>text/xml</dc:format>
+  <dc:identifier>tufts:ma.electors.western.1812</dc:identifier>
+  <dc:source>MS115</dc:source>
+  <dc:rights>http://dca.tufts.edu/ua/access/rights-pd.html</dc:rights>
+</oai_dc:dc>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="DC.1" LABEL="Dublin Core Metadata" CREATED="2011-08-18T18:15:06.623Z" MIMETYPE="text/xml" FORMAT_URI="http://www.openarchives.org/OAI/2.0/oai_dc/" SIZE="1211">
+<foxml:xmlContent>
+<oai_dc:dc xmlns="http://www.fedora.info/definitions/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <dc:title>Massachusetts 1812 Electoral College, Western District</dc:title>
+  <dc:creator>Philip Lampi</dc:creator>
+  <dc:creator>Tufts University Digital Collections and Archives</dc:creator>
+  <dc:creator>American Antiquarian Society</dc:creator>
+  <dc:subject>Electoral College</dc:subject>
+  <dc:subject>Massachusetts</dc:subject>
+  <dc:subject>Election districts Massachusetts</dc:subject>
+  <dc:description>Massachusetts 1812 Electoral College, Western District. The permanent URL for this resource is: http://hdl.handle.net/10427/27517</dc:description>
+  <dc:identifier>tufts:ma.electors.western.1812</dc:identifier>
+  <dc:publisher>Digital Collections and Archives, Tufts University</dc:publisher>
+  <dc:date>1812</dc:date>
+  <dc:type>dataset</dc:type>
+  <dc:format>text/xml</dc:format>
+  <dc:source>MS115</dc:source>
+  <dc:rights>http://dca.tufts.edu/ua/access/rights-pd.html</dc:rights>
+</oai_dc:dc>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+</foxml:datastream>
+<foxml:datastream ID="DCA-ADMIN" STATE="A" CONTROL_GROUP="X" VERSIONABLE="true">
+<foxml:datastreamVersion ID="DCA-ADMIN.0" LABEL="DCA Adminstrative Metadata" CREATED="2006-06-23T20:08:15.351Z" MIMETYPE="text/xml" SIZE="312">
+<foxml:xmlContent>
+<dca_admin:admin xmlns:dca_admin="http://nils.lib.tufts.edu/dca_admin/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:admin="http://nils.lib.tufts.edu/admin/" xmlns="http://www.fedora.info/definitions/" xmlns:xlink="http://www.w3.org/1999/xlink"></dca_admin:admin>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="DCA-ADMIN.1" LABEL="DCA Adminstrative Metadata" CREATED="2011-08-18T18:15:06.859Z" MIMETYPE="text/xml" SIZE="367">
+<foxml:xmlContent>
+<dca_admin:admin xmlns="http://www.fedora.info/definitions/" xmlns:admin="http://nils.lib.tufts.edu/admin/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dca_admin="http://nils.lib.tufts.edu/dca_admin /" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></dca_admin:admin>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+</foxml:datastream>
+<foxml:datastream ID="DCA-META" STATE="A" CONTROL_GROUP="X" VERSIONABLE="true">
+<foxml:datastreamVersion ID="DCA-META.0" LABEL="DCA Descriptive Metadata" CREATED="2006-06-23T20:07:38.965Z" MIMETYPE="text/xml" SIZE="1978">
+<foxml:xmlContent>
+<dca_dc:dc xmlns:dca_dc="http://nils.lib.tufts.edu/dca_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dcatech="http://nils.lib.tufts.edu/dcatech/" xmlns:dcadesc="http://nils.lib.tufts.edu/dcadesc/" xmlns="http://www.fedora.info/definitions/" xmlns:xlink="http://www.w3.org/1999/xlink">
+               <dc:title>Massachusetts Returns for Presidential Electors Western District 1812</dc:title>
+               <dc:creator>Philip Lampi</dc:creator>
+               <dc:creator>Tufts University Digital Collections and Archives</dc:creator>
+               <dc:creator>American Antiquarian Society</dc:creator>
+               <dc:subject>Electoral College</dc:subject>
+               <dc:subject>Election districts Massachusetts</dc:subject>
+               <dc:date.created>1812</dc:date.created>
+               <dc:date.issued>2010-11-02</dc:date.issued>
+               <dc:temporal>1812</dc:temporal>
+               <dc:type>dataset</dc:type>
+               <dc:format>text/xml</dc:format>
+               <dc:source>MS115</dc:source>
+               <dc:bibliographicCitation>American Antiquarian Society and Tufts University Digital Collections and Archives. &quot;Massachusetts Returns for Presidential Electors Western District 1812.&quot; 2010. Tufts University. Digital Collections and Archives. Medford, MA. http://hdl.handle.net/10427/27517</dc:bibliographicCitation>
+               <dc:publisher>Digital Collections and Archives, Tufts University</dc:publisher>
+               <dc:rights>http://dca.tufts.edu/ua/access/rights-pd.html</dc:rights>
+               <dc:identifier>http://hdl.handle.net/10427/27517</dc:identifier>
+               <dcterms:extent>9437 bytes</dcterms:extent>
+               <dcatech:fileSize>9437 bytes</dcatech:fileSize>
+               <dcadesc:geogname>Massachusetts</dcadesc:geogname>
+               <dcadesc:funder>National Endowment for the Humanities</dcadesc:funder>
+            </dca_dc:dc>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+<foxml:datastreamVersion ID="DCA-META.1" LABEL="DCA Descriptive Metadata" CREATED="2011-08-18T18:15:06.736Z" MIMETYPE="text/xml" SIZE="1730">
+<foxml:xmlContent>
+<dca_dc:dc xmlns="http://www.fedora.info/definitions/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dca_dc="http://nils.lib.tufts.edu/dca_dc/" xmlns:dcadesc="http://nils.lib.tufts.edu/dcadesc/" xmlns:dcatech="http://nils.lib.tufts.edu/dcatech/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <dc:title>Massachusetts 1812 Electoral College, Western District</dc:title>
+  <dc:creator>Philip Lampi</dc:creator>
+  <dc:creator>Tufts University Digital Collections and Archives</dc:creator>
+  <dc:creator>American Antiquarian Society</dc:creator>
+  <dc:subject>Electoral College</dc:subject>
+  <dc:subject>Election districts Massachusetts</dc:subject>
+  <dc:date.created>1812</dc:date.created>
+  <dc:date.issued>2010-11-02</dc:date.issued>
+  <dc:temporal>1812</dc:temporal>
+  <dc:type>dataset</dc:type>
+  <dc:format>text/xml</dc:format>
+  <dc:source>MS115</dc:source>
+  <dc:bibliographicCitation>American Antiquarian Society and Tufts University Digital Collections and Archives. &quot;Massachusetts 1812 Electoral College, Western District.&quot; 2010. Tufts University. Digital Collections and Archives. Medford, MA. http://hdl.handle.net/10427/27517</dc:bibliographicCitation>
+  <dc:publisher>Digital Collections and Archives, Tufts University</dc:publisher>
+  <dc:rights>http://dca.tufts.edu/ua/access/rights-pd.html</dc:rights>
+  <dc:identifier>http://hdl.handle.net/10427/27517</dc:identifier>
+  <dcterms:extent>9436 bytes</dcterms:extent>
+  <dcatech:fileSize>9436 bytes</dcatech:fileSize>
+  <dcadesc:geogname>Massachusetts</dcadesc:geogname>
+  <dcadesc:funder>National Endowment for the Humanities</dcadesc:funder>
+</dca_dc:dc>
+</foxml:xmlContent>
+</foxml:datastreamVersion>
+</foxml:datastream>
+</foxml:digitalObject>

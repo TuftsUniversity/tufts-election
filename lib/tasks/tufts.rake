@@ -11,10 +11,25 @@ namespace :index do
     e.datastreams['RECORD-XML'].content = File.new(File.join(File.dirname(__FILE__), '../../spec/fixtures', "election_records/us_potus_1792_RECORD-XML.xml") ).read
     e.datastreams['DCA-META'].content = File.new(File.join(File.dirname(__FILE__), '../../spec/fixtures', "election_records/us_potus_1792_DCA-META.xml") ).read
     e.save()
+    puts "Created tufts:1"
     e = Election.new(:pid=>'tufts:2')
     e.datastreams['RECORD-XML'].content =  File.new(File.join(File.dirname(__FILE__), '../../spec/fixtures', "election_records/al_staterepresentative_madisoncounty_1820_RECORD-XML.xml") ).read
     e.datastreams['DCA-META'].content = File.new(File.join(File.dirname(__FILE__), '../../spec/fixtures', "election_records/al_staterepresentative_madisoncounty_1820_DCA-META.xml") ).read
     e.save()
+    puts "Created tufts:2"
+    
+    Dir.glob("spec/fixtures/election_records/*.foxml.xml").each do |fixture_path|
+      pid = File.basename(fixture_path, ".foxml.xml").gsub("_",":")
+      begin
+        foo = ActiveFedora::FixtureLoader.new('spec/fixtures/election_records').reload(pid)
+        puts "Updated #{pid}"
+      rescue Errno::ECONNREFUSED => e
+        puts "Can't connect to Fedora! Are you sure jetty is running?"
+      rescue Exception => e
+        logger.error("Received a Fedora error while loading #{pid}\n#{e}")
+      end
+    end
+    
   end
 
 end
