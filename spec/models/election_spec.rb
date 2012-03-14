@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe Election do
+describe TuftsVotingRecord do
   describe "an instance" do
-    subject { Election.new }
+    subject { TuftsVotingRecord.new }
     its(:RECORD_XML) { should be_kind_of Datastreams::ElectionRecord}
     its(:DCA_META) { should be_kind_of Datastreams::DublinCore}
   end

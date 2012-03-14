@@ -1,4 +1,4 @@
-class Election < ActiveFedora::Base
+class TuftsVotingRecord < ActiveFedora::Base
   has_metadata :name => "RECORD-XML", :type => Datastreams::ElectionRecord
   has_metadata :name => "DCA-META", :type => Datastreams::DublinCore
   
