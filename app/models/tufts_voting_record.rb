@@ -1,6 +1,6 @@
 class TuftsVotingRecord < ActiveFedora::Base
   has_metadata :name => "RECORD-XML", :type => Datastreams::ElectionRecord
-  has_metadata :name => "DCA-META", :type => Datastreams::DublinCore
+  has_metadata :name => "DCA-META", :type => Datastreams::TuftsDcaMeta
   
   def to_solr(solr_doc=Hash.new)
     super
