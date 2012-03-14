@@ -7,7 +7,6 @@ gem 'rails', '3.2.2'
 
 gem 'sqlite3'
 
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -25,7 +24,8 @@ gem 'jquery-rails'
 gem 'blacklight'
 gem 'devise'
 gem 'jettywrapper'
-gem 'active-fedora', '4.0.0.rc11'
+# gem 'active-fedora', '4.0.0.rc11'
+gem 'active-fedora', :git => 'git://github.com/mediashelf/active_fedora.git'
 
 group :test, :development do
   gem 'rspec-rails'
