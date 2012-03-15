@@ -35,11 +35,3 @@
 </dl>
 
 <%= voting_record_xml_to_table(document.get("voting_record_xml_display")) %>
-<h3>Notes</h3>
-
-<h3>References</h3>
-<ul>
-<% document["citation_t"].each do |citation| %>
-  <li><%= citation %></li>
-<% end %>
-</ul>
