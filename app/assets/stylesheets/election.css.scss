@@ -100,9 +100,12 @@ dl.defList {
   }
 }
 
-a {
+a:link, a:visited, a:active {
   @include text1;
+  border-bottom: 0 none;
+
 }
+
 #electionNotes, #electionReferences {
   margin-top: 2em;
   @include text2;
