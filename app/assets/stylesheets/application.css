@@ -17,9 +17,19 @@
  *
  *= require_self
  *= require_tree .
+
+ *
+ * Used by blacklight_range_limit
+ *= require  'blacklight_range_limit'
+ *         
 */
 
-/* The following lines are in place just to override blacklight */
+/* The following lines are in place just to override blacklight 
+ *
+ * Used by blacklight_range_limit
+ *= require  'blacklight_range_limit'
+ *         
+*/
 body {
   background: none;
   padding: 0;
