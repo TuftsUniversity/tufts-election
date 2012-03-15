@@ -8,23 +8,44 @@ table.election-results-table {
     thead {
       background-color: #ECECDA;
       tr.candidate-row {
-          border-spacing: 10px;
+        border-spacing: 10px;
+        color: #243E61;
+        font-family: Arial,Helvetica,sans-serif;
+        font-size: 12px;
+        td {
           font-weight: bold;
+        }
       }
       tr.affiliation-row {
       }
       tr.overview-row {
+        td {
+          color: #243E61;
+          font-family: Arial,Helvetica,sans-serif;
+          font-size: 12px;
           font-weight: bold;
+        }
       }
     }
-    tr.sub-unit-row0 {
+    tbody {
+      font-size: 14px;
+      color: #666666;
+      font-family: Arial,Helvetica,sans-serif;
+      tr.sub-unit-row0 {
         background-color: #ECECDA;
         margin-top: 20px;
-    }
-    tr.sub-unit-row1 {
-      background-color: #F1F1F1;
-      td.sub-unit-Town, td.sub-unit-Populated {
-       padding-left: 2em;
+        td {
+          border-top: medium solid #FFFFFF;
+        }
+      }
+      tr.sub-unit-row1 {
+        background-color: #F1F1F1;
+        td.sub-unit-Town, td.sub-unit-Populated {
+         padding-left: 2em;
+        }
+      }
+      tr:nth-child(2n) {
+        background-color: #E4E4E4;
       }
     }
 }
