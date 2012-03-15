@@ -24,8 +24,14 @@
   <dd><%= document.get("iteration_t") %></dd>
   <dt>Office/Role:</dt>
   <dd><%= document.get("office_name_t") + "/" + document.get("office_role_title_t") %></dd>
-  <dt>Candidates:</dt>
-  <dd><%= document.get("candidate_name_t") %></dd>
+  <% unless document.get("candidate_name_t").nil? %>
+    <dt>Candidates:</dt>
+    <dd><%= document.get("candidate_name_t") %></dd>
+  <% end %>
+  <% unless document.get("elector_name_t").nil? %>
+    <dt>Electors:</dt>
+    <dd><%= document.get("elector_name_t") %></dd>
+  <% end %>
 </dl>
 
 {table here}

@@ -59,6 +59,9 @@ module Datastreams
       t.candidate_name(:proxy=>[:office, :role, :ballot, :candidate, :name])
       t.candidate_id(:proxy=>[:office, :role, :ballot, :candidate, :candidate_id])
       t.candidate_affiliation(:proxy=>[:office, :role, :ballot, :candidate, :affiliation])
+      t.elector_name(:proxy=>[:office, :role, :ballot, :elector, :name])
+      t.elector_id(:proxy=>[:office, :role, :ballot, :elector, :elector_id])
+      t.elector_affiliation(:proxy=>[:office, :role, :ballot, :elector, :affiliation])
       t.jurisdiction(:proxy=>[:admin_unit, :sub_unit, :type])
 
     end
