@@ -295,7 +295,8 @@
       <h2>Page Images:</h2>
       <xsl:for-each select="//aas:reference[@type='page_image' and not (./@urn = preceding::aas:reference/@urn)]">
 	<div class="page-image">
-	  <a href="/view_image/{@urn}"><xsl:value-of select="@urn"/></a>
+      <xsl:variable name="uri" select="substring(@urn, 24)" />
+	  <img src="http://repository01.lib.tufts.edu:8080/fedora/get/tufts{$uri}/bdef:TuftsImage/getMediumRes" alt="{@urn} />
 	</div>
       </xsl:for-each>
     </xsl:if>
