@@ -1,0 +1,35 @@
+table.election-results-table {
+    td {
+      min-width: 4em;
+      padding-left: 1em;
+      padding-right: 1em;
+      vertical-align: top;
+    }
+    thead {
+      background-color: #ECECDA;
+      tr.candidate-row {
+          border-spacing: 10px;
+          font-weight: bold;
+      }
+      tr.affiliation-row {
+      }
+      tr.overview-row {
+          font-weight: bold;
+      }
+    }
+    tr.sub-unit-row0 {
+        background-color: #ECECDA;
+        margin-top: 20px;
+    }
+    tr.sub-unit-row1 {
+      background-color: #F1F1F1;
+      td.sub-unit-Town, td.sub-unit-Populated {
+       padding-left: 2em;
+      }
+    }
+}
+#content {
+    margin-left: 4em;
+    margin-right: 4em;
+    padding-top: 1em;
+}

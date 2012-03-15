@@ -36,49 +36,50 @@
      <div id="election-results">
        <table class="election-results-table">
 
-	 <tr class="candidate-row">
-	   <td>Candidates <xsl:apply-templates select="/aas:election_record/aas:office/aas:role/aas:ballot/aas:note"/></td>
-	   <xsl:for-each select="/aas:election_record/aas:office/aas:role/aas:ballot/aas:candidate">
-	     <xsl:sort select="@candidate_num" data-type="number" order="ascending"/>
-	     <xsl:variable name="cand_id" select="@candidate_num"/>
+       <thead>
+         <tr class="candidate-row">
+           <td>Candidates <xsl:apply-templates select="/aas:election_record/aas:office/aas:role/aas:ballot/aas:note"/></td>
+           <xsl:for-each select="/aas:election_record/aas:office/aas:role/aas:ballot/aas:candidate">
+             <xsl:sort select="@candidate_num" data-type="number" order="ascending"/>
+             <xsl:variable name="cand_id" select="@candidate_num"/>
 
-	     <td><xsl:value-of select="@name"/></td>
-	   </xsl:for-each>
-	 </tr>
+             <td><xsl:value-of select="@name"/></td>
+           </xsl:for-each>
+         </tr>
 
-	 <tr class="affiliation-row"><td/>
-	   <xsl:for-each select="/aas:election_record/aas:office/aas:role/aas:ballot/aas:candidate">
-	     <xsl:sort select="@candidate_num" data-type="number" order="ascending"/>
-	     <xsl:variable name="cand_id" select="@candidate_num"/>
+         <tr class="affiliation-row"><td/>
+           <xsl:for-each select="/aas:election_record/aas:office/aas:role/aas:ballot/aas:candidate">
+             <xsl:sort select="@candidate_num" data-type="number" order="ascending"/>
+             <xsl:variable name="cand_id" select="@candidate_num"/>
 
-	     <td>
-	       <xsl:choose>
-		 <xsl:when test="@affiliation = 'null'"></xsl:when>
-		 <xsl:otherwise><xsl:value-of select="@affiliation"/></xsl:otherwise>
-	       </xsl:choose>
-	     </td>
-	   </xsl:for-each>
-	 </tr>	 
+             <td>
+               <xsl:choose>
+           <xsl:when test="@affiliation = 'null'"></xsl:when>
+           <xsl:otherwise><xsl:value-of select="@affiliation"/></xsl:otherwise>
+               </xsl:choose>
+             </td>
+           </xsl:for-each>
+         </tr>	 
 
-	 <xsl:call-template name="spacer"><xsl:with-param name="sp-class" select="'major-spacer-row'"/></xsl:call-template>
 
-	 <tr class="overview-row">
-	   <td>Final Result <xsl:apply-templates select="/aas:election_record/aas:office/aas:role/aas:overview/aas:note"/></td>
-	   <xsl:for-each select="/aas:election_record/aas:office/aas:role/aas:ballot/aas:candidate">
-	     <xsl:sort select="@candidate_num" data-type="number" order="ascending"/>
-	     <xsl:variable name="cand_id" select="@candidate_num"/>
-	     
-	     <xsl:variable name="x">
-	       <xsl:value-of select="/aas:election_record/aas:office/aas:role/aas:overview/aas:candidate_summary[@candidate_ref=$cand_id]/@vote_total"/>
-	     </xsl:variable>
-	     
-	     <xsl:choose>
-	       <xsl:when test="normalize-space($x)=''"><td class="vote-nodata">-</td></xsl:when>
-	       <xsl:otherwise><td class="vote"><xsl:value-of select="$x"/></td></xsl:otherwise>
-	     </xsl:choose>
+         <tr class="overview-row">
+           <td>Final Result <xsl:apply-templates select="/aas:election_record/aas:office/aas:role/aas:overview/aas:note"/></td>
+           <xsl:for-each select="/aas:election_record/aas:office/aas:role/aas:ballot/aas:candidate">
+             <xsl:sort select="@candidate_num" data-type="number" order="ascending"/>
+             <xsl:variable name="cand_id" select="@candidate_num"/>
+             
+             <xsl:variable name="x">
+               <xsl:value-of select="/aas:election_record/aas:office/aas:role/aas:overview/aas:candidate_summary[@candidate_ref=$cand_id]/@vote_total"/>
+             </xsl:variable>
+             
+             <xsl:choose>
+               <xsl:when test="normalize-space($x)=''"><td class="vote-nodata">-</td></xsl:when>
+               <xsl:otherwise><td class="vote"><xsl:value-of select="$x"/></td></xsl:otherwise>
+             </xsl:choose>
 
-	   </xsl:for-each>
-	 </tr>
+           </xsl:for-each>
+         </tr>
+       </thead>
 
 	 <xsl:apply-templates select="aas:admin_unit"/>
 
@@ -92,6 +93,7 @@
       <xsl:call-template name="sub_unit_depth"/>
     </xsl:variable>
 
+<!--
     <xsl:choose>
       <xsl:when test="$depth = 0">
 	 <xsl:call-template name="spacer"><xsl:with-param name="sp-class" select="'major-spacer-row'"/></xsl:call-template>
@@ -101,6 +103,7 @@
 	 <xsl:call-template name="spacer"><xsl:with-param name="sp-class" select="'minor-spacer-row'"/></xsl:call-template>
       </xsl:otherwise>
     </xsl:choose>
+-->
 
     <tr class="sub-unit-row{$depth}">
       <td class="sub-unit-{@type}">
@@ -204,7 +207,6 @@
       </xsl:when>
 
       <xsl:otherwise>
-	<xsl:text>--</xsl:text>
 	<xsl:call-template name="unit_name">
 	  <xsl:with-param name="name" select="$name"/>
 	  <xsl:with-param name="type" select="$type"/>
@@ -293,7 +295,7 @@
       <h2>Page Images:</h2>
       <xsl:for-each select="//aas:reference[@type='page_image' and not (./@urn = preceding::aas:reference/@urn)]">
 	<div class="page-image">
-	  <a href="/view_image.jsp?urn={@urn}"><xsl:value-of select="@urn"/></a>
+	  <a href="/view_image/{@urn}"><xsl:value-of select="@urn"/></a>
 	</div>
       </xsl:for-each>
     </xsl:if>
