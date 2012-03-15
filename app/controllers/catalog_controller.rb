@@ -42,6 +42,7 @@ class CatalogController < ApplicationController
     config.add_facet_field 'office_name_facet', :label => 'Office', :limit => 20 
     config.add_facet_field 'office_role_title_facet', :label => 'Position/Title', :limit => 20 
     config.add_facet_field 'candidate_name_facet', :label => 'Candidate', :limit => 15 
+    config.add_facet_field 'party_affiliation_facet', :label => 'Party', :limit => 15 
     config.add_facet_field 'election_type_facet', :label => 'Election Type'  
 
     # Have BL send all facet field names to Solr, which has been the default

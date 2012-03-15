@@ -27,6 +27,12 @@ module Datastreams
             t.candidate {
               t.name(:path=>{:attribute=>"name"}, :index_as=>[:facetable])
               t.candidate_id(:path=>{:attribute=>"name_id"}, :index_as=>[:facetable])
+              t.affiliation(:path=>{:attribute=>"name_id"}, :index_as=>[:facetable])
+            }
+            t.elector {
+              t.name(:path=>{:attribute=>"name"}, :index_as=>[:facetable])
+              t.elector_id(:path=>{:attribute=>"name_id"}, :index_as=>[:facetable])
+              t.affiliation(:path=>{:attribute=>"affiliation"}, :index_as=>[:facetable])
             }
           }
         }
@@ -52,6 +58,7 @@ module Datastreams
       t.election_type(:proxy=>[:election_record, :election_type])
       t.candidate_name(:proxy=>[:office, :role, :ballot, :candidate, :name])
       t.candidate_id(:proxy=>[:office, :role, :ballot, :candidate, :candidate_id])
+      t.candidate_affiliation(:proxy=>[:office, :role, :ballot, :candidate, :affiliation])
       t.jurisdiction(:proxy=>[:admin_unit, :sub_unit, :type])
 
     end
