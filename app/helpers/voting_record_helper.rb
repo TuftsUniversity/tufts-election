@@ -9,6 +9,6 @@ module VotingRecordHelper
   def voting_record_xml_to_table(voting_record_xml)
     src = Nokogiri::XML(voting_record_xml)
     xslt = stylesheet
-    xslt.transform(src)
+    xslt.transform(src).inner_html.to_s.html_safe
   end
 end
