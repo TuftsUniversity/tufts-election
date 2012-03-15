@@ -6,4 +6,14 @@ describe TuftsVotingRecord do
     its(:RECORD_XML) { should be_kind_of Datastreams::ElectionRecord}
     its(:DCA_META) { should be_kind_of Datastreams::TuftsDcaMeta}
   end
+  describe "to_solr" do
+    before do
+      @record = TuftsVotingRecord.find("tufts:2")
+      @solr_doc = @record.to_solr
+    end
+    it "should index the correct fields" do
+      pending
+      @solr_doc["voting_record_xml_display"].should == @record.datastreams["RECORD-XML"].to_xml
+    end
+  end
 end
