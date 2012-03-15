@@ -14,6 +14,6 @@ development:
   jetty_path: './jetty'
   url: http://127.0.0.1:8983/solr/development
 test: &test
-  url: http://127.0.0.1:8888/solr/test
+  url: http://127.0.0.1:8983/solr/test
 cucumber:
   <<: *test
