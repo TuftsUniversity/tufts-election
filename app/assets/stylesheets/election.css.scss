@@ -15,6 +15,18 @@ $blue: #243E61;
   font-family: Arial,Helvetica,sans-serif;
   font-size: 14px;
 }
+@mixin link1 {
+  color: $blue;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 11px;
+  text-decoration: underline;
+}
+@mixin link4 {
+  color: $gray;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 12px;
+  text-decoration: underline;
+}
 
 table.election-results-table {
     td {
@@ -101,7 +113,7 @@ dl.defList {
 }
 
 a:link, a:visited, a:active {
-  @include text1;
+  @include link4;
   border-bottom: 0 none;
 
 }
@@ -109,5 +121,12 @@ a:link, a:visited, a:active {
 #electionNotes, #electionReferences {
   margin-top: 2em;
   @include text2;
+}
+
+nav {
+  a:link, a:visited, a:active {
+    @include link1;
+  }
+  margin-bottom: 20px;
 }
 
