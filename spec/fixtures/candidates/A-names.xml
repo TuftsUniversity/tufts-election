@@ -1,0 +1,780 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<names-authority-list xmlns:auth="http://dca.tufts.edu/aas/auth" xmlns:xref="http://dca/tufts.edu/aas/xref">
+    
+    <auth:candidate name="Austin, Aaron"  id="AA0000"/>
+    <auth:candidate name="Alexander, Augustine"  id="AA0001"/>
+    <auth:candidate name="Albertson, Aaron"  id="AA0002"/>
+    <auth:candidate name="Addison, Alexander"  id="AA0003"/>
+    <auth:candidate name="Allen, Amasa"  id="AA0004"/>
+    <auth:candidate name="Adair, Alexander"  id="AA0005"/>
+<auth:candidate name="Atherton, Abel W."  id="AA0010"/>
+<auth:candidate name="Alexander, Archibald"  id="AA0027"/>
+<auth:candidate name="Allen, Alexander"  id="AA0032"/>
+<auth:candidate name="Avery, Archy"  id="AA0033"/>
+<auth:candidate name="Armstrong, Abner"  id="AA0034"/>
+<auth:candidate name="Abat, A."  id="AA0036"/>
+<auth:candidate name="Albaugh, Abraham"  id="AA0037"/>
+<auth:candidate name="Anderson, Abel"  id="AA0038"/>
+<auth:candidate name="Atkinson, Amos"  id="AA0042"/>
+<auth:candidate name="Allen, Amasa"  id="AA0043"/>
+<auth:candidate name="Ackerman, Abraham"  id="AA0047"/>
+<auth:candidate name="Armstrong, Abner"  id="AA0049"/>
+<auth:candidate name="Arendt, Abraham"  id="AA0051"/>
+<auth:candidate name="Adriance, Abraham"  id="AA0055"/>
+<auth:candidate name="Aiken, Albro"  id="AA0063"/>
+<auth:candidate name="Anthony, Allard"  id="AA0064"/>
+<auth:candidate name="Adgate, Asa"  id="AA0067"/>
+<auth:candidate name="Armstrong, Asher"  id="AA0068"/>
+<auth:candidate name="Alexander, Abner"  id="AA0070"/>
+<auth:candidate name="Alston, Alfred"  id="AA0073"/>
+<auth:candidate name="Adams, Asahel"  id="AA0075"/>
+<auth:candidate name="Ayers, Abner"  id="AA0076"/>
+<auth:candidate name="Albright, Andrew"  id="AA0077"/>
+<auth:candidate name="Andrews, Arthur"  id="AA0078"/>
+    <auth:candidate name="Allsworth, Andrew"  id="AA0079"/>
+    <auth:candidate name="Alstyne, Abraham V."  id="AA0080"/>
+<auth:candidate name="Adams, Abraham"  id="AA0085"/>
+<auth:candidate name="Anderson, Alexander A."  id="AA0086"/>
+<auth:candidate name="Augstadt, Abraham"  id="AA0089"/>
+<auth:candidate name="Alexander, Adam R."  id="AA0091"/>
+<auth:candidate name="Acklin, Alexander S."  id="AA0092"/>
+<auth:candidate name="Anderson, Alexander"  id="AA0093"/>
+<auth:candidate name="Aldis, Asa"  id="AA0094"/>
+<auth:candidate name="Aiken, Asa"  id="AA0095"/>
+<auth:candidate name="Anderson, Andrew"  id="AA0096"/>
+<auth:candidate name="Alexander, Andrew A."  id="AA0097"/>
+<auth:candidate name="Alexander, Amos"  id="AA0106"/>
+    <auth:candidate name="Austin, Archibald"  id="AA0107"/>
+    <auth:candidate name="Abergoty, A."  id="AA8812"/>
+<auth:candidate name="Andrews, Benjamin"  id="AB0000"/>
+<auth:candidate name="Anderson, Bailey"  id="AB0001"/>
+<auth:candidate name="Adams, Benjamin"  id="AB0002"/>
+<auth:candidate name="Ashbel, Bladen"  id="AB0004"/>
+<auth:candidate name="Allen, Benjamin"  id="AB0006"/>
+<auth:candidate name="Allen, Benjamin"  id="AB0007"/>
+<auth:candidate name="Ames, Benjamin"  id="AB0008"/>
+<auth:candidate name="Adams, Benjamin"  id="AB0010"/>
+    <auth:candidate name="Austin, Benjamin"  id="AB0013"/>
+    <auth:candidate name="Arendell, B."  id="AB0014"/>
+<auth:candidate name="Allen, Bethel"  id="AB0027"/>
+    <auth:candidate name="Aiken, Benjamin"  id="AB0028"/>
+    <auth:candidate name="Allen, Benjamin"  id="AB0029"/>
+    <auth:candidate name="Acworth, Beauchamp"  id="AB0030"/>
+<auth:candidate name="Arnold, Benedict"  id="AB0032"/>
+<auth:candidate name="Archer, Benjamin"  id="AB0033"/>
+<auth:candidate name="Austin, Benajah"  id="AB0034"/>
+<auth:candidate name="Adair, Blainey"  id="AB0040"/>
+<auth:candidate name="Allston, Benjamin"  id="AB0043"/>
+<auth:candidate name="Allen, Bennett"  id="AB0044"/>
+<auth:candidate name="Allston, Benjamin George"  id="AB0045"/>
+<auth:candidate name="Ashton, Burditt, Jr."  id="AB0048"/>
+<auth:candidate name="Anderson, B."  id="AB0050"/>
+<auth:candidate name="Archer, Branch T."  id="AB0051"/>
+<auth:candidate name="Allen, Chilton"  id="AC0000"/>
+    <auth:candidate name="Allen, Charles H."  id="AC0001"/>
+    <auth:candidate name="Andrews, Cullen"  id="AC0002"/>
+<auth:candidate name="Allen, Charles H."  id="AC0004"/>
+<auth:candidate name="Amidown, Caleb"  id="AC0011"/>
+<auth:candidate name="Alvord, Caleb"  id="AC0012"/>
+<auth:candidate name="Atherton, Charles H."  id="AC0017"/>
+<auth:candidate name="Allen, Clark"  id="AC0018"/>
+<auth:candidate name="Abeel, Charles C."  id="AC0019"/>
+<auth:candidate name="Atwater, Caleb"  id="AC0021"/>
+<auth:candidate name="Avery, Cyrus"  id="AC0022"/>
+    <auth:candidate name="Allen, Charles"  id="AC0023"/>
+    <auth:candidate name="Albertson, Cornelius"  id="AC0024"/>
+<auth:candidate name="Anderson, Colbert"  id="AC0028"/>
+<auth:candidate name="Alexander, Charles"  id="AC0029"/>
+<auth:candidate name="Alexander, Charles"  id="AC0030"/>
+<auth:candidate name="Anderson, Charles"  id="AC0031"/>
+    <auth:candidate name="Allen, Charles"  id="AC0032"/>
+    <auth:candidate name="Abercrombie, Charles"  id="AC0101"/>
+    <auth:candidate name="Allen, Charles"  id="AC0102"/>
+    <auth:candidate name="Allen, Drury M."  id="AD0000"/>
+    <auth:candidate name="Abbot, Daniel"  id="AD0001"/>
+    <auth:candidate name="Adams, Daniel J."  id="AD0002"/>
+    <auth:candidate name="Adams, David"  id="AD0003"/>
+    <auth:candidate name="Austin, David"  id="AD0004"/>
+    <auth:candidate name="Apperson, David"  id="AD0005"/>
+<auth:candidate name="Adams, David"  id="AD0006"/>
+<auth:candidate name="Appleton, Daniel"  id="AD0008"/>
+<auth:candidate name="Anderson, D."  id="AD0009"/>
+<auth:candidate name="Ashby, Daniel"  id="AD0010"/>
+<auth:candidate name="Aime, Dejean"  id="AD0011"/>
+<auth:candidate name="Ayers, David"  id="AD0012"/>
+<auth:candidate name="Austin, David"  id="AD0013"/>
+<auth:candidate name="Andrus, David I."  id="AD0014"/>
+<auth:candidate name="Avery, Daniel"  id="AD0015"/>
+<auth:candidate name="Andrews, David J."  id="AD0016"/>
+    <auth:candidate name="Allen, David"  id="AD0017"/>
+    <auth:candidate name="Armour, David"  id="AD0018"/>
+<auth:candidate name="Arnold, Dutee"  id="AD0019"/>
+<auth:candidate name="Arne, David, Jr."  id="AD0024"/>
+<auth:candidate name="Allen, Daniel B."  id="AD0026"/>
+<auth:candidate name="Abbott, David"  id="AD0027"/>
+<auth:candidate name="Ayres, Daniel"  id="AD0028"/>
+<auth:candidate name="Aurandt, Daniel"  id="AD0030"/>
+    <auth:candidate name="Acheson, David"  id="AD0032"/>
+    <auth:candidate name="Arthur, David"  id="AD0033"/>
+<auth:candidate name="Abraham, David"  id="AD0037"/>
+<auth:candidate name="Aldrich, David"  id="AD0039"/>
+<auth:candidate name="Acuff, David"  id="AD0040"/>
+    <auth:candidate name="Anderson, David"  id="AD0042"/>
+    <auth:candidate name="Arnell, David R."  id="AD0043"/>
+<auth:candidate name="Adams, David"  id="AD0044"/>
+<auth:candidate name="Allen, Daniel A."  id="AD0045"/>
+    <auth:candidate name="Armstrong, David"  id="AD0046"/>
+    <auth:candidate name="Abbe, Elisha"  id="AE0000"/>
+    <auth:candidate name="Allen, Elisha"  id="AE0001"/>
+    <auth:candidate name="Ayres, Ebenezer"  id="AE0002"/>
+    <auth:candidate name="Adams, Elijah"  id="AE0003"/>
+    <auth:candidate name="Atwater, Elihu"  id="AE0004"/>
+    <auth:candidate name="Adams, Elijah A."  id="AE0005"/>
+    <auth:candidate name="Asquith, Edward"  id="AE0006"/>
+    <auth:candidate name="Alexander, Elias"  id="AE0007"/>
+    <auth:candidate name="Alexander, Evan"  id="AE0008"/>
+    <auth:candidate name="Allis, Elisha"  id="AE0009"/>
+    <auth:candidate name="Abach, Ezah"  id="AE0010"/>
+<auth:candidate name="Allen, Edward"  id="AE0013"/>
+<auth:candidate name="Andrews, Ebenezer T."  id="AE0014"/>
+<auth:candidate name="Abbot, Edmund"  id="AE0015"/>
+<auth:candidate name="Ayers, Ezekiel"  id="AE0017"/>
+<auth:candidate name="Adams, Evi"  id="AE0018"/>
+<auth:candidate name="Adams, Ellis"  id="AE0019"/>
+<auth:candidate name="Andrews, Elnathan"  id="AE0020"/>
+<auth:candidate name="Arnold, Elisha"  id="AE0021"/>
+<auth:candidate name="Avery, Elias"  id="AE0022"/>
+<auth:candidate name="Atkinson, Edward"  id="AE0023"/>
+<auth:candidate name="Alexander, Evan"  id="AE0024"/>
+<auth:candidate name="Alexander, Elias"  id="AE0025"/>
+<auth:candidate name="Adams, E"  id="AE0026"/>
+<auth:candidate name="Anderson, Enoch"  id="AE0027"/>
+<auth:candidate name="Anderson, Eliakian"  id="AE0028"/>
+    <auth:candidate name="Adams, Elijah"  id="AE0029"/>
+    <auth:candidate name="Allen, Ebenezer N."  id="AE0030"/>
+<auth:candidate name="Allen, Ezekiel"  id="AE0033"/>
+<auth:candidate name="Anderson, Edward"  id="AE0034"/>
+<auth:candidate name="Ambler, Edward"  id="AE0036"/>
+<auth:candidate name="Anderson, Ezekial"  id="AE0037"/>
+<auth:candidate name="Anderson, Ezekial"  id="AE0040"/>
+    <auth:candidate name="Armstrong, Edward"  id="AE0041"/>
+    <auth:candidate name="Adams, Francis L."  id="AF0000"/>
+    <auth:candidate name="Armstrong, Francis W."  id="AF0001"/>
+    <auth:candidate name="Anderson, Francis"  id="AF0002"/>
+    <auth:candidate name="Arnaud, Felix"  id="AF0003"/>
+    <auth:candidate name="Ames, Fisher"  id="AF0004"/>
+<auth:candidate name="Adams, Francis"  id="AF0007"/>
+<auth:candidate name="Axe, Frederick"  id="AF0008"/>
+<auth:candidate name="Anose, Francisco"  id="AF0009"/>
+    <auth:candidate name="Arthur, Friday"  id="AF0010"/>
+    <auth:candidate name="Ayres, Frazee"  id="AF0011"/>
+<auth:candidate name="Armistead, Francis M."  id="AF0012"/>
+    <auth:candidate name="Allen, George"  id="AG0000"/>
+    <auth:candidate name="Alston, Gideon, Junior"  id="AG0001"/>
+    <auth:candidate name="Anderson, George W."  id="AG0002"/>
+    <auth:candidate name="Adams, George"  id="AG0003"/>
+    <auth:candidate name="Armstrong, George"  id="AG0004"/>
+    <auth:candidate name="Adams, George"  id="AG0005"/>
+    <auth:candidate name="Alexander, George"  id="AG0007"/>
+    <auth:candidate name="Ackerman, Garrett"  id="AG0008"/>
+    <auth:candidate name="Andrews, George"  id="AG0009"/>
+    <auth:candidate name="Anderson, George"  id="AG0010"/>
+    <auth:candidate name="Alexander, George"  id="AG0011"/>
+    <auth:candidate name="Aleis, Gideon"  id="AG0012"/>
+    <auth:candidate name="Adams, George"  id="AG0013"/>
+<auth:candidate name="Ackerson, Garrett"  id="AG0021"/>
+<auth:candidate name="Abeel, Garret"  id="AG0024"/>
+<auth:candidate name="Andrus, George"  id="AG0026"/>
+<auth:candidate name="Alston, Gideon"  id="AG0028"/>
+<auth:candidate name="Arrington, G."  id="AG0030"/>
+<auth:candidate name="Adams, George"  id="AG0031"/>
+<auth:candidate name="Acker, George"  id="AG0032"/>
+<auth:candidate name="Anderson, George"  id="AG0039"/>
+<auth:candidate name="Armstrong, George"  id="AG0040"/>
+<auth:candidate name="Aurand, George"  id="AG0041"/>
+<auth:candidate name="Alexander, Gerard"  id="AG0042"/>
+<auth:candidate name="Armistead, Gill"  id="AG0043"/>
+    <auth:candidate name="Allen, George H."  id="AG0044"/>
+    <auth:candidate name="Armprester, Henry"  id="AH0000"/>
+    <auth:candidate name="Allison, Henry"  id="AH0001"/>
+    <auth:candidate name="Ashton, Henry"  id="AH0002"/>
+    <auth:candidate name="Almy, Holder"  id="AH0003"/>
+    <auth:candidate name="Anderson, Hezekiah R."  id="AH0004"/>
+    <auth:candidate name="Aukeny, Henry"  id="AH0005"/>
+    <auth:candidate name="Allison, Hugh"  id="AH0006"/>
+    <auth:candidate name="Alexander, Hugh"  id="AH0007"/>
+    <auth:candidate name="Ashley, Henry"  id="AH0008"/>
+    <auth:candidate name="Allen, Horace"  id="AH0009"/>
+    <auth:candidate name="Abrams, Henry"  id="AH0010"/>
+    <auth:candidate name="Alexander, Hugh"  id="AH0011"/>
+    <auth:candidate name="Andrews, Humphrey"  id="AH0012"/>
+    <auth:candidate name="Ashlen, Henry"  id="AH0013"/>
+<auth:candidate name="Allshouse, Henry"  id="AH0014"/>
+<auth:candidate name="Albright, Henry"  id="AH0017"/>
+<auth:candidate name="Andrews, Hugh"  id="AH0018"/>
+    <auth:candidate name="Adams, Henry"  id="AH0020"/>
+    <auth:candidate name="Axtell, Henry, Jr."  id="AH0021"/>
+    <auth:candidate name="Alward, Henry"  id="AH0025"/>
+    <auth:candidate name="Allen, Henry"  id="AH0026"/>
+<auth:candidate name="Ankeny, Henry"  id="AH0027"/>
+<auth:candidate name="Allen, Herman"  id="AH0032"/>
+<auth:candidate name="Armstead, Henry"  id="AH0036"/>
+    <auth:candidate name="Allen, Hezekiah P."  id="AH0037"/>
+    <auth:candidate name="Abrahams, Isaac"  id="AI0000"/>
+    <auth:candidate name="Adams, Isaac M."  id="AI0001"/>
+    <auth:candidate name="Atkinson, Isaac"  id="AI0002"/>
+    <auth:candidate name="Avery, Isaac"  id="AI0003"/>
+    <auth:candidate name="Armfield, Isaac"  id="AI0004"/>
+<auth:candidate name="Adams, Isaac"  id="AI0007"/>
+<auth:candidate name="Appleton, Isaac"  id="AI0008"/>
+<auth:candidate name="Avery, I. T."  id="AI0009"/>
+<auth:candidate name="Adams, Isaac"  id="AI0010"/>
+<auth:candidate name="Anderson, Isaac"  id="AI0012"/>
+<auth:candidate name="Adams, Isaac"  id="AI0013"/>
+<auth:candidate name="Ankeny, Isaac"  id="AI0022"/>
+<auth:candidate name="Allen, Isaac"  id="AI0023"/>
+<auth:candidate name="Allen, Ira"  id="AI0025"/>
+    <auth:candidate name="Avery, Isaac"  id="AI0028"/>
+    <auth:candidate name="Alston, Joseph J."  id="AJ0000"/>
+    <auth:candidate name="Aldrich, Job"  id="AJ0001"/>
+    <auth:candidate name="Acklin, Joseph"  id="AJ0002"/>
+    <auth:candidate name="Abbot, Jacob"  id="AJ0003"/>
+    <auth:candidate name="Abercrombie, James"  id="AJ0004"/>
+    <auth:candidate name="Alston, J. J."  id="AJ0005"/>
+    <auth:candidate name="Allen, John"  id="AJ0006"/>
+    <auth:candidate name="Alexander, James"  id="AJ0007"/>
+    <auth:candidate name="Allen, Joseph"  id="AJ0008"/>
+    <auth:candidate name="Amis, Joseph"  id="AJ0009"/>
+    <auth:candidate name="Arnold, James"  id="AJ0010"/>
+    <auth:candidate name="Adams, Joseph"  id="AJ0011"/>
+    <auth:candidate name="Armstrong, John"  id="AJ0012"/>
+    <auth:candidate name="Atkinson, John"  id="AJ0013"/>
+    <auth:candidate name="Avery, Jas."  id="AJ0014"/>
+    <auth:candidate name="Armstrong, James"  id="AJ0015"/>
+    <auth:candidate name="Adams, John"  id="AJ0020"/>
+    <auth:candidate name="Alexander, James"  id="AJ0021"/>
+    <auth:candidate name="Arndt, James"  id="AJ0022"/>
+    <auth:candidate name="Allen, John"  id="AJ0023"/>
+    <auth:candidate name="Allison, James"  id="AJ0024"/>
+    <auth:candidate name="Anderson, John"  id="AJ0025"/>
+    <auth:candidate name="Aimmins, John"  id="AJ0026"/>
+    <auth:candidate name="Appling, John"  id="AJ0027"/>
+    <auth:candidate name="Allen, John"  id="AJ0028"/>
+    <auth:candidate name="Abbott, Joel"  id="AJ0029"/>
+    <auth:candidate name="Adams, John"  id="AJ0030"/>
+    <auth:candidate name="Ayers, Jacob"  id="AJ0031"/>
+    <auth:candidate name="Ash, John H."  id="AJ0032"/>
+    <auth:candidate name="Alexander, James"  id="AJ0033"/>
+    <auth:candidate name="Alston, Joseph W."  id="AJ0034"/>
+    <auth:candidate name="Ambler, John"  id="AJ0035"/>
+<auth:candidate name="Abercrombie, John"  id="AJ0036"/>
+<auth:candidate name="Abraham, J."  id="AJ0037"/>
+<auth:candidate name="Anderson, John"  id="AJ0039"/>
+<auth:candidate name="Allen, Jason"  id="AJ0040"/>
+<auth:candidate name="Allen, John"  id="AJ0041"/>
+<auth:candidate name="Allen, James"  id="AJ0042"/>
+<auth:candidate name="Adams, John Quincy"  id="AJ0043"/>
+<auth:candidate name="Allen, John"  id="AJ0044"/>
+<auth:candidate name="Adams, Joseph"  id="AJ0045"/>
+<auth:candidate name="Allen, John"  id="AJ0046"/>
+<auth:candidate name="Adair, John"  id="AJ0047"/>
+<auth:candidate name="Ayer, James, Jr."  id="AJ0048"/>
+    <auth:candidate name="Allen, John"  id="AJ0049"/>
+    <auth:candidate name="Adams, John"  id="AJ0050"/>
+<auth:candidate name="Allen, John"  id="AJ0062"/>
+    <auth:candidate name="Arnold, John"  id="AJ0063"/>
+    <auth:candidate name="Averill, James"  id="AJ0064"/>
+<auth:candidate name="Alexander, John R."  id="AJ0070"/>
+<auth:candidate name="Anderson, James"  id="AJ0071"/>
+<auth:candidate name="Allen, John J."  id="AJ0072"/>
+<auth:candidate name="Abel, Jesse"  id="AJ0073"/>
+<auth:candidate name="Allen, James"  id="AJ0074"/>
+<auth:candidate name="Archer, John"  id="AJ0075"/>
+<auth:candidate name="Adams, John"  id="AJ0076"/>
+<auth:candidate name="Ashmead, John"  id="AJ0078"/>
+<auth:candidate name="Able, John"  id="AJ0079"/>
+<auth:candidate name="Alexander, James"  id="AJ0083"/>
+<auth:candidate name="Abell, John S."  id="AJ0085"/>
+<auth:candidate name="Allender, Joseph"  id="AJ0088"/>
+<auth:candidate name="Armstrong, James"  id="AJ0093"/>
+<auth:candidate name="Anderson, James, Jr."  id="AJ0095"/>
+<auth:candidate name="Anderson, John W."  id="AJ0096"/>
+<auth:candidate name="Avery, John"  id="AJ0097"/>
+<auth:candidate name="Austin, Jonathan L."  id="AJ0102"/>
+<auth:candidate name="Athrop, John T."  id="AJ0103"/>
+    <auth:candidate name="Allen, Jonathan"  id="AJ0104"/>
+    <auth:candidate name="Archer, John"  id="AJ0105"/>
+    <auth:candidate name="Ashley, John"  id="AJ0106"/>
+    <auth:candidate name="Ashmore, John"  id="AJ0107"/>
+<auth:candidate name="Apthorp, John J."  id="AJ0109"/>
+<auth:candidate name="Ashton, Jacob"  id="AJ0110"/>
+<auth:candidate name="Allen, Joseph"  id="AJ0113"/>
+<auth:candidate name="Atwell, J. D."  id="AJ0115"/>
+<auth:candidate name="Archer, Jonathan"  id="AJ0117"/>
+<auth:candidate name="Adams, Joseph"  id="AJ0120"/>
+<auth:candidate name="Allen, John"  id="AJ0139"/>
+    <auth:candidate name="Allen, John E."  id="AJ0140"/>
+    <auth:candidate name="Annin, John"  id="AJ0141"/>
+<auth:candidate name="Alcorn, James"  id="AJ0142"/>
+    <auth:candidate name="Adams, Josiah"  id="AJ0148"/>
+    <auth:candidate name="Adair, John"  id="AJ0149"/>
+<auth:candidate name="Archer, John"  id="AJ0150"/>
+    <auth:candidate name="Adams, Joseph"  id="AJ0151"/>
+    <auth:candidate name="Armstrong, J."  id="AJ0152"/>
+<auth:candidate name="Armstrong, James F."  id="AJ0153"/>
+    <auth:candidate name="Anderson, Joshua"  id="AJ0154"/>
+    <auth:candidate name="Armstrong, John"  id="AJ0155"/>
+<auth:candidate name="Anderson, John"  id="AJ0156"/>
+    <auth:candidate name="Ackerman, James"  id="AJ0157"/>
+    <auth:candidate name="Anderson, James, Jr."  id="AJ0158"/>
+    <auth:candidate name="Anderson, Joseph"  id="AJ0159"/>
+<auth:candidate name="Anderson, Jacob"  id="AJ0160"/>
+<auth:candidate name="Anderson, John L."  id="AJ0162"/>
+<auth:candidate name="Annin, John"  id="AJ0163"/>
+<auth:candidate name="Anderson, James"  id="AJ0168"/>
+<auth:candidate name="Aryes, Jacob"  id="AJ0172"/>
+<auth:candidate name="Annin, Joseph"  id="AJ0174"/>
+<auth:candidate name="Andrews, James W."  id="AJ0180"/>
+<auth:candidate name="Akins, Jonathan"  id="AJ0181"/>
+<auth:candidate name="Addison, John"  id="AJ0184"/>
+<auth:candidate name="Armstrong, John"  id="AJ0193"/>
+<auth:candidate name="Annin, Joseph"  id="AJ0197"/>
+<auth:candidate name="Allen, James"  id="AJ0205"/>
+<auth:candidate name="Adams, John"  id="AJ0206"/>
+<auth:candidate name="Avery, John H."  id="AJ0207"/>
+<auth:candidate name="Anthon, John"  id="AJ0208"/>
+<auth:candidate name="Anderson, Jeremiah"  id="AJ0211"/>
+<auth:candidate name="Ashe, John B."  id="AJ0212"/>
+<auth:candidate name="Alexander, Joab"  id="AJ0215"/>
+<auth:candidate name="Allen, James"  id="AJ0216"/>
+<auth:candidate name="Arrington, John"  id="AJ0217"/>
+<auth:candidate name="Anthony, James"  id="AJ0220"/>
+<auth:candidate name="Alston, John"  id="AJ0222"/>
+<auth:candidate name="Andrews, John"  id="AJ0223"/>
+<auth:candidate name="Abernathy, John"  id="AJ0224"/>
+<auth:candidate name="Adams, Jesse"  id="AJ0225"/>
+<auth:candidate name="Arrington, J., Jr."  id="AJ0226"/>
+<auth:candidate name="Allen, John"  id="AJ0228"/>
+<auth:candidate name="Aderhold, Jacob"  id="AJ0230"/>
+<auth:candidate name="Alexander, James"  id="AJ0235"/>
+<auth:candidate name="Armstrong, James"  id="AJ0236"/>
+<auth:candidate name="Ayers, John"  id="AJ0237"/>
+<auth:candidate name="Adams, John"  id="AJ0238"/>
+<auth:candidate name="Alexander, John"  id="AJ0239"/>
+    <auth:candidate name="Armstrong, James"  id="AJ0242"/>
+    <auth:candidate name="Adams, John"  id="AJ0247"/>
+<auth:candidate name="Anderson, Jacob"  id="AJ0248"/>
+<auth:candidate name="Arndt, John"  id="AJ0249"/>
+<auth:candidate name="Ash, James"  id="AJ0250"/>
+<auth:candidate name="Allison, John"  id="AJ0252"/>
+<auth:candidate name="Alter, Jacob, Jr."  id="AJ0253"/>
+<auth:candidate name="Anderson, Joshua"  id="AJ0259"/>
+<auth:candidate name="Arndt, John"  id="AJ0261"/>
+<auth:candidate name="Arnold, Jonathan"  id="AJ0263"/>
+<auth:candidate name="Allen, James"  id="AJ0266"/>
+<auth:candidate name="Alexander, James"  id="AJ0268"/>
+<auth:candidate name="Arnodt, John"  id="AJ0269"/>
+<auth:candidate name="Ash, John"  id="AJ0270"/>
+<auth:candidate name="Anerwalt, John"  id="AJ0272"/>
+<auth:candidate name="Agnew, John"  id="AJ0275"/>
+    <auth:candidate name="Ashmead, James"  id="AJ0276"/>
+    <auth:candidate name="Atwater, Joshua"  id="AJ0277"/>
+    <auth:candidate name="Ashmead, John"  id="AJ0280"/>
+    <auth:candidate name="Allen, John"  id="AJ0281"/>
+<auth:candidate name="Andrews, Joseph"  id="AJ0282"/>
+<auth:candidate name="Armor, John"  id="AJ0283"/>
+<auth:candidate name="Anderson, James"  id="AJ0284"/>
+<auth:candidate name="Algeo, John"  id="AJ0285"/>
+<auth:candidate name="Adams, John"  id="AJ0287"/>
+<auth:candidate name="Ashman, John"  id="AJ0288"/>
+<auth:candidate name="Alexander, John"  id="AJ0289"/>
+<auth:candidate name="Arendt, John"  id="AJ0290"/>
+    <auth:candidate name="Arrison, Jeptha"  id="AJ0292"/>
+    <auth:candidate name="Allen, Jesse"  id="AJ0293"/>
+<auth:candidate name="Allison, John"  id="AJ0294"/>
+    <auth:candidate name="Arndt, John P."  id="AJ0295"/>
+    <auth:candidate name="Adams, John"  id="AJ0296"/>
+    <auth:candidate name="Anderson, John"  id="AJ0297"/>
+<auth:candidate name="Ash, John"  id="AJ0298"/>
+<auth:candidate name="Arinst, John"  id="AJ0299"/>
+<auth:candidate name="Auginbaugh, John"  id="AJ0301"/>
+<auth:candidate name="Alexander, John"  id="AJ0302"/>
+<auth:candidate name="Albert, John"  id="AJ0305"/>
+<auth:candidate name="Adolph, Joseph"  id="AJ0306"/>
+<auth:candidate name="Ankrim, James"  id="AJ0308"/>
+<auth:candidate name="Adolph, John"  id="AJ0309"/>
+<auth:candidate name="Anderson, John"  id="AJ0310"/>
+<auth:candidate name="Alexander, James"  id="AJ0312"/>
+<auth:candidate name="Albright, Jacob"  id="AJ0313"/>
+    <auth:candidate name="Allen, Joshua"  id="AJ0314"/>
+    <auth:candidate name="Athinson, Joseph"  id="AJ0315"/>
+<auth:candidate name="Ankney, Jacob"  id="AJ0316"/>
+    <auth:candidate name="Anderson, James"  id="AJ0317"/>
+    <auth:candidate name="Armstrong, Jacob"  id="AJ0318"/>
+<auth:candidate name="Anderson, J."  id="AJ0319"/>
+<auth:candidate name="Aitken, J. W."  id="AJ0320"/>
+<auth:candidate name="Adair, John S."  id="AJ0321"/>
+<auth:candidate name="Avery, Jonas B."  id="AJ0322"/>
+<auth:candidate name="Adams, Jesse"  id="AJ0324"/>
+<auth:candidate name="Akin, James"  id="AJ0325"/>
+<auth:candidate name="Angue, John, Jr."  id="AJ0326"/>
+<auth:candidate name="Andrews, James"  id="AJ0328"/>
+<auth:candidate name="Appel, John"  id="AJ0331"/>
+<auth:candidate name="Allison, James"  id="AJ0332"/>
+<auth:candidate name="Ashmead, John"  id="AJ0333"/>
+<auth:candidate name="Alexander, John B."  id="AJ0334"/>
+<auth:candidate name="Algair, Joseph"  id="AJ0337"/>
+<auth:candidate name="Allen, John"  id="AJ0341"/>
+<auth:candidate name="Aldrich, James"  id="AJ0342"/>
+<auth:candidate name="Anderson, Jar."  id="AJ0346"/>
+<auth:candidate name="Allison, John"  id="AJ0347"/>
+<auth:candidate name="Alston, Joseph"  id="AJ0348"/>
+<auth:candidate name="Allston, John"  id="AJ0350"/>
+    <auth:candidate name="Appleby, James P."  id="AJ0351"/>
+    <auth:candidate name="Ambler, Jacob"  id="AJ0352"/>
+<auth:candidate name="Alston, Joseph"  id="AJ0353"/>
+<auth:candidate name="Allston, Josiah William"  id="AJ0354"/>
+<auth:candidate name="Allison, Jacob"  id="AJ0355"/>
+<auth:candidate name="Alston, Joseph"  id="AJ0360"/>
+<auth:candidate name="Ancrum, James Hasell"  id="AJ0361"/>
+<auth:candidate name="Allen, John C."  id="AJ0363"/>
+<auth:candidate name="Axson, Jacob"  id="AJ0364"/>
+<auth:candidate name="Anderson, James"  id="AJ0365"/>
+<auth:candidate name="Allison, James H."  id="AJ0366"/>
+<auth:candidate name="Allen, Joseph"  id="AJ0367"/>
+<auth:candidate name="Ashe, J."  id="AJ0368"/>
+<auth:candidate name="Anderson, Joseph"  id="AJ0370"/>
+<auth:candidate name="Anderson, James"  id="AJ0377"/>
+<auth:candidate name="Amis, James"  id="AJ0378"/>
+<auth:candidate name="Arnold, Jonathan"  id="AJ0380"/>
+<auth:candidate name="Adams, John"  id="AJ0382"/>
+<auth:candidate name="Allen, James"  id="AJ0383"/>
+<auth:candidate name="Allen, John"  id="AJ0386"/>
+<auth:candidate name="Anderson, John"  id="AJ0387"/>
+<auth:candidate name="Anderson, James"  id="AJ0390"/>
+<auth:candidate name="Ashton, John W."  id="AJ0391"/>
+<auth:candidate name="Armstrong, John"  id="AJ0392"/>
+<auth:candidate name="Aderson, Joseph"  id="AJ0393"/>
+<auth:candidate name="Armistead, John"  id="AJ0394"/>
+<auth:candidate name="Adams, Joseph P."  id="AJ0395"/>
+    <auth:candidate name="Alderson, Joseph"  id="AJ0396"/>
+    <auth:candidate name="Armstrong, John"  id="AJ0397"/>
+<auth:candidate name="Aspill, Joseph"  id="AJ0398"/>
+    <auth:candidate name="Armer, James"  id="AJ0399"/>
+    <auth:candidate name="Adcock, James"  id="AJ0400"/>
+    <auth:candidate name="Atkinson, Joseph"  id="AJ0944"/>
+    <auth:candidate name="Adger, James"  id="AJ5542"/>
+<auth:candidate name="Anderson, Kenneth"  id="AK0000"/>
+    <auth:candidate name="Anthon, Kae"  id="AK0002"/>
+    <auth:candidate name="Adams, Levi"  id="AL0000"/>
+    <auth:candidate name="Allard, Louis"  id="AL0001"/>
+    <auth:candidate name="Axton, Levi C."  id="AL0002"/>
+    <auth:candidate name="Ackerman, Lawrence A."  id="AL0003"/>
+    <auth:candidate name="Adams, Levi"  id="AL0004"/>
+    <auth:candidate name="Albritten, Luke"  id="AL0005"/>
+<auth:candidate name="Adams, Littleton"  id="AL0006"/>
+<auth:candidate name="Aikman, Levi"  id="AL0007"/>
+<auth:candidate name="Ayers, Lewis M."  id="AL0008"/>
+    <auth:candidate name="Alston, Lemuel J."  id="AL0009"/>
+    <auth:candidate name="Alden, Mason Fitz"  id="AM0000"/>
+    <auth:candidate name="Andry, M."  id="AM0001"/>
+    <auth:candidate name="Armstrong, Maxwell"  id="AM0002"/>
+<auth:candidate name="Adgate, Matthew"  id="AM0007"/>
+<auth:candidate name="Austin, Moses"  id="AM0011"/>
+<auth:candidate name="Ayers, Matson"  id="AM0014"/>
+<auth:candidate name="Ayers, Michael"  id="AM0015"/>
+<auth:candidate name="App, Michael"  id="AM0016"/>
+<auth:candidate name="Allison, Matthew"  id="AM0017"/>
+    <auth:candidate name="Ash, Michael"  id="AM0018"/>
+    <auth:candidate name="Atwater, Moses"  id="AM0019"/>
+<auth:candidate name="Anderson, Matthew"  id="AM0022"/>
+    <auth:candidate name="Alexander, Mark"  id="AM0023"/>
+    <auth:candidate name="Aldrich, Nathan"  id="AN0000"/>
+    <auth:candidate name="Austin, Nathaniel"  id="AN0001"/>
+    <auth:candidate name="Arrowsmith, Nicholas"  id="AN0002"/>
+    <auth:candidate name="Aspenwall, Nathaniel"  id="AN0003"/>
+    <auth:candidate name="Allen, Nathaniel"  id="AN0004"/>
+<auth:candidate name="Alexander, Nathaniel"  id="AN0006"/>
+<auth:candidate name="Anderson, Nathan"  id="AN0013"/>
+<auth:candidate name="Arnold, Nicholas"  id="AN0014"/>
+<auth:candidate name="Allen, Nathaniel"  id="AN0015"/>
+    <auth:candidate name="Armbruster, Nicholas"  id="AN0016"/>
+    <auth:candidate name="Alexander, Nathaniel"  id="AN0007"/>
+<auth:candidate name="Anderson, Nelson"  id="AN0018"/>
+    <auth:candidate name="Allen, Newman"  id="AN0020"/>
+    <auth:candidate name="Alison, Oliver"  id="AO0000"/>
+<auth:candidate name="Abney, Paul C."  id="AP0001"/>
+<auth:candidate name="Allen, Peter"  id="AP0002"/>
+<auth:candidate name="Adams, Peter B."  id="AP0005"/>
+<auth:candidate name="Amidon, Phillip"  id="AP0006"/>
+    <auth:candidate name="Alling, Prudden"  id="AP0007"/>
+    <auth:candidate name="Adams, Pliney"  id="AP0008"/>
+<auth:candidate name="Adams, Peter C."  id="AP0012"/>
+<auth:candidate name="Adams, Platt"  id="AP0015"/>
+<auth:candidate name="Adams, Parmenio"  id="AP0018"/>
+<auth:candidate name="Apple, Peter"  id="AP0020"/>
+<auth:candidate name="Albright, Philip"  id="AP0021"/>
+    <auth:candidate name="Apple, Paul"  id="AP0022"/>
+    <auth:candidate name="Atkinson, Josiah"  id="AP0023"/>
+<auth:candidate name="Aurandt, P."  id="AP0025"/>
+<auth:candidate name="Ash, Phineas"  id="AP0026"/>
+<auth:candidate name="Andrews, Philip"  id="AP0027"/>
+    <auth:candidate name="Arnold, Peleg"  id="AP0028"/>
+    <auth:candidate name="Albertson, Peter"  id="AP0029"/>
+    <auth:candidate name="Arthur, Peter S."  id="AP0032"/>
+    <auth:candidate name="Arcularius, Philip J."  id="AP0033"/>
+<auth:candidate name="Aylett, Philip, Jr."  id="AP0035"/>
+<auth:candidate name="Anderson, Quinton"  id="AQ0000"/>
+    <auth:candidate name="Atkins, Q.F."  id="AQ0002"/>
+    <auth:candidate name="Armstrong, Robert"  id="AR0000"/>
+    <auth:candidate name="Alexander, Robert"  id="AR0001"/>
+    <auth:candidate name="Allen, Richard"  id="AR0002"/>
+    <auth:candidate name="Anderson, Richard C., Jr."  id="AR0003"/>
+    <auth:candidate name="Atmore, Ralph"  id="AR0004"/>
+    <auth:candidate name="Alexander, Reuben"  id="AR0005"/>
+    <auth:candidate name="Andrews, Robert"  id="AR0006"/>
+<auth:candidate name="Amos, Robert, Jr."  id="AR0011"/>
+<auth:candidate name="Anderson, Reuben"  id="AR0012"/>
+<auth:candidate name="Archer, Robert H."  id="AR0016"/>
+<auth:candidate name="Alcock, Robert"  id="AR0021"/>
+<auth:candidate name="Ayer, Richard H."  id="AR0022"/>
+<auth:candidate name="Arnold, Robert"  id="AR0024"/>
+<auth:candidate name="Atwater, Russell"  id="AR0025"/>
+    <auth:candidate name="Atkinson, Richard"  id="AR0028"/>
+    <auth:candidate name="Amos, Robert"  id="AR0029"/>
+<auth:candidate name="Arrington, R."  id="AR0031"/>
+<auth:candidate name="Abrams, Reuben"  id="AR0033"/>
+<auth:candidate name="Ayres, Richard"  id="AR0034"/>
+<auth:candidate name="Anderson, Robert"  id="AR0035"/>
+<auth:candidate name="Armstrong, Robert"  id="AR0036"/>
+<auth:candidate name="Avery, Richard"  id="AR0041"/>
+<auth:candidate name="Anderson, Robert"  id="AR0042"/>
+<auth:candidate name="Alden, Roger"  id="AR0043"/>
+<auth:candidate name="Andrews, Robert"  id="AR0044"/>
+<auth:candidate name="Auchnuty, Robert"  id="AR0049"/>
+<auth:candidate name="Alexander, Robert"  id="AR0050"/>
+<auth:candidate name="Allison, Robert"  id="AR0051"/>
+    <auth:candidate name="Anderson, Robert"  id="AR0052"/>
+    <auth:candidate name="Airs, Robert"  id="AR0053"/>
+<auth:candidate name="Anderson, Robert"  id="AR0054"/>
+<auth:candidate name="Anderson, Robert"  id="AR0055"/>
+    <auth:candidate name="Alderman, Richard"  id="AR0057"/>
+<auth:candidate name="Arthur, Reuben"  id="AR0058"/>
+<auth:candidate name="Armstrong, Robert"  id="AR0059"/>
+<auth:candidate name="Allen, Robert"  id="AR0060"/>
+<auth:candidate name="Atwater, Reuben"  id="AR0061"/>
+<auth:candidate name="Armstead, R. B."  id="AR0062"/>
+<auth:candidate name="Anderson, Robert"  id="AR0063"/>
+    <auth:candidate name="Allen, Robert"  id="AR0064"/>
+    <auth:candidate name="Abercrombie, Robert"  id="AR0065"/>
+    <auth:candidate name="Allen, Robert"  id="AR0066"/>
+    <auth:candidate name="Alderman, Robert"  id="AR0067"/>
+    <auth:candidate name="Anderson, Robert"  id="AR8775"/>
+    <auth:candidate name="Austin, Stephen F."  id="AS0000"/>
+    <auth:candidate name="Abbe, Shubael"  id="AS0001"/>
+    <auth:candidate name="Arnold, Stephen"  id="AS0002"/>
+    <auth:candidate name="Alston, Stephen"  id="AS0003"/>
+    <auth:candidate name="Alexander, Samuel"  id="AS0004"/>
+    <auth:candidate name="Albers, Solomon G."  id="AS0005"/>
+    <auth:candidate name="Adams, Simon"  id="AS0006"/>
+    <auth:candidate name="Ayres, Samuel"  id="AS0007"/>
+    <auth:candidate name="Atkinson, Sherwood W."  id="AS0008"/>
+    <auth:candidate name="Abbot, Samuel"  id="AS0009"/>
+    <auth:candidate name="Abel, Samuel"  id="AS0010"/>
+    <auth:candidate name="Alden, Seth"  id="AS0011"/>
+    <auth:candidate name="Allen, Solomon"  id="AS0012"/>
+    <auth:candidate name="Archer, Stevenson"  id="AS0013"/>
+    <auth:candidate name="Augustus, Samuel"  id="AS0014"/>
+    <auth:candidate name="Allen, Samuel"  id="AS0015"/>
+    <auth:candidate name="Arnwine, Samuel"  id="AS0016"/>
+    <auth:candidate name="Ashe, Samuel P."  id="AS0017"/>
+    <auth:candidate name="Anderson, S."  id="AS0018"/>
+    <auth:candidate name="Arnold, Samuel G."  id="AS0019"/>
+<auth:candidate name="Adams, Samuel"  id="AS0022"/>
+<auth:candidate name="Allen, Simeon"  id="AS0032"/>
+<auth:candidate name="Austin, Stephen T."  id="AS0033"/>
+<auth:candidate name="Arniwine, Samuel"  id="AS0034"/>
+<auth:candidate name="Allen, Samuel F."  id="AS0035"/>
+<auth:candidate name="Allen, Silas"  id="AS0037"/>
+<auth:candidate name="Ashe, Samuel"  id="AS0038"/>
+<auth:candidate name="Alston, Samuel"  id="AS0039"/>
+<auth:candidate name="Archer, Samuel"  id="AS0044"/>
+<auth:candidate name="Aikens, Samuel"  id="AS0045"/>
+<auth:candidate name="Ashmead, Samuel"  id="AS0046"/>
+<auth:candidate name="Ainsworth, Samuel"  id="AS0047"/>
+<auth:candidate name="Agnew, Samuel"  id="AS0049"/>
+<auth:candidate name="Awl, Samuel"  id="AS0053"/>
+<auth:candidate name="Adams, Samuel"  id="AS0054"/>
+<auth:candidate name="Austin, Shadrach"  id="AS0056"/>
+<auth:candidate name="Archer, Samuel"  id="AS0058"/>
+<auth:candidate name="Anderson, Samuel"  id="AS0059"/>
+<auth:candidate name="Austin, Samuel"  id="AS0060"/>
+<auth:candidate name="Auchmuty, Samuel, Jr."  id="AS0061"/>
+<auth:candidate name="Albright, Solomon"  id="AS0062"/>
+<auth:candidate name="Alexander, S."  id="AS0065"/>
+    <auth:candidate name="Atkinson, Samuel"  id="AS0066"/>
+    <auth:candidate name="Atkinson, Samuel"  id="AS0067"/>
+<auth:candidate name="Anderson, Samuel"  id="AS0071"/>
+<auth:candidate name="Archer, Samuel B."  id="AS0072"/>
+    <auth:candidate name="Arce, Samuel"  id="AS0073"/>
+    <auth:candidate name="Alston, Samuel"  id="AS0744"/>
+    <auth:candidate name="Arnett, Thomas"  id="AT0000"/>
+    <auth:candidate name="Anderson, Thomas"  id="AT0001"/>
+    <auth:candidate name="Anderson, Thomas"  id="AT0002"/>
+    <auth:candidate name="Allen, Tandy"  id="AT0003"/>
+    <auth:candidate name="Anderson, T."  id="AT0004"/>
+    <auth:candidate name="Ayet, Thomas"  id="AT0005"/>
+    <auth:candidate name="Angor, Thomas S."  id="AT0006"/>
+    <auth:candidate name="Ayres, Thomas"  id="AT0007"/>
+    <auth:candidate name="Allen, Thomas"  id="AT0008"/>
+    <auth:candidate name="Addison, Thomas G."  id="AT0009"/>
+    <auth:candidate name="Almy, Tillinghast"  id="AT0010"/>
+    <auth:candidate name="Adams, Thomas"  id="AT0011"/>
+    <auth:candidate name="Allibone, Thomas"  id="AT0012"/>
+<auth:candidate name="Adams, Thomas"  id="AT0016"/>
+<auth:candidate name="Adams, Thomas B."  id="AT0017"/>
+<auth:candidate name="Allen, Thomas"  id="AT0018"/>
+<auth:candidate name="Armstrong, Thomas"  id="AT0019"/>
+<auth:candidate name="Ackley, Thomas"  id="AT0023"/>
+<auth:candidate name="Adams, Truman"  id="AT0026"/>
+<auth:candidate name="Armstrong, Thomas"  id="AT0027"/>
+<auth:candidate name="Alston, Thomas H."  id="AT0029"/>
+<auth:candidate name="Arrinton, Thomas"  id="AT0031"/>
+<auth:candidate name="Abbott, Thomas"  id="AT0032"/>
+<auth:candidate name="Adams, Thomas"  id="AT0034"/>
+    <auth:candidate name="Acheson, Thomas"  id="AT0035"/>
+    <auth:candidate name="Anderson, Thomas"  id="AT0036"/>
+<auth:candidate name="Atkinson, Thomas"  id="AT0037"/>
+    <auth:candidate name="Ashbridge, Thomas"  id="AT0038"/>
+    <auth:candidate name="Allason, Thomas"  id="AT0039"/>
+    <auth:candidate name="Allen, Tunis"  id="AT0040"/>
+<auth:candidate name="Alden, Timothy"  id="AT0042"/>
+<auth:candidate name="Arnold, Thomas"  id="AT0043"/>
+<auth:candidate name="Ashby, Thomas"  id="AT0044"/>
+<auth:candidate name="Anderson, Thomas"  id="AT0045"/>
+<auth:candidate name="Allston, Thomas P."  id="AT0046"/>
+<auth:candidate name="Arnold, T.D."  id="AT0047"/>
+<auth:candidate name="Anderson, Thomas"  id="AT0048"/>
+<auth:candidate name="Amory, Thomas"  id="AT0049"/>
+<auth:candidate name="Anderson, Thomas"  id="AT0050"/>
+    <auth:candidate name="Anderson, Thomas"  id="AT0051"/>
+    <auth:candidate name="Anderson, Thomas"  id="AT4566"/>
+<auth:candidate name="Angier, Unit"  id="AU0001"/>
+    <auth:candidate name="Allen, Vine"  id="AV0000"/>
+    <auth:candidate name="Allen, Valentine"  id="AV0001"/>
+    <auth:candidate name="Atwood, William"  id="AW0000"/>
+    <auth:candidate name="Allen, William O."  id="AW0001"/>
+    <auth:candidate name="Adams, William"  id="AW0002"/>
+    <auth:candidate name="Alaband, William, Sen."  id="AW0003"/>
+    <auth:candidate name="Asquith, William"  id="AW0004"/>
+    <auth:candidate name="Alexander, William"  id="AW0005"/>
+    <auth:candidate name="Alexander, William M."  id="AW0006"/>
+    <auth:candidate name="Alford, William"  id="AW0007"/>
+    <auth:candidate name="Avery, William"  id="AW0008"/>
+    <auth:candidate name="Allen, William B."  id="AW0009"/>
+    <auth:candidate name="Archer, William B."  id="AW0010"/>
+    <auth:candidate name="Abbott, William"  id="AW0011"/>
+    <auth:candidate name="Anderson, W."  id="AW0012"/>
+    <auth:candidate name="Allen, William, Jr."  id="AW0013"/>
+    <auth:candidate name="Aikins, William"  id="AW0014"/>
+    <auth:candidate name="Arnold, William"  id="AW0015"/>
+    <auth:candidate name="Allen, William H."  id="AW0016"/>
+    <auth:candidate name="Adams, William"  id="AW0017"/>
+    <auth:candidate name="Avery, Waightstill"  id="AW0018"/>
+    <auth:candidate name="Allen, W. L."  id="AW0019"/>
+    <auth:candidate name="Alexander, W. S."  id="AW0020"/>
+    <auth:candidate name="Aspinwall, William"  id="AW0021"/>
+    <auth:candidate name="Alford, Warren"  id="AW0022"/>
+    <auth:candidate name="Armstead, Westward"  id="AW0023"/>
+    <auth:candidate name="Ashbridge, William"  id="AW0024"/>
+    <auth:candidate name="Atler, William A."  id="AW0025"/>
+    <auth:candidate name="Alston, William"  id="AW0026"/>
+    <auth:candidate name="Armstrong, William"  id="AW0027"/>
+    <auth:candidate name="Allgood, William"  id="AW0028"/>
+    <auth:candidate name="Ashley, Warren"  id="AW0029"/>
+<auth:candidate name="Austin, William"  id="AW0032"/>
+    <auth:candidate name="Adams, William"  id="AW0033"/>
+    <auth:candidate name="Aspinwall, William, Jr."  id="AW0034"/>
+    <auth:candidate name="Austin, William"  id="AW0035"/>
+    <auth:candidate name="Adams, William M."  id="AW0036"/>
+<auth:candidate name="Ashley, William H."  id="AW0037"/>
+<auth:candidate name="Adams, William W."  id="AW0038"/>
+<auth:candidate name="Atkinson, William K."  id="AW0040"/>
+<auth:candidate name="Armstrong, William"  id="AW0041"/>
+<auth:candidate name="Andrews, William"  id="AW0042"/>
+<auth:candidate name="Adams, W."  id="AW0043"/>
+<auth:candidate name="Aikin, William"  id="AW0044"/>
+<auth:candidate name="Adams, William H."  id="AW0045"/>
+<auth:candidate name="Angel, William G."  id="AW0046"/>
+<auth:candidate name="Alston, Willis"  id="AW0047"/>
+    <auth:candidate name="Arrington, William"  id="AW0048"/>
+    <auth:candidate name="Arnold, William"  id="AW0049"/>
+    <auth:candidate name="Alves, Walter"  id="AW0052"/>
+    <auth:candidate name="Aylesworth, William"  id="AW0053"/>
+    <auth:candidate name="Arnold, Whitlock"  id="AW0059"/>
+    <auth:candidate name="Allison, William"  id="AW0060"/>
+<auth:candidate name="Askew, William"  id="AW0068"/>
+<auth:candidate name="Ayers, William"  id="AW0070"/>
+<auth:candidate name="Alban, William"  id="AW0071"/>
+<auth:candidate name="Alexander, William"  id="AW0072"/>
+<auth:candidate name="Adcock, William"  id="AW0074"/>
+<auth:candidate name="Anderson, William"  id="AW0075"/>
+<auth:candidate name="Alexander, William K."  id="AW0076"/>
+<auth:candidate name="Alexander, William"  id="AW0080"/>
+    <auth:candidate name="Armstrong, William"  id="AW0081"/>
+    <auth:candidate name="Aylett, William"  id="AW0082"/>
+    <auth:candidate name="Alexander, William"  id="AW0083"/>
+    <auth:candidate name="Anderson, William E."  id="AW0084"/>
+<auth:candidate name="Atlee, William P."  id="AW0087"/>
+<auth:candidate name="Alexander, William"  id="AW0091"/>
+<auth:candidate name="Allison, William"  id="AW0092"/>
+<auth:candidate name="Arbuckle, William"  id="AW0094"/>
+<auth:candidate name="Anderson, William"  id="AW0096"/>
+<auth:candidate name="Alexander, William"  id="AW0097"/>
+<auth:candidate name="Allison, William"  id="AW0098"/>
+    <auth:candidate name="Allibone, William, Jr."  id="AW0100"/>
+    <auth:candidate name="Allen, William"  id="AW0101"/>
+<auth:candidate name="Alexander, William"  id="AW0104"/>
+<auth:candidate name="Adams, William"  id="AW0109"/>
+<auth:candidate name="Atlee, William R."  id="AW0111"/>
+<auth:candidate name="Allen, William"  id="AW0117"/>
+<auth:candidate name="Anderson, William"  id="AW0119"/>
+<auth:candidate name="Ayres, William"  id="AW0123"/>
+<auth:candidate name="Audenried, William"  id="AW0124"/>
+<auth:candidate name="Aten, William"  id="AW0126"/>
+<auth:candidate name="Andrews, William"  id="AW0127"/>
+    <auth:candidate name="Atchesson, William"  id="AW0131"/>
+    <auth:candidate name="Adair, W.J."  id="AW0132"/>
+<auth:candidate name="Atlee, William R."  id="AW0133"/>
+<auth:candidate name="Ayers, William"  id="AW0134"/>
+    <auth:candidate name="Anderson, William"  id="AW0137"/>
+    <auth:candidate name="Armistead, West"  id="AW0138"/>
+<auth:candidate name="Anderson, William"  id="AW0142"/>
+<auth:candidate name="Adair, William"  id="AW0143"/>
+<auth:candidate name="Anthony, William"  id="AW0149"/>
+<auth:candidate name="Anderson, William"  id="AW0151"/>
+<auth:candidate name="Allen, West"  id="AW0152"/>
+<auth:candidate name="Arnold, William"  id="AW0153"/>
+<auth:candidate name="Adams, William Weston"  id="AW0154"/>
+<auth:candidate name="Anderson, William"  id="AW0155"/>
+<auth:candidate name="Aiken, William"  id="AW0156"/>
+<auth:candidate name="Anthony, William"  id="AW0162"/>
+<auth:candidate name="Arnold, William"  id="AW0163"/>
+<auth:candidate name="Allen, William"  id="AW0164"/>
+<auth:candidate name="Archer, William S."  id="AW0165"/>
+<auth:candidate name="Armistead, William"  id="AW0168"/>
+<auth:candidate name="Allen, William"  id="AW0170"/>
+<auth:candidate name="Armstrong, William"  id="AW0172"/>
+<auth:candidate name="Abney, William"  id="AW0173"/>
+<auth:candidate name="Anderson, W."  id="AW0182"/>
+<auth:candidate name="Anderson, William"  id="AW0189"/>
+<auth:candidate name="Alliband, William"  id="AW0190"/>
+<auth:candidate name="Armor, William"  id="AW0191"/>
+<auth:candidate name="Alligood, William"  id="AW0192"/>
+<auth:candidate name="Alliband, William"  id="AW0193"/>
+<auth:candidate name="Allen, William"  id="AW0194"/>
+<auth:candidate name="Allen, William C"  id="AW0195"/>
+    <auth:candidate name="Allen, Zachariah"  id="AZ0002"/>
+    <auth:candidate name="Aydelott, Zadock"  id="AZ0003"/>
+    
+</names-authority-list>
