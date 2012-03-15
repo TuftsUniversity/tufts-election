@@ -27,7 +27,7 @@ module Datastreams
             t.candidate {
               t.name(:path=>{:attribute=>"name"}, :index_as=>[:facetable])
               t.candidate_id(:path=>{:attribute=>"name_id"}, :index_as=>[:facetable])
-              t.affiliation(:path=>{:attribute=>"name_id"}, :index_as=>[:facetable])
+              t.affiliation(:path=>{:attribute=>"affiliation"}, :index_as=>[:facetable])
             }
             t.elector {
               t.name(:path=>{:attribute=>"name"}, :index_as=>[:facetable])
