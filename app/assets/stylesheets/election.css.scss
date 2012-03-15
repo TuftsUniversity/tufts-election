@@ -1,3 +1,16 @@
+$gray: #666666;
+$blue: #243E61;
+@mixin text1 {
+  color: $blue;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 12px;
+}
+@mixin text8 {
+  color: $gray;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 14px;
+}
+
 table.election-results-table {
     td {
       min-width: 4em;
@@ -8,10 +21,8 @@ table.election-results-table {
     thead {
       background-color: #ECECDA;
       tr.candidate-row {
+        @include text1;
         border-spacing: 10px;
-        color: #243E61;
-        font-family: Arial,Helvetica,sans-serif;
-        font-size: 12px;
         td {
           font-weight: bold;
         }
@@ -20,17 +31,13 @@ table.election-results-table {
       }
       tr.overview-row {
         td {
-          color: #243E61;
-          font-family: Arial,Helvetica,sans-serif;
-          font-size: 12px;
+          @include text1;
           font-weight: bold;
         }
       }
     }
     tbody {
-      font-size: 14px;
-      color: #666666;
-      font-family: Arial,Helvetica,sans-serif;
+      @include text8;
       tr.sub-unit-row0 {
         background-color: #ECECDA;
         margin-top: 20px;
@@ -50,10 +57,38 @@ table.election-results-table {
     }
 }
 #content {
-    margin-left: 4em;
-    margin-right: 4em;
+    margin-left: 80px;
+    margin-right: 80px;
     padding-top: 1em;
 }
 .pageEntriesInfo {
   border-bottom-width: 1px;
+}
+
+
+.details {
+    margin-left: 30px;
+}
+dl.defList {
+  dt {
+    width: auto;
+    display: inline;
+    font-weight: bold;
+    @include text1;
+    padding: 0;
+  }
+  dd {
+    @include text1;
+    padding: 0 2px;
+  }
+}
+
+#document h1 {
+  @include text8;
+  font-weight: normal;
+  padding: 0;
+}
+
+a {
+  @include text1;
 }

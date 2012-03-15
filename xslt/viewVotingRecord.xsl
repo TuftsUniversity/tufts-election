@@ -12,11 +12,6 @@
   
   <xsl:template match="/aas:election_record">
 
-      <!-- Header -->
-      <div id="electionTitle">
-	<h1><xsl:call-template name="election_title"/></h1>
-      </div>
-
       <xsl:apply-templates/>
 
       <!-- FOOTNOTES -->

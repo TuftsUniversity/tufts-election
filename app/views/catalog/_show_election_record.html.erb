@@ -1,37 +1,38 @@
-<dl class="defList">
-  <dt>Office:</dt>
-  <dd><%= document.get("office_name_t") %></dd>
-  <dt>Title:</dt>
-  <dd><%= document.get("office_role_title_t") %></dd>
-  <dt>Jurisdiction:</dt>
-  <dd><%= document.get("jurisdiction_display") %></dd>
-</dl>
+<div class="details">
+  <dl class="defList">
+    <dt>Office:</dt>
+    <dd><%= document.get("office_name_t") %></dd>
+    <dt>Title:</dt>
+    <dd><%= document.get("office_role_title_t") %></dd>
+    <dt>Jurisdiction:</dt>
+    <dd><%= document.get("jurisdiction_display") %></dd>
+  </dl>
 
-<h3>Extended Info</h3>
-
-<dl class="defList">
-  <dt>Label:</dt>
-  <dd><%= document.get("label_t") %></dd>
-  <dt>Id:</dt>
-  <dd><%= document.get("election_id_s") %></dd>
-  <dt>Date:</dt>
-  <dd><%= document.get("date_i") %></dd>
-  <dt>State:</dt>
-  <dd><%= document.get("state_name_t") %></dd>
-  <dt>Type:</dt>
-  <dd><%= document.get("election_type_t") %></dd>
-  <dt>Iteration:</dt>
-  <dd><%= document.get("iteration_t") %></dd>
-  <dt>Office/Role:</dt>
-  <dd><%= document.get("office_name_t") + "/" + document.get("office_role_title_t") %></dd>
-  <% unless document.get("candidate_name_t").nil? %>
-    <dt>Candidates:</dt>
-    <dd><%= document.get("candidate_name_t") %></dd>
-  <% end %>
-  <% unless document.get("elector_name_t").nil? %>
-    <dt>Electors:</dt>
-    <dd><%= document.get("elector_name_t") %></dd>
-  <% end %>
-</dl>
+  <a href="#" class="more">View more information</a>
+  <dl class="defList">
+    <dt>Label:</dt>
+    <dd><%= document.get("label_t") %></dd>
+    <dt>Id:</dt>
+    <dd><%= document.get("election_id_s") %></dd>
+    <dt>Date:</dt>
+    <dd><%= document.get("date_i") %></dd>
+    <dt>State:</dt>
+    <dd><%= document.get("state_name_t") %></dd>
+    <dt>Type:</dt>
+    <dd><%= document.get("election_type_t") %></dd>
+    <dt>Iteration:</dt>
+    <dd><%= document.get("iteration_t") %></dd>
+    <dt>Office/Role:</dt>
+    <dd><%= document.get("office_name_t") + "/" + document.get("office_role_title_t") %></dd>
+    <% unless document.get("candidate_name_t").nil? %>
+      <dt>Candidates:</dt>
+      <dd><%= document.get("candidate_name_t") %></dd>
+    <% end %>
+    <% unless document.get("elector_name_t").nil? %>
+      <dt>Electors:</dt>
+      <dd><%= document.get("elector_name_t") %></dd>
+    <% end %>
+  </dl>
+</div>
 
 <%= voting_record_xml_to_table(document.get("voting_record_xml_display")) %>
