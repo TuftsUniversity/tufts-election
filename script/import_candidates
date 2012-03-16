@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+# encoding: utf-8
+
+path = ARGV[0]
+raise ArgumentError, "Must provide a path" unless path
+require File.expand_path(File.join(File.dirname(__FILE__), '../config/environment.rb'))
+
+Dir.glob(File.join(path, '*.xml')).each do |filename|
+  input = Nokogiri::XML(File.new(filename))
+  input.root.xpath('//auth:candidate', 'auth' => 'http://dca.tufts.edu/aas/auth').each do |candidate_node|
+    doc = {'name_t' =>candidate_node.attribute('name').value, 'id'=> candidate_node.attribute('id').value, 'format'=>'Candidate'}
+puts "DOc is : #{doc}"
+    ActiveFedora::SolrService.instance.conn.add(doc)
+  end
+end
+
+ActiveFedora::SolrService.commit
+
+

@@ -24,7 +24,7 @@ gem 'jquery-rails'
 gem 'blacklight'
 gem 'devise'
 gem 'jettywrapper'
-# gem 'active-fedora', '4.0.0.rc11'
+#gem 'active-fedora', '4.0.0.rc12'
 gem 'active-fedora', :git => 'git://github.com/mediashelf/active_fedora.git'
 
 group :test, :development do
