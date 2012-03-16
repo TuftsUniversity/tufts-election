@@ -157,3 +157,14 @@ figcaption {
   }
 }
 
+h3.contract {
+  color: $gray;
+  size: 12pt;
+  font-weight: normal;
+
+}
+h3.contract:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
