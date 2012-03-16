@@ -33,6 +33,7 @@
 body {
   background: none;
   padding: 0;
+  min-width: 1080px;
 }
 
 table {

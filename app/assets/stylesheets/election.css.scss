@@ -77,8 +77,8 @@ table.election-results-table {
     }
 }
 #content {
-    margin-left: 80px;
-    margin-right: 80px;
+    margin-left: 3%;
+    margin-right: 3%;
     padding-top: 1em;
 }
 .pageEntriesInfo {
@@ -135,7 +135,13 @@ nav {
 
 figcaption {
   width: 400px;
+  @include text2;
   font-style: italic;
+}
+
+#record-message {
+    @include text2;
+    margin-top: 3em;
 }
 
 #footer-links-table {

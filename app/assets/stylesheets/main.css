@@ -110,10 +110,8 @@ a img {
 }
 
 #main-content-panel {
- /*  padding-left:258px; */
    margin-left: 12px;
    padding-top: 1em;
-   margin-right: 4em;
    width: 650px;
    display: inline-block;
    vertical-align: top;
