@@ -44,7 +44,6 @@ describe Datastreams::ElectionRecord do
       @county_solr["state_name_facet"].should == ["Alabama"]
       @county_solr["state_county_name_t"].should == ["Madison"]
       @county_solr["state_county_name_facet"].should == ["Madison"]
-      debugger
       @county_solr["jurisdiction_display"].should == ["County"]
       
       
