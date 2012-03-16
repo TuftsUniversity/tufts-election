@@ -42,6 +42,9 @@ table.election-results-table {
         border-spacing: 10px;
         td {
           font-weight: bold;
+          a {
+            color: $blue;
+          }
         }
       }
       tr.affiliation-row {

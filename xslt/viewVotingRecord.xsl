@@ -38,7 +38,7 @@
              <xsl:sort select="@candidate_num" data-type="number" order="ascending"/>
              <xsl:variable name="cand_id" select="@candidate_num"/>
 
-             <td><xsl:value-of select="@name"/></td>
+             <td><a href="/catalog/{@name_id}"><xsl:value-of select="@name"/></a></td>
            </xsl:for-each>
          </tr>
 
