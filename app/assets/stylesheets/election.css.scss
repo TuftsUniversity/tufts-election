@@ -135,3 +135,16 @@ figcaption {
   font-style: italic;
 }
 
+#footer-links-table {
+  tr:first-child {
+    height: 21px;
+  }
+  tr {
+    height: 32px;
+  }
+  td {
+    text-align: center;
+    padding: 1px;
+  }
+}
+
