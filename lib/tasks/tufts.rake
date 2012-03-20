@@ -26,6 +26,7 @@ namespace :index do
       rescue Errno::ECONNREFUSED => e
         puts "Can't connect to Fedora! Are you sure jetty is running?"
       rescue Exception => e
+        puts("Received a Fedora error while loading #{pid}\n#{e}")
         logger.error("Received a Fedora error while loading #{pid}\n#{e}")
       end
     end
