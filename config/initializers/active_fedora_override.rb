@@ -11,7 +11,7 @@ end
 
 module ActiveFedora::Model::ClassMethods
     def to_class_uri
-        ns = (self.respond_to? :pid_namespace) ? self.pid_namespace : ActiveFedora::Model::DEFAULT_NS
+        ns = (self.respond_to? :pid_namespace) ? self.pid_namespace : ActiveFedora::ContentModel::CMODEL_NAMESPACE
         pid = self.name.gsub(/::/, '_')
         ModelNameHelper.map_model_name("info:fedora/#{ns}:#{pid}")
     end

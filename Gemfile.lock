@@ -1,8 +1,8 @@
 GIT
   remote: git://github.com/mediashelf/active_fedora.git
-  revision: 4014ec61cac46f742c24c8f386050c0c04cef6b8
+  revision: fbc309d295d09760761d79dc03ae35437db971b9
   specs:
-    active-fedora (4.0.0.rc12)
+    active-fedora (4.0.0.rc15)
       activeresource (>= 3.0.0)
       activesupport (>= 3.0.0)
       equivalent-xml
@@ -213,6 +213,9 @@ GEM
       om (>= 1.5.0)
       stomp
       xml-simple
+    solrizer-fedora (2.0.0.rc2)
+      active-fedora (~> 4.0.0.rc15)
+      fastercsv
     sprockets (2.1.2)
       hike (~> 1.2)
       rack (~> 1.0)
@@ -253,6 +256,7 @@ DEPENDENCIES
   rails (= 3.2.2)
   rspec-rails
   sass-rails (~> 3.2.3)
+  solrizer-fedora (= 2.0.0.rc2)
   sqlite3
   uglifier (>= 1.0.3)
   unicorn
