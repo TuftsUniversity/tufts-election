@@ -17,3 +17,6 @@ test: &test
   url: http://127.0.0.1:8983/solr/test
 cucumber:
   <<: *test
+production:
+  #for staging box
+  url: http://vm76.atech.tufts.edu:8080/solr_tufts_election
