@@ -13,6 +13,10 @@ describe TuftsVotingRecord do
     end
     it "should index the correct fields" do
       @solr_doc["voting_record_xml_display"].should == @record.datastreams["RECORD-XML"].to_xml
+      @solr_doc["title_t"].should == ['Alabama 1820 House of Representatives, Madison County']
+      @solr_doc["title_sort"].should == 'Alabama 1820 House of Representatives, Madison County'
+      @solr_doc["title_display"].should == 'Alabama 1820 House of Representatives, Madison County'
+      
     end
   end
 end
