@@ -18,6 +18,15 @@ GIT
       solrizer (~> 1.2.0)
       xml-simple (>= 1.0.12)
 
+GIT
+  remote: git://github.com/projecthydra/solrizer-fedora.git
+  revision: 9c12a92cc19720f9acc657647dea5fb390599b69
+  ref: 9c12a92
+  specs:
+    solrizer-fedora (2.0.0.rc2)
+      active-fedora (~> 4.0.0.rc15)
+      fastercsv
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -214,9 +223,6 @@ GEM
       om (>= 1.5.0)
       stomp
       xml-simple
-    solrizer-fedora (2.0.0.rc2)
-      active-fedora (~> 4.0.0.rc15)
-      fastercsv
     sprockets (2.1.2)
       hike (~> 1.2)
       rack (~> 1.0)
@@ -259,7 +265,7 @@ DEPENDENCIES
   rails (= 3.2.2)
   rspec-rails
   sass-rails (~> 3.2.3)
-  solrizer-fedora (= 2.0.0.rc2)
+  solrizer-fedora!
   sqlite3
   therubyracer
   uglifier (>= 1.0.3)

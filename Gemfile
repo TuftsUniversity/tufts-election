@@ -23,7 +23,7 @@ gem 'devise'
 gem 'jettywrapper'
 #gem 'active-fedora', '4.0.0.rc16'
 gem 'active-fedora', :git => 'git://github.com/mediashelf/active_fedora.git'
-gem 'solrizer-fedora', '2.0.0.rc2'
+gem 'solrizer-fedora', :git => 'git://github.com/projecthydra/solrizer-fedora.git', :ref=>'9c12a92' #need to release '2.0.0.rc3'
 
 group :test, :development do
   gem 'rspec-rails'
