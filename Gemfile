@@ -16,6 +16,7 @@ end
 
 gem 'jquery-rails'
 
+gem "blacklight_range_limit"
 gem 'therubyracer'
 gem 'sass-rails',   '~> 3.2.3'
 gem 'blacklight'
@@ -29,7 +30,7 @@ group :test, :development do
   gem 'rspec-rails'
   # To use debugger
   # gem 'ruby-debug19', :require => 'ruby-debug'
-  gem "blacklight_range_limit"
+  # gem "blacklight_range_limit"
 end
 
 # To use ActiveModel has_secure_password
