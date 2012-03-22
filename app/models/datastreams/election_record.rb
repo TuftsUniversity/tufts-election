@@ -72,7 +72,7 @@ module Datastreams
     def to_solr(solr_doc=Hash.new)
       super
       solr_doc["format"] = "Election Record"
-      solr_doc["date_i"] = self.date.to_a.map(&:to_i)
+      solr_doc["date_i"] = self.date.to_a.map(&:to_i).first
       solr_doc["election_id_s"] = self.election_id.to_a
       solr_doc["handle_s"] = self.handle.to_a
       solr_doc["office_id_s"] = self.office.office_id.to_a

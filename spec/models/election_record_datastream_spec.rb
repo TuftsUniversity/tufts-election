@@ -6,7 +6,7 @@ describe Datastreams::ElectionRecord do
     it "should only index the year part of the date" do
         @potus_1792 = Datastreams::ElectionRecord.from_xml( fixture("election_records/us_potus_1792_RECORD-XML.xml") )
         @potus_1792.date = '1820-11'
-        @potus_1792.to_solr['date_i'].should == [1820]
+        @potus_1792.to_solr['date_i'].should == 1820
         
     end
     describe "with some fixtures" do
@@ -19,7 +19,7 @@ describe Datastreams::ElectionRecord do
       it "should set field values" do
         @potus_solr["format"].should == "Election Record"
         @potus_solr["date_t"].should == ["1792"]
-        @potus_solr["date_i"].should == [1792]
+        @potus_solr["date_i"].should == 1792
         @potus_solr["iteration_t"].should == ["First Ballot"]
         @potus_solr["label_t"].should == ["1792 President of the United States, Electoral College"]
         @potus_solr["election_id_s"].should == ["us.potus.1792"]
