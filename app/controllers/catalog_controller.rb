@@ -4,7 +4,10 @@ require 'blacklight/catalog'
 class CatalogController < ApplicationController  
 
   include Blacklight::Catalog
-
+  
+  # This filters out objects that you want to exclude from search results, like FileAssets
+  CatalogController.solr_search_params_logic << :exclude_unwanted_models
+  
   configure_blacklight do |config|
     config.default_solr_params = { 
       :qt => 'search',
@@ -145,6 +148,12 @@ class CatalogController < ApplicationController
     config.spell_max = 5
   end
 
-
+  # This filters out objects that you want to exclude from search results.  By default it only excludes FileAssets
+  # @param solr_parameters the current solr parameters
+  # @param user_parameters the current user-subitted parameters
+  def exclude_unwanted_models(solr_parameters, user_parameters)
+    solr_parameters[:fq] ||= []
+    solr_parameters[:fq] << "has_model_s:\"info:fedora/cm:VotingRecord\" OR format:Candidate"
+  end
 
 end 

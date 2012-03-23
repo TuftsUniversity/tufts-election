@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<foxml:digitalObject VERSION="1.1" PID="tufts:me.elector.at_large.1820"
+<foxml:digitalObject VERSION="1.1" PID="tufts:me.elector.at-large.1820"
 xmlns:foxml="info:fedora/fedora-system:def/foxml#"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="info:fedora/fedora-system:def/foxml# http://www.fedora.info/definitions/1/0/foxml1-1.xsd">
@@ -20,7 +20,7 @@ xsi:schemaLocation="info:fedora/fedora-system:def/foxml# http://www.fedora.info/
 <audit:componentID></audit:componentID>
 <audit:responsibility>fedoraAdmin</audit:responsibility>
 <audit:date>2010-11-08T20:59:59.604Z</audit:date>
-<audit:justification>Ingested from local file c:\20101104\objects\me.elector.at_large.1820.xml</audit:justification>
+<audit:justification>Ingested from local file c:\20101104\objects\me.elector.at-large.1820.xml</audit:justification>
 </audit:record>
 <audit:record ID="AUDREC2">
 <audit:process type="Fedora API-M"/>
@@ -109,7 +109,7 @@ xsi:schemaLocation="info:fedora/fedora-system:def/foxml# http://www.fedora.info/
 <foxml:datastream ID="RECORD-XML" STATE="A" CONTROL_GROUP="X" VERSIONABLE="true">
 <foxml:datastreamVersion ID="RECORD-XML.0" LABEL="Voting record XML data" CREATED="2006-06-23T20:08:56.186Z" MIMETYPE="text/xml" SIZE="4147">
 <foxml:xmlContent>
-<aas:election_record xmlns:aas="http://dca.tufts.edu/aas" xmlns="http://www.fedora.info/definitions/" xmlns:xlink="http://www.w3.org/1999/xlink" label="Maine 1820 Electors of President and Vice-Presidents of President and Vice-President, At Large" type="General" iteration="First Ballot" date="1820" election_id="me.elector.at_large.1820" handle="10427/58285" schemaLocation="http://dca.tufts.edu/aas http://dca.tufts.edu/schema/aas/electionRecord.xsd">
+<aas:election_record xmlns:aas="http://dca.tufts.edu/aas" xmlns="http://www.fedora.info/definitions/" xmlns:xlink="http://www.w3.org/1999/xlink" label="Maine 1820 Electors of President and Vice-Presidents of President and Vice-President, At Large" type="General" iteration="First Ballot" date="1820" election_id="me.elector.at-large.1820" handle="10427/58285" schemaLocation="http://dca.tufts.edu/aas http://dca.tufts.edu/schema/aas/electionRecord.xsd">
                <aas:office name="Electoral College" office_id="ON050" scope="Federal">
                   <aas:role title="Elector" scope="State">
                      <aas:ballot>
@@ -151,7 +151,7 @@ xsi:schemaLocation="info:fedora/fedora-system:def/foxml# http://www.fedora.info/
 </foxml:datastreamVersion>
 <foxml:datastreamVersion ID="RECORD-XML.1" LABEL="Voting record XML data" CREATED="2011-08-18T18:42:49.934Z" MIMETYPE="text/xml" SIZE="4324">
 <foxml:xmlContent>
-<aas:election_record xmlns:aas="http://dca.tufts.edu/aas" date="1820" election_id="me.elector.at_large.1820" handle="10427/58285" iteration="First Ballot" label="Maine 1820 Electoral College, At Large" schemaLocation="http://dca.tufts.edu/aas http://dca.tufts.edu/schema/aas/electionRecord.xsd" type="General">
+<aas:election_record xmlns:aas="http://dca.tufts.edu/aas" date="1820" election_id="me.elector.at-large.1820" handle="10427/58285" iteration="First Ballot" label="Maine 1820 Electoral College, At Large" schemaLocation="http://dca.tufts.edu/aas http://dca.tufts.edu/schema/aas/electionRecord.xsd" type="General">
   <aas:office name="Electoral College" office_id="ON050" scope="Federal">
     <aas:role scope="State" title="Elector">
       <aas:ballot>
@@ -205,7 +205,7 @@ xsi:schemaLocation="info:fedora/fedora-system:def/foxml# http://www.fedora.info/
 </foxml:datastreamVersion>
 <foxml:datastreamVersion ID="RECORD-XML.2" LABEL="Voting record XML data" CREATED="2011-12-01T15:14:46.605Z" MIMETYPE="text/xml" SIZE="4324">
 <foxml:xmlContent>
-<aas:election_record xmlns:aas="http://dca.tufts.edu/aas" date="1820" election_id="me.elector.at_large.1820" handle="10427/58285" iteration="First Ballot" label="Maine 1820 Electoral College, At Large" schemaLocation="http://dca.tufts.edu/aas http://dca.tufts.edu/schema/aas/electionRecord.xsd" type="General">
+<aas:election_record xmlns:aas="http://dca.tufts.edu/aas" date="1820" election_id="me.elector.at-large.1820" handle="10427/58285" iteration="First Ballot" label="Maine 1820 Electoral College, At Large" schemaLocation="http://dca.tufts.edu/aas http://dca.tufts.edu/schema/aas/electionRecord.xsd" type="General">
   <aas:office name="Electoral College" office_id="ON050" scope="Federal">
     <aas:role scope="State" title="Elector">
       <aas:ballot>
@@ -262,9 +262,9 @@ xsi:schemaLocation="info:fedora/fedora-system:def/foxml# http://www.fedora.info/
 <foxml:datastreamVersion ID="RELS-EXT.0" LABEL="RDF Relationship Metadata" CREATED="2006-06-23T20:07:38.965Z" MIMETYPE="application/rdf+xml" FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0" SIZE="946">
 <foxml:xmlContent>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rel="info:fedora/fedora-system:def/relations-external#" xmlns="http://www.fedora.info/definitions/" xmlns:xlink="http://www.w3.org/1999/xlink">
-               <rdf:Description rdf:about="info:fedora/tufts:me.elector.at_large.1820">
+               <rdf:Description rdf:about="info:fedora/tufts:me.elector.at-large.1820">
                   <fedora-model:hasModel xmlns:fedora-model="info:fedora/fedora-system:def/model#" rdf:resource="info:fedora/cm:VotingRecord"></fedora-model:hasModel>
-                  <itemID xmlns="http://www.openarchives.org/OAI/2.0/">oai:tufts:me.elector.at_large.1820</itemID>
+                  <itemID xmlns="http://www.openarchives.org/OAI/2.0/">oai:tufts:me.elector.at-large.1820</itemID>
                   <rel:isMemberOfCollection rdf:resource="info:fedora/tufts:UA069.006.DO.MS115.002.ME.1820"></rel:isMemberOfCollection>
                   <fedora-model:hasModel xmlns:fedora-model="info:fedora/fedora-system:def/model#" rdf:resource="info:fedora/cm:VotingRecord"></fedora-model:hasModel>
                </rdf:Description>
@@ -274,9 +274,9 @@ xsi:schemaLocation="info:fedora/fedora-system:def/foxml# http://www.fedora.info/
 <foxml:datastreamVersion ID="RELS-EXT.1" LABEL="RDF Relationship Metadata" CREATED="2011-08-18T18:42:50.071Z" MIMETYPE="application/rdf+xml" FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0" SIZE="906">
 <foxml:xmlContent>
 <rdf:RDF xmlns="http://www.fedora.info/definitions/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rel="info:fedora/fedora-system:def/relations-external#" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <rdf:Description rdf:about="info:fedora/tufts:me.elector.at_large.1820">
+  <rdf:Description rdf:about="info:fedora/tufts:me.elector.at-large.1820">
     <fedora-model:hasModel xmlns:fedora-model="info:fedora/fedora-system:def/model#" rdf:resource="info:fedora/cm:VotingRecord"></fedora-model:hasModel>
-    <itemID xmlns="http://www.openarchives.org/OAI/2.0/">oai:tufts:me.elector.at_large.1820</itemID>
+    <itemID xmlns="http://www.openarchives.org/OAI/2.0/">oai:tufts:me.elector.at-large.1820</itemID>
     <rel:isMemberOfCollection rdf:resource="info:fedora/tufts:UA069.006.DO.MS115.002.ME.1820"></rel:isMemberOfCollection>
     <fedora-model:hasModel xmlns:fedora-model="info:fedora/fedora-system:def/model#" rdf:resource="info:fedora/cm:VotingRecord"></fedora-model:hasModel>
   </rdf:Description>
@@ -286,9 +286,9 @@ xsi:schemaLocation="info:fedora/fedora-system:def/foxml# http://www.fedora.info/
 <foxml:datastreamVersion ID="RELS-EXT.2" LABEL="RDF Relationship Metadata" CREATED="2011-12-01T15:14:46.764Z" MIMETYPE="application/rdf+xml" FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0" SIZE="906">
 <foxml:xmlContent>
 <rdf:RDF xmlns="http://www.fedora.info/definitions/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rel="info:fedora/fedora-system:def/relations-external#" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <rdf:Description rdf:about="info:fedora/tufts:me.elector.at_large.1820">
+  <rdf:Description rdf:about="info:fedora/tufts:me.elector.at-large.1820">
     <fedora-model:hasModel xmlns:fedora-model="info:fedora/fedora-system:def/model#" rdf:resource="info:fedora/cm:VotingRecord"></fedora-model:hasModel>
-    <itemID xmlns="http://www.openarchives.org/OAI/2.0/">oai:tufts:me.elector.at_large.1820</itemID>
+    <itemID xmlns="http://www.openarchives.org/OAI/2.0/">oai:tufts:me.elector.at-large.1820</itemID>
     <rel:isMemberOfCollection rdf:resource="info:fedora/tufts:UA069.006.DO.MS115.002.ME.1820"></rel:isMemberOfCollection>
     <fedora-model:hasModel xmlns:fedora-model="info:fedora/fedora-system:def/model#" rdf:resource="info:fedora/cm:VotingRecord"></fedora-model:hasModel>
   </rdf:Description>
@@ -312,7 +312,7 @@ xsi:schemaLocation="info:fedora/fedora-system:def/foxml# http://www.fedora.info/
   <dc:date>1820</dc:date>
   <dc:type>dataset</dc:type>
   <dc:format>text/xml</dc:format>
-  <dc:identifier>tufts:me.elector.at_large.1820</dc:identifier>
+  <dc:identifier>tufts:me.elector.at-large.1820</dc:identifier>
   <dc:source>MS115</dc:source>
   <dc:rights>http://dca.tufts.edu/ua/access/rights-pd.html</dc:rights>
 </oai_dc:dc>
@@ -329,7 +329,7 @@ xsi:schemaLocation="info:fedora/fedora-system:def/foxml# http://www.fedora.info/
   <dc:subject>Maine</dc:subject>
   <dc:subject>Election districts Maine</dc:subject>
   <dc:description>Maine 1820 Electoral College, At Large. The permanent URL for this resource is: http://hdl.handle.net/10427/58285</dc:description>
-  <dc:identifier>tufts:me.elector.at_large.1820</dc:identifier>
+  <dc:identifier>tufts:me.elector.at-large.1820</dc:identifier>
   <dc:publisher>Digital Collections and Archives, Tufts University</dc:publisher>
   <dc:date>1820</dc:date>
   <dc:type>dataset</dc:type>
@@ -350,7 +350,7 @@ xsi:schemaLocation="info:fedora/fedora-system:def/foxml# http://www.fedora.info/
   <dc:subject>Maine</dc:subject>
   <dc:subject>Election districts Maine</dc:subject>
   <dc:description>Maine 1820 Electoral College, At Large. The permanent URL for this resource is: http://hdl.handle.net/10427/58285</dc:description>
-  <dc:identifier>tufts:me.elector.at_large.1820</dc:identifier>
+  <dc:identifier>tufts:me.elector.at-large.1820</dc:identifier>
   <dc:publisher>Digital Collections and Archives, Tufts University</dc:publisher>
   <dc:date>1820</dc:date>
   <dc:type>dataset</dc:type>
