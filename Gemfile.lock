@@ -20,12 +20,11 @@ GIT
 
 GIT
   remote: git://github.com/projecthydra/solrizer-fedora.git
-  revision: 9c12a92cc19720f9acc657647dea5fb390599b69
-  ref: 9c12a92
+  revision: 7ede63d49e356f1576c62d1813aa5eac38db6474
+  ref: 7ede63d
   specs:
-    solrizer-fedora (2.0.0.rc2)
+    solrizer-fedora (2.0.0.rc3)
       active-fedora (~> 4.0.0.rc15)
-      fastercsv
 
 GEM
   remote: https://rubygems.org/
