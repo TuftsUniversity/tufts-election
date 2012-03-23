@@ -9,7 +9,7 @@ test: &TEST
   password: fedoraAdmin
   validateChecksum: true
 production:
-  url: http://your.production.server:8080/fedora
+  url: http://vm76.atech.tufts.edu:8080/fedora
   user: fedoraAdmin
   password: fedoraAdmin
   validateChecksum: true
