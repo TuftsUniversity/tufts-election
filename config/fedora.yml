@@ -11,7 +11,7 @@ test: &TEST
 production:
   url: http://vm76.atech.tufts.edu:8080/fedora
   user: fedoraAdmin
-  password: fedoraAdmin
+  password: media$helf2012
   validateChecksum: true
 cucumber:
   <<: *TEST
