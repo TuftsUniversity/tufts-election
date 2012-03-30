@@ -5,19 +5,26 @@ gem 'rails', '3.2.2'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+platforms :ruby do
+  gem 'sqlite3'
+end
+
+platforms :jruby do
+  gem 'jruby-openssl'
+  gem 'activerecord-jdbcsqlite3-adapter'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
+  gem 'therubyracer'
 end
 
 gem 'jquery-rails'
 
 gem "blacklight_range_limit"
-gem 'therubyracer'
 gem 'sass-rails',   '~> 3.2.3'
 gem 'blacklight'
 gem 'devise'
@@ -30,6 +37,10 @@ group :test, :development do
   gem 'rspec-rails'
   # To use debugger
   # gem 'ruby-debug19', :require => 'ruby-debug'
+  platform :ruby do
+    # Use unicorn as the app server
+    gem 'unicorn'
+  end
 end
 
 # To use ActiveModel has_secure_password
@@ -38,8 +49,6 @@ end
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 
-# Use unicorn as the app server
-gem 'unicorn'
 
 # Deploy with Capistrano
 # gem 'capistrano'
