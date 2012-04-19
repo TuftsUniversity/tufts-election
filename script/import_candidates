@@ -6,6 +6,7 @@ raise ArgumentError, "Must provide the directory with the authority files as an 
 require File.expand_path(File.join(File.dirname(__FILE__), '../config/environment.rb'))
 
 Dir.glob(File.join(path, '*.xml')).each do |filename|
+puts "Importing #{filename}"
   input = Nokogiri::XML(File.new(filename))
   input.root.xpath('//auth:candidate', 'auth' => 'http://dca.tufts.edu/aas/auth').each do |candidate_node|
     name = candidate_node.attribute('name').value
