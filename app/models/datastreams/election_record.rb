@@ -38,12 +38,12 @@ module Datastreams
         }
       }
       
-      t.admin_unit {
-        t.type(:path=>{:attribute=>"type"})
-        t.sub_unit {
-          t.type(:path=>{:attribute=>"type"})
-        }
-      }
+      # t.admin_unit {
+      #   t.type(:path=>{:attribute=>"type"})
+      #   t.sub_unit {
+      #     t.type(:path=>{:attribute=>"type"})
+      #   }
+      # }
       t.state(:path=>"admin_unit", :attributes=>{:type=>"State"}) {
         t.name(:path=>{:attribute=>"name"}, :index_as=>[:facetable])
         t.county(:path=>"sub_unit", :attributes=>{:type=>"County"}) {
@@ -62,7 +62,7 @@ module Datastreams
       t.elector_name(:proxy=>[:office, :role, :ballot, :elector, :name])
       t.elector_id(:proxy=>[:office, :role, :ballot, :elector, :elector_id])
       t.elector_affiliation(:proxy=>[:office, :role, :ballot, :elector, :affiliation])
-      t.jurisdiction(:proxy=>[:admin_unit, :sub_unit, :type])
+      t.jurisdiction(:proxy=>[:office, :role, :scope])
 
     end
     
@@ -78,11 +78,7 @@ module Datastreams
       solr_doc["office_id_s"] = self.office.office_id.to_a
       solr_doc["candidate_id_s"] = self.candidate_id.to_a
       solr_doc["page_image_urn_s"] = self.page_image.urn
-      if self.office.scope.include?("Federal")
-        solr_doc["jurisdiction_display"] = ["Federal"]
-      else
-        solr_doc["jurisdiction_display"] = self.admin_unit.sub_unit.type.to_a
-      end
+      solr_doc["jurisdiction_display"] = self.jurisdiction
       
       solr_doc
     end
