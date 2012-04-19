@@ -38,13 +38,7 @@ module Datastreams
         }
       }
       
-      # t.admin_unit {
-      #   t.type(:path=>{:attribute=>"type"})
-      #   t.sub_unit {
-      #     t.type(:path=>{:attribute=>"type"})
-      #   }
-      # }
-      t.state(:path=>"admin_unit", :attributes=>{:type=>"State"}) {
+      t.state(:path=>"admin_unit") {
         t.name(:path=>{:attribute=>"name"}, :index_as=>[:facetable])
         t.county(:path=>"sub_unit", :attributes=>{:type=>"County"}) {
           t.name(:path=>{:attribute=>"name"}, :index_as=>[:facetable])

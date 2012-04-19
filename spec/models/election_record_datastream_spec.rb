@@ -9,6 +9,20 @@ describe Datastreams::ElectionRecord do
         @potus_1792.to_solr['date_i'].should == 1820
         
     end
+    describe "state_name_facet" do
+      describe "when the admin unit is a State" do
+        subject { Datastreams::ElectionRecord.from_xml('<aas:election_record xmlns:aas="http://dca.tufts.edu/aas"> <aas:office><aas:role><aas:admin_unit geog_id="mes" name="Maine" type="State"></aas:admin_unit></aas:role></aas:office></aas:election_record>').to_solr} 
+        it "should be the states name" do
+          subject["state_name_facet"]. should == ['Maine'] 
+        end
+      end
+      describe "when the admin unit is a Territory" do
+        subject { Datastreams::ElectionRecord.from_xml('<aas:election_record xmlns:aas="http://dca.tufts.edu/aas"> <aas:office><aas:role><aas:admin_unit geog_id="mes" name="Maine" type="Territory"></aas:admin_unit></aas:role></aas:office></aas:election_record>').to_solr} 
+        it "should be the territorys name" do
+          subject["state_name_facet"]. should == ['Maine'] 
+        end
+      end
+    end
     describe "with some fixtures" do
       before(:each) do
         @potus_1792 = Datastreams::ElectionRecord.from_xml( fixture("election_records/us_potus_1792_RECORD-XML.xml") )
