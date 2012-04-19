@@ -128,9 +128,9 @@
 
     <xsl:apply-templates select="aas:sub_unit"/>
 
-    <xsl:if test="$depth = 0">
-      <xsl:call-template name="spacer"><xsl:with-param name="sp-class" select="'clear-spacer-row'"/></xsl:call-template>	
-    </xsl:if>
+    <!-- <xsl:if test="$depth = 0"> -->
+    <!--   <xsl:call-template name="spacer"><xsl:with-param name="sp-class" select="'clear-spacer-row'"/></xsl:call-template>	 -->
+    <!-- </xsl:if> -->
 
   </xsl:template>
 
