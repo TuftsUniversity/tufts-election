@@ -35,6 +35,9 @@ table.election-results-table {
       padding-right: 1em;
       vertical-align: top;
     }
+    .vote {
+      text-align: right;
+    }
     thead {
       background-color: #ECECDA;
       tr.candidate-row {
@@ -67,7 +70,7 @@ table.election-results-table {
       }
       tr.sub-unit-row1 {
         background-color: #F1F1F1;
-        td.sub-unit-Town, td.sub-unit-Populated, td.sub-unit-District {
+        td.sub-unit-Town, td.sub-unit-Populated, td.sub-unit-City, td.sub-unit-District {
          padding-left: 2em;
         }
       }
