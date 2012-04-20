@@ -69,12 +69,19 @@ table.election-results-table {
         }
       }
       tr.sub-unit-row1 {
-        background-color: #F1F1F1;
-        td.sub-unit-Town, td.sub-unit-Populated, td.sub-unit-City, td.sub-unit-District {
+        td.sub-unit-label1 {
          padding-left: 2em;
         }
       }
-      tr:nth-child(2n) {
+      tr.sub-unit-row2 {
+        td.sub-unit-label2 {
+         padding-left: 4em;
+        }
+      }
+      tr.sub-unit-alt1-0 {
+        background-color: #F1F1F1;
+      }
+      tr.sub-unit-alt1-1 {
         background-color: #E4E4E4;
       }
     }
