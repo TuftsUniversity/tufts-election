@@ -9,4 +9,4 @@ h1. Setting up Tufts Election search:
 
 # solrize objects
 
-  INDEX_LIST=pids.csv rake solrizer:fedora:solrize_objects
+  INDEX_LIST=pids.csv RAILS_ENV=production rake solrizer:fedora:solrize_objects
