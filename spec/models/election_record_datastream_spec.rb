@@ -63,6 +63,7 @@ describe Datastreams::ElectionRecord do
         @county_solr["state_county_name_t"].should == ["Madison"]
         @county_solr["state_county_name_facet"].should == ["Madison"]
         @county_solr["jurisdiction_display"].should == ["County"]
+        @county_solr["jurisdiction_facet"].should == ["County"]
         
         
         @county_solr["office_name_t"].should == ["House of Representatives"]

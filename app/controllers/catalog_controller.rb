@@ -44,6 +44,7 @@ class CatalogController < ApplicationController
     config.add_facet_field 'date_i', :label => 'Year', :range=>true
     config.add_facet_field 'office_name_facet', :label => 'Office', :limit => 20 
     config.add_facet_field 'candidate_name_facet', :label => 'Candidate', :limit => 15 
+    config.add_facet_field 'jurisdiction_facet', :label => 'Jurisdiction', :limit => 15 
     config.add_facet_field 'party_affiliation_facet', :label => 'Party', :limit => 15 
     config.add_facet_field 'election_type_facet', :label => 'Election Type'  
 
