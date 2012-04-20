@@ -72,7 +72,7 @@ module Datastreams
       solr_doc["office_id_s"] = self.office.office_id.to_a
       solr_doc["candidate_id_s"] = self.candidate_id.to_a
       solr_doc["page_image_urn_s"] = self.page_image.urn
-      solr_doc["jurisdiction_display"] = self.jurisdiction
+      solr_doc["jurisdiction_display"] = self.jurisdiction.to_a
       
       solr_doc
     end
