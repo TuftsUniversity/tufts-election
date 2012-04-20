@@ -10,7 +10,12 @@
 
   <% unless has_search_parameters? %>
     <%# if there are no input/search related params, display the "home" partial -%>
-    <%= render 'home' %>
+    <% if params[:advanced] %>
+      <%= render 'advanced' %>
+    <% else %> 
+      <%= render 'home' %>
+    <% end %>
+
   <% else %>
 
 
