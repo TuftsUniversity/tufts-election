@@ -22,7 +22,7 @@ group :assets do
   gem 'therubyracer'
   gem 'sass-rails',   '~> 3.2.3'
   gem 'compass-rails', '~> 1.0.0'
-  gem 'compass-susy-plugin', '~> 0.9.0', :require => 'susy' 
+  gem 'compass-susy-plugin', '~> 0.9.0'
 
 end
 
