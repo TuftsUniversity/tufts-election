@@ -1,12 +1,8 @@
 h1. Setting up Tufts Election search:
 
 # Clone the submodule
-<pre>git submodule init; git submodule update</pre>
-
-
+  <pre>git submodule init; git submodule update</pre>
 # import candidates - parameter is the directory containing all the candidate authority files.
-<pre>./script/import_candidates spec/fixtures/candidates/</pre>
-
+  <pre>./script/import_candidates spec/fixtures/candidates/</pre>
 # solrize objects
-
-  INDEX_LIST=pids.csv rake solrizer:fedora:solrize_objects
+  <pre>INDEX_LIST=pids.csv RAILS_ENV=production rake solrizer:fedora:solrize_objects</pre>
