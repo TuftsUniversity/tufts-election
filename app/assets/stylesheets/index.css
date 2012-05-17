@@ -45,16 +45,12 @@
 
 
 div.browse-box {
-   position: relative;
-   height: 10em;
-   width: 18em;
-}
-
-div.browse-box p {
-   margin-left: 1em;
-   margin-right: 1em;
-   margin-top: 0.5em;
-   margin-bottom: 0.75em;
+  background-color: #F4F4E9;
+  height: 95px;
+  width: 185px;
+  border: thin solid #E3E3C8;
+  vertical-align: top;
+  padding: 0.5em 1em;
 }
 
 div.browse-submit {

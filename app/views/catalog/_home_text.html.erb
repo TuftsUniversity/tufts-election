@@ -10,5 +10,14 @@
   <p>You may also download the election returns dataset for offline analysis.
      Visit our <a href="http://elections.lib.tufts.edu/aas_portal/download.xq">data download</a> page for details.
   </p>
+
+  <div class="browse-box">
+     <p>View complete list of candidates and links to their elections.</p> 
+     <%= form_tag candidates_path, :method=>:get do %>
+       <%= select_tag 'f[candidate_last_name_letter_facet][]', options_for_select(('A'..'Z').to_a - ['X']) %>
+       <%= image_submit_tag 'button_arrow.gif', :alt=>'go' %>
+     <% end %>
+    
+  </div>
 </div>
 
