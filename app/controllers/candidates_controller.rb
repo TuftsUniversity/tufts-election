@@ -1,11 +1,13 @@
-class CandidatesController < CatalogController
+class CandidatesController < ApplicationController
+  include Blacklight::Catalog
+
   # This filters out objects that you want to exclude from search results, like FileAssets
   CandidatesController.solr_search_params_logic << :exclude_unwanted_models
   
   configure_blacklight do |config|
     config.default_solr_params = { 
       :qt => 'search',
-      :rows => 100 
+      :rows => 100
     }
 
     # solr field configuration for search results/index views
@@ -51,9 +53,7 @@ class CandidatesController < CatalogController
     config.add_search_field 'all_fields', :label => 'All Fields'
     
 
-    config.add_sort_field 'score desc, date_i asc, title_sort asc', :label => 'relevance'
-    config.add_sort_field 'date_i asc, title_sort asc', :label => 'year'
-    config.add_sort_field 'title_sort asc, date_i asc', :label => 'title'
+    config.add_sort_field 'title_sort asc', :label => 'Name'
 
     # If there are more than this many search results, no spelling ("did you 
     # mean") suggestion is offered.
