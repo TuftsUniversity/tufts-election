@@ -1,4 +1,4 @@
-Rails.configuration.middleware.insert_before ActionDispatch::Cookies, CleanCookies::Rack
+#Rails.configuration.middleware.insert_before ActionDispatch::Cookies, CleanCookies::Rack
 TuftsElection::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
