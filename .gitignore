@@ -21,3 +21,5 @@
 
 #ignore the pids-reingest file
 pids-reingest.txt
+
+.sass-cache
