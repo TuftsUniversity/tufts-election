@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Home</title>
+  <title>A New Nation Votes</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
+  <link href="/assets/stylesheets/facets.css" rel="stylesheet">
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
@@ -18,7 +19,7 @@
       <%= link_to image_tag('menu_advancedsearch.gif', :class=>'menu-sep', :alt=>"Advanced Search"), catalog_index_path(:advanced=>true) %>
       <a href="about.html"><img src="/assets/menu_about.gif" alt="About" class="menu-sep" /></a>
       <a href="help.html"><img src="/assets/menu_help.gif" alt="Help" class="menu-sep" /></a>
-      <a href="contact.html"><img src="/assets/menu_contact.gif" alt="Contcac" /></a>
+      <a href="contact.html"><img src="/assets/menu_contact.gif" alt="Contact" /></a>
     </div>
   </div>
 </div>
