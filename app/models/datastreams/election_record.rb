@@ -17,7 +17,7 @@ module Datastreams
         t.election_type(:path=>{:attribute=>"type"}, :index_as=>[:facetable])
       }
       t.office {
-        t.name(:path=>{:attribute=>"name"}, :index_as=>[:facetable])
+        t.name(:path=>{:attribute=>"name"})
         t.office_id(:path=>{:attribute=>"office_id"})
         t.scope_(:path=>{:attribute=>"scope"})
         t.role {
