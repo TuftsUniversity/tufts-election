@@ -7,6 +7,7 @@ class TuftsVotingRecord < ActiveFedora::Base
     solr_doc["title_display"] = solr_doc["title_sort"] = solr_doc["title_t"].first
     solr_doc["party_affiliation_facet"] = datastreams["RECORD-XML"].office.role.ballot.candidate.affiliation.to_a + datastreams["RECORD-XML"].office.role.ballot.elector.affiliation.to_a 
     solr_doc["voting_record_xml_display"] = datastreams["RECORD-XML"].to_xml
+    solr_doc["office_name_facet"] = $offices[solr_doc["office_id_s"].first.to_s]
     solr_doc
   end
 end

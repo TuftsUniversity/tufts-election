@@ -40,7 +40,7 @@ class CatalogController < ApplicationController
     # sniffing requires solr requests to be made with "echoParams=all", for
     # app code to actually have it echo'd back to see it.  
     #config.add_facet_field 'format', :label => 'Format' 
-    config.add_facet_field 'state_name_facet', :label => 'State' 
+    config.add_facet_field 'state_name_facet', :label => 'State', :limit => 20 
     config.add_facet_field 'date_i', :label => 'Year', :range=>true
     config.add_facet_field 'office_name_facet', :label => 'Office', :limit => 20 
     #config.add_facet_field 'candidate_name_facet', :label => 'Candidate', :limit => 15 
