@@ -36,10 +36,6 @@
           <a href="print-election.xq?id={@election_id}"
              onclick="window.open(this.href,'');return false;"
              class="link1"><img alt="print" src="images/print.gif"/> Printer Friendly</a>
-
-          <!-- these links are disabled until and unless we implement the required functionality -->
-          <!-- <a href="" class="link1"><img alt="email" src="images/email.gif"/> Email</a> -->
-          <!-- <a href="" class="link1"><img alt="graph" src="images/graph.gif"/> Graph</a> -->
         </div>
 
         <a href="search.xq" class="link1">&lt; back to search results</a><br/>
@@ -47,6 +43,7 @@
         <a href="advanced-search.xq?modify-search=true" class="link1">&lt; modify search</a><br/>
       </xsl:if>
 
+      <!-- Main results table --> 
       <div id="record-header">
          <span class="text8"><xsl:value-of select="@label"/></span>
          <div id="record-subheader" class="text1">
@@ -87,15 +84,11 @@
 
          <xsl:choose>
            <xsl:when test="//aas:elector">
-             <!-- Electoral election
 
-                  We display a few things a little differently when we
-                  have an electoral election
-               -->
-
+           <!-- Electoral election: We display a few things a little differently when we have an electoral election -->
            <tr class="candidate-row">
-             <td class="row-label">Electors: <xsl:apply-templates select="//aas:election_record/aas:office/aas:role/aas:ballot/aas:note"/></td>
-             <xsl:for-each select="//aas:election_record/aas:office/aas:role/aas:ballot/aas:elector">
+             <td class="row-label">Electors: <xsl:apply-templates select="/aas:election_record/aas:office/aas:role/aas:ballot/aas:note"/></td>
+             <xsl:for-each select="/aas:election_record/aas:office/aas:role/aas:ballot/aas:elector">
                <xsl:sort select="@elector_num" data-type="number" order="ascending"/>
                <td>
                        <xsl:choose>
@@ -106,6 +99,7 @@
                             <xsl:value-of select="@name"/>
              </xsl:otherwise>
                  </xsl:choose>
+                 <xsl:apply-templates select="aas:note"/>
                      </td>
              </xsl:for-each>
            </tr>
@@ -154,31 +148,34 @@
 
 
            </xsl:when>
-           <xsl:otherwise>
-             <!-- Normal candidatorial election
 
-               -->
+           <xsl:otherwise> 
+            <!-- Normal candidatorial election -->
 
            <tr class="candidate-row">
-             <td class="row-label">Candidates: <xsl:apply-templates select="//aas:election_record/aas:office/aas:role/aas:ballot/aas:note"/></td>
-             <xsl:for-each select="//aas:election_record/aas:office/aas:role/aas:ballot/aas:candidate">
+             <td class="row-label">Candidates: <xsl:apply-templates select="/aas:election_record/aas:office/aas:role/aas:ballot/aas:note"/></td>
+             <xsl:for-each select="/aas:election_record/aas:office/aas:role/aas:ballot/aas:candidate">
                <xsl:sort select="@candidate_num" data-type="number" order="ascending"/>
                <td>
-                       <xsl:choose>
-                         <xsl:when test="normalize-space(@name_id) and @name_id != 'null'">
-                            <a href="/catalog/{@name_id}"><xsl:value-of select="@name"/></a>
-             </xsl:when>
-                         <xsl:otherwise>
-                            <xsl:value-of select="@name"/>
-             </xsl:otherwise>
+
+                 <xsl:choose>
+                     <xsl:when test="normalize-space(@name_id) and @name_id != 'null'">
+                         <a href="/catalog/{@name_id}"><xsl:value-of select="@name"/></a>
+                     </xsl:when>
+                     <xsl:otherwise>
+                         <xsl:value-of select="@name"/>
+                    </xsl:otherwise>
                  </xsl:choose>
-                     </td>
+
+                 <xsl:apply-templates select="aas:note"/>
+
+               </td>
              </xsl:for-each>
            </tr>
 
            <tr class="affiliation-row">
                    <td class="row-label">Affiliation:</td>
-             <xsl:for-each select="//aas:election_record/aas:office/aas:role/aas:ballot/aas:candidate">
+             <xsl:for-each select="/aas:election_record/aas:office/aas:role/aas:ballot/aas:candidate">
                <xsl:sort select="@candidate_num" data-type="number" order="ascending"/>
 
                <td>
@@ -190,13 +187,13 @@
            </tr>
 
            <tr class="overview-row">
-             <td>Final Result: <xsl:apply-templates select="//aas:election_record/aas:office/aas:role/aas:overview/aas:note"/></td>
-             <xsl:for-each select="//aas:election_record/aas:office/aas:role/aas:ballot/aas:candidate">
+             <td>Final Result: <xsl:apply-templates select="/aas:election_record/aas:office/aas:role/aas:overview/aas:note"/></td>
+             <xsl:for-each select="/aas:election_record/aas:office/aas:role/aas:ballot/aas:candidate">
                <xsl:sort select="@candidate_num" data-type="number" order="ascending"/>
                <xsl:variable name="cand_id" select="@candidate_num"/>
                
                <xsl:variable name="x">
-                 <xsl:value-of select="//aas:election_record/aas:office/aas:role/aas:overview/aas:candidate_summary[@candidate_ref=$cand_id]/@vote_total"/>
+                 <xsl:value-of select="/aas:election_record/aas:office/aas:role/aas:overview/aas:candidate_summary[@candidate_ref=$cand_id]/@vote_total"/>
                </xsl:variable>
                
                <xsl:choose>
@@ -208,6 +205,7 @@
            </tr>
 
           </xsl:otherwise>
+          <!--  end Normal candidatorial election -->
         </xsl:choose>
 
         </thead>
@@ -271,7 +269,7 @@
        </xsl:when>
        <xsl:otherwise>
 
-      <xsl:for-each select="//aas:election_record/aas:office/aas:role/aas:ballot/aas:candidate">
+      <xsl:for-each select="/aas:election_record/aas:office/aas:role/aas:ballot/aas:candidate">
 	<xsl:sort select="@candidate_num" data-type="number" order="ascending"/>
 	<xsl:variable name="cand_id" select="@candidate_num"/>
 	     
@@ -386,46 +384,45 @@
   </xsl:template>
 
 
- <xsl:template match="aas:note"  xmlns="http://www.w3.org/1999/xhtml">
+<!-- Templates to put the footnote references in the candidate row -->
+<xsl:template match="aas:note"  xmlns="http://www.w3.org/1999/xhtml">
     <xsl:call-template name="inlineNote">
       <xsl:with-param name="node-id" select="generate-id(.)"/>
     </xsl:call-template>
-  </xsl:template>
+</xsl:template>
 
-  <xsl:template name="inlineNote"  xmlns="http://www.w3.org/1999/xhtml">
+<xsl:template name="inlineNote"  xmlns="http://www.w3.org/1999/xhtml">
     <xsl:param name="node-id"/>
     
-    <xsl:for-each select="//aas:note[not(./text() = preceding::aas:note/text())]">
-      <xsl:variable name="note-text" select="normalize-space(string(.))"/>
-      <xsl:variable name="note-pos"  select="position()"/>
+    <xsl:variable name="note-pos">
+        <xsl:number level="any" />
+    </xsl:variable>
 
-      <xsl:for-each select="//aas:note[normalize-space(string(.)) = $note-text]">
-	<xsl:if test="$node-id = generate-id(.)">
-	  <a href="#note_{$note-pos}" class="link4">[<xsl:value-of
-	  select="$note-pos"/>]</a>
-	</xsl:if>
-      </xsl:for-each>
-      
-    </xsl:for-each>
-  </xsl:template>
+     <xsl:if test="$node-id = generate-id(.)">
+        <a href="#note_{$note-pos}" class="link4">[<xsl:value-of select="$note-pos"/>]</a>
+     </xsl:if>
+</xsl:template>
 
-  <xsl:template name="footnotes"  xmlns="http://www.w3.org/1999/xhtml">
+<!-- Templates to put the footnotes beneath the table -->
+<xsl:template name="footnotes"  xmlns="http://www.w3.org/1999/xhtml">
     <xsl:if test="//aas:note">
       <div id="electionNotes">
       	<h2>Notes:</h2>
-        <xsl:for-each select="//aas:note[not(./text() = preceding::aas:note/text())]">
+        <xsl:for-each select="//aas:note">
           <xsl:variable name="note-text" select="normalize-space(string(.))"/>
-          <xsl:variable name="note-pos"  select="position()"/>
-          
+          <xsl:variable name="note-pos">
+              <xsl:number level="any" />
+          </xsl:variable>
+
           <div class="footnote">
-            <a id="note_{$note-pos}"><span class="label">[<xsl:value-of select="$note-pos"/>] </span></a>
+            <a id="note_{$note-pos}" class="label">[<xsl:value-of select="$note-pos"/>]</a>
             <span class="data"><xsl:value-of select="$note-text"/></span>
           </div>
           
         </xsl:for-each>
       </div>
     </xsl:if>
-  </xsl:template>
+</xsl:template>
 
   <xsl:template name="references"  xmlns="http://www.w3.org/1999/xhtml">
     <xsl:if test="//aas:reference[@type='citation']">
