@@ -11,15 +11,17 @@
 <div id="main-ballot"><p /></div>
 <div id="main-header">
   <div id="main-header-upper">
-    <div id="main-logo"><a href="/"><%= image_tag('logo.gif', :alt=>"A New Nation Votes") %></a></div>
+    <div id="main-logo"><h1><a href="/"><%= image_tag('logo.gif', :alt=>"A New Nation Votes") %></a></h1></div>
   </div>
   <div id="main-header-lower">
     <div id="main-menu">
-      <%= link_to image_tag('menu_home.gif', :class=>'menu-sep', :alt=>"Home"), root_path %>
-      <%= link_to image_tag('menu_advancedsearch.gif', :class=>'menu-sep', :alt=>"Advanced Search"), catalog_index_path(:advanced=>true) %>
-      <a href="about.html"><img src="/assets/menu_about.gif" alt="About" class="menu-sep" /></a>
-      <a href="help.html"><img src="/assets/menu_help.gif" alt="Help" class="menu-sep" /></a>
-      <a href="contact.html"><img src="/assets/menu_contact.gif" alt="Contact" /></a>
+      <ul>
+   <li><%= link_to image_tag('menu_home.gif', :class=>'menu-sep', :alt=>"Home"), root_path %></li>
+   <li><%= link_to image_tag('menu_advancedsearch.gif', :class=>'menu-sep', :alt=>"Advanced Search"), catalog_index_path(:advanced=>true) %></li>
+   <li><a href="about.html"><img src="/assets/menu_about.gif" alt="About" class="menu-sep" /></a></li>
+   <li><a href="help.html"><img src="/assets/menu_help.gif" alt="Help" class="menu-sep" /></a></li>
+   <li><a href="contact.html"><img src="/assets/menu_contact.gif" alt="Contact" /></a></li>
+      </ul>
     </div>
   </div>
 </div>
