@@ -33,8 +33,8 @@ gem 'jettywrapper'
 #gem 'active-fedora', '4.0.0.rc16'
 gem 'active-fedora', :git => 'http://github.com/mediashelf/active_fedora.git'
 gem 'solrizer-fedora', :git => 'http://github.com/projecthydra/solrizer-fedora.git', :ref=>'7ede63d' #need to release '2.0.0.rc3'
-gem 'solrizer', :git=>'http://github.com/mkorcy/solrizer.git', :ref=>'3d1c83c3e5'
-#gem 'solrizer','1.2.1'
+#gem 'solrizer', :git=>'http://github.com/mkorcy/solrizer.git', :ref=>'df0595b'
+gem 'solrizer','1.2.2'
 group :test, :development do
   gem 'rspec-rails'
   # To use debugger
