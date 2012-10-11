@@ -87,10 +87,10 @@
 
            <!-- Electoral election: We display a few things a little differently when we have an electoral election -->
            <tr class="candidate-row">
-             <td class="row-label">Electors: <xsl:apply-templates select="/aas:election_record/aas:office/aas:role/aas:ballot/aas:note"/></td>
+             <th scope="row" class="row-label">Electors: <xsl:apply-templates select="/aas:election_record/aas:office/aas:role/aas:ballot/aas:note"/></td>
              <xsl:for-each select="/aas:election_record/aas:office/aas:role/aas:ballot/aas:elector">
                <xsl:sort select="@elector_num" data-type="number" order="ascending"/>
-               <td>
+               <th scop="col">
                        <xsl:choose>
                          <xsl:when test="normalize-space(@name_id) and @name_id != 'null'">
                             <a href="/catalog/{@name_id}"><xsl:value-of select="@name"/></a>
@@ -100,12 +100,12 @@
              </xsl:otherwise>
                  </xsl:choose>
                  <xsl:apply-templates select="aas:note"/>
-                     </td>
+                     </th>
              </xsl:for-each>
            </tr>
 
            <tr class="affiliation-row">
-                   <td class="row-label">Affiliation:</td>
+                   <th scope="row" class="row-label">Affiliation:</td>
              <xsl:for-each select="//aas:election_record/aas:office/aas:role/aas:ballot/aas:elector">
                <xsl:sort select="@elector_num" data-type="number" order="ascending"/>
                <td>
@@ -117,7 +117,7 @@
            </tr>
 
            <tr class="declared-for-row">
-             <td class="row-label">Presidential Candidate:</td>
+             <th scope="row" class="row-label">Presidential Candidate:</td>
              <xsl:for-each select="//aas:election_record/aas:office/aas:role/aas:ballot/aas:elector">
                <xsl:sort select="@elector_num" data-type="number" order="ascending"/>
                <td>
@@ -129,7 +129,7 @@
            </tr>
 
            <tr class="overview-row">
-             <td>Final Result: <xsl:apply-templates select="//aas:election_record/aas:office/aas:role/aas:overview/aas:note"/></td>
+             <th scope="row">Final Result: <xsl:apply-templates select="//aas:election_record/aas:office/aas:role/aas:overview/aas:note"/></th>
              <xsl:for-each select="//aas:election_record/aas:office/aas:role/aas:ballot/aas:elector">
                <xsl:sort select="@elector_num" data-type="number" order="ascending"/>
                <xsl:variable name="elec_id" select="@elector_num"/>
@@ -153,10 +153,10 @@
             <!-- Normal candidatorial election -->
 
            <tr class="candidate-row">
-             <td class="row-label">Candidates: <xsl:apply-templates select="/aas:election_record/aas:office/aas:role/aas:ballot/aas:note"/></td>
+             <th scope="row" class="row-label">Candidates: <xsl:apply-templates select="/aas:election_record/aas:office/aas:role/aas:ballot/aas:note"/></td>
              <xsl:for-each select="/aas:election_record/aas:office/aas:role/aas:ballot/aas:candidate">
                <xsl:sort select="@candidate_num" data-type="number" order="ascending"/>
-               <td>
+               <th scop="col">
 
                  <xsl:choose>
                      <xsl:when test="normalize-space(@name_id) and @name_id != 'null'">
@@ -169,12 +169,12 @@
 
                  <xsl:apply-templates select="aas:note"/>
 
-               </td>
+               </th>
              </xsl:for-each>
            </tr>
 
            <tr class="affiliation-row">
-                   <td class="row-label">Affiliation:</td>
+                   <th scope="row" class="row-label">Affiliation:</td>
              <xsl:for-each select="/aas:election_record/aas:office/aas:role/aas:ballot/aas:candidate">
                <xsl:sort select="@candidate_num" data-type="number" order="ascending"/>
 
@@ -187,7 +187,7 @@
            </tr>
 
            <tr class="overview-row">
-             <td>Final Result: <xsl:apply-templates select="/aas:election_record/aas:office/aas:role/aas:overview/aas:note"/></td>
+             <th scope="row">Final Result: <xsl:apply-templates select="/aas:election_record/aas:office/aas:role/aas:overview/aas:note"/></th>
              <xsl:for-each select="/aas:election_record/aas:office/aas:role/aas:ballot/aas:candidate">
                <xsl:sort select="@candidate_num" data-type="number" order="ascending"/>
                <xsl:variable name="cand_id" select="@candidate_num"/>
@@ -240,12 +240,12 @@
           </xsl:choose>
       </xsl:attribute>
 
-      <td class="sub-unit-label{$depth}">
+      <th scope="row" class="sub-unit-label{$depth}">
     	  <xsl:call-template name="unit_name">
 	    <xsl:with-param name="name" select="@name"/>
 	    <xsl:with-param name="type" select="@type"/>
 	  </xsl:call-template><xsl:apply-templates select="aas:note"/>
-      </td>
+      </th>
 
      <xsl:choose>
        <xsl:when test="//aas:elector">
