@@ -29,11 +29,14 @@ $blue: #243E61;
 }
 
 table.election-results-table {
-    td {
+    th,td {
       min-width: 4em;
+      background-color: $blue;
       padding-left: 1em;
       padding-right: 1em;
       vertical-align: top;
+      font-weight: normal;
+      alignment: left;
     }
     .vote {
       text-align: right;
@@ -43,7 +46,7 @@ table.election-results-table {
       tr.candidate-row {
         @include text1;
         border-spacing: 10px;
-        td {
+        th,td {
           font-weight: bold;
           a {
             color: $blue;
@@ -53,7 +56,7 @@ table.election-results-table {
       tr.affiliation-row {
       }
       tr.overview-row {
-        td {
+        th,td {
           @include text1;
           font-weight: bold;
         }
@@ -64,17 +67,17 @@ table.election-results-table {
       tr.sub-unit-row0 {
         background-color: #ECECDA;
         margin-top: 20px;
-        td {
+        th,td {
           border-top: medium solid #FFFFFF;
         }
       }
       tr.sub-unit-row1 {
-        td.sub-unit-label1 {
+        th,td.sub-unit-label1 {
          padding-left: 2em;
         }
       }
       tr.sub-unit-row2 {
-        td.sub-unit-label2 {
+        th,td.sub-unit-label2 {
          padding-left: 4em;
         }
       }
@@ -117,7 +120,7 @@ dl.defList {
   h1 {
     @include text8;
     font-weight: normal;
-    padding: 0;
+    padding-top: 100em;
   }
   h2 {
     @include text2;
@@ -161,7 +164,7 @@ figcaption {
   tr {
     height: 32px;
   }
-  td {
+  th,td {
     text-align: center;
     padding: 1px;
   }
