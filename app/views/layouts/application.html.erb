@@ -14,7 +14,7 @@
     <div id="main-logo"><h1><a href="/"><%= image_tag('logo.gif', :alt=>"A New Nation Votes") %></a></h1></div>
   </div>
   <div id="main-header-lower">
-    <div id="main-menu">
+    <div id="main-menu" role="navigation">
       <ul>
    <li><%= link_to image_tag('menu_home.gif', :class=>'menu-sep', :alt=>"Home"), root_path %></li>
    <li><%= link_to image_tag('menu_advancedsearch.gif', :class=>'menu-sep', :alt=>"Advanced Search"), catalog_index_path(:advanced=>true) %></li>
@@ -30,13 +30,13 @@
 
 
 <div id="container">
-  <div xmlns:xi="http://www.w3.org/2001/XInclude" id="content">
+  <div xmlns:xi="http://www.w3.org/2001/XInclude" id="content" role="main">
     <%= yield %>
   </div>
 
   <div class="list-spacer"><p /></div>
 </div>
 
-<div id="main-footer"><div id="main-footer-runner"><p /></div><table id="footer-links"><tr><td><table id="footer-links-table"><tr><td><a href="http://www.americanantiquarian.org/" class="footer-link footer-link-sep">American Antiquarian Society</a></td><td><a href="http://dca.tufts.edu" class="footer-link footer-link-sep">Digital Collections and Archives at Tufts University</a></td><td><a href="terms.html" class="footer-link">Terms and Conditions</a></td></tr><tr><td><img src="/assets/logo_aas.gif" alt="American Antiquarian Society" /></td><td><img src="/assets/logo_dca.gif" alt="Digital Collections and Archives at Tufts University" /></td><td /></tr></table></td></tr></table></div>
+<div id="main-footer" role="footer"><div id="main-footer-runner"><p /></div><table id="footer-links"><tr><td><table id="footer-links-table"><tr><td><a href="http://www.americanantiquarian.org/" class="footer-link footer-link-sep">American Antiquarian Society</a></td><td><a href="http://dca.tufts.edu" class="footer-link footer-link-sep">Digital Collections and Archives at Tufts University</a></td><td><a href="terms.html" class="footer-link">Terms and Conditions</a></td></tr><tr><td><img src="/assets/logo_aas.gif" alt="American Antiquarian Society" /></td><td><img src="/assets/logo_dca.gif" alt="Digital Collections and Archives at Tufts University" /></td><td /></tr></table></td></tr></table></div>
 </body>
 </html>
