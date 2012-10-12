@@ -28,15 +28,25 @@ $blue: #243E61;
   text-decoration: underline;
 }
 
+h3.contract {
+  color: $gray;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 12px;
+  text-decoration: underline;
+}
+
 table.election-results-table {
-    th,td {
+    th {
+      font-weight: normal;
+      border: none;
+      padding: 0;
+      text-align: left;
+    }
+    th, td {
       min-width: 4em;
-      background-color: $blue;
       padding-left: 1em;
       padding-right: 1em;
       vertical-align: top;
-      font-weight: normal;
-      alignment: left;
     }
     .vote {
       text-align: right;
@@ -72,19 +82,19 @@ table.election-results-table {
         }
       }
       tr.sub-unit-row1 {
-        th,td.sub-unit-label1 {
+        th.sub-unit-label1,td.sub-unit-label1 {
          padding-left: 2em;
         }
       }
-      tr.sub-unit-row2 {
-        th,td.sub-unit-label2 {
+      th.sub-unit-row2,tr.sub-unit-row2 {
+        td.sub-unit-label2 {
          padding-left: 4em;
         }
       }
-      tr.sub-unit-alt1-0 {
+      th.sub-unit-alt1-0,tr.sub-unit-alt1-0 {
         background-color: #F1F1F1;
       }
-      tr.sub-unit-alt1-1 {
+      th.sub-unit-alt1-1,tr.sub-unit-alt1-1 {
         background-color: #E4E4E4;
       }
     }
@@ -120,7 +130,7 @@ dl.defList {
   h1 {
     @include text8;
     font-weight: normal;
-    padding-top: 100em;
+    padding: 0;
   }
   h2 {
     @include text2;
@@ -164,7 +174,7 @@ figcaption {
   tr {
     height: 32px;
   }
-  th,td {
+  td {
     text-align: center;
     padding: 1px;
   }

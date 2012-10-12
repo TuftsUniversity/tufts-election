@@ -19,7 +19,6 @@ console.log("YO");
                  } else {
                    $(this).html(original_text)
                  }
-                 $(f_content).slideToggle();
              });
          });
      });
