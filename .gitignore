@@ -25,4 +25,4 @@ pids-reingest.txt
 .sass-cache
 
 #ignore the office authority file
-config/office-authority.xml
+#config/office-authority.xml
