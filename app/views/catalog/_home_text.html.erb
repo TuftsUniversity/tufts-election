@@ -1,13 +1,14 @@
-<div id="home_text">
-  <p><%=image_tag 'title_welcome.gif', :alt=>"Welcome!" %></p>
+<div id="home_text" role="main">
+  <h2><%=image_tag 'title_welcome.gif', :alt=>"Welcome!" %></h2>
   <p><span style="font-weight:bold;">A New Nation Votes</span> is a searchable collection of election returns
       from the earliest years of American democracy. The data were compiled by Philip Lampi. 
       The American Antiquarian Society and Tufts University Digital Collections and Archives have mounted it online 
       for you with funding from the National Endowment for the Humanities.
   </p>
 
+<h2 class="hidden">Search</h2>
 <p><%= render :partial=>'search_form' %></p>
-<p> <%=image_tag 'title_downloaddata.gif', :alt=>"Download" %></p>
+<h2> <%=image_tag 'title_downloaddata.gif', :alt=>"Download" %></h2>
   <p>You may also download the election returns dataset for offline analysis.
      Visit our <a href="http://elections.lib.tufts.edu/aas_portal/download.xq">data download</a> page for details.
   </p>
