@@ -1,0 +1,15 @@
+<!-- temporarily overriding this to take out the search drop-down; once that's fixed get rid of me -->
+<div id="search" class="search">
+  <%= form_tag catalog_index_path, :method => :get do %>
+    <h2 class="search"><%= label_tag(:q, "Search ") %></h2>
+    <%= text_field_tag :q, params[:q], :class => "q" %>
+    <% unless search_fields.empty? %>
+      <%= label_tag(:search_field, " in ") %>
+    <% end %>
+    <%= search_as_hidden_fields(:omit_keys => [:q, :search_field, :qt, :page]).html_safe %>        
+    
+    <%= submit_tag 'search', :class=>'submit' %>
+  <% end %>
+
+  <hr/>
+</div>
