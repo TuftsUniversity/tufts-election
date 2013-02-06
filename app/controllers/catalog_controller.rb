@@ -11,7 +11,7 @@ class CatalogController < ApplicationController
   configure_blacklight do |config|
     config.default_solr_params = { 
       :qt => 'search',
-      :rows => 10 
+      :rows => 10,
     }
 
     # solr field configuration for search results/index views
@@ -39,8 +39,8 @@ class CatalogController < ApplicationController
     # on the solr side in the request handler itself. Request handler defaults
     # sniffing requires solr requests to be made with "echoParams=all", for
     # app code to actually have it echo'd back to see it.  
-    config.add_facet_field 'state_name_facet', :label => 'State', :sort => 'index', :limit => 10
-    config.add_facet_field 'date_i', :label => 'Year', :range=>true, :sort => 'index', :date => true
+    config.add_facet_field 'state_name_facet', :label => 'State', :sort => 'index', :limit => 50
+    config.add_facet_field 'date_i', :label => 'Year', :range=>true
     config.add_facet_field 'office_name_facet', :label => 'Office', :limit => 20 
     config.add_facet_field 'jurisdiction_facet', :label => 'Jurisdiction', :limit => 15 
     config.add_facet_field 'party_affiliation_facet', :label => 'Party', :limit => 15 
@@ -92,7 +92,6 @@ class CatalogController < ApplicationController
     # since we aren't specifying it otherwise. 
     
     config.add_search_field 'all_fields', :label => 'All Fields'
-    
 
     # Now we see how to over-ride Solr request handler defaults, in this
     # case for a BL "search field", which is really a dismax aggregate
