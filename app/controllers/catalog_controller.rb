@@ -45,6 +45,7 @@ class CatalogController < ApplicationController
     config.add_facet_field 'jurisdiction_facet', :label => 'Jurisdiction', :limit => 15 
     config.add_facet_field 'party_affiliation_facet', :label => 'Party', :limit => 15 
     config.add_facet_field 'election_type_facet', :label => 'Election Type'  
+    config.add_facet_fields_to_solr_request!
 
     # Have BL send all facet field names to Solr, which has been the default
     # previously. Simply remove these lines if you'd rather use Solr request
