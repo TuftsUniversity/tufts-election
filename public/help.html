@@ -22,7 +22,6 @@
     <div id="main-menu" role="navigation">
       <ul>
          <li><a href="/"><img src="/assets/menu_home.gif" elass="menu-sep" alt="Home"></a></li>
-         <li><a href="/catalog/advanced"><img src="/assets/menu_advancedsearch.gif" class="menu-sep" alt="Advanced Search"></a></li>
          <li><a href="about.html"><img src="/assets/menu_about.gif" alt="About" class="menu-sep" /></a></li>
          <li><a href="help.html"><img src="/assets/menu_help.gif" alt="Help" class="menu-sep" /></a></li>
          <li><a href="contact.html"><img src="/assets/menu_contact.gif" alt="Contact" /></a></li>
@@ -46,10 +45,18 @@
        <div style="padding-left:0.5em">
           <span class="text8">Search FAQs</span>
 
-          <p><span class="question">What am I searching for?</span><br />
-            The search engine locates elections that fit your criteria. An election is a race in a place, for an office, at a particular point in time.</p>
+      <dl>
+          <dt class="question">What am I searching for?</dt>
+      <dd><p>Your results might include both <em>elections</em> and
+      <em>candidates</em>. An election will give you the results for an
+      election that takes place on a date, for a single office, in a single
+      jurisdiction. A candidate result will give you the candidate's full
+      name and a link to all of the elections featuring that candidate.</p></dd>
 
-	  <p><span class="question">My search is running slow.  What should I do?</span>
+      <!-- searches are a lot faster in the new engine; let's leave this out
+           for now in the hopes that it won't be necessary.
+          
+      <p><span class="question">My search is running slow.  What should I do?</span>
              <ul>
                 <li>The keyword search function is examining over 17,000 elections in full text. It may take a few moments to process. 
                    </li>
@@ -61,69 +68,132 @@
                    are grouped together in any of these ways, head to the <a href="/">home page</a>
                    to browse.</li>
                 <li>If you are having significant problems obtaining search results, please contact Tufts University.</li>
-	     </ul>
-	  </p>
+         </ul>
+      </p>
+      -->
 
-          <p><span class="question">Can I use Boolean searching?</span><br />
-             Yes. The operators use punctuation instead of words or do not require a colon.
-             Among these operators are OR, "" (the quote operator), - (the minus operator), and + (the plus operator).</p>
-          <p>""</p>
-          <p>The quote operator enables you to contain a string of words together. Search engines look at each word as a separate search and will bring back anything that matches in the results. To prevent the search engine from doing that, you can use the quote operator. For example, if you wanted elections only for John Quincy Adams and not for his father, John Adams, as well, the search would look like this:<br />
-          <pre>"John Quincy Adams"</pre><br />
-          Without the quotation marks, you would get all elections where there was someone named John or Quincy or Adams.</p>
-          <p>+</p>
-          <p>The plus operator makes a search more refined or exclusive. Say you wanted only the elections in which John Quincy Adams ran for the Senate and you did not want the elections in which he ran for any other office. Such a search would look like this:<br />
-             
-             <pre>"John Quincy Adams" + Senate</pre>
-          </p>
+          <dt class="question">Can I use Boolean searching?</dt>
+          <dd><p>Yes. Permissible operators are
+             <ul>
+                <li><strong>"</strong> [double quotation mark]: to define an
+		exact string. For example, if you wanted elections only for John
+		Quincy Adams and not for his father, John Adams, as well, the
+		search would look like this: <pre>"John Quincy Adams"</pre>
+		Without the quotation marks, you would get all elections where
+		there was someone named John or Quincy or Adams.  </li>
+                <li><strong>-</strong> [minus sign]: to specify that the next word is not in the search string </li>
+                <li><strong>+</strong> [plus sign]: to specify that  both words must be in the search string (this is the default behavior) </li>
+              </ul>
+          </p></dd>
 
-          <p>OR</p>
-          <p>To find elections that include either of two search terms, add an uppercase OR between the terms.</p>
+          <dt class="question">Capitalization: Are the searches case
+	  sensitive?</dt>
+          <dd><p>Keyword searches are NOT case sensitive. Thus Senator, senator,
+	  and SeNaTOr will all yield the same results.</p></dd>
 
-          <p>For example, here's one way to search for a candidate named either John Smith or Jonathan Smith:<br />
-             <pre>(John OR Jonathan) Smith</pre>
-	  </p>
-
-          <p>-</p>
-          <p>The minus operator allows you to enter negative search terms. 
-             If your search term has more than one meaning (bass, for example, could refer to
-             fishing or music) you can focus your search by putting a minus sign ("-") in front
-             of words related to the meaning you want to avoid.<br />
-             <pre>bass -music</pre>
-          </p>
-
-          <p><span class="question">Capitalization: Are the searches case sensitive?</span><br />
-             Keyword searches are NOT case sensitive. Thus Senator, senator, and SeNaTOr will all yield the same results.</p>
-
-          <p><span class="question">How do I search for a range of years?</span><br />
-             Next to the word year, use the first drop-down box to indicate the first year of your range and use the second drop-down box to indicate the last year of your range. Thus, if you are looking for elections held from 1812 to 1816, use<br />
+          <!-- I'm not sure we currently have a way to do this. We should
+	  install the advanced search plug-in if we want this behavior.
+          <dt class="question">How do I search for a range of years?</dt>
+          <dd><p>Next to the word year, use the first drop-down box to indicate the first year of your range and use the second drop-down box to indicate the last year of your range. Thus, if you are looking for elections held from 1812 to 1816, use<br />
              <pre><img alt="1812   1816" src="assets/1812.gif" /></pre>
              For just one year put the same year in both boxes<br />
              <pre><img alt="1820   1820" src="assets/1820.gif" /></pre>
-             The years will automatically default to the time period of these data, 1787-1825
-	  </p>
+             The years will automatically default to the time period of these
+	     data, 1787-1825</dt>
+	     -->
 
-          <p><span class="question">How can I search by the type of office?</span><br />
-Use the office drop-down box and select the office name. The drop-down box contains a controlled list of office names for all of the states. The states had various different names for their legislative bodies. For example, one of New York's legislative bodies is called the Assembly. So if you search for New York and House of Representative you will not find any elections. For more information about the states and their offices, please browse the state pages.  
-	  </p>
+          <dt class="question">How can I search by the type of office?</dt>
+          <dd><p>Expand the "Office"facet in the left-hand navigation and select
+	  the office name. The facet list contains a controlled list of office
+	  names for all of the states. The states had various different names
+	  for their legislative bodies. For example, one of New York's
+	  legislative bodies is called the Assembly. So if you search for New
+	  York and House of Representative you will not find any elections. For
+	  more information about the states and their offices, please browse the
+	  state pages.</p></dd>
 
-          <p><span class="question">Do I have to fill in all of the fields in the advanced search?</span><br />
-             No. All of the fields are available to you. They are there to help you refine your search. 
-	  </p>
+          <dt class="question">How do I search by candidate name?</dt>
+          <dd><p>You either browse by last name or search for the name. If you
+	  would like to browse, look underneath the search box on the homepage
+	  for "Browse by Candidate". Please keep in mind that the names in the
+	  XML are entered given name first and family name last. Also note that
+	  the spellings of names were not regularized during this period in
+	  history. As a result, one newspaper may spell a candidate’s name one
+	  way, and another source may spell the name in a completely different
+	  way. Whenever possible, we have tried to give the authoritative names
+	  for candidates.</p></dd>
 
-          <p><span class="question">How do I search by candidate name?</span><br />
-             You can either browse by last name or search by keyword for the name. Please keep in mind that the names in the XML are entered given name first and family name last. Also note that the spellings of names were not regularized during this period in history. As a result, one newspaper may spell a candidate’s name one way, and another source may spell the name in a completely different way. Whenever possible, we have tried to give the authoritative names for candidates.
-	  </p>
+          <dt class="question">How do I search by party?</dt>
+          <dd><p>You can expand the "Party" facet in the left-hand navigation to
+	  see a controlled list of party affiliations and coalitions. The party
+	  affiliations given in the election record are those that were recorded
+	  in the contemporary newspapers. Elections where Mr. Lampi did not indicate
+	  the party affiliation of a candidate will not have an affiliation and
+	  will not be found in a search.</p></dd>
 
-          <p><span class="question">How do I search by party?</span><br />
-             The drop-down list gives a controlled list of party affiliations and coalitions. The party affiliations given in the election record are those that were recorded in the contemporary newspapers. Elections where Phil did not indicate the party affiliation of a candidate will not have an affiliation and will not be found in a search.
-          </p>
+          <dt class="question">How do I search for elections in a certain
+	  place?</dt>
+         <dd><p>If you would like to search for elections held in a certain place,
+	 you have two options. You may type the name in the keyword box or use
+	 the state facet. If the geographic name you are looking for is not
+	 included in the drop box, then either we do not yet have data available
+	 for that place or the place may have been gone by a different name
+	 during this time period. Much of the authoritative listing of historic
+	 geography still needs to be done. For information on historic
+	 geography, visit the <a
+	 href="http://www.newberry.org/ahcbp/atlasabout.html">Newberry Library’s
+	 Atlas of Historic County Boundaries</a>.</p></dd>
 
-          <p><span class="question">How do I search for elections in a certain place?</span><br />
-             If you would like to search for elections held in a certain place, you have two options. You may type the name in the keyword box or use the state drop-down box. If you type in the keyword box, please be aware that the search engine will look for a match in all of the states, if you do not select a state. If you are looking for a certain place within a state, select the state. After you select a state, a drop-down box with the names of all the localities found in that state will appear. These drop boxes offer only the geographic names that are contained in our data. If the geographic name you are looking for is not included in the drop box, then either we do not yet have data available for that place or the place may have been gone by a different name during this time period. Much of the authoritative listing of historic geography still needs to be done. For information on historic geography visit the Newberry Library’s Atlas of Historic County Boundaries <a href=" http://www.newberry.org/ahcbp/atlasabout.html">website</a>.</p>
+          <dt class="question">Why can't I find Somerville, Massachusetts or
+	  Manhattan?</dt>
+         <dd><p>The geographic names are those that were used for places at a
+	 specific time in American history. Somerville was part of Charlestown
+	 until 1842 and thus will not yield any results.  Similarly, all results
+	 from Maine prior to 1820 will be found under Massachusetts. There will
+	 also be results from places that no longer exist such as Greenwich,
+	 Massachusetts which now sits beneath the Quabbin Reservoir or
+	 Dorchester, Massachusetts which was a separate city until being annexed
+	 by Boston in 1870. You may need to do some preliminary research to
+	 learn about these historic places.</p></dd>
 
-          <p><span class="question">Why can't I find Somerville, Massachusetts or Manhattan?</span><br />
-             The geographic names are those that were used for places at a specific time in American history. Somerville was part of Charlestown until 1842 and thus will not yield any results.  Similarly, all results from Maine prior to 1820 will be found under Massachusetts. There will also be results from places that no longer exist such as Greenwich, Massachusetts which now sits beneath the Quabbin Reservoir or Dorchester, Massachusetts which was a separate city until being annexed by Boston in 1870. You may need to do some preliminary research to learn about these historic places.
-	  </p>
+        <dt class="question">What are these "facets" over on the left, and how can I use them to help me search?</dt>
+        <dd><p><p>Facets provide a method to intuitively see how to refine your search results.</p>
+
+	<p>Once you have made a search, you can expand the facets on the left to
+	narrow your search by state or territory, year, office, jurisdiction,
+	party, or election type. Once you have expanded the facets, you will see
+	that the available options are listed, with each link followed by a
+	number in parentheses indicating how many elections meet that
+	criterion.</p> 
+
+	<p>For example, let's say I search for "Adams." If I make that search
+	today, I will get 571 results. However, if I expand the "State" facet, I
+	see that only eight of those results are from Kentucky. If I select the
+	"Kentucky" facet it will be much easier for me to find the election I'm
+	seeking. Now my elections are updated to show only results from
+	Kentucky.</p>
+
+
+	<p>A single search can have multiple facets. For example, perhaps I am
+	searching for "Adams" in Pennsylvania. I see that there are 182
+	elections in the Pennsylvania facet for Adams; that is still a lot of
+	elections to examine. I can select the "Pennsylvania" facet to start
+	narrowing my search, and I will now see under the search box that I have
+	chosen the "Adams" and "Pennsylvania" facets. (I can remove any of these
+	facets from my search at any time by selecting the "x" to the right of
+	the facet name.) Now I have 182 elections to search through. If I expand
+	"Office" in the left-hand navigation, I can narrow it to "Commissioner"
+	-- that still gets me 30 elections -- and now I can expand the year
+	facet in the left-hand navigation bar and narrow it by "1804". At this
+	point there are only two possible choices! For people named "Adams" who
+	ran in Pennsylvania in 1804 for the office of Commissioner, we have only
+	two elections available.</p>
+  
+	<p>You can even use the facets to browse. From the homepage, expand the
+	facet choices in the left-hand navigation and select the area you'd like
+	to browse. For example, if you expand the "Party" link you can select
+	"Quid" in order to browse through all of the elections which use the
+	"Quid" party identification.</p></p></dd>
+      </dl>
        </div>
     </div></div></div><div class="list-spacer"><p /></div></div><div id="main-footer"><div id="main-footer-runner"><p /></div><table id="footer-links"><tr><td><table id="footer-links-table"><tr><td><a href="http://www.americanantiquarian.org/" class="footer-link footer-link-sep">American Antiquarian Society</a></td><td><a href="http://dca.tufts.edu" class="footer-link footer-link-sep">Digital Collections and Archives at Tufts University</a></td><td><a href="terms.html" class="footer-link">Terms and Conditions</a></td></tr><tr><td><img src="assets/logo_aas.gif" alt="American Antiquarian Society" /></td><td><img src="assets/logo_dca.gif" alt="Digital Collections and Archives at Tufts University" /></td><td /></tr></table></td></tr></table></div></body></html>

@@ -8,11 +8,14 @@
 
 <h2 class="hidden">Search</h2>
 <p><%= render :partial=>'search_form' %></p>
-<h2> <%=image_tag 'title_downloaddata.gif', :alt=>"Download" %></h2>
+
+<h2>Browse candidates</h2>
+  <%= render :partial=>'/shared/candidate_by_name_widget' %>
+
+<h2>Download</h2>
   <p>You may also download the election returns dataset for offline analysis.
      Visit our <a href="http://elections.lib.tufts.edu/aas_portal/download.xq">data download</a> page for details.
   </p>
 
-  <%= render :partial=>'/shared/candidate_by_name_widget' %>
 </div>
 
