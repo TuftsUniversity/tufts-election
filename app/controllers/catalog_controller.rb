@@ -40,7 +40,7 @@ class CatalogController < ApplicationController
     # sniffing requires solr requests to be made with "echoParams=all", for
     # app code to actually have it echo'd back to see it.  
     config.add_facet_field 'state_name_facet', :label => 'State', :sort => 'index', :limit => 50
-    config.add_facet_field 'date_i', :label => 'Year', :range=>true
+    config.add_facet_field 'date_i', :label => 'Year', :range=>true, :sort => 'index'
     config.add_facet_field 'office_name_facet', :label => 'Office', :limit => 20 
     config.add_facet_field 'jurisdiction_facet', :label => 'Jurisdiction', :limit => 15 
     config.add_facet_field 'party_affiliation_facet', :label => 'Party', :limit => 15 
@@ -93,6 +93,14 @@ class CatalogController < ApplicationController
     # since we aren't specifying it otherwise. 
     
     config.add_search_field 'all_fields', :label => 'All Fields'
+
+    config.add_search_field('Candidate') do |field|
+      field.solr_parameters = { :'spellcheck.dictionary' => 'candidate_name_t' }
+      field.solr_local_parameters = { 
+        :qf => 'candidate_name_t',
+        :pf => 'candidate_name_t',
+      }
+    end
 
     # Now we see how to over-ride Solr request handler defaults, in this
     # case for a BL "search field", which is really a dismax aggregate
