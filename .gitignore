@@ -24,5 +24,12 @@ pids-reingest.txt
 
 .sass-cache
 
+# Ignore configuration files with passwords
+/config/fedora.yml
+/config/solr.yml
+
+# ignore utils directory only used on dev
+/utils/*
+
 #ignore the office authority file
 #config/office-authority.xml
