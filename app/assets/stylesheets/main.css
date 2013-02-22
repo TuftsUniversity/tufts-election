@@ -145,6 +145,19 @@ a img {
    padding-top: 0.5em;
 }
 
+#project-progress {
+   border:none;
+   padding: 2em;
+   margin-left: -1em;
+   background: url(images/parchment_bg.gif);
+   background-repeat:no-repeat;
+   background-position:center center;
+   -o-background-size: 100% 100%, auto;
+   -moz-background-size: 100% 100%, auto;
+   -webkit-background-size: 100% 100%, auto;
+   background-size: 100% 100%, auto;
+}
+
 div.picture-right {
    margin-left: 4em;
    padding-top: 20px;
