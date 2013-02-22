@@ -27,14 +27,16 @@ gem 'jquery-rails'
 #gem 'rdf-rdfxml', '~> 0.3.7'
 gem 'rdf', '~> 0.3.7'
 gem "blacklight_range_limit"
-gem 'blacklight'
+gem 'blacklight', "~> 3.8.2"
 gem 'devise'
 gem 'jettywrapper'
 #gem 'active-fedora', '4.0.0.rc16'
 gem 'active-fedora', :git => 'http://github.com/mediashelf/active_fedora.git'
 gem 'solrizer-fedora', :git => 'http://github.com/projecthydra/solrizer-fedora.git', :ref=>'7ede63d' #need to release '2.0.0.rc3'
-#gem 'solrizer', :git=>'http://github.com/mkorcy/solrizer.git', :ref=>'df0595b'
 gem 'solrizer','1.2.2'
+
+
+
 group :test, :development do
   gem 'rspec-rails'
   # To use debugger
