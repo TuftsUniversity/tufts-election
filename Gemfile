@@ -34,6 +34,7 @@ gem 'jettywrapper'
 gem 'active-fedora', :git => 'http://github.com/mediashelf/active_fedora.git'
 gem 'solrizer-fedora', :git => 'http://github.com/projecthydra/solrizer-fedora.git', :ref=>'7ede63d' #need to release '2.0.0.rc3'
 gem 'solrizer','1.2.2'
+gem 'google-analytics-rails'
 
 
 
