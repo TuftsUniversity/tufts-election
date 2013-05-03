@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  last_heartbeat: 2013-05-02
+  last_ingest: 2013-05-02
+  last_modify: 2013-05-02
+  last_purge: 2013-05-02
+  last_pid_ingested: MyString
+  last_pid_purged: MyString
+  last_pid_modified: MyString
+
+two:
+  name: MyString
+  last_heartbeat: 2013-05-02
+  last_ingest: 2013-05-02
+  last_modify: 2013-05-02
+  last_purge: 2013-05-02
+  last_pid_ingested: MyString
+  last_pid_purged: MyString
+  last_pid_modified: MyString

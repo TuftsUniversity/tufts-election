@@ -1,4 +1,6 @@
 TuftsElection::Application.routes.draw do
+
+
   Blacklight.add_routes(self)
 
   root :to => "catalog#index"
@@ -7,4 +9,5 @@ TuftsElection::Application.routes.draw do
   
   resources :catalog, :id => /.*/
   resources :candidates, :only=>'index'
+  resources :message_queues, :only=>'index'
 end
