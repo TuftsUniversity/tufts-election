@@ -2,7 +2,7 @@
  * Required by Blacklight:
  *= require 'jquery/ui-lightness/jquery-ui-1.8.1.custom.css'
  *
- * This is the default theme. You can modify many of the settings 
+ * This is the default theme. You can modify many of the settings
  * by editing your local app/assets/stylesheets/blacklight_themes/standard.css
  *
  * This is a manifest file that'll be compiled into application.css, which will include all the files
@@ -16,31 +16,478 @@
  *
  *= require_self
  *= require_tree .
-
  *
  * Used by blacklight_range_limit
  *= require  'blacklight_range_limit'
- *         
+ *
 */
 
-/* The following lines are in place just to override blacklight 
+/* The following lines are in place just to override blacklight
  *
  * Used by blacklight_range_limit
  *= require  'blacklight_range_limit'
- *         
+ *
 */
+
+.pageEntriesInfo {
+    background-color: #f0f0f0;
+    border-color: #aaa;
+    border-style: solid;
+    border-width: 1px 1px 0;
+    padding: 0.66em;
+    position: relative;
+    text-align: center;
+}
+
+#main-logo {
+    padding-top: 4px;
+    padding-left: 5px;
+    float: left;
+    clear: none;
+}
+
+
 body {
-  background: none;
-  padding: 0;
-  min-width: 1080px;
+    background: none;
+    padding: 0;
+    min-width: 1080px;
+    background-color: #707070;
+    font: 0.7em Verdana, "Lucida Grande", "Lucida Sans Unicode", "Arial Unicode MS", Arial, sans-serif;
+    line-height: 1.4;
+    margin: 0;
+
 }
 
 table {
-  border-collapse: separate;
+    border-collapse: separate;
+    border-spacing: 0;
+
 }
 
-td{
-  border-width: 0;
-  padding: 0;
+caption,
+th,
+td {
+    text-align: left;
+    font-weight: normal;
+    vertical-align: middle;
 }
 
+ol,
+ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+caption,
+th,
+td {
+    text-align: left;
+    font-weight: normal;
+    vertical-align: middle;
+}
+
+q,
+blockquote {
+    quotes: none;
+}
+
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+    content: "";
+    content: none;
+}
+
+a img {
+    border: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+#login form,
+p,
+fieldset,
+table,
+pre {
+    margin-bottom: 1em;
+}
+
+a:hover {
+    color: #029;
+}
+
+a:link,
+a:visited,
+a:active {
+    border-bottom: 1px dotted #aaa;
+    color: #2e4f81;
+    text-decoration: none;
+}
+
+abbr,
+acronym {
+    border-bottom: 1px dotted #000;
+    cursor: help;
+}
+
+blockquote,
+ul,
+ol,
+dl {
+    margin: 1em;
+}
+
+caption {
+    margin-bottom: .5em;
+    text-align: center;
+}
+
+dl dd {
+    margin-left: 1em;
+}
+
+em {
+    font-style: italic;
+}
+
+form div.row {
+    clear: both;
+    margin-bottom: .5em;
+}
+
+form div.row label {
+    float: left;
+    margin-right: .5em;
+    text-align: right;
+    width: 120px;
+}
+
+form div.row.submit {
+    margin-left: 130px;
+}
+
+form.per_page {
+    float: right;
+}
+
+form.sort {
+    display: inline;
+}
+
+h1 {
+    font-size: 138.5%;
+}
+
+h1,
+h2,
+h3 {
+    margin: 1em 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 123.1%;
+}
+
+h3 {
+    font-size: 108%;
+}
+
+hr {
+    background-color: #ccc;
+    border: none;
+    height: 1px;
+}
+
+input {
+    padding: .1em;
+}
+
+input[type=text],
+input[type=password],
+textarea {
+    width: 11.9em;
+}
+
+label {
+    color: #555;
+    font-weight: 700;
+}
+
+ol li {
+    list-style: decimal outside;
+}
+
+ol,
+ul,
+dl {
+    margin-left: 2em;
+}
+
+select,
+input,
+button,
+textarea {
+    font: 1em Verdana, "Lucida Grande", "Lucida Sans Unicode", "Arial Unicode MS", Arial, sans-serif;
+}
+
+table.zebra .zebra_stripe,
+ul.zebra .zebra_stripe {
+    background-color: #F1F5FA;
+}
+
+textarea {
+    height: 15em;
+    width: 30em;
+}
+
+th {
+    font-weight: 700;
+    text-align: center;
+}
+
+th,
+td {
+    border: 1px solid #000;
+    padding: .5em;
+}
+
+ul li {
+    list-style: disc outside;
+}
+
+.first h1 {
+    margin: 0;
+    padding: 0;
+}
+
+h1.site_title {
+    background: transparent url('/assets/blacklight/logo.png') no-repeat top left;
+    height: 35px;
+    margin: 0;
+    width: 120px;
+}
+
+h1.site_title a {
+    border: 0;
+    display: block;
+    height: 35px;
+    overflow: hidden;
+    text-decoration: none;
+    text-indent: -9999px;
+    width: 120px;
+}
+
+h1.site_title a:link,
+h1.site_title a:visited,
+h1.site_title a:hover,
+h1.site_title a:active {
+    border: 0;
+}
+
+h2.search {
+    display: inline;
+    margin: 0;
+}
+
+#appliedParams {
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #aaa;
+    border-left: 1px solid #aaa;
+    border-right: 1px solid #aaa;
+    margin-bottom: 1.5em;
+    padding: 1em 0.66em 0 1em;
+}
+
+#appliedParams .label {
+    left: -100000000px;
+    position: absolute;
+}
+
+#document {
+    margin-top: 1em;
+}
+
+#document h1 {
+    margin: 0;
+    padding: 0 0 1em;
+}
+
+#documents {
+    margin-bottom: 1.5em;
+    margin-top: 1.5em;
+}
+
+#documents .documentHeader {
+    padding: 0;
+}
+
+#documents .per_page {
+    padding-right: 5px;
+}
+
+#librarian_view {
+    left: -17%;
+    text-align: left;
+    top: 10%;
+    width: 700px;
+}
+
+#marc_view {
+    padding: 5px;
+    text-align: left;
+}
+
+#marc_view .field {
+    border-bottom: 1px solid #ccc;
+    clear: both;
+}
+
+#marc_view .ind1,
+#marc_view .ind2 {
+    display: inline;
+    padding: 0 5px;
+}
+
+#marc_view .subfields {
+    padding-left: 5em;
+}
+
+#marc_view .tag_ind {
+    float: left;
+}
+
+#previousNextDocument {
+    background-color: #f0f0f0;
+    border: 1px solid #aaa;
+    margin-bottom: 1.5em;
+    overflow: auto;
+    padding: 0.66em;
+}
+
+#previousNextDocument .next {
+    float: right;
+}
+
+#search {
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    -ms-border-radius: 4px 4px 0 0;
+    -o-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+    border: 1px solid #aaa;
+    font-size: 120%;
+    padding: 0.66em;
+    text-align: left;
+}
+
+#search #q {
+    width: 200px;
+}
+
+#search .submit {
+    margin: 0 0.5em;
+    padding: 0 0.25em;
+    text-transform: capitalize;
+}
+
+#search hr {
+    display: none;
+    margin: 2em 0 1em;
+}
+
+#search h2,
+.pagination h2,
+#results_text,
+.page_links .next_page,
+.page_links .prev_page {
+    display: none;
+}
+
+dl.defList dd {
+    float: left;
+    margin: 0;
+    padding: 2px 0;
+    text-align: left;
+    width: 450px;
+}
+
+dl.defList dt {
+    clear: both;
+    color: #888;
+    float: left;
+    margin: 0;
+    padding: 2px 1em 2px 0;
+    text-align: right;
+    width: 20%;
+}
+
+#home_text {
+    margin-top: 20px;
+}
+
+#sortAndPerPage {
+    background-color: #f0f0f0;
+    border-color: #aaa;
+    border-style: solid;
+    border-width: 0 1px 1px 1px;
+    padding: 0.66em;
+}
+
+table.election-results-table td {
+    min-width: 4em;
+    padding-left: 1em;
+    padding-right: 1em;
+    vertical-align: top;
+}
+
+table.election-results-table .vote {
+    text-align: right;
+}
+
+table.election-results-table thead {
+    background-color: #ECECDA;
+}
+
+table.election-results-table thead tr.candidate-row {
+    color: #243e61;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    border-spacing: 10px;
+}
+
+#menu ul {
+    padding: 0;
+    margin: 0;
+    width: 180px;
+}
