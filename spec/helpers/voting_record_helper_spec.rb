@@ -13,7 +13,7 @@ describe VotingRecordHelper do
       subject.xpath('//h2[text()="Page Images:"]').size.should == 1 
     end
     it "should link to the candidates" do
-      subject.xpath('//tr[@class="candidate-row"]/td/a/@href').first.value.should == catalog_path("VJ0000")
+      subject.xpath('//tr[@class="candidate-row"]/th/a/@href').first.value.should == catalog_path("VJ0000")
     end
     it "should have a figure" do
       subject.xpath('//figure/img/@src').first.value.should == "http://repository01.lib.tufts.edu:8080/fedora/get/tufts:MS115.001.DO.11024/bdef:TuftsImage/getMediumRes"
