@@ -33,3 +33,6 @@ pids-reingest.txt
 
 #ignore the office authority file
 #config/office-authority.xml
+
+# ignore precompiled assets
+public/assets
