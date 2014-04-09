@@ -30,9 +30,8 @@ gem "blacklight_range_limit"
 gem 'blacklight', "~> 3.8.2"
 gem 'devise'
 gem 'jettywrapper'
-#gem 'active-fedora', '4.0.0.rc16'
-gem 'active-fedora', :git => 'http://github.com/mediashelf/active_fedora.git'
-gem 'solrizer-fedora', :git => 'http://github.com/projecthydra/solrizer-fedora.git', :ref=>'7ede63d' #need to release '2.0.0.rc3'
+gem 'active-fedora'
+gem 'solrizer-fedora'
 gem 'solrizer','1.2.2'
 gem 'google-analytics-rails'
 
