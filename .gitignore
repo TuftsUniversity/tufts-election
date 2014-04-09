@@ -36,3 +36,6 @@ pids-reingest.txt
 
 # ignore precompiled assets
 public/assets
+
+# ignore ide files
+.idea/
