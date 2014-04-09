@@ -10,5 +10,4 @@ input.root.xpath('//auth:office', 'auth' => 'http://dca.tufts.edu/aas/auth').eac
   name = office_node.attribute('name').value
   id =  office_node.attribute('id').value
   $offices[id] = name
-  puts "#{id} -- #{name}"
 end
