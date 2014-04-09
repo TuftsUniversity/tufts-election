@@ -74,9 +74,8 @@ module Datastreams
       solr_doc["page_image_urn_s"] = self.page_image.urn
       solr_doc["jurisdiction_display"] = self.jurisdiction.to_a
       solr_doc["jurisdiction_facet"] = self.jurisdiction.to_a
-      
+      solr_doc["office_name_facet"] = [$offices[solr_doc["office_id_s"].first.to_s]]
       solr_doc
     end
-    
   end
 end
