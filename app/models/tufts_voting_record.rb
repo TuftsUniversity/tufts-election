@@ -4,10 +4,23 @@ class TuftsVotingRecord < ActiveFedora::Base
   
   def to_solr(solr_doc=Hash.new,opt={})
     super
-    solr_doc["title_display"] = solr_doc["title_sort"] = solr_doc["title_t"].first
-    solr_doc["party_affiliation_facet"] = datastreams["RECORD-XML"].office.role.ballot.candidate.affiliation.to_a + datastreams["RECORD-XML"].office.role.ballot.elector.affiliation.to_a 
-    solr_doc["voting_record_xml_display"] = datastreams["RECORD-XML"].to_xml
-    solr_doc["office_name_facet"] = $offices[solr_doc["office_id_s"].first.to_s]
+    solr_doc["format_ssim"] = solr_doc["format_tesim"]
+    solr_doc["title_tesi"] = solr_doc["title_ssi"] = solr_doc["title_tesim"].first
+    solr_doc["party_affiliation_sim"] = datastreams["RECORD-XML"].office.role.ballot.candidate.affiliation.to_a + datastreams["RECORD-XML"].office.role.ballot.elector.affiliation.to_a
+    solr_doc["voting_record_xml_tesi"] = datastreams["RECORD-XML"].to_xml
+    solr_doc["office_name_sim"] = $offices[solr_doc["office_id_ssim"].first.to_s]
+    all_text_values = []
+    solr_doc.each do |key,value|
+
+        unless ['voting_record_xml_tesi','object_profile_ssm'].include? key
+          all_text_values << value
+        end
+
+    end
+    solr_doc["all_text_timv"] = all_text_values.flatten
+    #Add all searchable fields to the all_text_timv field
+
+
     solr_doc
   end
 end
