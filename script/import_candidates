@@ -10,7 +10,7 @@ Dir.glob(File.join(path, '*.xml')).each do |filename|
   input = Nokogiri::XML(File.new(filename))
   input.root.xpath('//auth:candidate', 'auth' => 'http://dca.tufts.edu/aas/auth').each do |candidate_node|
     name = candidate_node.attribute('name').value
-    doc = {'name_t' =>name, 'title_display' =>name, 'title_sort'=>name, 'title_t' =>name, 'candidate_last_name_letter_facet' => name.first.upcase, 'id'=> candidate_node.attribute('id').value, 'format'=>'Candidate'}
+    doc = {'name_tesim' => name, 'title_tesim' => name, 'title_ssi' => name, 'title_tesim' => name, 'candidate_last_name_letter_sim' => name.first.upcase, 'id' => candidate_node.attribute('id').value, 'format_ssim' => 'Candidate', 'all_text_timv' => name}
     ActiveFedora::SolrService.instance.conn.add(doc)
   end
 end
