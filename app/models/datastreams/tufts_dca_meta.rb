@@ -9,7 +9,7 @@
 # the rdoc: http://rubydoc.info/gems/om/1.2.2/frames
 #
 module Datastreams
-  class TuftsDcaMeta  < ActiveFedora::NokogiriDatastream
+  class TuftsDcaMeta  < ActiveFedora::OmDatastream
 
     # 2012-01-23 decided to make everything searchable here and handle facetable in the to_solr methods of the
     # models
@@ -22,7 +22,7 @@ module Datastreams
              "xmlns:dcatech"=>"http://nils.lib.tufts.edu/dcatech/",
              "xmlns:dcterms"=>"http://purl.org/d/terms/",
              "xmlns:xlink"=>"http://www.w3.org/1999/xlink")
-      t.title(:namespace_prefix=>"dc",:path => "title",:index_as=>[:searchable],:label=>"title")
+      t.title(:namespace_prefix=>"dc",:path => "title",:index_as=>[:stored_searchable],:label=>"title")
       t.creator(:namespace_prefix=>"dc",:path => "creator",:index_as=>[:searchable],:label=>"creator")
       t.source2(:namespace_prefix=>"dc",:path => "source",:index_as=>[:searchable],:label=>"source")
       t.description(:namespace_prefix=>"dc",:path => "description",:index_as=>[:searchable],:label=>"description")
