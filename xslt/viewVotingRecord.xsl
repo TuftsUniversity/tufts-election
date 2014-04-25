@@ -93,7 +93,7 @@
                <th scop="col">
                        <xsl:choose>
                          <xsl:when test="normalize-space(@name_id) and @name_id != 'null'">
-                            <a href="/catalog/{@name_id}"><xsl:value-of select="@name"/></a>
+                            <a href="/catalog/{@name_id}/track"><xsl:value-of select="@name"/></a>
              </xsl:when>
                          <xsl:otherwise>
                             <xsl:value-of select="@name"/>
@@ -160,7 +160,7 @@
 
                  <xsl:choose>
                      <xsl:when test="normalize-space(@name_id) and @name_id != 'null'">
-                         <a href="/catalog/{@name_id}"><xsl:value-of select="@name"/></a>
+                         <a href="/catalog/{@name_id}/track"><xsl:value-of select="@name"/></a>
                      </xsl:when>
                      <xsl:otherwise>
                          <xsl:value-of select="@name"/>
