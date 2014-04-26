@@ -6,11 +6,10 @@ Devise.setup do |config|
   # note that it will be overwritten if you use your own mailer class with default "from" parameter.
   config.mailer_sender = "please-change-me-at-config-initializers-devise@example.com"
 
+  yaml_config = YAML.load(File.read(File.join(File.dirname(__FILE__), '../devise.yml')))[Rails.env]
+  config.secret_key =  yaml_config['secret_key']
   # Configure the class responsible to send e-mails.
   # config.mailer = "Devise::Mailer"
-
-  # Automatically apply schema changes in tableless databases
-  config.apply_schema = false
 
   # ==> ORM configuration
   # Load and configure the ORM. Supports :active_record (default) and
@@ -110,10 +109,6 @@ Devise.setup do |config|
 
   # If true, extends the user's remember period when remembered via cookie.
   # config.extend_remember_period = false
-
-  # If true, uses the password salt as remember token. This should be turned
-  # to false if you are not using database authenticatable.
-  config.use_salt_as_remember_token = true
 
   # Options to be passed to the created cookie. For instance, you can set
   # :secure => true in order to force SSL only cookies.
