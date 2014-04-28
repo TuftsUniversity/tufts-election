@@ -6,20 +6,20 @@ describe Datastreams::ElectionRecord do
     it "should only index the year part of the date" do
         @potus_1792 = Datastreams::ElectionRecord.from_xml( fixture("election_records/us_potus_1792_RECORD-XML.xml") )
         @potus_1792.date = '1820-11'
-        @potus_1792.to_solr['date_i'].should == 1820
+        @potus_1792.to_solr['date_isi'].should == 1820
         
     end
     describe "state_name_facet" do
       describe "when the admin unit is a State" do
         subject { Datastreams::ElectionRecord.from_xml('<aas:election_record xmlns:aas="http://dca.tufts.edu/aas"> <aas:office><aas:role><aas:admin_unit geog_id="mes" name="Maine" type="State"></aas:admin_unit></aas:role></aas:office></aas:election_record>').to_solr} 
         it "should be the states name" do
-          subject["state_name_facet"]. should == ['Maine'] 
+          subject["state_name_sim"]. should == ['Maine'] 
         end
       end
       describe "when the admin unit is a Territory" do
         subject { Datastreams::ElectionRecord.from_xml('<aas:election_record xmlns:aas="http://dca.tufts.edu/aas"> <aas:office><aas:role><aas:admin_unit geog_id="mes" name="Maine" type="Territory"></aas:admin_unit></aas:role></aas:office></aas:election_record>').to_solr} 
         it "should be the territorys name" do
-          subject["state_name_facet"]. should == ['Maine'] 
+          subject["state_name_sim"]. should == ['Maine'] 
         end
       end
     end
@@ -31,46 +31,46 @@ describe Datastreams::ElectionRecord do
         @county_solr = @madisoncounty_1820.to_solr
       end
       it "should set field values" do
-        @potus_solr["format"].should == "Election Record"
-        @potus_solr["date_t"].should == ["1792"]
-        @potus_solr["date_i"].should == 1792
-        @potus_solr["iteration_t"].should == ["First Ballot"]
-        @potus_solr["label_t"].should == ["1792 President of the United States, Electoral College"]
-        @potus_solr["election_id_s"].should == ["us.potus.1792"]
-        @potus_solr["handle_s"].should == ["10427/65038"]
-        @potus_solr["election_type_t"].should == ["Legislative"]
-        @potus_solr["election_type_facet"].should == ["Legislative"]
-        @potus_solr["jurisdiction_display"].should == ["Federal"]
+        puts "#{@potus_solr}"
+        @potus_solr["format_ssim"].should == "Election Record"
+        @potus_solr["date_tesim"].should == ["1792"]
+        @potus_solr["date_isi"].should == 1792
+        @potus_solr["iteration_tesim"].should == ["First Ballot"]
+        @potus_solr["label_tesim"].should == ["1792 President of the United States, Electoral College"]
+        @potus_solr["election_id_tesim"].should == ["us.potus.1792"]
+        @potus_solr["handle_tesim"].should == ["10427/65038"]
+        @potus_solr["election_type_tesim"].should == ["Legislative"]
+        @potus_solr["election_type_sim"].should == ["Legislative"]
+        @potus_solr["jurisdiction_tesim"].should == ["Federal"]
         
-        @potus_solr["office_name_t"].should == ["President of the United States"]
-        @potus_solr["office_name_facet"].should == ["President of the United States"]
-        @potus_solr["office_id_s"].should == ["ON069"]
-        @potus_solr["office_scope_t"].should == ["Federal"]
-        @potus_solr["office_role_title_t"].should == ["President of the United States"]
-        @potus_solr["office_role_title_facet"].should == ["President of the United States"]
-        @potus_solr["office_role_scope_t"].should == ["Federal"]
-        @potus_solr["candidate_name_t"].should == ["George Washington", "John Adams", "George Clinton", "Thomas Jefferson", "Aaron Burr"]
-        @potus_solr["candidate_name_facet"].should == ["George Washington", "John Adams", "George Clinton", "Thomas Jefferson", "Aaron Burr"]
-        @potus_solr["candidate_id_s"].should == ["WG0011", "AJ0076", "CG0080", "JT0012", "BA0134"]
+        @potus_solr["office_name_tesim"].should == ["President of the United States"]
+        @potus_solr["office_name_sim"].should == ["President of the United States"]
+        @potus_solr["office_id_ssim"].should == ["ON069"]
+        @potus_solr["office_scope_tesim"].should == ["Federal"]
+        @potus_solr["office_role_title_tesim"].should == ["President of the United States"]
+        @potus_solr["office_role_title_sim"].should == ["President of the United States"]
+        @potus_solr["office_role_scope_tesim"].should == ["Federal"]
+        @potus_solr["candidate_name_tesim"].should == ["George Washington", "John Adams", "George Clinton", "Thomas Jefferson", "Aaron Burr"]
+        @potus_solr["candidate_name_sim"].should == ["George Washington", "John Adams", "George Clinton", "Thomas Jefferson", "Aaron Burr"]
+        @potus_solr["candidate_id_tesim"].should == ["WG0011", "AJ0076", "CG0080", "JT0012", "BA0134"]
         
-        @county_solr["format"].should == "Election Record"
-        @county_solr["page_image_urn_s"].should == ["tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024"]
-        @county_solr["citation_t"].should == ["Alabama Republican (Huntsville), August 11, 1820. (Phil's typewritten notes.)", "Election Record from Alabama State Archives.", "The Republican (Huntsville). August 11, 1820.", "The Republican (Huntsville). September 1, 1820.", "The Halcyon (Saint Stephens). August 21, 1820."]
-        @county_solr["date_t"].should == ["1820"]
+        @county_solr["page_image_urn_ssim"].should == ["tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024"]
+        @county_solr["citation_tesim"].should == ["Alabama Republican (Huntsville), August 11, 1820. (Phil's typewritten notes.)", "Election Record from Alabama State Archives.", "The Republican (Huntsville). August 11, 1820.", "The Republican (Huntsville). September 1, 1820.", "The Halcyon (Saint Stephens).  August 21, 1820."]
+        @county_solr["date_tesim"].should == ["1820"]
 
-        @county_solr["state_name_t"].should == ["Alabama"]
-        @county_solr["state_name_facet"].should == ["Alabama"]
-        @county_solr["state_county_name_t"].should == ["Madison"]
-        @county_solr["state_county_name_facet"].should == ["Madison"]
-        @county_solr["jurisdiction_display"].should == ["County"]
-        @county_solr["jurisdiction_facet"].should == ["County"]
+        @county_solr["state_name_tesim"].should == ["Alabama"]
+        @county_solr["state_name_sim"].should == ["Alabama"]
+        @county_solr["state_county_name_tesim"].should == ["Madison"]
+        @county_solr["state_county_name_sim"].should == ["Madison"]
+        @county_solr["jurisdiction_tesim"].should == ["County"]
+        @county_solr["jurisdiction_sim"].should == ["County"]
         
         
-        @county_solr["office_name_t"].should == ["House of Representatives"]
-        @county_solr["office_id_s"].should == ["ON057"]
-        @county_solr["office_scope_t"].should == ["State"]
-        @county_solr["office_role_title_t"].should == ["State Representative"]
-        @county_solr["office_role_scope_t"].should == ["County"]      
+        @county_solr["office_name_tesim"].should == ["House of Representatives"]
+        @county_solr["office_id_ssim"].should == ["ON057"]
+        @county_solr["office_scope_tesim"].should == ["State"]
+        @county_solr["office_role_title_tesim"].should == ["State Representative"]
+        @county_solr["office_role_scope_tesim"].should == ["County"]      
       end
     end
 
