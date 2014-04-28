@@ -8,9 +8,12 @@ class SolrDocument
   # The following shows how to setup this blacklight document to display marc documents
   extension_parameters[:marc_source_field] = :marc_display
   extension_parameters[:marc_format_type] = :marcxml
-  use_extension( Blacklight::Solr::Document::Marc) do |document|
-    document.key?( :marc_display  )
-  end
+  # Add the blacklight-marc gem to your Gemfile. If you are not using MARC-flavor metadata, 
+  # you can omit them gem, and remove any references to Blacklight::Solr::Document::Marc
+  # from your SolrDocument class.
+  #use_extension( Blacklight::Solr::Document::Marc) do |document|
+  #  document.key?( :marc_display  )
+  #end
   
   # Email uses the semantic field mappings below to generate the body of an email.
   SolrDocument.use_extension( Blacklight::Solr::Document::Email )
@@ -25,9 +28,9 @@ class SolrDocument
   # Recommendation: Use field names from Dublin Core
   use_extension( Blacklight::Solr::Document::DublinCore)    
   field_semantics.merge!(    
-                         :title => "title_display",
-                         :author => "author_display",
-                         :language => "language_facet",
-                         :format => "format"
+                         :title => "title_tesi",
+                         :author => "author_tesim",
+                         :language => "language_ssim",
+                         :format => "format_ssim"
                          )
 end
