@@ -1,0 +1,7 @@
+<% unless params['q'].blank? and params['f'].blank? %>
+
+    <div id="appliedParams" class="clearfix constraints-container">
+      <span class="constraints-label"><%= t('blacklight.search.filters.title') %></span>
+      <%= render_constraints(params) %>
+    </div>
+<% end %>
