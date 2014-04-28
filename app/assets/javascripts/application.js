@@ -13,8 +13,6 @@
 //= require jquery
 //= require jquery.browser
 //= require jquery_ujs
-// Used by blacklight_range_limit
-//= require  'blacklight_range_limit'
 //
 // Required by Blacklight
 //= require blacklight/blacklight
