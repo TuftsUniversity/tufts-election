@@ -1,7 +1,4 @@
 /*
- * Required by Blacklight:
- *= require 'jquery/ui-lightness/jquery-ui-1.8.1.custom.css'
- *
  * This is the default theme. You can modify many of the settings
  * by editing your local app/assets/stylesheets/blacklight_themes/standard.css
  *
@@ -17,8 +14,6 @@
  *= require_self
  *= require_tree .
  *
- * Used by blacklight_range_limit
- *= require  'blacklight_range_limit'
  *
 */
 
@@ -58,69 +53,6 @@ body {
 
 }
 
-table {
-    border-collapse: separate;
-    border-spacing: 0;
-
-}
-
-caption,
-th,
-td {
-    text-align: left;
-    font-weight: normal;
-    vertical-align: middle;
-}
-
-ol,
-ul {
-    list-style: none;
-}
-
-table {
-    border-collapse: collapse;
-}
-
-caption,
-th,
-td {
-    text-align: left;
-    font-weight: normal;
-    vertical-align: middle;
-}
-
-q,
-blockquote {
-    quotes: none;
-}
-
-q:before,
-q:after,
-blockquote:before,
-blockquote:after {
-    content: "";
-    content: none;
-}
-
-a img {
-    border: none;
-}
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section,
-summary {
-    display: block;
-}
-
 .hide {
     display: none;
 }
@@ -151,12 +83,6 @@ acronym {
     cursor: help;
 }
 
-blockquote,
-ul,
-ol,
-dl {
-    margin: 1em;
-}
 
 caption {
     margin-bottom: .5em;
@@ -248,12 +174,6 @@ ol li {
     list-style: decimal outside;
 }
 
-ol,
-ul,
-dl {
-    margin-left: 2em;
-}
-
 select,
 input,
 button,
@@ -280,10 +200,6 @@ th,
 td {
     border: 1px solid #000;
     padding: .5em;
-}
-
-ul li {
-    list-style: disc outside;
 }
 
 .first h1 {
@@ -325,7 +241,6 @@ h2.search {
     border-bottom: 1px solid #aaa;
     border-left: 1px solid #aaa;
     border-right: 1px solid #aaa;
-    margin-bottom: 1.5em;
     padding: 1em 0.66em 0 1em;
 }
 
@@ -393,10 +308,6 @@ h2.search {
     margin-bottom: 1.5em;
     overflow: auto;
     padding: 0.66em;
-}
-
-#previousNextDocument .next {
-    float: right;
 }
 
 #search {
@@ -490,4 +401,17 @@ table.election-results-table thead tr.candidate-row {
     padding: 0;
     margin: 0;
     width: 180px;
+}
+
+.appliedFilter .filterName:after {
+content: "\276F";
+padding-left: 4px;
+}
+.appliedFilter .remove {
+    border-left: 1px solid #c4dafe;
+}
+
+div.accordian {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
