@@ -1,48 +1,42 @@
 <div id="content-sidebar">
   <div id="sidebar">
-	  <%= render :partial=>'facets' %>
+    <%= render :partial => 'facets' %>
   </div>
   <% unless has_search_parameters? %>
-    <%= render :partial=>'shared/project_progress' %>
+      <%= render :partial => 'shared/project_progress' %>
   <% end %>
 </div>
 <div id="main-content-panel">
 
   <% unless has_search_parameters? %>
-    <%# if there are no input/search related params, display the "home" partial -%>
-    <% if params[:advanced] %>
-      <%= render 'advanced' %>
-    <% else %> 
+      <%# if there are no input/search related params, display the "home" partial -%>
       <%= render 'home' %>
-    <% end %>
 
   <% else %>
 
 
-    <% @page_title = application_name + " Search Results" %>
+      <% @page_title = application_name + " Search Results" %>
 
-          <% extra_head_content << render_opensearch_response_metadata.html_safe %>
+      <%= render :partial => 'search_form' %>
 
-    <%= render :partial => 'search_form' %>
-    
-    <%= render :partial => 'did_you_mean' %>
+      <%= render :partial => 'did_you_mean' %>
 
-    <%= render 'constraints', :localized_params=>params %>
-    
-    <div class="pageEntriesInfo">
-      <%= render_pagination_info @response, :entry_name=>'item' %>
-      <%=link_to "start over", catalog_index_path, :id=>"startOverLink" %>
-    </div>
-    
-    <%= render 'sort_and_per_page' %>
-    
-    <%= render 'results_pagination' %>
-    
-    <%= render :partial => 'document_list' %>
+      <%= render 'constraints', :localized_params => params %>
 
+      <%= render 'sort_and_per_page' %>
 
-    <%= render 'results_pagination' %>
+      <%= render 'results_pagination' %>
 
-  <%end%>
+      <%- if @response.empty? %>
+          <%= render "zero_results" %>
+      <%- elsif render_grouped_response? %>
+          <%= render_grouped_document_index %>
+      <%- else %>
+          <%= render_document_index %>
+      <%- end %>
+
+      <%= render 'results_pagination' %>
+
+  <% end %>
 </div>
 
