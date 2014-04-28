@@ -1,0 +1,6 @@
+<% if @response.total_pages > 1 %>
+    <div id="pagination_container">
+      <h2><%= t('blacklight.search.pagination.title') %></h2>
+      <%= paginate @response, :outer_window => 2 %>
+    </div>
+<% end %>
