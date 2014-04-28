@@ -1,38 +1,51 @@
 <div class="details">
   <dl class="defList">
     <dt>Office:</dt>
-    <dd><%= document.get("office_name_t") %> (<%= document.get("office_scope_t") %>)</dd>
+    <dd><%= document.get("office_name_tesim") %> (<%= document.get("office_scope_tesim") %>)</dd>
     <dt>Title:</dt>
-    <dd><%= document.get("office_role_title_t") %></dd>
+    <dd><%= document.get("office_role_title_tesim") %></dd>
     <dt>Jurisdiction:</dt>
-    <dd><%= document.get("jurisdiction_display") %></dd>
+    <dd><%= document.get("jurisdiction_tesim") %></dd>
   </dl>
 
-  <h3 class="contract" data-closed-text="Less information">View more information</h3>
+  <div class="accordion" id="accordion2">
+    <div class="accordion-group">
+      <div class="accordion-heading">
+
+   <a class="accordian-toggle collapsed"  data-toggle="collapse" href="#collapseOne">View more information</a>
+        </div>
+      <div id="collapseOne" class="accordion-body collapse">
+           <div class="accordion-inner">
   <dl class="defList">
     <dt>Label:</dt>
-    <dd><%= document.get("label_t") %></dd>
+    <dd><%= document.get("label_tesim") %></dd>
     <dt>Date:</dt>
-    <dd><%= document.get("date_i") %></dd>
+    <dd><%= document.get("date_isi") %></dd>
     <dt>State:</dt>
-    <dd><%= document.get("state_name_t") %></dd>
+    <dd><%= document.get("state_name_tesim") %></dd>
     <dt>Type:</dt>
-    <dd><%= document.get("election_type_t") %></dd>
+    <dd><%= document.get("election_type_tesim") %></dd>
     <dt>Iteration:</dt>
-    <dd><%= document.get("iteration_t") %></dd>
+    <dd><%= document.get("iteration_tesim") %></dd>
     <dt>Office/Role:</dt>
-    <dd><%= document.get("office_name_t") + "/" + document.get("office_role_title_t") %></dd>
-    <% unless document.get("candidate_name_t").nil? %>
+    <dd><%= document.get("office_name_tesim") + "/" + document.get("office_role_title_tesim") %></dd>
+    <% unless document.get("candidate_name_tesim").nil? %>
       <dt>Candidates:</dt>
-      <dd><%= document.get("candidate_name_t") %></dd>
+      <dd><%= document.get("candidate_name_tesim") %></dd>
     <% end %>
-    <% unless document.get("elector_name_t").nil? %>
+    <% unless document.get("elector_name_tesim").nil? %>
       <dt>Electors:</dt>
-      <dd><%= document.get("elector_name_t") %></dd>
+      <dd><%= document.get("elector_name_tesim") %></dd>
     <% end %>
   </dl>
+             </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
-<%= voting_record_xml_to_table(document.get("voting_record_xml_display")) %>
+<%= voting_record_xml_to_table(document.get("voting_record_xml_tesi")) %>
 
 <p id="record-message"><%=render :partial=>'shared/released_message' %></p>
