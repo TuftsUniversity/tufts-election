@@ -22,10 +22,10 @@ $blue: #243E61;
   text-decoration: underline;
 }
 @mixin link4 {
-  color: $gray;
+/*  color: $gray;
   font-family: Arial,Helvetica,sans-serif;
   font-size: 12px;
-  text-decoration: underline;
+  text-decoration: underline;*/
 }
 
 h3.contract {
@@ -111,6 +111,7 @@ table.election-results-table {
 
 .details {
     margin-left: 30px;
+    margin-bottom: 15px;
 }
 dl.defList {
   dt {
@@ -130,7 +131,7 @@ dl.defList {
   h1 {
     @include text8;
     font-weight: normal;
-    padding: 0;
+    padding-top: 15px;
   }
   h2 {
     @include text2;
@@ -154,11 +155,12 @@ a:link, a:visited, a:active {
   @include text2;
 }
 
-nav {
+.pagination {
   a:link, a:visited, a:active {
     @include link1;
   }
-  margin-bottom: 20px;
+  margin: 0px;
+  border-radius: 0px;
 }
 
 figcaption {
@@ -203,4 +205,97 @@ h3.contract:hover {
     width:1px;
     height:1px;
     overflow:hidden;
+}
+
+.wrapper {
+  display: inline-block;
+  height: 25px;
+}
+h3.index_title {
+  font-size: 12px;
+}
+a:link, a:visited, a:active {
+color: #666666;
+font-family: Arial,Helvetica,sans-serif;
+font-size: 12px;
+text-decoration: underline;
+border-bottom: 0 none;
+}
+
+div.yui-u {
+  margin-bottom: 10px;
+}
+
+
+a.constraint-value
+{
+  background: none;
+
+}
+
+a.btn-default {
+  border: 0px solid transparent;
+}
+
+.sort-dropdown {
+  float:left;
+}
+
+.dropdown-menu > li > a {
+  text-decoration: none;
+}
+
+.btn a:link, a:visited, a:active {
+  text-decoration: none;
+}
+
+.pagination {
+  width: 630px;
+  text-align: center;
+}
+#pagination_container h2 {
+  display: none;
+}
+
+* {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+span.page.current {
+background: none repeat scroll 0 0 #2e4f81;
+border: 1px solid #2e4f81;
+color: #FFF;
+font-weight: 700;
+font-family: Arial,Helvetica,sans-serif;
+font-size: 11px;
+}
+
+h2 {
+color: #666666;
+font-family: "Lucida Bright", serif;
+font-size: 123.1%;
+}
+
+h1 {
+  margin-top: 15px;
+}
+
+#f_candidate_last_name_letter_sim_ {
+  border: 1px outset buttonface;
+  vertical-align: top;
+  margin-top: 3px;
+}
+#search_field {
+
+  border: 1px outset buttonface;
+}
+
+a:link.constraint-value {
+  text-decoration: none;
+}
+
+.facet-label.glyphicon {
+  background: red;
 }
