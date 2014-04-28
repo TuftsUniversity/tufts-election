@@ -437,7 +437,10 @@ a.link4:visited {
     *zoom: 1;
 }
 
+
 #project-progress {
+    width: 195px;
+    margin-top: 25px;
     border: none;
     padding: 2em;
     margin-left: -1em;
@@ -455,7 +458,7 @@ a.link4:visited {
 }
 
 #startOverLink {
-    background: url(/assets/blacklight/start_over.gif) no-repeat center center;
+    /*background: url(/assets/blacklight/start_over.gif) no-repeat center center;
     border-bottom: none;
     color: #fff;
     display: block;
@@ -465,7 +468,8 @@ a.link4:visited {
     position: absolute;
     right: 0.66em;
     text-decoration: none;
-    top: 50%;
+    top: 50%; */
+    display: none;
 }
 
 .appliedFilter {
@@ -483,30 +487,17 @@ a.link4:visited {
     border-radius: 15px 15px 15px 15px;
 }
 
-.appliedFilter .btnRemove {
-    background: url(/assets/blacklight/remove.gif) no-repeat center center;
-    border-bottom: none;
-    border-left: 1px solid #c4dafe;
-    display: block;
-    height: 100%;
-    outline: none;
-    position: absolute;
-    right: 0;
-    text-indent: -99999px;
-    top: 0;
-    width: 32px;
-    z-index: 5;
+a:hover.constraint-value {
+    background: #e2edfe;
 }
-
-.appliedFilter .btnRemove:active,
-.appliedFilter .btnRemove:focus {
-    border: 1px dotted #ffd27a;
+a:hover.remove {
+    background: #e2edfe;
 }
-
-.appliedFilter .queryName,
-.appliedFilter .filterName {
-    background: url(/assets/blacklight/separator.gif) no-repeat right center;
-    padding-right: 14px;
+a.remove {
+    background: #e2edfe;
+}
+span.glyphicon-remove {
+    background: #e2edfe;
 }
 
 .constraints,
