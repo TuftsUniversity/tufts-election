@@ -11,7 +11,7 @@
 
               <li>
                 <div class="menutop">
-                  <a href="#"><%= facet_field_labels[solr_fname] -%></a>
+                  <a href="#"><%= facet_field_label(solr_fname) -%></a>
 
                   <div class="toggle toggle_icon">+</div>
                 </div>
@@ -22,22 +22,21 @@
                   %>
                   <% paginator.items.each do |item| -%>
                       <li>
-                        <% if facet_in_params?(solr_fname, item.value) %>
-                            <%= render_selected_facet_value(solr_fname, item) %>
-                        <% else %>
-                            <% if item.value.blank? %>
-                                <%#= render_facet_value(solr_fname, ["Unknown",item.hits]) %>
+
+                            <% unless item.value.blank? %>
+                            <% if facet_in_params?( solr_fname, item ) %>
+                                <%= render_selected_facet_value(solr_fname, item) %>
                             <% else %>
                                 <%= render_facet_value(solr_fname, item) %>
-                            <% end %>
+                            <% end -%>
                         <% end -%>
+
                       </li>
                   <% end %>
 
-                  <% if (paginator.has_next?) %>
-                      <% #<a data-toggle="modal" href="#myModal" class="more_facets_link">more »</a> -%>
-                      <li class="more_facets_link"><%= link_to('more »', params.merge(:id => solr_fname, :action => "facet"), :'data-toggle' => "modal", :class => "more_facets_link") %></li>
-                  <% end %>
+                  <% if paginator.has_next? and params[:action] != "facet" %>
+                     <li class="more_facets_link"><%= link_to(t('blacklight.search.facets.more'), params.merge(:id => solr_fname, :action=>"facet", :page => nil), :class => "more_facets_link") %></li>
+                   <% end %>
 
                 </ul>
               </li>
