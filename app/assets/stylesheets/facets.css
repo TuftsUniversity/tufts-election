@@ -39,7 +39,7 @@
  /*extended lists*/
 .prev_next_links{
 	text-align:center;}
-	
+
 .sort_change {text-decoration:underline;}
  .sort_options{font-size:11px; padding-right: 5px;text-align:right;    }
 .close_window{float:right;  width:9px;  padding-left:5px; cursor:pointer; border-left:1px solid #E0E0E0; color:#999; height:25px;}
@@ -47,8 +47,13 @@
 
 .selected
 {
-    padding: 5px;
-    display: block;
+    padding: 10px;
     color: #666;
 }
 
+span.facet-label > a:link.remove {
+    background: none;
+}
+span.facet-label > a:link.remove > span.glyphicon-remove {
+    background: none;
+}
