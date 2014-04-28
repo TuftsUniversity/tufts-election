@@ -11,8 +11,8 @@ module Datastreams
       t.date(:path=>{:attribute=>"date"}, :index_as=>[:facetable,:stored_searchable])
       t.iteration(:path=>{:attribute=>"iteration"}, :index_as=>[:stored_searchable])
       t.label_(:path=>{:attribute=>"label"}, :index_as=>[:stored_searchable])
-      t.election_id(:path=>{:attribute=>"election_id"})
-      t.handle(:path=>{:attribute=>"handle"})
+      t.election_id(:path=>{:attribute=>"election_id"}, :index_as=>[:stored_searchable])
+      t.handle(:path=>{:attribute=>"handle"}, :index_as=>[:stored_searchable])
       t.election_record {
         t.election_type(:path=>{:attribute=>"type"}, :index_as=>[:facetable,:stored_searchable])
       }
@@ -45,13 +45,13 @@ module Datastreams
         }
       }
       t.citation(:path=>"reference", :attributes=>{:type=>"citation"}, :index_as=>[:stored_searchable])
-      t.page_image(:path=>"reference", :attributes=>{:type=>"page_image"}) {
-        t.urn(:path=>{:attribute=>"urn"})
+      t.page_image(:path=>"reference", :attributes=>{:type=>"page_image"}, :index_as=>[:facetable,:stored_searchable]) {
+        t.urn(:path=>{:attribute=>"urn"}, :index_as=>[:facetable,:stored_searchable])
       }
       
-      t.election_type(:proxy=>[:election_record, :election_type])
+      t.election_type(:proxy=>[:election_record, :election_type], :index_as=>[:facetable,:stored_searchable])
       t.candidate_name(:proxy=>[:office, :role, :ballot, :candidate, :name], :index_as=>[:facetable,:stored_searchable])
-      t.candidate_id(:proxy=>[:office, :role, :ballot, :candidate, :candidate_id])
+      t.candidate_id(:proxy=>[:office, :role, :ballot, :candidate, :candidate_id], :index_as=>[:facetable,:stored_searchable])
       t.candidate_affiliation(:proxy=>[:office, :role, :ballot, :candidate, :affiliation])
       t.elector_name(:proxy=>[:office, :role, :ballot, :elector, :name])
       t.elector_id(:proxy=>[:office, :role, :ballot, :elector, :elector_id])
@@ -65,6 +65,7 @@ module Datastreams
     
     def to_solr(solr_doc=Hash.new)
       super
+      puts "MIKEK: #{self.to_s}"
       solr_doc["format_tesim"] = "Election Record"
       solr_doc["format_ssim"] = "Election Record"
       solr_doc["date_isi"] = self.date.to_a.map(&:to_i).first
