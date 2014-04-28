@@ -27,6 +27,8 @@ pids-reingest.txt
 # Ignore configuration files with passwords
 /config/fedora.yml
 /config/solr.yml
+/config/jetty.yml
+/config/devise.yml
 
 # ignore utils directory only used on dev
 /utils/*
