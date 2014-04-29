@@ -65,7 +65,6 @@ module Datastreams
     
     def to_solr(solr_doc=Hash.new)
       super
-      puts "MIKEK: #{self.to_s}"
       solr_doc["format_tesim"] = "Election Record"
       solr_doc["format_ssim"] = "Election Record"
       solr_doc["date_isi"] = self.date.to_a.map(&:to_i).first
