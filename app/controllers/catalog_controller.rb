@@ -39,7 +39,7 @@ class CatalogController < ApplicationController
     # on the solr side in the request handler itself. Request handler defaults
     # sniffing requires solr requests to be made with "echoParams=all", for
     # app code to actually have it echo'd back to see it.  
-    config.add_facet_field 'state_name_sim', :label => 'State', :sort => 'index', :limit => 2
+    config.add_facet_field 'state_name_sim', :label => 'State', :sort => 'index', :limit => 50
     config.add_facet_field 'date_sim', :label => 'Year', :range=>true, :sort => 'index'
     config.add_facet_field 'office_name_sim', :label => 'Office', :limit => 20
     config.add_facet_field 'jurisdiction_sim', :label => 'Jurisdiction', :limit => 15
