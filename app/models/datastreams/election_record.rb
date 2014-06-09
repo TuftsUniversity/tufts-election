@@ -8,7 +8,10 @@ module Datastreams
         # "xmlns:aas"="http://dca.tufts.edu/aas",
          "xsi:schemaLocation"=>"http://dca.tufts.edu/aas http://dca.tufts.edu/schema/aas/electionRecord.xsd",
          :schema=>"http://ddex.net/xml/2010/ern-main/32/ern-main.xsd")
-      t.date(:path=>{:attribute=>"date"}, :index_as=>[:facetable,:stored_searchable])
+      #In the latest version of AF/BL date indexes differently then it used to, whereas
+      #in the past 2011-01 would index as "2011" it now indexes the full string, or
+      #it at least appears that way.
+      t.date(:path=>{:attribute=>"date"})
       t.iteration(:path=>{:attribute=>"iteration"}, :index_as=>[:stored_searchable])
       t.label_(:path=>{:attribute=>"label"}, :index_as=>[:stored_searchable])
       t.election_id(:path=>{:attribute=>"election_id"}, :index_as=>[:stored_searchable])
@@ -65,9 +68,11 @@ module Datastreams
     
     def to_solr(solr_doc=Hash.new)
       super
+
       solr_doc["format_tesim"] = "Election Record"
       solr_doc["format_ssim"] = "Election Record"
       solr_doc["date_isi"] = self.date.to_a.map(&:to_i).first
+      solr_doc["date_sim"] = self.date.first[0..3]
       solr_doc["election_id_ssim"] = self.election_id.to_a
       solr_doc["handle_ssi"] = self.handle.to_a
       solr_doc["office_id_ssim"] = self.office.office_id.to_a
