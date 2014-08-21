@@ -1,5 +1,9 @@
 <% @page_title = "#{document_show_html_title} - #{application_name}" %>
-
+<style>
+.label {
+  color: #428bca
+}
+</style>
 <% if false %>
     <%= render 'constraints', :params => current_search_session.try(:query_params) || {} %>
 <% end %>
