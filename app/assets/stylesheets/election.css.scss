@@ -51,6 +51,9 @@ table.election-results-table {
     .vote {
       text-align: right;
     }
+    .vote-nodata {
+      text-align: right;
+    }
     thead {
       background-color: #ECECDA;
       tr.candidate-row {
