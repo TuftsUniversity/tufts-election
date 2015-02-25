@@ -444,7 +444,7 @@
       <xsl:for-each select="//aas:reference[@type='page_image' and not (./@urn = preceding::aas:reference/@urn)]">
       <figure class="page-image">
         <xsl:variable name="uri" select="substring(@urn, 24)" />
-        <img src="http://repository01.lib.tufts.edu:8080/fedora/get/tufts{$uri}/bdef:TuftsImage/getMediumRes" alt="handwritten notes" />
+        <img src="http://repository01.lib.tufts.edu:8080/fedora/objects/tufts{$uri}/datastreams/Basic.jpg/content" alt="handwritten notes" />
         <figcaption>Phil's original notebook pages that were used to compile this election. These notes are considered a draft of the electronic version. Therefore, the numbers may not match. To verify numbers you will need to check the original sources cited. Some original source material is available at the <a href="http://www.americanantiquarian.org">American Antiquarian Society</a>).</figcaption>
       </figure>
       </xsl:for-each>
