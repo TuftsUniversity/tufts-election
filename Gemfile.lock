@@ -62,6 +62,8 @@ GEM
       sass (~> 3.2)
     bouncy-castle-java (1.5.0147)
     builder (3.0.4)
+    childprocess (0.5.5)
+      ffi (~> 1.0, >= 1.0.11)
     codesake-commons (0.95.0)
       mechanize
       nokogiri
@@ -126,6 +128,12 @@ GEM
       domain_name (~> 0.5)
     i18n (0.6.9)
     jdbc-sqlite3 (3.7.2.1)
+    jettywrapper (1.5.0)
+      activesupport (>= 3.0.0)
+      childprocess
+      i18n
+      logger
+      mediashelf-loggable
     journey (1.0.4)
     jquery-rails (3.1.0)
       railties (>= 3.0, < 5.0)
@@ -140,6 +148,7 @@ GEM
       activesupport (>= 3.0.0)
     kgio (2.9.2)
     libv8 (3.16.14.3)
+    logger (1.2.8)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -317,6 +326,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise
   google-analytics-rails
+  jettywrapper (= 1.5.0)
   jquery-rails
   jruby-openssl
   om (~> 3.0.4)

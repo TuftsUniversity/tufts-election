@@ -32,6 +32,7 @@ gem 'devise'
 gem 'active-fedora', '~> 6.7.7'
 gem 'solrizer','3.1.1'
 gem 'google-analytics-rails'
+gem 'jettywrapper', '1.5.0'
 
 group :test, :development do
   gem 'rspec-rails'
