@@ -9,6 +9,8 @@ h1. Setting up Tufts Election development environment:
   <pre>./script/import_candidates spec/fixtures/candidates/</pre>
 # Import election result records from spec/fixtures/election_records
   <pre>rake index</pre>
+# Migrate your database:
+  <pre>rake db:migrate</pre>
 # Start rails:
   <pre>rails s</pre>
 
