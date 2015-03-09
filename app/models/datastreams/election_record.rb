@@ -69,10 +69,13 @@ module Datastreams
     def to_solr(solr_doc=Hash.new)
       super
 
+      first_date = Array(self.date).first
+
       solr_doc["format_tesim"] = "Election Record"
       solr_doc["format_ssim"] = "Election Record"
       solr_doc["date_isi"] = self.date.to_a.map(&:to_i).first
-      solr_doc["date_sim"] = self.date.first[0..3]
+      solr_doc["date_sim"] = first_date[0..3] unless first_date.blank?
+      solr_doc["date_tesim"] = self.date
       solr_doc["election_id_ssim"] = self.election_id.to_a
       solr_doc["handle_ssi"] = self.handle.to_a
       solr_doc["office_id_ssim"] = self.office.office_id.to_a

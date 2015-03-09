@@ -9,6 +9,7 @@ describe Datastreams::ElectionRecord do
         @potus_1792.to_solr['date_isi'].should == 1820
         
     end
+
     describe "state_name_facet" do
       describe "when the admin unit is a State" do
         subject { Datastreams::ElectionRecord.from_xml('<aas:election_record xmlns:aas="http://dca.tufts.edu/aas"> <aas:office><aas:role><aas:admin_unit geog_id="mes" name="Maine" type="State"></aas:admin_unit></aas:role></aas:office></aas:election_record>').to_solr} 
@@ -23,6 +24,7 @@ describe Datastreams::ElectionRecord do
         end
       end
     end
+
     describe "with some fixtures" do
       before(:each) do
         @potus_1792 = Datastreams::ElectionRecord.from_xml( fixture("election_records/us_potus_1792_RECORD-XML.xml") )
@@ -30,8 +32,8 @@ describe Datastreams::ElectionRecord do
         @potus_solr = @potus_1792.to_solr
         @county_solr = @madisoncounty_1820.to_solr
       end
+
       it "should set field values" do
-        puts "#{@potus_solr}"
         @potus_solr["format_ssim"].should == "Election Record"
         @potus_solr["date_tesim"].should == ["1792"]
         @potus_solr["date_isi"].should == 1792
