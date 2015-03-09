@@ -14,6 +14,11 @@ h1. Setting up Tufts Election development environment:
 # Start rails:
   <pre>rails s</pre>
 
+h3. Running the specs
+# Make sure jetty is running
+# <pre> RAILS_ENV=test rake index </pre>
+# <pre> bundle exec rake spec </pre>
+
 h1. Setting up Tufts Election search:
 # solrize objects
   <pre>INDEX_LIST=pids.csv RAILS_ENV=production rake solrizer:fedora:solrize_objects</pre>
