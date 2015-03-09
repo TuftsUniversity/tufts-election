@@ -19,10 +19,15 @@ h3. Running the specs
 # <pre> RAILS_ENV=test rake index </pre>
 # <pre> bundle exec rake spec </pre>
 
-*Note:*
-There is an initializer script that will load the candidate names authorities every time the server is restarted.  This takes a long time, so you probably want to disable for development mode.  You can disable it by setting an environment variable:
+h3. Importing authorities
 
-  <pre> export NNV_SKIP_CANDIDATES=true </pre>
+There is an initializer script that will load the candidate names authorities every time the server is restarted.
+The initializer downloads the names authority into a temp file, and then reads the temp file to index the data in solr.
+This takes a long time to run, so it is disabled in development mode.
+If the script detects that the data has already been downloaded, it will skip the indexing.
+
+If you want to force it to re-load the candidate names, you can remove the temp file that the data is downloaded to:
+<pre> rm tmp/candidates.xml </pre>
 
 h1. Setting up Tufts Election search:
 # solrize objects

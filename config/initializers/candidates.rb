@@ -1,15 +1,15 @@
 # Import candidate names authority
 
-if Rails.env == 'test' || ENV['NNV_SKIP_CANDIDATES'] == 'true'
+uri_for_candidates_file = 'http://dl.tufts.edu/file_assets/generic/tufts:MS115.003.001.00002.00001/0'
+filename = 'tmp/candidates.xml'
+
+if Rails.env == 'test' ||
+    (Rails.env == 'development' && File.exist?(filename))
   Rails.logger.info 'Skipping load candidate names authority'
   puts 'Skipping load candidate names authority'
 else
 
   require 'open-uri'
-
-  uri_for_candidates_file = 'http://dl.tufts.edu/file_assets/generic/tufts:MS115.003.001.00002.00001/0'
-  filename = 'tmp/candidates.xml'
-
 
   # Download the candidate names authority file
   Rails.logger.info "Downloading candidate names authority from #{uri_for_candidates_file}"
