@@ -72,7 +72,7 @@ module Datastreams
       solr_doc["format_tesim"] = "Election Record"
       solr_doc["format_ssim"] = "Election Record"
       solr_doc["date_isi"] = self.date.to_a.map(&:to_i).first
-      solr_doc["date_sim"] = self.date.first[0..3]
+      solr_doc["date_sim"] = self.date.first[0..3] unless self.date.first.nil?
       solr_doc["election_id_ssim"] = self.election_id.to_a
       solr_doc["handle_ssi"] = self.handle.to_a
       solr_doc["office_id_ssim"] = self.office.office_id.to_a

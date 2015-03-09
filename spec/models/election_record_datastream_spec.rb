@@ -13,13 +13,13 @@ describe Datastreams::ElectionRecord do
       describe "when the admin unit is a State" do
         subject { Datastreams::ElectionRecord.from_xml('<aas:election_record xmlns:aas="http://dca.tufts.edu/aas"> <aas:office><aas:role><aas:admin_unit geog_id="mes" name="Maine" type="State"></aas:admin_unit></aas:role></aas:office></aas:election_record>').to_solr} 
         it "should be the states name" do
-          subject["state_name_sim"]. should == ['Maine'] 
+          subject["state_name_sim"].should == ['Maine'] 
         end
       end
       describe "when the admin unit is a Territory" do
         subject { Datastreams::ElectionRecord.from_xml('<aas:election_record xmlns:aas="http://dca.tufts.edu/aas"> <aas:office><aas:role><aas:admin_unit geog_id="mes" name="Maine" type="Territory"></aas:admin_unit></aas:role></aas:office></aas:election_record>').to_solr} 
         it "should be the territorys name" do
-          subject["state_name_sim"]. should == ['Maine'] 
+          subject["state_name_sim"].should == ['Maine'] 
         end
       end
     end
@@ -33,7 +33,7 @@ describe Datastreams::ElectionRecord do
       it "should set field values" do
         puts "#{@potus_solr}"
         @potus_solr["format_ssim"].should == "Election Record"
-        @potus_solr["date_tesim"].should == ["1792"]
+        @potus_solr["date_sim"].should == "1792"
         @potus_solr["date_isi"].should == 1792
         @potus_solr["iteration_tesim"].should == ["First Ballot"]
         @potus_solr["label_tesim"].should == ["1792 President of the United States, Electoral College"]
@@ -56,7 +56,7 @@ describe Datastreams::ElectionRecord do
         
         @county_solr["page_image_urn_ssim"].should == ["tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024", "tufts:central:dca:MS115:MS115.001.DO.11024"]
         @county_solr["citation_tesim"].should == ["Alabama Republican (Huntsville), August 11, 1820. (Phil's typewritten notes.)", "Election Record from Alabama State Archives.", "The Republican (Huntsville). August 11, 1820.", "The Republican (Huntsville). September 1, 1820.", "The Halcyon (Saint Stephens).  August 21, 1820."]
-        @county_solr["date_tesim"].should == ["1820"]
+        @county_solr["date_sim"].should == "1820"
 
         @county_solr["state_name_tesim"].should == ["Alabama"]
         @county_solr["state_name_sim"].should == ["Alabama"]
