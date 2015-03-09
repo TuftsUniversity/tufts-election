@@ -19,6 +19,11 @@ h3. Running the specs
 # <pre> RAILS_ENV=test rake index </pre>
 # <pre> bundle exec rake spec </pre>
 
+*Note:*
+There is an initializer script that will load the candidate names authorities every time the server is restarted.  This takes a long time, so you probably want to disable for development mode.  You can disable it by setting an environment variable:
+
+  <pre> export NNV_SKIP_CANDIDATES=true </pre>
+
 h1. Setting up Tufts Election search:
 # solrize objects
   <pre>INDEX_LIST=pids.csv RAILS_ENV=production rake solrizer:fedora:solrize_objects</pre>
