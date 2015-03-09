@@ -21,10 +21,7 @@ h3. Running the specs
 
 h3. Importing authorities
 
-There is an initializer script that will load the candidate names authorities every time the server is restarted.
-The initializer downloads the names authority into a temp file, and then reads the temp file to index the data in solr.
-This takes a long time to run, so it is disabled in development mode.
-If the script detects that the data has already been downloaded, it will skip the indexing.
+There is an initializer script that will load the candidate names authorities every time the server is restarted.  The initializer downloads the names authority into a temp file, and then reads the temp file to index the data in solr.  This takes a long time to run, so it is disabled in development mode.  If the script detects that the data has already been downloaded, it will skip the indexing.
 
 If you want to force it to re-load the candidate names, you can remove the temp file that the data is downloaded to:
 <pre> rm tmp/candidates.xml </pre>
