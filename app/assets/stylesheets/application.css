@@ -12,16 +12,9 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require 'blacklight_range_limit'
  *= require_tree .
- *
- *
-*/
-
-/* The following lines are in place just to override blacklight
- *
- * Used by blacklight_range_limit
- *= require  'blacklight_range_limit'
- *
+ *         
 */
 
 .pageEntriesInfo {
@@ -404,9 +397,21 @@ table.election-results-table thead tr.candidate-row {
 }
 
 .appliedFilter .filterName:after {
-content: "\276F";
-padding-left: 4px;
+  content: "\276F";
+  padding-left: 4px;
 }
+
+.appliedFilter a.remove, .appliedFilter a.remove .glyphicon-remove {
+    background: #e2edfe;
+}
+
+.appliedFilter a.remove:hover {
+  background: #e2edfe;
+  color: #666;
+  border-left: 1px solid #c4dafe;
+}
+
+
 .appliedFilter .remove {
     border-left: 1px solid #c4dafe;
 }

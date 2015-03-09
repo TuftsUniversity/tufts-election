@@ -458,17 +458,6 @@ a.link4:visited {
 }
 
 #startOverLink {
-    /*background: url(/assets/blacklight/start_over.gif) no-repeat center center;
-    border-bottom: none;
-    color: #fff;
-    display: block;
-    line-height: 22px;
-    margin-top: -12px;
-    padding: 0 7px 3px 12px;
-    position: absolute;
-    right: 0.66em;
-    text-decoration: none;
-    top: 50%; */
     display: none;
 }
 
@@ -488,15 +477,6 @@ a.link4:visited {
 }
 
 a:hover.constraint-value {
-    background: #e2edfe;
-}
-a:hover.remove {
-    background: #e2edfe;
-}
-a.remove {
-    background: #e2edfe;
-}
-span.glyphicon-remove {
     background: #e2edfe;
 }
 
@@ -653,9 +633,6 @@ span.page.current {
     color: #666;
 }
 
-#facets li a:hover {
-    background-color: #eee;
-}
 
 #facets li.more_facets_link {
     text-align: right;
@@ -815,3 +792,4 @@ td {
     border-width: 0;
     padding: 0;
 }
+
