@@ -290,34 +290,29 @@
     <auth:party id="A09" name="one-issue parties">
       <auth:description>
          <div xmlns="http://www.w3.org/1999/xhtml">
-           <p>In the "Era of Good Feelings", when many candidates were of the same party, specific issues would divide the candidates and the candidates would be described in newspapers in terms of their support or opposition of that issue.  The various one-issue parties include:
+           <p>In the "Era of Good Feelings", when many candidates were of the same party, specific issues would divide the candidates and the candidates would be described in newspapers in terms of their support or opposition of that issue.  The various one-issue parties include:</p>
            
-           New York 1807 Assembly, Dutchess County: The Division and Anti-Division Tickets
-           Maryland 1816 House of Delegates, Montgomery County: Moderates and Violents.  Both groups appeared to be Federalists, but were listed in several newspapers as Moderates and Violents (including the Daily National Intelligencer (Washington), Alexandria Herald, Federal Republican (Baltimore) and Federal Gazette (Baltimore).
-           New York 1819 Assembly, Ontario County: The Division and Anti-Division Tickets
-           Illinois and Missouri 1820:  Various elections included tickets there listed as either Pro-Slavery and Anti-Slavery or Restrictionist (anti-slavery) and Anti-Restrictionist or variations of the two tickets running against each other (e.g. Pro-Slavery vs. Restrictionist).  These would come up again in Illinois in 1824.
-           Maryland 1822 and 1823 House of Delegates elections in Anne Arundel County and the 1822 Assembly election in Annapolis City: The Caucus and Anti-Caucus tickets.
-           Kentucky 1822 House of Representatives, Bullitt County, Assembly, Fayette County and Assembly, Franklin and Owen Counties, 1823 Assembly, Fayette County and 1824 Assembly, Madison County: The Relief and Anti-Relief (or Constitutionalist) Tickets
-           Maryland 1823 House of Delegates, Washington County: The Jew-Bill Ticket and the No Jew-Bill Ticket.  This was in reference to the bill, eventually passed in 1826, that removed the Christian oath requirement for public office in Maryland.
-           Pennsylvania 1824 Commissioner, Moyamensing Township: The People's ticket and the Family Ticket.
-           Kentucky 1824 House of Representatives, Bourbon, Fayette, Franklin, Mercer and Washington Counties: The Court Ticket and the Country Ticket.
-           </p>
+           <ul>
+             <li> New York 1807 Assembly, Dutchess County: The Division and Anti-Division Tickets </li>
+             <li> Maryland 1816 House of Delegates, Montgomery County: Moderates and Violents.  Both groups appeared to be Federalists, but were listed in several newspapers as Moderates and Violents (including the Daily National Intelligencer (Washington), Alexandria Herald, Federal Republican (Baltimore) and Federal Gazette (Baltimore).  </li>
+             <li> New York 1819 Assembly, Ontario County: The Division and Anti-Division Tickets </li>
+             <li> Illinois and Missouri 1820:  Various elections included tickets there listed as either Pro-Slavery and Anti-Slavery or Restrictionist (anti-slavery) and Anti-Restrictionist or variations of the two tickets running against each other (e.g. Pro-Slavery vs. Restrictionist).  These would come up again in Illinois in 1824.  </li>
+             <li> Maryland 1822 and 1823 House of Delegates elections in Anne Arundel County and the 1822 Assembly election in Annapolis City: The Caucus and Anti-Caucus tickets.  </li>
+             <li> Kentucky 1822 House of Representatives, Bullitt County, Assembly, Fayette County and Assembly, Franklin and Owen Counties, 1823 Assembly, Fayette County and 1824 Assembly, Madison County: The Relief and Anti-Relief (or Constitutionalist) Tickets </li>
+             <li> Maryland 1823 House of Delegates, Washington County: The Jew-Bill Ticket and the No Jew-Bill Ticket.  This was in reference to the bill, eventually passed in 1826, that removed the Christian oath requirement for public office in Maryland.  </li>
+             <li> Pennsylvania 1824 Commissioner, Moyamensing Township: The People's ticket and the Family Ticket.  </li>
+             <li> Kentucky 1824 House of Representatives, Bourbon, Fayette, Franklin, Mercer and Washington Counties: The Court Ticket and the Country Ticket.  </li>
+           </ul>
            </div>
       </auth:description>
     </auth:party>
     
-  
-    
     <auth:party id="A10" name="candidates supported by both major parties">
       <auth:description>
-         <div xmlns="http://www.w3.org/1999/xhtml">
-         <p>As early as the first Federal elections in 1788, there were candidates, who while alligned with one party or another, was supported in the press by both parties in a particular election.</p>
-           </div>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          <p>As early as the first Federal elections in 1788, there were candidates, who while alligned with one party or another, was supported in the press by both parties in a particular election.</p>
+        </div>
       </auth:description>
      </auth:party>
-
-  
-  
-  
 
 </party-authority-list>
