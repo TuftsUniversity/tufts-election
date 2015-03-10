@@ -29,5 +29,5 @@ input = Nokogiri::XML(File.new(filename))
 input.root.xpath('//auth:office', 'auth' => 'http://dca.tufts.edu/aas/auth').each do |office_node|
   name = office_node.attribute('name').value
   id =  office_node.attribute('id').value
-  $offices[id] = name
+  $offices[id] = { name: name }
 end

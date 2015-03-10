@@ -79,10 +79,18 @@ module Datastreams
       solr_doc["page_image_urn_ssim"] = self.page_image.urn
       solr_doc["jurisdiction_tesim"] = self.jurisdiction.to_a
       solr_doc["jurisdiction_ssim"] = self.jurisdiction.to_a
-      solr_doc["office_id_ssim"] = self.office.office_id.to_a
-      solr_doc["office_name_sim"] = [$offices[solr_doc["office_id_ssim"].first.to_s]]
-      solr_doc["office_name_tesim"] = [$offices[solr_doc["office_id_ssim"].first.to_s]]
+
+      office_id = Array(self.office.office_id).first
+      solr_doc["office_id_ssim"] = [office_id]
+      solr_doc["office_name_sim"] = Array(office_name(office_id))
+      solr_doc["office_name_tesim"] = Array(office_name(office_id))
+
       solr_doc
     end
+
+    def office_name(id)
+      $offices[id].blank? ? nil : $offices[id][:name]
+    end
+
   end
 end
