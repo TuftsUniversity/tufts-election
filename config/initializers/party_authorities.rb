@@ -6,7 +6,7 @@ uri_for_party_file = 'http://dl.tufts.edu/file_assets/generic/tufts:party-author
 filename = Rails.root.join('config', 'party-authority.xml')
 
 # Download the parties authority file
-if (Rails.env.development? || Rails.env.text?) && File.exist?(filename)
+if (Rails.env.development? || Rails.env.test?) && File.exist?(filename)
   Rails.logger.info "Skipping download, using existing party authority: #{filename}"
   puts "Skipping download, using existing party authority: #{filename}"
 else
