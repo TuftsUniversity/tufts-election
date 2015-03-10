@@ -1,7 +1,7 @@
 # Import candidate names authority
 
 uri_for_candidates_file = 'http://dl.tufts.edu/file_assets/generic/tufts:MS115.003.001.00002.00001/0'
-filename = 'tmp/candidates.xml'
+filename = Rails.root.join('tmp', 'candidates.xml')
 
 if Rails.env == 'test' ||
     (Rails.env == 'development' && File.exist?(filename))
@@ -15,7 +15,7 @@ else
   Rails.logger.info "Downloading candidate names authority from #{uri_for_candidates_file}"
   puts "Downloading candidate names authority from #{uri_for_candidates_file}"
 
-  File.open("#{filename}", 'w') do |file|
+  File.open(filename, 'w') do |file|
     open uri_for_candidates_file  do |f|
       f.each_line {|line| file.write line }
     end
