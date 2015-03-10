@@ -58,6 +58,7 @@ class CatalogController < ApplicationController
     config.add_index_field 'jurisdiction_tesim', :label => 'Jurisdiction'
     config.add_index_field 'date_tesim', :label => 'Year'
     config.add_index_field 'state_name_tesim', :label => 'State'
+    config.add_index_field 'party_affiliation_sim', :label => 'Party Affiliation'
 
     # solr fields to be displayed in the show (single result) view
     #   The ordering of the field names is the order of the display 

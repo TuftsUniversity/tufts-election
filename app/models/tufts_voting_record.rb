@@ -14,6 +14,7 @@ class TuftsVotingRecord < ActiveFedora::Base
         all_text_values << value
       end
     end
+
     solr_doc["all_text_timv"] = all_text_values.flatten
     #Add all searchable fields to the all_text_timv field
 

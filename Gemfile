@@ -34,6 +34,11 @@ gem 'solrizer','3.1.1'
 gem 'google-analytics-rails'
 gem 'jettywrapper', '1.5.0'
 
+group :development do
+  # support for rails_panel chrome extension
+  gem 'meta_request', '0.3.4'
+end
+
 group :test, :development do
   gem 'rspec-rails'
   # To use debugger

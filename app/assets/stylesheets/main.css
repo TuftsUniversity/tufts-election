@@ -123,10 +123,27 @@ a img {
 #main-content-panel {
     margin-left: 12px;
     padding-top: 1em;
-    width: 650px;
+    width: 900px;
     display: inline-block;
     vertical-align: top;
+
+    /* debug */
+    border: 1px dotted red;
 }
+
+.searchResultPanel {
+  float: left;
+}
+
+.itemDetail {
+  border: 1px dotted red;
+  float: right;
+  width: 400px;
+  margin-left: 1em;
+  margin-right: 1em;
+  padding-left: 0.5em;
+}
+
 
 #wait-panel {
     clear: both;
