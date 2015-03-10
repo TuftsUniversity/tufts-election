@@ -22,6 +22,8 @@
 #ignore the pids-reingest file
 pids-reingest.txt
 
+pids.csv
+
 .sass-cache
 
 # Ignore jetty

@@ -13,13 +13,10 @@
 //= require jquery
 //= require jquery.browser
 //= require jquery_ujs
-//
-// Required by Blacklight
 //= require blacklight/blacklight
+//= require blacklight_range_limit
 //= require_tree .
-
-//= require blacklight/core
-
+//
 $(document).ready(function () {
     $('a.accordian-toggle').click(function () {
         if ($('a.accordian-toggle').hasClass('collapsed')) {
@@ -30,3 +27,4 @@ $(document).ready(function () {
         }
     });
 });
+
