@@ -15,6 +15,7 @@
 //= require jquery_ujs
 //= require blacklight/blacklight
 //= require blacklight_range_limit
+//= require_tree .
 //
 $(document).ready(function () {
     $('a.accordian-toggle').click(function () {
