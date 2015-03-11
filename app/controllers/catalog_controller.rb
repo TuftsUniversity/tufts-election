@@ -41,7 +41,7 @@ class CatalogController < ApplicationController
     # app code to actually have it echo'd back to see it.  
     config.add_facet_field 'state_name_sim', :label => 'State', :sort => 'index', :limit => 50
     config.add_facet_field 'date_sim', :label => 'Year', :range => true, :sort => 'index'
-    config.add_facet_field 'office_name_sim', :label => 'Office', :limit => 20
+    config.add_facet_field 'office_id_ssim', :label => 'Office', :limit => 20, helper_method: :office_name
     config.add_facet_field 'jurisdiction_sim', :label => 'Jurisdiction', :limit => 15
     config.add_facet_field 'party_affiliation_sim', :label => 'Party', :limit => 15
     config.add_facet_field 'election_type_sim', :label => 'Election Type'

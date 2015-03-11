@@ -12,12 +12,17 @@ module ApplicationHelper
     end
   end
 
+  def office_name(id)
+    office = Office.find(id)
+    office.blank? ? id : office.name
+  end
+
   def display_facet_details?
     office_facet_selected? || party_facet_selected? || state_facet_selected?
   end
 
   def office_facet_selected?
-    params[:f] && params[:f].key?('office_name_sim')
+    params[:f] && params[:f].key?('office_id_ssim')
   end
 
   def party_facet_selected?
@@ -37,7 +42,7 @@ module ApplicationHelper
   end
 
   def selected_office_facets
-    params[:f]['office_name_sim'].each do |facet_value|
+    params[:f]['office_id_ssim'].each do |facet_value|
       if office = Office.find(facet_value)
         yield office if block_given?
       end
