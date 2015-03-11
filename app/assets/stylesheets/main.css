@@ -824,3 +824,7 @@ td {
 #sortAndPerPage, #previousNextDocument {
   margin-bottom: -1em;
 }
+
+img.stateThumbnail {
+	margin-bottom: 2em;
+}

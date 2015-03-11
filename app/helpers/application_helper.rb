@@ -34,7 +34,7 @@ module ApplicationHelper
   end
 
   def selected_party_facets
-    params[:f]['party_affiliation_sim'].each do |facet_value|
+    Array(params[:f]['party_affiliation_sim']).each do |facet_value|
       if party = Party.find(facet_value)
         yield party if block_given?
       end
@@ -42,7 +42,7 @@ module ApplicationHelper
   end
 
   def selected_office_facets
-    params[:f]['office_id_ssim'].each do |facet_value|
+    Array(params[:f]['office_id_ssim']).each do |facet_value|
       if office = Office.find(facet_value)
         yield office if block_given?
       end
@@ -50,7 +50,7 @@ module ApplicationHelper
   end
 
   def selected_state_facets
-    params[:f]['state_name_sim'].each do |facet_value|
+    Array(params[:f]['state_name_sim']).each do |facet_value|
       if state = State.find(facet_value)
         yield state if block_given?
       end

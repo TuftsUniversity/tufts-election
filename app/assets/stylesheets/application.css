@@ -409,9 +409,7 @@ table.election-results-table thead tr.candidate-row {
 .appliedFilter a.remove:hover {
   background: #e2edfe;
   color: #666;
-  border-left: 1px solid #c4dafe;
 }
-
 
 .appliedFilter .remove {
     border-left: 1px solid #c4dafe;
