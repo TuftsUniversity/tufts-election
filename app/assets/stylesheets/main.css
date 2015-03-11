@@ -112,8 +112,7 @@ a img {
 }
 
 #content-sidebar {
-    /*float: left; */
-    display: inline-block;
+    float: left; 
     width: 240px;
     height: 100%;
     margin-left: 12px;
@@ -128,23 +127,26 @@ a img {
 #main-content-panel {
     margin-left: 12px;
     padding-top: 1em;
-    width: 857px;
-    display: inline-block;
+    width: 71%;
+    position: relative;
+    float: left;
     vertical-align: top;
 }
 
 .searchResultPanel {
-  float: left;
-  width: 100%;
+    width: 100%;
+    position: relative;
+    float: left;
 }
 
 .searchResultPanel.facetDetails {
-  width: 53%;
+  width: 54%;
 }
 
 .itemDetail {
-  float: right;
-  width: 42%;
+  float: left;
+  position: relative;
+  width: 40%;
   margin-left: 1em;
   margin-right: 1em;
   padding-left: 0.5em;
