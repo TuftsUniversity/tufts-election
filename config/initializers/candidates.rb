@@ -3,12 +3,10 @@
 uri_for_candidates_file = 'http://dl.tufts.edu/file_assets/generic/tufts:MS115.003.001.00002.00001/0'
 filename = Rails.root.join('tmp', 'candidates.xml')
 
-if Rails.env == 'test' ||
-    (Rails.env == 'development' && File.exist?(filename))
+if (Rails.env.development? || Rails.env.test?) && File.exist?(filename)
   Rails.logger.info 'Skipping load candidate names authority'
   puts 'Skipping load candidate names authority'
 else
-
   require 'open-uri'
 
   # Download the candidate names authority file
