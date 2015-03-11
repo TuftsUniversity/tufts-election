@@ -30,7 +30,7 @@ module ApplicationHelper
   end
 
   def state_facet_selected?
-    params[:f] && params[:f].key?('state_name_tesim')
+    params[:f] && params[:f].key?('state_name_sim')
   end
 
   def selected_party_facets
@@ -50,7 +50,7 @@ module ApplicationHelper
   end
 
   def selected_state_facets
-    params[:f]['state_name_tesim'].each do |facet_value|
+    params[:f]['state_name_sim'].each do |facet_value|
       if state = State.find(facet_value)
         yield state if block_given?
       end
