@@ -235,6 +235,7 @@ h2.search {
     border-left: 1px solid #aaa;
     border-right: 1px solid #aaa;
     padding: 1em 0.66em 0 1em;
+    margin-bottom: -1em;
 }
 
 #appliedParams .label {
