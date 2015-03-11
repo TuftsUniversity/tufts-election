@@ -1,11 +1,7 @@
 # Import the party authority data
 
-parties = {}
-
 uri_for_party_file = 'http://dl.tufts.edu/file_assets/generic/tufts:party-authority/0'
 filename = Rails.root.join('config', 'party-authority.xml')
-
-# Download the parties authority file
 if (Rails.env.development? || Rails.env.test?) && File.exist?(filename)
   Rails.logger.info "Skipping download, using existing party authority: #{filename}"
   puts "Skipping download, using existing party authority: #{filename}"
@@ -25,11 +21,13 @@ end
 Rails.logger.info "Importing parties from #{filename}"
 puts "Importing parties from #{filename}"
 
-Nokogiri::XML(File.new(filename)).root.xpath('/party-authority-list/auth:party', 'auth' => 'http://dca.tufts.edu/aas/auth').each do |node|
+namespaces = {'auth' => 'http://dca.tufts.edu/aas/auth'}
+
+Nokogiri::XML(File.new(filename)).root.xpath('/party-authority-list/auth:party', namespaces).each do |node|
   name = node.attribute('name').value
   id =  node.attribute('id').value
 
-  description = node.xpath('./auth:description').children.to_s.strip
+  description = node.xpath('./auth:description', namespaces).children.to_s.strip
 
   party_attrs = { name: name, id: id, description: description }
 

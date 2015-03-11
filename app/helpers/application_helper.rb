@@ -11,4 +11,35 @@ module ApplicationHelper
       end
     end
   end
+
+  def display_facet_details?
+    office_facet_selected? || party_facet_selected? || state_facet_selected?
+  end
+
+  def office_facet_selected?
+    params[:f] && params[:f].key?('office_name_sim')
+  end
+
+  def party_facet_selected?
+    params[:f] && params[:f].key?('party_affiliation_sim')
+  end
+
+  def state_facet_selected?
+    params[:f] && params[:f].key?('state_name_tesim')
+  end
+
+  def party_facet_description
+    facet = params[:f]['party_affiliation_sim'].first
+
+    party = Party.find(facet)
+    party ? party.description.html_safe : ""
+  end
+
+  def office_facet_description
+    ""
+  end
+
+  def state_facet_description
+    ""
+  end
 end

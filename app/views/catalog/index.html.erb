@@ -16,15 +16,10 @@
 
     <div class="searchResultPanel">
       <% @page_title = application_name + " Search Results" %>
-
       <%= render :partial => 'search_form' %>
-
       <%= render :partial => 'did_you_mean' %>
-
       <%= render 'constraints', :localized_params => params %>
-
       <%= render 'sort_and_per_page' %>
-
       <%= render 'results_pagination' %>
 
       <%- if @response.empty? %>
@@ -38,47 +33,13 @@
       <%= render 'results_pagination' %>
     </div>
 
-
-    <div class="itemDetail">
-      <p>Details about the items here.</p>
-      <p>Details about the items here.</p>
-      <p>Details about the items here.</p>
-      <p>Details about the items here.</p>
-      <p>Details about the items here.</p>
-      <p>Details about the items here.</p>
-      <p>Details about the items here.</p>
-      <p>Details about the items here.</p>
-      <p>Details about the items here.</p>
-      <p>Details about the items here.</p>
-      <p>Details about the items here.</p>
-      <p>Details about the items here.</p>
-      <p>Details about the items here.</p>
-      <p>Details about the items here.</p>
-      <p>Details about the items here.</p>
-      <p>Details about the items here.</p>
-      <p>Details about the items here.</p>
-      <p>Details about the items here.</p>
-      <p>Details about the items here.</p>
-      <p>Details about the items here.</p>
-      <p>Details about the items here.</p>
-      <p>Details about the items here.</p>
-      <p>Details about the items here.</p>
-      <p>Details about the items here.</p>
-      <p>Details about the items here.</p>
-      <p>Details about the items here.</p>
-      <p>Details about the items here.</p>
-      <p>Details about the items here.</p>
-      <p>Details about the items here.</p>
-      <p>Details about the items here.</p>
-      <p>Details about the items here.</p>
-      <p>Details about the items here.</p>
-      <p>Details about the items here.</p>
-      <p>Details about the items here.</p>
-      <p>Details about the items here.</p>
-      <p>Details about the items here.</p>
-      <p>Details about the items here.</p>
-      <p>Details about the items here.</p>
-    </div>
+    <% if display_facet_details? %>
+      <div class="itemDetail">
+        <%= office_facet_description if office_facet_selected? %>
+        <%= party_facet_description  if party_facet_selected? %>
+        <%= state_facet_description  if state_facet_selected? %>
+      </div>
+    <% end %>
 
   <% end %>
 </div>
