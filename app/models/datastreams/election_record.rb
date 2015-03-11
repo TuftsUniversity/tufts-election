@@ -89,7 +89,8 @@ module Datastreams
     end
 
     def office_name(id)
-      $offices[id].blank? ? nil : $offices[id][:name]
+      office = Office.find(id)
+      office.blank? ? nil : office.name
     end
 
   end
