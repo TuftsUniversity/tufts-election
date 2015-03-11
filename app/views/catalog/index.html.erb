@@ -55,7 +55,6 @@
 
         <% if state_facet_selected? %>
           <% selected_state_facets do |state| %>
-            <h2><%= state.name %></h2>
             <%= state.history.html_safe %>
             <%= state.bibliography.html_safe %>
             <hr />
