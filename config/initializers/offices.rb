@@ -26,10 +26,14 @@ Rails.logger.info "Importing offices from #{filename}"
 puts "Importing offices from #{filename}"
 
 input = Nokogiri::XML(File.new(filename))
-input.root.xpath('//auth:office', 'auth' => 'http://dca.tufts.edu/aas/auth').each do |office_node|
+namespaces = { 'auth' => 'http://dca.tufts.edu/aas/auth' }
+
+input.root.xpath('//auth:office', namespaces).each do |office_node|
   name = office_node.attribute('name').value
   id = office_node.attribute('id').value
+  desc = office_node.xpath('./auth:description', namespaces).children.to_s.strip
 
-  office_attrs = { name: name, id: id }
+  office_attrs = { name: name, id: id, description: desc }
   Office.register(office_attrs)
 end
+
