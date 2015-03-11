@@ -28,19 +28,28 @@ module ApplicationHelper
     params[:f] && params[:f].key?('state_name_tesim')
   end
 
-  def party_facet_description
-    # FIXME: What if there are multiple party facets selected?
-    facet = params[:f]['party_affiliation_sim'].first
-
-    party = Party.find(facet)
-    party ? party.description.html_safe : ""
+  def selected_party_facets
+    params[:f]['party_affiliation_sim'].each do |facet_value|
+      if party = Party.find(facet_value)
+        yield party if block_given?
+      end
+    end
   end
 
-  def office_facet_description
-    ""
+  def selected_office_facets
+    params[:f]['office_name_sim'].each do |facet_value|
+      if office = Office.find(facet_value)
+        yield office if block_given?
+      end
+    end
   end
 
-  def state_facet_description
-    ""
+  def selected_state_facets
+    params[:f]['state_name_tesim'].each do |facet_value|
+      if state = State.find(facet_value)
+        yield state if block_given?
+      end
+    end
   end
+
 end

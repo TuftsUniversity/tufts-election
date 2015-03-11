@@ -35,9 +35,31 @@
 
     <% if display_facet_details? %>
       <div class="itemDetail">
-        <%= office_facet_description if office_facet_selected? %>
-        <%= party_facet_description  if party_facet_selected? %>
-        <%= state_facet_description  if state_facet_selected? %>
+
+        <% if party_facet_selected? %>
+          <% selected_party_facets do |party| %>
+            <h2><%= party.name %></h2>
+            <%= party.description.html_safe %>
+            <hr />
+          <% end %>
+        <% end %>
+
+        <% if office_facet_selected? %>
+          <% selected_office_facets do |office| %>
+            <h2><%= office.name %></h2>
+            <%= office.description.html_safe %>
+            <hr />
+          <% end %>
+        <% end %>
+
+        <% if state_facet_selected? %>
+          <% selected_state_facets do |state| %>
+            <h2><%= state.name %></h2>
+            <%= state.description.html_safe %>
+            <hr />
+          <% end %>
+        <% end %>
+
       </div>
     <% end %>
 
