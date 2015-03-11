@@ -1,7 +1,7 @@
 # Import the party authority data
 
 uri_for_party_file = 'http://dl.tufts.edu/file_assets/generic/tufts:party-authority/0'
-filename = Rails.root.join('config', 'party-authority.xml')
+filename = Rails.root.join('tmp', 'party-authority.xml')
 
 # Download the party authority file
 if (Rails.env.development? || Rails.env.test?) && File.exist?(filename)
