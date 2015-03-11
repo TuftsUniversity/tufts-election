@@ -10,11 +10,7 @@ class Party
   end
 
   def self.register(party_attrs)
-    @parties[party_attrs.fetch(:id)] = new(party_attrs)
-  end
-
-  def self.reset!
-    @parties = {}
+    @parties[party_attrs.fetch(:name)] = new(party_attrs)
   end
 
   def self.find(party_id)
