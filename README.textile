@@ -1,6 +1,7 @@
 h1. Setting up Tufts Election development environment:
 
 # Copy the *.sample files in config/ to the appropriate .yml filenames.
+# Copy config/initializers/secret_token.rb.sample to config/initializers/secret_token.rb, generate a new secret token using 'rake secret', and paste the new token into the secret_token.rb.
 # Initialize hydra-jetty for development environments
   <pre>rake jetty:clean</pre>
 # Start Jetty:
@@ -26,6 +27,13 @@ There is an initializer script that will load the candidate names authorities ev
 If you want to force it to re-load the candidate names, you can remove the temp file that the data is downloaded to:
 <pre> rm tmp/candidates.xml </pre>
 
+There are similar initializer scripts for the offices, parties, and states authority files.
+
 h1. Setting up Tufts Election search:
 # solrize objects
   <pre>INDEX_LIST=pids.csv RAILS_ENV=production rake solrizer:fedora:solrize_objects</pre>
+
+What should be in the pids.csv?
+
+Tufts' production fedora environment contains other objects besides what should be displayed in the New Nation Votes site.  The pids.csv should contain a list of all the PIDs that you want to index in solr for this front end.  For a development environment, it's probably just a list of all the pids in your fedora.
+
