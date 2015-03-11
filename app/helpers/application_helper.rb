@@ -29,6 +29,7 @@ module ApplicationHelper
   end
 
   def party_facet_description
+    # FIXME: What if there are multiple party facets selected?
     facet = params[:f]['party_affiliation_sim'].first
 
     party = Party.find(facet)
