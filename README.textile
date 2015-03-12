@@ -29,6 +29,10 @@ If you want to force it to re-load the candidate names, you can remove the temp 
 
 There are similar initializer scripts for the offices, parties, and states authority files.
 
+*Note:*  If you see office IDs appear in the facet list instead of the office names, that means that the office authorities aren't loaded.  This might happen frequently in development mode if you are editing files, because Rails might re-load the Office class without re-running the initializer scripts, which will clear out the in-memory cache.
+
+The names will re-appear if you restart your Rails server.  Or, if you need to temporarily disable the class re-loading, you can set config.cache_classes in your config/environments/development.rb.
+
 h1. Setting up Tufts Election search:
 # solrize objects
   <pre>INDEX_LIST=pids.csv RAILS_ENV=production rake solrizer:fedora:solrize_objects</pre>
