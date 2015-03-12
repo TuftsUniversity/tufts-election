@@ -13,7 +13,7 @@ else
 
   File.open(filename, 'w') do |file|
     open uri_for_state_file do |f|
-      f.each_line { |line| file.write line }
+      f.each_line { |line| file.write(line.force_encoding('UTF-8')) }
     end
   end
 end
