@@ -1,20 +1,28 @@
 # Import the state authority data
 
-uri_for_state_file = 'http://dl.tufts.edu/file_assets/generic/tufts:state-authority/0'
+require 'net/http'
+uri_for_state_file = URI('http://dl.tufts.edu/file_assets/generic/tufts:state-authorit-1213y/0')
+
 filename = Rails.root.join('tmp', 'state-authorities.xml')
 
 if (Rails.env.development? || Rails.env.test?) && File.exist?(filename)
   Rails.logger.info "Skipping download, using existing state authority: #{filename}"
   puts "Skipping download, using existing state authority: #{filename}"
 else
-  require 'open-uri'
   Rails.logger.info "Downloading state authority from #{uri_for_state_file}"
   puts "Downloading state authority from #{uri_for_state_file}"
 
-  File.open(filename, 'w') do |file|
-    open uri_for_state_file do |f|
-      f.each_line { |line| file.write(line.force_encoding('UTF-8')) }
+  response = Net::HTTP.get_response(uri_for_state_file)
+
+  if response.code == '200'
+    File.open(filename, 'w') do |file|
+      file.write response.body
     end
+  else
+    msg = "Warning: Could not load #{uri_for_state_file} (HTTP response: #{response.code}). Attempting to read local cached copy."
+
+    puts msg
+    Rails.logger.warn msg
   end
 end
 

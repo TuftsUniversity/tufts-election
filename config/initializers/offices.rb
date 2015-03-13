@@ -1,24 +1,31 @@
 # Import the offices authority data
 
-offices = Hash.new
+require 'net/http'
+uri_for_offices_file = URI('http://dl.tufts.edu/file_assets/generic/tufts:MS115.003.001.00003.00001/0')
 
-uri_for_offices_file = 'http://dl.tufts.edu/file_assets/generic/tufts:MS115.003.001.00003.00001/0'
 filename = Rails.root.join('tmp', 'offices.xml')
 
-# Download the offices authority file
 if (Rails.env.development? || Rails.env.test?) && File.exist?(filename)
   Rails.logger.info "Skipping download, using existing offices authority: #{filename}"
   puts "Skipping download, using existing offices authority: #{filename}"
 else
-  require 'open-uri'
+  # Download the offices authority file
   Rails.logger.info "Downloading offices authority from #{uri_for_offices_file}"
   puts "Downloading offices authority from #{uri_for_offices_file}"
 
-  File.open(filename, 'w') do |file|
-    open uri_for_offices_file do |f|
-      f.each_line {|line| file.write line }
+  response = Net::HTTP.get_response(uri_for_offices_file)
+
+  if response.code == '200'
+    File.open(filename, 'w') do |file|
+      file.write response.body
     end
+  else
+    msg = "Warning: Could not load #{uri_for_offices_file} (HTTP response: #{response.code}). Attempting to read local cached copy."
+
+    puts msg
+    Rails.logger.warn msg
   end
+
 end
 
 # Load the offices
