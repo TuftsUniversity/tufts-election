@@ -1,6 +1,8 @@
 # Import the party authority data
 
-uri_for_party_file = 'http://dl.tufts.edu/file_assets/generic/tufts:party-authority/0'
+require 'net/http'
+
+uri_for_party_file = URI('http://dl.tufts.edu/file_assets/generic/tufts:party-authority/0')
 filename = Rails.root.join('tmp', 'party-authority.xml')
 
 # Download the party authority file
@@ -8,14 +10,20 @@ if (Rails.env.development? || Rails.env.test?) && File.exist?(filename)
   Rails.logger.info "Skipping download, using existing party authority: #{filename}"
   puts "Skipping download, using existing party authority: #{filename}"
 else
-  require 'open-uri'
   Rails.logger.info "Downloading party authority from #{uri_for_party_file}"
   puts "Downloading party authority from #{uri_for_party_file}"
 
-  File.open(filename, 'w') do |file|
-    open uri_for_party_file do |f|
+  response = Net::HTTP.get_response(uri_for_party_file)
+
+  if response.code == '200'
+    File.open(filename, 'w') do |file|
       file.write response.body.force_encoding('UTF-8')
     end
+  else
+    msg = "Warning: Could not load #{uri_for_party_file} (HTTP response: #{response.code}). Attempting to read local cached copy."
+
+    puts msg
+    Rails.logger.warn msg
   end
 end
 
