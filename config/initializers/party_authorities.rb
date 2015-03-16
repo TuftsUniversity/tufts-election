@@ -14,7 +14,7 @@ else
 
   File.open(filename, 'w') do |file|
     open uri_for_party_file do |f|
-      f.each_line { |line| file.write line }
+      file.write response.body.force_encoding('UTF-8')
     end
   end
 end

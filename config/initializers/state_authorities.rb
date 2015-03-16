@@ -16,7 +16,7 @@ else
 
   if response.code == '200'
     File.open(filename, 'w') do |file|
-      file.write response.body
+      file.write response.body.force_encoding('UTF-8')
     end
   else
     msg = "Warning: Could not load #{uri_for_state_file} (HTTP response: #{response.code}). Attempting to read local cached copy."
