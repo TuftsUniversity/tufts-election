@@ -1,7 +1,7 @@
 # Import candidate names authority
 
 require 'net/http'
-uri_for_candidates_file = URI('http://dl.tufts.edu/file_assets/generic/tufts:MS115.003.001.00002.00001/0')
+uri_for_candidates_file = 'http://dl.tufts.edu/file_assets/generic/tufts:MS115.003.001.00002.00001/0'
 
 filename = Rails.root.join('tmp', 'candidates.xml')
 
@@ -13,7 +13,7 @@ else
   Rails.logger.info "Downloading candidate names authority from #{uri_for_candidates_file}"
   puts "Downloading candidate names authority from #{uri_for_candidates_file}"
 
-  response = Net::HTTP.get_response(uri_for_candidates_file)
+  response = Net::HTTP.get_response(URI(uri_for_candidates_file))
 
   if response.code == '200'
     File.open(filename, 'w') do |file|

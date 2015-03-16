@@ -2,7 +2,7 @@
 
 require 'net/http'
 
-uri_for_party_file = URI('http://dl.tufts.edu/file_assets/generic/tufts:party-authority/0')
+uri_for_party_file = 'http://dl.tufts.edu/file_assets/generic/tufts:party-authority/0'
 filename = Rails.root.join('tmp', 'party-authority.xml')
 
 # Download the party authority file
@@ -13,7 +13,7 @@ else
   Rails.logger.info "Downloading party authority from #{uri_for_party_file}"
   puts "Downloading party authority from #{uri_for_party_file}"
 
-  response = Net::HTTP.get_response(uri_for_party_file)
+  response = Net::HTTP.get_response(URI(uri_for_party_file))
 
   if response.code == '200'
     File.open(filename, 'w') do |file|

@@ -1,7 +1,7 @@
 # Import the offices authority data
 
 require 'net/http'
-uri_for_offices_file = URI('http://dl.tufts.edu/file_assets/generic/tufts:MS115.003.001.00003.00001/0')
+uri_for_offices_file = 'http://dl.tufts.edu/file_assets/generic/tufts:MS115.003.001.00003.00001/0'
 
 filename = Rails.root.join('tmp', 'offices.xml')
 
@@ -13,7 +13,7 @@ else
   Rails.logger.info "Downloading offices authority from #{uri_for_offices_file}"
   puts "Downloading offices authority from #{uri_for_offices_file}"
 
-  response = Net::HTTP.get_response(uri_for_offices_file)
+  response = Net::HTTP.get_response(URI(uri_for_offices_file))
 
   if response.code == '200'
     File.open(filename, 'w') do |file|
