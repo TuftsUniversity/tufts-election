@@ -25,19 +25,18 @@ else
     puts msg
     Rails.logger.warn msg
   end
+
+  # Import the candidate names
+  Rails.logger.info "Importing candidate names authority from #{filename}"
+  puts "Importing candidate names authority from #{filename}"
+
+  input = Nokogiri::XML(File.new("#{filename}"))
+  docs = []
+  input.root.xpath('//auth:candidate', 'auth' => 'http://dca.tufts.edu/aas/auth').each do |candidate_node|
+    name = candidate_node.attribute('name').value
+    docs << { 'name_tesim' => name, 'title_tesim' => name, 'title_ssi' => name, 'title_tesim' => name, 'candidate_last_name_letter_sim' => name.first.upcase, 'id' => candidate_node.attribute('id').value, 'format_ssim' => 'Candidate', 'all_text_timv' => name }
+  end
+
+  ActiveFedora::SolrService.instance.conn.add(docs)
+  ActiveFedora::SolrService.commit
 end
-
-# Import the candidate names
-Rails.logger.info "Importing candidate names authority from #{filename}"
-puts "Importing candidate names authority from #{filename}"
-
-input = Nokogiri::XML(File.new("#{filename}"))
-docs = []
-input.root.xpath('//auth:candidate', 'auth' => 'http://dca.tufts.edu/aas/auth').each do |candidate_node|
-  name = candidate_node.attribute('name').value
-  docs << { 'name_tesim' => name, 'title_tesim' => name, 'title_ssi' => name, 'title_tesim' => name, 'candidate_last_name_letter_sim' => name.first.upcase, 'id' => candidate_node.attribute('id').value, 'format_ssim' => 'Candidate', 'all_text_timv' => name }
-end
-
-ActiveFedora::SolrService.instance.conn.add(docs)
-ActiveFedora::SolrService.commit
-
