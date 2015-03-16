@@ -1,24 +1,30 @@
 # Import candidate names authority
 
+require 'net/http'
 uri_for_candidates_file = 'http://dl.tufts.edu/file_assets/generic/tufts:MS115.003.001.00002.00001/0'
+
 filename = Rails.root.join('tmp', 'candidates.xml')
 
 if (Rails.env.development? || Rails.env.test?) && File.exist?(filename)
   Rails.logger.info 'Skipping load candidate names authority'
   puts 'Skipping load candidate names authority'
 else
-  require 'open-uri'
-
   # Download the candidate names authority file
   Rails.logger.info "Downloading candidate names authority from #{uri_for_candidates_file}"
   puts "Downloading candidate names authority from #{uri_for_candidates_file}"
 
-  File.open(filename, 'w') do |file|
-    open uri_for_candidates_file  do |f|
-      f.each_line {|line| file.write line }
-    end
-  end
+  response = Net::HTTP.get_response(URI(uri_for_candidates_file))
 
+  if response.code == '200'
+    File.open(filename, 'w') do |file|
+      file.write response.body
+    end
+  else
+    msg = "Warning: Could not load #{uri_for_candidates_file} (HTTP response: #{response.code}). Attempting to read local cached copy."
+
+    puts msg
+    Rails.logger.warn msg
+  end
 
   # Import the candidate names
   Rails.logger.info "Importing candidate names authority from #{filename}"
@@ -33,5 +39,4 @@ else
 
   ActiveFedora::SolrService.instance.conn.add(docs)
   ActiveFedora::SolrService.commit
-
 end
