@@ -31,7 +31,6 @@ describe Datastreams::ElectionRecord do
         @county_solr = @madisoncounty_1820.to_solr
       end
       it "should set field values" do
-        puts "#{@potus_solr}"
         @potus_solr["format_ssim"].should == "Election Record"
         @potus_solr["date_sim"].should == "1792"
         @potus_solr["date_isi"].should == 1792

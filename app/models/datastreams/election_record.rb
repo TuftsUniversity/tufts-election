@@ -75,14 +75,23 @@ module Datastreams
       solr_doc["date_sim"] = self.date.first[0..3] unless self.date.first.nil?
       solr_doc["election_id_ssim"] = self.election_id.to_a
       solr_doc["handle_ssi"] = self.handle.to_a
-      solr_doc["office_id_ssim"] = self.office.office_id.to_a
       solr_doc["candidate_id_ssim"] = self.candidate_id.to_a
       solr_doc["page_image_urn_ssim"] = self.page_image.urn
       solr_doc["jurisdiction_tesim"] = self.jurisdiction.to_a
       solr_doc["jurisdiction_ssim"] = self.jurisdiction.to_a
-      solr_doc["office_name_sim"] = [$offices[solr_doc["office_id_ssim"].first.to_s]]
-      solr_doc["office_name_tesim"] = [$offices[solr_doc["office_id_ssim"].first.to_s]]
+
+      office_id = Array(self.office.office_id).first
+      solr_doc["office_id_ssim"] = [office_id]
+      solr_doc["office_name_sim"] = Array(office_name(office_id))
+      solr_doc["office_name_tesim"] = Array(office_name(office_id))
+
       solr_doc
     end
+
+    def office_name(id)
+      office = Office.find(id)
+      office.blank? ? nil : office.name
+    end
+
   end
 end

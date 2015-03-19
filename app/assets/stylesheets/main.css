@@ -1,3 +1,8 @@
+.debug {
+  border: 1px dotted red;
+  margin: 0 -2px 0 -2px;
+}
+
 #body {
     margin: 0px;
 }
@@ -107,8 +112,7 @@ a img {
 }
 
 #content-sidebar {
-    /*float: left; */
-    display: inline-block;
+    float: left; 
     width: 240px;
     height: 100%;
     margin-left: 12px;
@@ -123,10 +127,31 @@ a img {
 #main-content-panel {
     margin-left: 12px;
     padding-top: 1em;
-    width: 650px;
-    display: inline-block;
+    width: 71%;
+    position: relative;
+    float: left;
     vertical-align: top;
 }
+
+.searchResultPanel {
+    width: 100%;
+    position: relative;
+    float: left;
+}
+
+.searchResultPanel.facetDetails {
+  width: 54%;
+}
+
+.itemDetail {
+  float: left;
+  position: relative;
+  width: 40%;
+  margin-left: 1em;
+  margin-right: 1em;
+  padding-left: 0.5em;
+}
+
 
 #wait-panel {
     clear: both;
@@ -458,17 +483,6 @@ a.link4:visited {
 }
 
 #startOverLink {
-    /*background: url(/assets/blacklight/start_over.gif) no-repeat center center;
-    border-bottom: none;
-    color: #fff;
-    display: block;
-    line-height: 22px;
-    margin-top: -12px;
-    padding: 0 7px 3px 12px;
-    position: absolute;
-    right: 0.66em;
-    text-decoration: none;
-    top: 50%; */
     display: none;
 }
 
@@ -488,15 +502,6 @@ a.link4:visited {
 }
 
 a:hover.constraint-value {
-    background: #e2edfe;
-}
-a:hover.remove {
-    background: #e2edfe;
-}
-a.remove {
-    background: #e2edfe;
-}
-span.glyphicon-remove {
     background: #e2edfe;
 }
 
@@ -547,8 +552,9 @@ dl {
     border-style: solid;
     border-width: 0 1px 1px;
     line-height: 2em;
-    padding: 0.66em;
+    padding: 0.66em 0;
     position: relative;
+    width: 100%;
 }
 
 .pagination .next_page {
@@ -653,9 +659,6 @@ span.page.current {
     color: #666;
 }
 
-#facets li a:hover {
-    background-color: #eee;
-}
 
 #facets li.more_facets_link {
     text-align: right;
@@ -814,4 +817,14 @@ table {
 td {
     border-width: 0;
     padding: 0;
+}
+
+
+/* blacklight override */
+#sortAndPerPage, #previousNextDocument {
+  margin-bottom: -1em;
+}
+
+img.stateThumbnail {
+	margin-bottom: 2em;
 }

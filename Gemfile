@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
 ruby '2.1.1'
-#ruby-gemset=tufts-election
 gem 'rails', '3.2.16'
+#ruby-gemset=tufts-election
 
 platforms :ruby do
   gem 'sqlite3'
@@ -20,18 +20,24 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
   gem 'therubyracer'
   gem 'sass-rails',   '~> 3.2.3'
-  gem 'bootstrap-sass'
+  gem 'bootstrap-sass', '3.2.0.2'
 end
 
 gem 'jquery-rails'
 gem 'rdf'
-gem "blacklight_range_limit"
-gem 'blacklight'
+gem 'blacklight_range_limit', '5.0.3'
+gem 'blacklight', '5.6.0'
 gem 'om', '~> 3.0.4'
 gem 'devise'
 gem 'active-fedora', '~> 6.7.7'
 gem 'solrizer','3.1.1'
 gem 'google-analytics-rails'
+gem 'jettywrapper', '1.5.0'
+
+group :development do
+  # support for rails_panel chrome extension
+  gem 'meta_request', '0.3.4'
+end
 
 group :test, :development do
   gem 'rspec-rails'

@@ -6,6 +6,7 @@
       <%= render :partial => 'shared/project_progress' %>
   <% end %>
 </div>
+
 <div id="main-content-panel">
 
   <% unless has_search_parameters? %>
@@ -14,17 +15,12 @@
 
   <% else %>
 
-
+    <div class="searchResultPanel <%= display_facet_details? ? 'facetDetails' : '' %>">
       <% @page_title = application_name + " Search Results" %>
-
       <%= render :partial => 'search_form' %>
-
       <%= render :partial => 'did_you_mean' %>
-
       <%= render 'constraints', :localized_params => params %>
-
       <%= render 'sort_and_per_page' %>
-
       <%= render 'results_pagination' %>
 
       <%- if @response.empty? %>
@@ -36,6 +32,31 @@
       <%- end %>
 
       <%= render 'results_pagination' %>
+    </div>
+
+    <% if display_facet_details? %>
+      <div class="itemDetail">
+        <% selected_state_facets do |state| %>
+          <%= state_thumbnail(state.name) %>
+          <%= state.history.html_safe %>
+          <%= state.bibliography.html_safe %>
+          <hr />
+        <% end %>
+
+        <% selected_party_facets do |party| %>
+          <h2><%= party.name %></h2>
+          <%= party.description.html_safe %>
+          <hr />
+        <% end %>
+
+        <% selected_office_facets do |office| %>
+          <h2><%= office.name %></h2>
+          <%= office.description.html_safe %>
+          <hr />
+        <% end %>
+
+      </div>
+    <% end %>
 
   <% end %>
 </div>
