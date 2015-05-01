@@ -59,7 +59,7 @@ module Datastreams
       t.elector_name(:proxy=>[:office, :role, :ballot, :elector, :name])
       t.elector_id(:proxy=>[:office, :role, :ballot, :elector, :elector_id])
       t.elector_affiliation(:proxy=>[:office, :role, :ballot, :elector, :affiliation])
-      t.jurisdiction(:proxy=>[:office, :role, :scope], :index_as=>[:facetable])
+      t.jurisdiction(:proxy=>[:office, :scope], :index_as=>[:facetable])
 
     end
     
