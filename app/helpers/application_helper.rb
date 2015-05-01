@@ -17,6 +17,11 @@ module ApplicationHelper
     office.blank? ? id : office.name
   end
 
+  def party_name(id)
+    party = Party.find(id)
+    party.blank? ? id : party.name
+  end
+
   def display_facet_details?
     office_facet_selected? || party_facet_selected? || state_facet_selected?
   end

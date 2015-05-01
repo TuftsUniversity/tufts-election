@@ -43,7 +43,7 @@ class CatalogController < ApplicationController
     config.add_facet_field 'date_sim', :label => 'Year', :range => true, :sort => 'index'
     config.add_facet_field 'office_id_ssim', :label => 'Office', :limit => 20, helper_method: :office_name
     config.add_facet_field 'jurisdiction_sim', :label => 'Jurisdiction', :limit => 15
-    config.add_facet_field 'party_affiliation_sim', :label => 'Party', :limit => 15
+    config.add_facet_field 'party_affiliation_id_ssim', :label => 'Party', :limit => 15, helper_method: :party_name
     config.add_facet_field 'election_type_sim', :label => 'Election Type'
     config.add_facet_fields_to_solr_request!
 
