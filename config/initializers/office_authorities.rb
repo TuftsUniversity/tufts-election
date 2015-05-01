@@ -36,7 +36,15 @@ input = Nokogiri::XML(File.new(filename))
 namespaces = { 'auth' => 'http://dca.tufts.edu/aas/auth' }
 
 input.root.xpath('//auth:office', namespaces).each do |office_node|
-  name = office_node.attribute('name').value
+
+
+    office_node.xpath('//xref:office').each do |xref|
+      xref.namespace = nil
+      xref.name = 'a'
+      xref['href'] = "/catalog?f%5Boffice_id_ssim%5D%5B%5D=#{xref['id']}"
+  end
+
+    name = office_node.attribute('name').value
   id = office_node.attribute('id').value
   desc = office_node.xpath('./auth:description', namespaces).children.to_s.strip
 
