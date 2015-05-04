@@ -31,7 +31,7 @@ module ApplicationHelper
   end
 
   def party_facet_selected?
-    params[:f] && params[:f].key?('party_affiliation_sim')
+    params[:f] && params[:f].key?('party_affiliation_id_ssim')
   end
 
   def state_facet_selected?
@@ -39,7 +39,7 @@ module ApplicationHelper
   end
 
   def selected_party_facets
-    Array(params[:f]['party_affiliation_sim']).each do |facet_value|
+    Array(params[:f]['party_affiliation_id_ssim']).each do |facet_value|
       if party = Party.find(facet_value)
         yield party if block_given?
       end
