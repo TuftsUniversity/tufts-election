@@ -61,8 +61,8 @@ describe Datastreams::ElectionRecord do
         @county_solr["state_name_sim"].should == ["Alabama"]
         @county_solr["state_county_name_tesim"].should == ["Madison"]
         @county_solr["state_county_name_sim"].should == ["Madison"]
-        @county_solr["jurisdiction_tesim"].should == ["County"]
-        @county_solr["jurisdiction_sim"].should == ["County"]
+        @county_solr["jurisdiction_tesim"].should == ["State"]
+        @county_solr["jurisdiction_sim"].should == ["State"]
         
         
         @county_solr["office_name_tesim"].should == ["House of Representatives"]

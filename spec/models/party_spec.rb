@@ -41,7 +41,7 @@ describe Party do
     end
 
     it 'indexes party by the :name' do
-      party = Party.find('Foo party')
+      party = Party.find('A123')
 
       expect(party.id).to eq('A123')
       expect(party.name).to eq('Foo party')
@@ -53,7 +53,7 @@ describe Party do
     end
 
     it 'returns the most recently-added party by id' do
-      party = Party.find('Third party')
+      party = Party.find('C987')
 
       expect(party.description).to eq('A duplicate of Third Party')
     end
