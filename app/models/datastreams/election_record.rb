@@ -31,11 +31,13 @@ module Datastreams
               t.name(:path=>{:attribute=>"name"}, :index_as=>[:facetable])
               t.candidate_id(:path=>{:attribute=>"name_id"}, :index_as=>[:facetable])
               t.affiliation(:path=>{:attribute=>"affiliation"}, :index_as=>[:facetable])
+              t.affiliation_id(:path=>{:attribute=>"affiliation_id"}, :index_as=>[:facetable])
             }
             t.elector {
               t.name(:path=>{:attribute=>"name"}, :index_as=>[:facetable, :stored_searchable])
               t.elector_id(:path=>{:attribute=>"name_id"}, :index_as=>[:facetable])
               t.affiliation(:path=>{:attribute=>"affiliation"}, :index_as=>[:facetable])
+              t.affiliation_id(:path=>{:attribute=>"affiliation_id"}, :index_as=>[:facetable])
             }
           }
         }
