@@ -16,7 +16,7 @@ before_script:
   - cp config/devise.yml.sample config/devise.yml
   - cp config/jetty.yml.sample config/jetty.yml
 #  - cp config/secrets.yml.sample config/secrets.yml
-  - cp config/database.yml.travis config/database.yml
+  - cp config/database.yml.sample config/database.yml
   - cp config/ldap.yml.sample config/ldap.yml
 #  - mysql -e 'create database tdl_test'
 #  - bundle exec rake db:setup
