@@ -10,11 +10,13 @@ notifications:
     - mike.korcynski@tufts.edu
 
 before_script:
+  - mkdir -p tmp && export TMPDIR=tmp
   - cp config/database.yml.sample config/database.yml
   - cp config/fedora.yml.sample config/fedora.yml
   - cp config/solr.yml.sample config/solr.yml
   - cp config/devise.yml.sample config/devise.yml
   - cp config/jetty.yml.sample config/jetty.yml
+  - cp spec/fixtures/authorities/candidates.xml tmp/candidates.xml
 #  - cp config/secrets.yml.sample config/secrets.yml
   - cp config/database.yml.sample config/database.yml
 #  - mysql -e 'create database tdl_test'
@@ -22,11 +24,13 @@ before_script:
 #  - bundle exec rake tufts:fixtures:refresh
   - RAILS_ENV=test bundle exec rake db:migrate --trace
 #  - RAILS_ENV=test bundle exec rake db:seed --trace
-  - mkdir -p tmp && export TMPDIR=tmp
+#after_script:
+#  - cat jetty/jettywrapper.log
 env:
   global:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
     - TRAVIS=true
+    - RAILS_ENV=test
 
 bundler_args: --without development debug
 
