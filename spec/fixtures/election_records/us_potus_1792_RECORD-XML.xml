@@ -1,6 +1,6 @@
 
 <aas:election_record xmlns:aas="http://dca.tufts.edu/aas" date="1792" election_id="us.potus.1792" handle="10427/65038" iteration="First Ballot" label="1792 President of the United States, Electoral College" schemaLocation="http://dca.tufts.edu/aas http://dca.tufts.edu/schema/aas/electionRecord.xsd" type="Legislative">
-  <aas:office name="President of the United States" office_id="ON069" scope="Federal">
+  <aas:office name="President of the United States" office_id="ON082" scope="Federal">
     <aas:role scope="Federal" title="President of the United States">
       <aas:ballot>
         <aas:candidate affiliation="null" affiliation_id="null" candidate_num="1" name="George Washington" name_id="WG0011">

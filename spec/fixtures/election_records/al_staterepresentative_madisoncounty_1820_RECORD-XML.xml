@@ -1,6 +1,6 @@
 
 <aas:election_record xmlns:aas="http://dca.tufts.edu/aas" date="1820" election_id="al.staterepresentative.madisoncounty.1820" handle="10427/55818" iteration="First Ballot" label="Alabama 1820 House of Representatives, Madison County" schemaLocation="http://dca.tufts.edu/aas http://dca.tufts.edu/schema/aas/electionRecord.xsd" type="General">
-  <aas:office name="House of Representatives" office_id="ON057" scope="State">
+  <aas:office name="House of Representatives" office_id="ON064" scope="State">
     <aas:role scope="County" title="State Representative">
       <aas:ballot>
         <aas:candidate affiliation="null" affiliation_id="null" candidate_num="1" name="John Vining" name_id="VJ0000"></aas:candidate>

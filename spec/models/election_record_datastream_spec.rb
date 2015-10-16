@@ -44,7 +44,7 @@ describe Datastreams::ElectionRecord do
         
         @potus_solr["office_name_tesim"].should == ["President of the United States"]
         @potus_solr["office_name_sim"].should == ["President of the United States"]
-        @potus_solr["office_id_ssim"].should == ["ON069"]
+        @potus_solr["office_id_ssim"].should == ["ON082"]
         @potus_solr["office_scope_tesim"].should == ["Federal"]
         @potus_solr["office_role_title_tesim"].should == ["President of the United States"]
         @potus_solr["office_role_title_sim"].should == ["President of the United States"]
@@ -66,7 +66,7 @@ describe Datastreams::ElectionRecord do
         
         
         @county_solr["office_name_tesim"].should == ["House of Representatives"]
-        @county_solr["office_id_ssim"].should == ["ON057"]
+        @county_solr["office_id_ssim"].should == ["ON064"]
         @county_solr["office_scope_tesim"].should == ["State"]
         @county_solr["office_role_title_tesim"].should == ["State Representative"]
         @county_solr["office_role_scope_tesim"].should == ["County"]      

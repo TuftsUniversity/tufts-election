@@ -12,7 +12,7 @@ describe TuftsVotingRecord do
     let(:solr) { subject.to_solr }
 
     it 'indexes office' do
-      expect(solr['office_id_ssim']).to eq ['ON057']
+      expect(solr['office_id_ssim']).to eq ['ON064']
       expect(solr['office_name_sim']).to eq ['House of Representatives']
       expect(solr['office_name_tesim']).to eq ['House of Representatives']
     end
