@@ -6,8 +6,9 @@ class CatalogController < ApplicationController
   include Blacklight::Catalog
   
   # This filters out objects that you want to exclude from search results, like FileAssets
-  CatalogController.solr_search_params_logic << :exclude_unwanted_models
-  
+  CatalogController.solr_search_params_logic += [:exclude_unwanted_models, :exclude_drafts]
+  before_filter :enforce_show_permissions, :only=>:show
+
   configure_blacklight do |config|
     config.default_solr_params = { 
       :qt => 'search',
@@ -159,6 +160,21 @@ class CatalogController < ApplicationController
   def exclude_unwanted_models(solr_parameters, user_parameters)
     solr_parameters[:fq] ||= []
     solr_parameters[:fq] << "has_model_ssim:\"info:fedora/cm:VotingRecord\" OR format_ssim:Candidate"
+  end
+
+  def exclude_drafts(solr_parameters,user_parameters)
+    solr_parameters[:fq] ||= []
+    solr_parameters[:fq] << "-id:draft*"
+  end
+
+  def enforce_show_permissions(opts={})
+    id = params[:id]
+    unless id.nil?
+      if (id[/^draft/])
+        flash[:alert] = "Draft objects are not available."
+        redirect_to(:action=>'index', :q=>nil, :f=>nil) and return false
+      end
+    end
   end
 
 end 

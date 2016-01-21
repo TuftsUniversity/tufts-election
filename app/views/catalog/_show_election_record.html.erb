@@ -28,7 +28,7 @@
     <dt>Iteration:</dt>
     <dd><%= document.get("iteration_tesim") %></dd>
     <dt>Office/Role:</dt>
-    <dd><%= document.get("office_name_tesim") + "/" + document.get("office_role_title_tesim") %></dd>
+    <dd><%= (document.get("office_name_tesim")||'') + "/" + (document.get("office_role_title_tesim")||'') %></dd>
     <% unless document.get("candidate_name_tesim").nil? %>
       <dt>Candidates:</dt>
       <dd><%= document.get("candidate_name_tesim") %></dd>

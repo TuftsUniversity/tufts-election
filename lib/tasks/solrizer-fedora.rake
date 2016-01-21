@@ -6,6 +6,12 @@ namespace :solrizer do
       if ENV['PID']
         puts "indexing #{ENV['PID'].inspect}"
         ActiveFedora::Base.find(ENV['PID'], cast: true).update_index
+        begin
+          ActiveFedora::Base.find(pid,cast: true).update_index
+        rescue ActiveFedora::ObjectNotFoundError => onfe
+          puts "#{pid} not found"
+        end
+
         puts "Finished shelving #{ENV['PID']}"
       else
         puts "You must provide a pid using the format 'solrizer::solrize_object PID=sample:pid'."
