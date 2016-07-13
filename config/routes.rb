@@ -1,7 +1,9 @@
 ALLOW_DOTS ||= /[a-zA-Z0-9_\-.:]+/
 
 TuftsElection::Application.routes.draw do
-  
+
+  #mount Blacklight::Engine => '/'
+
   root to: "catalog#index"
     concern :searchable, Blacklight::Routes::Searchable.new
 
@@ -22,6 +24,13 @@ TuftsElection::Application.routes.draw do
       delete 'clear'
     end
   end
+
+  devise_for :users
+
+  match '/catalog/:id/track', :to => 'catalog#track', :constraints => {:id => /.*/}, via: [:get], :as =>'catalog'
+  resources :catalog, :id => ALLOW_DOTS
+  resources :candidates, :only=>'index'
+  resources :message_queues, :only=>'index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -77,35 +86,5 @@ TuftsElection::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-
-  mount Blacklight::Engine => '/'
-
-  concern :searchable, Blacklight::Routes::Searchable.new
-  concern :exportable, Blacklight::Routes::Exportable.new
-
-  resource :catalog, only: [:index], controller: 'catalog' do
-    concerns :searchable
-  end
-
-  resources :solr_documents, only: [:show], controller: 'catalog' do
-    concerns :exportable
-  end
-
-  resources :bookmarks do
-    concerns :exportable
-
-    collection do
-      delete 'clear'
-    end
-  end
-
-  root :to => "catalog#index"
-
-  devise_for :users
-
-  match '/catalog/:id/track', :to => 'catalog#track', :constraints => {:id => /.*/}, via: [:get], :as =>'catalog'
-  resources :catalog, :id => ALLOW_DOTS
-  resources :candidates, :only=>'index'
-  resources :message_queues, :only=>'index'
 
 end
