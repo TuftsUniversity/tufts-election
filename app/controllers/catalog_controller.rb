@@ -13,6 +13,8 @@ class CatalogController < ApplicationController
     ## Model that maps search index responses to the blacklight response model
     # config.response_model = Blacklight::Solr::Response
 
+    before_filter :enforce_show_permissions, :only=>:show
+
     ## Default parameters to send to solr for all search-like requests. See also SearchBuilder#processed_parameters
     config.default_solr_params = {
       rows: 10
@@ -36,12 +38,14 @@ class CatalogController < ApplicationController
     #}
 
     # solr field configuration for search results/index views
-    config.index.title_field = 'title_display'
-    config.index.display_type_field = 'format'
+    config.index.title_field = 'title_tesim'
+    config.index.display_type_field = 'format_ssim'
 
     # solr field configuration for document/show views
     #config.show.title_field = 'title_display'
+    config.show.title_field  = 'title_tesim'
     #config.show.display_type_field = 'format'
+    config.show.display_type_field  = 'format_ssim'
 
     # solr fields that will be treated as facets by the blacklight application
     #   The ordering of the field names is the order of the display
@@ -67,21 +71,28 @@ class CatalogController < ApplicationController
     #  (useful when user clicks "more" on a large facet and wants to navigate alphabetically across a large set of results)
     # :index_range can be an array or range of prefixes that will be used to create the navigation (note: It is case sensitive when searching values)
 
-    config.add_facet_field 'format', label: 'Format'
-    config.add_facet_field 'pub_date', label: 'Publication Year', single: true
-    config.add_facet_field 'subject_topic_facet', label: 'Topic', limit: 20, index_range: 'A'..'Z'
-    config.add_facet_field 'language_facet', label: 'Language', limit: true
-    config.add_facet_field 'lc_1letter_facet', label: 'Call Number'
-    config.add_facet_field 'subject_geo_facet', label: 'Region'
-    config.add_facet_field 'subject_era_facet', label: 'Era'
+    # Original facets
+    #config.add_facet_field 'format', label: 'Format'
+    #config.add_facet_field 'pub_date', label: 'Publication Year', single: true
+    #config.add_facet_field 'subject_topic_facet', label: 'Topic', limit: 20, index_range: 'A'..'Z'
+    #config.add_facet_field 'language_facet', label: 'Language', limit: true
+    #config.add_facet_field 'lc_1letter_facet', label: 'Call Number'
+    #config.add_facet_field 'subject_geo_facet', label: 'Region'
+    #config.add_facet_field 'subject_era_facet', label: 'Era'
 
-    config.add_facet_field 'example_pivot_field', label: 'Pivot Field', :pivot => ['format', 'language_facet']
+    #config.add_facet_field 'example_pivot_field', label: 'Pivot Field', :pivot => ['format', 'language_facet']
 
-    config.add_facet_field 'example_query_facet_field', label: 'Publish Date', :query => {
-       :years_5 => { label: 'within 5 Years', fq: "pub_date:[#{Time.zone.now.year - 5 } TO *]" },
-       :years_10 => { label: 'within 10 Years', fq: "pub_date:[#{Time.zone.now.year - 10 } TO *]" },
-       :years_25 => { label: 'within 25 Years', fq: "pub_date:[#{Time.zone.now.year - 25 } TO *]" }
-    }
+    #config.add_facet_field 'example_query_facet_field', label: 'Publish Date', :query => {
+    #   :years_5 => { label: 'within 5 Years', fq: "pub_date:[#{Time.zone.now.year - 5 } TO *]" },
+    #   :years_10 => { label: 'within 10 Years', fq: "pub_date:[#{Time.zone.now.year - 10 } TO *]" },
+    #   :years_25 => { label: 'within 25 Years', fq: "pub_date:[#{Time.zone.now.year - 25 } TO *]" }
+    #}
+    config.add_facet_field 'state_name_sim', :label => 'State', :sort => 'index', :limit => 50
+    config.add_facet_field 'date_sim', :label => 'Year', :range => true, :sort => 'index'
+    config.add_facet_field 'office_id_ssim', :label => 'Office', :limit => 20, helper_method: :office_name
+    config.add_facet_field 'jurisdiction_sim', :label => 'Jurisdiction', :limit => 15
+    config.add_facet_field 'party_affiliation_id_ssim', :label => 'Party', :limit => 15, helper_method: :party_name
+    config.add_facet_field 'election_type_sim', :label => 'Election Type'
 
 
     # Have BL send all facet field names to Solr, which has been the default
@@ -91,32 +102,38 @@ class CatalogController < ApplicationController
 
     # solr fields to be displayed in the index (search results) view
     #   The ordering of the field names is the order of the display
-    config.add_index_field 'title_display', label: 'Title'
-    config.add_index_field 'title_vern_display', label: 'Title'
-    config.add_index_field 'author_display', label: 'Author'
-    config.add_index_field 'author_vern_display', label: 'Author'
-    config.add_index_field 'format', label: 'Format'
-    config.add_index_field 'language_facet', label: 'Language'
-    config.add_index_field 'published_display', label: 'Published'
-    config.add_index_field 'published_vern_display', label: 'Published'
-    config.add_index_field 'lc_callnum_display', label: 'Call number'
+    # Original index fields
+    #config.add_index_field 'title_display', label: 'Title'
+    #config.add_index_field 'title_vern_display', label: 'Title'
+    #config.add_index_field 'author_display', label: 'Author'
+    #config.add_index_field 'author_vern_display', label: 'Author'
+    #config.add_index_field 'format', label: 'Format'
+    #config.add_index_field 'language_facet', label: 'Language'
+    #config.add_index_field 'published_display', label: 'Published'
+    #config.add_index_field 'published_vern_display', label: 'Published'
+    #config.add_index_field 'lc_callnum_display', label: 'Call number'
+    config.add_index_field 'office_name_tesim', :label => 'Office'
+    config.add_index_field 'jurisdiction_tesim', :label => 'Jurisdiction'
+    config.add_index_field 'date_tesim', :label => 'Year'
+    config.add_index_field 'state_name_tesim', :label => 'State'
+    config.add_index_field 'party_affiliation_sim', :label => 'Party Affiliation'
 
     # solr fields to be displayed in the show (single result) view
     #   The ordering of the field names is the order of the display
-    config.add_show_field 'title_display', label: 'Title'
-    config.add_show_field 'title_vern_display', label: 'Title'
-    config.add_show_field 'subtitle_display', label: 'Subtitle'
-    config.add_show_field 'subtitle_vern_display', label: 'Subtitle'
-    config.add_show_field 'author_display', label: 'Author'
-    config.add_show_field 'author_vern_display', label: 'Author'
-    config.add_show_field 'format', label: 'Format'
-    config.add_show_field 'url_fulltext_display', label: 'URL'
-    config.add_show_field 'url_suppl_display', label: 'More Information'
-    config.add_show_field 'language_facet', label: 'Language'
-    config.add_show_field 'published_display', label: 'Published'
-    config.add_show_field 'published_vern_display', label: 'Published'
-    config.add_show_field 'lc_callnum_display', label: 'Call number'
-    config.add_show_field 'isbn_t', label: 'ISBN'
+    #config.add_show_field 'title_display', label: 'Title'
+    #config.add_show_field 'title_vern_display', label: 'Title'
+    #config.add_show_field 'subtitle_display', label: 'Subtitle'
+    #config.add_show_field 'subtitle_vern_display', label: 'Subtitle'
+    #config.add_show_field 'author_display', label: 'Author'
+    #config.add_show_field 'author_vern_display', label: 'Author'
+    #config.add_show_field 'format', label: 'Format'
+    #config.add_show_field 'url_fulltext_display', label: 'URL'
+    #config.add_show_field 'url_suppl_display', label: 'More Information'
+    #config.add_show_field 'language_facet', label: 'Language'
+    #config.add_show_field 'published_display', label: 'Published'
+    #config.add_show_field 'published_vern_display', label: 'Published'
+    #config.add_show_field 'lc_callnum_display', label: 'Call number'
+    #config.add_show_field 'isbn_t', label: 'ISBN'
 
     # "fielded" search configuration. Used by pulldown among other places.
     # For supported keys in hash, see rdoc for Blacklight::SearchFields
@@ -138,53 +155,63 @@ class CatalogController < ApplicationController
 
     config.add_search_field 'all_fields', label: 'All Fields'
 
+    config.add_search_field('Candidate') do |field|
+      field.solr_local_parameters = { 
+        :qf => 'name_tesim',
+        :pf => 'name_tesim',
+      }
+    end
 
     # Now we see how to over-ride Solr request handler defaults, in this
     # case for a BL "search field", which is really a dismax aggregate
     # of Solr search fields.
 
-    config.add_search_field('title') do |field|
-      # solr_parameters hash are sent to Solr as ordinary url query params.
-      field.solr_parameters = { :'spellcheck.dictionary' => 'title' }
+    #config.add_search_field('title') do |field|
+    #  # solr_parameters hash are sent to Solr as ordinary url query params.
+    #  field.solr_parameters = { :'spellcheck.dictionary' => 'title' }
 
-      # :solr_local_parameters will be sent using Solr LocalParams
-      # syntax, as eg {! qf=$title_qf }. This is neccesary to use
-      # Solr parameter de-referencing like $title_qf.
-      # See: http://wiki.apache.org/solr/LocalParams
-      field.solr_local_parameters = {
-        qf: '$title_qf',
-        pf: '$title_pf'
-      }
-    end
+    #  # :solr_local_parameters will be sent using Solr LocalParams
+    #  # syntax, as eg {! qf=$title_qf }. This is neccesary to use
+    #  # Solr parameter de-referencing like $title_qf.
+    #  # See: http://wiki.apache.org/solr/LocalParams
+    #  field.solr_local_parameters = {
+    #    qf: '$title_qf',
+    #    pf: '$title_pf'
+    #  }
+    #end
 
-    config.add_search_field('author') do |field|
-      field.solr_parameters = { :'spellcheck.dictionary' => 'author' }
-      field.solr_local_parameters = {
-        qf: '$author_qf',
-        pf: '$author_pf'
-      }
-    end
+    #config.add_search_field('author') do |field|
+    #  field.solr_parameters = { :'spellcheck.dictionary' => 'author' }
+    #  field.solr_local_parameters = {
+    #    qf: '$author_qf',
+    #    pf: '$author_pf'
+    #  }
+    #end
 
     # Specifying a :qt only to show it's possible, and so our internal automated
     # tests can test it. In this case it's the same as
     # config[:default_solr_parameters][:qt], so isn't actually neccesary.
-    config.add_search_field('subject') do |field|
-      field.solr_parameters = { :'spellcheck.dictionary' => 'subject' }
-      field.qt = 'search'
-      field.solr_local_parameters = {
-        qf: '$subject_qf',
-        pf: '$subject_pf'
-      }
-    end
+    #config.add_search_field('subject') do |field|
+    #  field.solr_parameters = { :'spellcheck.dictionary' => 'subject' }
+    #  field.qt = 'search'
+    #  field.solr_local_parameters = {
+    #    qf: '$subject_qf',
+    #    pf: '$subject_pf'
+    #  }
+    #end
 
     # "sort results by" select (pulldown)
     # label in pulldown is followed by the name of the SOLR field to sort by and
     # whether the sort is ascending or descending (it must be asc or desc
     # except in the relevancy case).
-    config.add_sort_field 'score desc, pub_date_sort desc, title_sort asc', label: 'relevance'
-    config.add_sort_field 'pub_date_sort desc, title_sort asc', label: 'year'
-    config.add_sort_field 'author_sort asc, title_sort asc', label: 'author'
-    config.add_sort_field 'title_sort asc, pub_date_sort desc', label: 'title'
+    # Original sort_fields
+    #config.add_sort_field 'score desc, pub_date_sort desc, title_sort asc', label: 'relevance'
+    #config.add_sort_field 'pub_date_sort desc, title_sort asc', label: 'year'
+    #config.add_sort_field 'author_sort asc, title_sort asc', label: 'author'
+    #config.add_sort_field 'title_sort asc, pub_date_sort desc', label: 'title'
+    config.add_sort_field 'score desc, date_isi asc, title_ssi asc', :label => 'relevance'
+    config.add_sort_field 'date_isi asc, title_ssi asc', :label => 'year'
+    config.add_sort_field 'title_ssi asc, date_isi asc', :label => 'title'
 
     # If there are more than this many search results, no spelling ("did you
     # mean") suggestion is offered.
@@ -193,5 +220,16 @@ class CatalogController < ApplicationController
     # Configuration for autocomplete suggestor
     config.autocomplete_enabled = true
     config.autocomplete_path = 'suggest'
+
+    def enforce_show_permissions(opts={})
+      id = params[:id]
+      unless id.nil?
+        if (id[/^draft/])
+          flash[:alert] = "Draft objects are not available."
+          redirect_to(:action=>'index', :q=>nil, :f=>nil) and return false
+        end
+      end
+    end
+
   end
 end
