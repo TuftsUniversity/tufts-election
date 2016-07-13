@@ -2,7 +2,7 @@ ALLOW_DOTS ||= /[a-zA-Z0-9_\-.:]+/
 
 TuftsElection::Application.routes.draw do
 
-  #mount Blacklight::Engine => '/'
+  mount Blacklight::Engine => '/'
 
   root to: "catalog#index"
     concern :searchable, Blacklight::Routes::Searchable.new
