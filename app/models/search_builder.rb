@@ -2,7 +2,6 @@
 class SearchBuilder < Blacklight::SearchBuilder
   include Blacklight::Solr::SearchBuilderBehavior
 
-
   self.default_processor_chain += [:exclude_unwanted_models, :exclude_drafts]
 
   # This filters out objects that you want to exclude from search results.  By default it only excludes FileAssets

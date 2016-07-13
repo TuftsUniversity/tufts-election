@@ -2,7 +2,7 @@ class CandidatesController < ApplicationController
   include Blacklight::Catalog
 
   configure_blacklight do |config|
-    config.default_solr_params = { 
+    config.default_solr_params = {
       :rows => 100
     }
 
@@ -45,9 +45,9 @@ class CandidatesController < ApplicationController
     config.add_index_field 'date_tesim', :label => 'Year:'
     config.add_index_field 'state_name_tesim', :label => 'State:'
 
-    
+
     config.add_search_field 'all_fields', :label => 'All Fields'
-    
+
 
     config.add_sort_field 'title_ssi asc', :label => 'Name'
 

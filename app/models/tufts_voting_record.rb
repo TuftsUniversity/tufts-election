@@ -1,7 +1,7 @@
 class TuftsVotingRecord < ActiveFedora::Base
   has_metadata :name => "RECORD-XML", :type => Datastreams::ElectionRecord
   has_metadata :name => "DCA-META", :type => Datastreams::TuftsDcaMeta
-  
+
   def to_solr(solr_doc=Hash.new,opt={})
     super
     solr_doc["format_ssim"] = solr_doc["format_tesim"]
