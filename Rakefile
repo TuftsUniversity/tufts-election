@@ -5,3 +5,5 @@
 require File.expand_path('../config/application', __FILE__)
 
 TuftsElection::Application.load_tasks
+
+require 'solr_wrapper/rake_task'

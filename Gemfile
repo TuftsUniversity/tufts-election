@@ -45,3 +45,9 @@ group :test, :development do
   # gem 'ruby-debug19', :require => 'ruby-debug'
   gem 'codesake-dawn', :require=>false
 end
+
+group :development, :test do
+  gem 'solr_wrapper', '>= 0.3'
+end
+
+gem 'rsolr', '~> 1.0'
