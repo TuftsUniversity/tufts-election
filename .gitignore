@@ -31,6 +31,7 @@ pids.csv
 
 # Ignore configuration files with passwords and secrets
 config/fedora.yml
+config/blacklight.yml
 config/initializers/secret_token.rb
 config/database.yml
 config/solr.yml
