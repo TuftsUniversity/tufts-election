@@ -15,13 +15,11 @@ end
 
 # Gems used only for assets and not required
 # in production environments by default.
-group :assets do
-  gem 'coffee-rails'
-  gem 'uglifier'
-  gem 'therubyracer'
-  gem 'sass-rails'
-  gem 'bootstrap-sass'
-end
+gem 'coffee-rails'
+gem 'uglifier'
+gem 'therubyracer'
+gem 'sass-rails'
+gem 'bootstrap-sass'
 
 gem 'jquery-rails'
 gem 'rdf'
