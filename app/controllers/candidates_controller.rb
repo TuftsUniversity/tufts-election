@@ -4,8 +4,9 @@ class CandidatesController < ApplicationController
   configure_blacklight do |config|
     config.default_solr_params = {
       :qt => 'search',
-      :rows => 100
     }
+
+    config.default_per_page = 100
 
     # solr field configuration for search results/index views
     config.index.title_field = 'title_tesim'

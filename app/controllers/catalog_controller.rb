@@ -18,8 +18,9 @@ class CatalogController < ApplicationController
     ## Default parameters to send to solr for all search-like requests. See also SearchBuilder#processed_parameters
     config.default_solr_params = {
       :qt => 'search',
-      rows: 10
     }
+
+    config.default_per_page = 10
 
     # solr path which will be added to solr base url before the other solr params.
     #config.solr_path = 'select'
