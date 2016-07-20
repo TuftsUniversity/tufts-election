@@ -3,6 +3,7 @@ class CandidatesController < ApplicationController
 
   configure_blacklight do |config|
     config.default_solr_params = {
+      :qt => 'search',
       :rows => 100
     }
 
