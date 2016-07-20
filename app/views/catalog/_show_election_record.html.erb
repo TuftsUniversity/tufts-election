@@ -1,11 +1,11 @@
 <div class="details">
   <dl class="defList">
     <dt>Office:</dt>
-    <dd><%= document.get("office_name_tesim") %> (<%= document.get("office_scope_tesim") %>)</dd>
+    <dd><%= document.first("office_name_tesim") %> (<%= document.first("office_scope_tesim") %>)</dd>
     <dt>Title:</dt>
-    <dd><%= document.get("office_role_title_tesim") %></dd>
+    <dd><%= document.first("office_role_title_tesim") %></dd>
     <dt>Jurisdiction:</dt>
-    <dd><%= document.get("jurisdiction_tesim") %></dd>
+    <dd><%= document.first("jurisdiction_tesim") %></dd>
   </dl>
 
   <div class="accordion" id="accordion2">
@@ -18,24 +18,24 @@
            <div class="accordion-inner">
   <dl class="defList">
     <dt>Label:</dt>
-    <dd><%= document.get("label_tesim") %></dd>
+    <dd><%= document.first("label_tesim") %></dd>
     <dt>Date:</dt>
-    <dd><%= document.get("date_isi") %></dd>
+    <dd><%= document.first("date_isi") %></dd>
     <dt>State:</dt>
-    <dd><%= document.get("state_name_tesim") %></dd>
+    <dd><%= document.first("state_name_tesim") %></dd>
     <dt>Type:</dt>
-    <dd><%= document.get("election_type_tesim") %></dd>
+    <dd><%= document.first("election_type_tesim") %></dd>
     <dt>Iteration:</dt>
-    <dd><%= document.get("iteration_tesim") %></dd>
+    <dd><%= document.first("iteration_tesim") %></dd>
     <dt>Office/Role:</dt>
-    <dd><%= (document.get("office_name_tesim")||'') + "/" + (document.get("office_role_title_tesim")||'') %></dd>
-    <% unless document.get("candidate_name_tesim").nil? %>
+    <dd><%= (document.first("office_name_tesim")||'') + "/" + (document.first("office_role_title_tesim")||'') %></dd>
+    <% unless document.first("candidate_name_tesim").nil? %>
       <dt>Candidates:</dt>
-      <dd><%= document.get("candidate_name_tesim") %></dd>
+      <dd><%= document.first("candidate_name_tesim") %></dd>
     <% end %>
-    <% unless document.get("elector_name_tesim").nil? %>
+    <% unless document.first("elector_name_tesim").nil? %>
       <dt>Electors:</dt>
-      <dd><%= document.get("elector_name_tesim") %></dd>
+      <dd><%= document.first("elector_name_tesim") %></dd>
     <% end %>
   </dl>
              </div>
@@ -46,6 +46,6 @@
 
 </div>
 
-<%= voting_record_xml_to_table(document.get("voting_record_xml_tesi")) %>
+<%= voting_record_xml_to_table(document.first("voting_record_xml_tesi")) %>
 
 <p id="record-message"><%=render :partial=>'shared/released_message' %></p>
