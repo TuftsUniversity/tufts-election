@@ -506,6 +506,7 @@ a:hover.constraint-value {
 }
 
 .constraints,
+h3.index_title,
 dl {
     margin: 0;
     padding: 0;
