@@ -27,7 +27,7 @@ TuftsElection::Application.routes.draw do
 
   devise_for :users
 
-  match '/catalog/:id/track', :to => 'catalog#track', :constraints => {:id => /.*/}, via: [:post], :as =>'catalog'
+  match '/catalog/:id/track', :to => 'catalog#track', :constraints => {:id => /.*/}, via: [:get, :post], :as =>'catalog'
   resources :catalog, :id => ALLOW_DOTS
   resources :candidates, :only=>'index'
   resources :message_queues, :only=>'index'
