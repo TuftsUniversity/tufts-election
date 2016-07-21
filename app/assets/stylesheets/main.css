@@ -645,7 +645,6 @@ span.page.current {
 #facets h3 {
     color: #555;
     cursor: pointer;
-    font-weight: 400;
     margin-bottom: 0;
     text-align: justify;
 }
