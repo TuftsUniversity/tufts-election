@@ -39,6 +39,7 @@ gem 'jettywrapper'
 
 group :test, :development do
   gem 'rspec-rails'
+  gem 'rspec-its'
   # To use debugger
   # gem 'ruby-debug19', :require => 'ruby-debug'
   gem 'codesake-dawn', :require=>false
