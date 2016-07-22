@@ -1,19 +1,19 @@
 language: ruby
 rvm:
-  - 2.1.1
+  - 2.2.3
 
 sudo: false
 cache: bundler
 
 notifications:
   email:
-    - mike.korcynski@tufts.edu
+    - tdl-commiters@googlegroups.com
 
 before_script:
   - mkdir -p tmp && export TMPDIR=tmp
   - cp config/database.yml.sample config/database.yml
   - cp config/fedora.yml.sample config/fedora.yml
-  - cp config/solr.yml.sample config/solr.yml
+  - cp config/blacklight.yml.sample config/blacklight.yml
   - cp config/devise.yml.sample config/devise.yml
   - cp config/jetty.yml.sample config/jetty.yml
   - cp spec/fixtures/authorities/candidates.xml tmp/candidates.xml
