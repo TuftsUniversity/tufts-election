@@ -7,6 +7,7 @@ h1. Setting up Tufts Election development environment:
 # Start Jetty:
   <pre>rake jetty:start</pre>
 # Import candidates - parameter is the directory containing all the candidate authority files.
+  <pre>mkdir tmp</pre>
   <pre>./script/import_candidates spec/fixtures/candidates/</pre>
 # Import election result records from spec/fixtures/election_records
   <pre>rake index</pre>
