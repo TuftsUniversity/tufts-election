@@ -1,5 +1,7 @@
 class DeleteMessageQueues < ActiveRecord::Migration
   def change
-    drop_table :message_queues
+    if( table_exists?(:message_queues) )
+      drop_table :message_queues
+    end
   end
 end
