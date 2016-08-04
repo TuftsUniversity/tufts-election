@@ -30,7 +30,6 @@ TuftsElection::Application.routes.draw do
   match '/catalog/:id/track', :to => 'catalog#track', :constraints => {:id => /.*/}, via: [:get, :post], :as =>'catalog'
   resources :catalog, :id => ALLOW_DOTS
   resources :candidates, :only=>'index'
-  resources :message_queues, :only=>'index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
