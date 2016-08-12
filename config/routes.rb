@@ -5,16 +5,15 @@ TuftsElection::Application.routes.draw do
   mount Blacklight::Engine => '/'
 
   root to: "catalog#index"
-    concern :searchable, Blacklight::Routes::Searchable.new
-
-  resource :catalog, only: [:index], as: 'catalog', path: '/catalog', controller: 'catalog' do
-    concerns :searchable
-  end
 
   concern :exportable, Blacklight::Routes::Exportable.new
-
   resources :solr_documents, only: [:show], path: '/catalog', controller: 'catalog' do
     concerns :exportable
+  end
+
+  concern :searchable, Blacklight::Routes::Searchable.new
+  resources :catalog, only: [:index], as: 'catalog', path: '/catalog', controller: 'catalog' do
+    concerns :searchable
   end
 
   resources :bookmarks do
@@ -28,7 +27,7 @@ TuftsElection::Application.routes.draw do
   devise_for :users
 
   match '/catalog/:id/track', :to => 'catalog#track', :constraints => {:id => /.*/}, via: [:get, :post], :as =>'catalog'
-  resources :catalog, :id => ALLOW_DOTS
+  #resources :catalog, :id => ALLOW_DOTS
   resources :candidates, :only=>'index'
 
   # The priority is based upon order of creation: first created -> highest priority.
