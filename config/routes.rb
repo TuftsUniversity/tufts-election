@@ -7,12 +7,12 @@ TuftsElection::Application.routes.draw do
   root to: "catalog#index"
 
   concern :exportable, Blacklight::Routes::Exportable.new
-  resources :solr_documents, only: [:show], path: '/catalog', controller: 'catalog' do
+  resources :solr_documents, id: ALLOW_DOTS, only: [:show], path: '/catalog', controller: 'catalog' do
     concerns :exportable
   end
 
   concern :searchable, Blacklight::Routes::Searchable.new
-  resources :catalog, :id => ALLOW_DOTS, only: [:index], as: 'catalog', path: '/catalog', controller: 'catalog' do
+  resources :catalog, only: [:index], as: 'catalog', path: '/catalog', controller: 'catalog' do
     concerns :searchable
   end
 
