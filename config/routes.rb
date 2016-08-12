@@ -12,7 +12,7 @@ TuftsElection::Application.routes.draw do
   end
 
   concern :searchable, Blacklight::Routes::Searchable.new
-  resources :catalog, only: [:index], as: 'catalog', path: '/catalog', controller: 'catalog' do
+  resources :catalog, :id => ALLOW_DOTS, only: [:index], as: 'catalog', path: '/catalog', controller: 'catalog' do
     concerns :searchable
   end
 
