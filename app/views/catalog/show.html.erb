@@ -8,7 +8,9 @@
     <%= render 'constraints', :params => current_search_session.try(:query_params) || {} %>
 <% end %>
 
-<%= render 'previous_next_doc' %>
+<% if @previous_document || @next_document %>
+  <%= render 'previous_next_doc' %>
+<% end %>
 
 <%# this should be in a partial -%>
 <div id="document" class="<%= render_document_class %>">
