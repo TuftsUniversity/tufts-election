@@ -12,7 +12,7 @@ TuftsElection::Application.routes.draw do
   end
 
   concern :searchable, Blacklight::Routes::Searchable.new
-  resources :catalog, only: [:index], as: 'catalog', path: '/catalog', controller: 'catalog' do
+  resource :catalog, only: [:index], as: 'catalog', path: '/catalog', controller: 'catalog' do
     concerns :searchable
   end
 
@@ -27,8 +27,7 @@ TuftsElection::Application.routes.draw do
   devise_for :users
 
   match '/catalog/:id/track', :to => 'catalog#track', :constraints => {:id => /.*/}, via: [:get, :post], :as =>'catalog'
-  #resources :catalog, :id => ALLOW_DOTS
-  resources :candidates, :only=>'index'
+  resources :candidates, only: [:index]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

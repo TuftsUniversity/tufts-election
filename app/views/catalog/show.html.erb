@@ -13,7 +13,7 @@
 <%# this should be in a partial -%>
 <div id="document" class="<%= render_document_class %>">
   <nav>
-    <%= link_to "< new search", catalog_index_path %>
+    <%= link_to "< new search", root_path %>
   </nav>
 
   <div id="doc_<%= @document.id.to_s.parameterize %>">
