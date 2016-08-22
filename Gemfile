@@ -30,7 +30,7 @@ gem 'devise'
 gem 'active-fedora', '~> 6.7.7'
 gem 'solrizer','3.1.1'
 gem 'google-analytics-rails'
-gem 'jettywrapper'
+gem 'jettywrapper', '1.5.0'
 
 #group :development do
 #  # support for rails_panel chrome extension
