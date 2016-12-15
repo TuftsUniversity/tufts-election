@@ -1,4 +1,4 @@
-ALLOW_DOTS ||= /[a-zA-Z0-9_\-.:]+/
+ALLOW_DOTS ||= /[a-zA-Z0-9_\-.:]+?/
 
 TuftsElection::Application.routes.draw do
 
@@ -12,7 +12,7 @@ TuftsElection::Application.routes.draw do
   end
 
   concern :searchable, Blacklight::Routes::Searchable.new
-  resource :catalog, only: [:index], as: 'catalog', path: '/catalog', controller: 'catalog' do
+  resource :catalog, id: ALLOW_DOTS, only: [:index], as: 'catalog', path: '/catalog', controller: 'catalog' do
     concerns :searchable
   end
 
