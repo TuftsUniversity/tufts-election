@@ -13,6 +13,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp
+derby.log
 
 # Ignore vim swap files
 *.swp

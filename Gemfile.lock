@@ -353,6 +353,7 @@ DEPENDENCIES
   om (~> 3.0.4)
   rails (= 4.2)
   rdf
+  rsolr (~> 1.0)
   rspec-its
   rspec-rails
   sass-rails

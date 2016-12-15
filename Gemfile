@@ -39,5 +39,5 @@ group :development, :test do
   gem 'codesake-dawn', :require=>false
 end
 
-#gem 'rsolr', '~> 1.0'
+gem 'rsolr', '~> 1.0'
 
