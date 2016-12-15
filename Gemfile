@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.2.3'
+ruby '2.3.3'
 gem 'rails', '4.2'
 #ruby-gemset=tufts-election
 
@@ -28,26 +28,16 @@ gem 'blacklight'
 gem 'om', '~> 3.0.4'
 gem 'devise'
 gem 'active-fedora', '~> 6.7.7'
-gem 'solrizer','3.1.1'
+#gem 'solrizer','3.1.1'
 gem 'google-analytics-rails'
-gem 'jettywrapper', '1.5.0'
 
-#group :development do
-#  # support for rails_panel chrome extension
-#  gem 'meta_request', '0.3.4'
-#end
-
-group :test, :development do
+group :development, :test do
+  gem 'jettywrapper', '1.8.3'
+  gem 'solr_wrapper', '>= 0.3'
   gem 'rspec-rails'
   gem 'rspec-its'
-  # To use debugger
-  # gem 'ruby-debug19', :require => 'ruby-debug'
   gem 'codesake-dawn', :require=>false
 end
 
-group :development, :test do
-  gem 'solr_wrapper', '>= 0.3'
-end
-
-gem 'rsolr', '~> 1.0'
+#gem 'rsolr', '~> 1.0'
 
