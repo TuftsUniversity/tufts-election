@@ -1,4 +1,4 @@
-ALLOW_DOTS ||= /[a-zA-Z0-9_\-.:]+?/
+ALLOW_DOTS ||= /[a-zA-Z0-9_\-.:]*/
 
 TuftsElection::Application.routes.draw do
 
@@ -26,7 +26,7 @@ TuftsElection::Application.routes.draw do
 
   devise_for :users
 
-  match '/catalog/:id/track', :to => 'catalog#track', :constraints => {:id => /.*/}, via: [:get, :post], :as =>'catalog'
+  match '/catalog/:id/track', :to => 'catalog#track', id: /.*/, via: [:get, :post], :as =>'catalog'
   resources :candidates, only: [:index]
 
   # The priority is based upon order of creation: first created -> highest priority.
