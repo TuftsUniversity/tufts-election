@@ -11,7 +11,6 @@ notifications:
 
 before_script:
   - mkdir -p tmp && export TMPDIR=tmp
-  - cp config/database.yml.sample config/database.yml
   - cp config/fedora.yml.sample config/fedora.yml
   - cp config/blacklight.yml.sample config/blacklight.yml
   - cp config/devise.yml.sample config/devise.yml
@@ -19,10 +18,12 @@ before_script:
   - cp spec/fixtures/authorities/candidates.xml tmp/candidates.xml
 #  - cp config/secrets.yml.sample config/secrets.yml
   - cp config/database.yml.sample config/database.yml
-#  - mysql -e 'create database tdl_test'
+  - sed -i .bak 's:db/test.sqlite3:elections_test:' config/database.yml
+  - sed -i .bak 's:sqlite3:mysql:' config/database.yml
+  - mysql -e 'create database elections_test'
 #  - bundle exec rake db:setup
 #  - bundle exec rake tufts:fixtures:refresh
-  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - RAILS_ENV=test bundle exec rake db:migrate
 #  - RAILS_ENV=test bundle exec rake db:seed --trace
 #after_script:
 #  - cat jetty/jettywrapper.log
