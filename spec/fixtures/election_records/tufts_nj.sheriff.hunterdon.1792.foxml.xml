@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<foxml:digitalObject PID="tufts:nj.sheriff.hunterdon.1792" VERSION="1.1" xsi:schemaLocation="info:fedora/fedora-system:def/foxml# http://www.fedora.info/definitions/1/0/foxml1-1.xsd" xmlns:foxml="info:fedora/fedora-system:def/foxml#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <foxml:objectProperties>
+    <foxml:property NAME="info:fedora/fedora-system:def/model#state" VALUE="Active" />
+    <foxml:property NAME="info:fedora/fedora-system:def/model#label" VALUE="New Jersey 1792 Sheriff, Hunterdon County" />
+    <foxml:property NAME="info:fedora/fedora-system:def/model#ownerId" VALUE="" />
+    <foxml:property NAME="info:fedora/fedora-system:def/model#createdDate" VALUE="2006-08-29T12:58:31.542Z" />
+    <foxml:property NAME="info:fedora/fedora-system:def/view#lastModifiedDate" VALUE="2015-09-02T17:54:35.811Z" />
+  </foxml:objectProperties>
+  <foxml:datastream CONTROL_GROUP="X" ID="AUDIT" STATE="A" VERSIONABLE="false">
+    <foxml:datastreamVersion CREATED="2006-08-29T12:58:31.542Z" FORMAT_URI="info:fedora/fedora-system:format/xml.fedora.audit" ID="AUDIT.0" LABEL="Audit Trail for this object" MIMETYPE="text/xml">
+      <foxml:xmlContent>
+        <audit:auditTrail xmlns:audit="info:fedora/fedora-system:def/audit#">
+          <audit:record ID="AUDREC1">
+            <audit:process type="Fedora API-M" />
+            <audit:action>ingest</audit:action>
+            <audit:componentID />
+            <audit:responsibility>fedoraAdmin</audit:responsibility>
+            <audit:date>2010-11-08T21:08:43.650Z</audit:date>
+            <audit:justification>Ingested from local file c:\20101104\objects\nj.sheriff.hunterdon.1792.xml</audit:justification>
+          </audit:record>
+          <audit:record ID="AUDREC2">
+            <audit:process type="Fedora API-M" />
+            <audit:action>modifyDatastreamByValue</audit:action>
+            <audit:componentID>DCA-META</audit:componentID>
+            <audit:responsibility>fedoraAdmin</audit:responsibility>
+            <audit:date>2013-03-27T21:16:48.873Z</audit:date>
+            <audit:justification>purging bib citation</audit:justification>
+          </audit:record>
+          <audit:record ID="AUDREC3">
+            <audit:process type="Fedora API-M" />
+            <audit:action>modifyDatastreamByValue</audit:action>
+            <audit:componentID>DCA-ADMIN</audit:componentID>
+            <audit:responsibility>fedoraAdmin</audit:responsibility>
+            <audit:date>2013-03-27T21:16:49.046Z</audit:date>
+            <audit:justification>purging datastream</audit:justification>
+          </audit:record>
+          <audit:record ID="AUDREC4">
+            <audit:process type="Fedora API-M" />
+            <audit:action>modifyDatastreamByValue</audit:action>
+            <audit:componentID>RECORD-XML</audit:componentID>
+            <audit:responsibility>fedoraAdmin</audit:responsibility>
+            <audit:date>2014-01-29T17:42:35.550Z</audit:date>
+            <audit:justification>dringest-408</audit:justification>
+          </audit:record>
+          <audit:record ID="AUDREC5">
+            <audit:process type="Fedora API-M" />
+            <audit:action>modifyDatastreamByValue</audit:action>
+            <audit:componentID>RELS-EXT</audit:componentID>
+            <audit:responsibility>fedoraAdmin</audit:responsibility>
+            <audit:date>2014-01-29T17:42:35.798Z</audit:date>
+            <audit:justification>dringest-408</audit:justification>
+          </audit:record>
+          <audit:record ID="AUDREC6">
+            <audit:process type="Fedora API-M" />
+            <audit:action>modifyDatastreamByValue</audit:action>
+            <audit:componentID>DCA-ADMIN</audit:componentID>
+            <audit:responsibility>fedoraAdmin</audit:responsibility>
+            <audit:date>2014-01-29T17:42:36.464Z</audit:date>
+            <audit:justification>dringest-408</audit:justification>
+          </audit:record>
+          <audit:record ID="AUDREC7">
+            <audit:process type="Fedora API-M" />
+            <audit:action>modifyDatastreamByValue</audit:action>
+            <audit:componentID>DCA-META</audit:componentID>
+            <audit:responsibility>fedoraAdmin</audit:responsibility>
+            <audit:date>2014-01-29T17:42:36.601Z</audit:date>
+            <audit:justification>dringest-408</audit:justification>
+          </audit:record>
+          <audit:record ID="AUDREC8">
+            <audit:process type="Fedora API-M" />
+            <audit:action>modifyDatastreamByValue</audit:action>
+            <audit:componentID>DCA-ADMIN</audit:componentID>
+            <audit:responsibility>fedoraAdmin</audit:responsibility>
+            <audit:date>2015-01-26T20:53:20.363Z</audit:date>
+            <audit:justification />
+          </audit:record>
+          <audit:record ID="AUDREC9">
+            <audit:process type="Fedora API-M" />
+            <audit:action>purgeDatastream</audit:action>
+            <audit:componentID>RECORD-XML</audit:componentID>
+            <audit:responsibility>fedoraAdmin</audit:responsibility>
+            <audit:date>2015-02-25T18:45:37.312Z</audit:date>
+            <audit:justification>Purged datastream (ID=RECORD-XML), versions ranging from the beginning of time to the end of time.  This resulted in the permanent removal of 2 datastream version(s) (2006-06-23T16:08:56.186Z, 2014-01-29T12:42:35.550Z) and all associated audit records.</audit:justification>
+          </audit:record>
+          <audit:record ID="AUDREC10">
+            <audit:process type="Fedora API-M" />
+            <audit:action>modifyDatastreamByValue</audit:action>
+            <audit:componentID>DCA-ADMIN</audit:componentID>
+            <audit:responsibility>fedoraAdmin</audit:responsibility>
+            <audit:date>2015-02-25T18:45:37.550Z</audit:date>
+            <audit:justification />
+          </audit:record>
+          <audit:record ID="AUDREC11">
+            <audit:process type="Fedora API-M" />
+            <audit:action>modifyDatastreamByValue</audit:action>
+            <audit:componentID>DCA-ADMIN</audit:componentID>
+            <audit:responsibility>fedoraAdmin</audit:responsibility>
+            <audit:date>2015-02-25T18:45:37.994Z</audit:date>
+            <audit:justification />
+          </audit:record>
+          <audit:record ID="AUDREC12">
+            <audit:process type="Fedora API-M" />
+            <audit:action>addDatastream</audit:action>
+            <audit:componentID>RECORD-XML</audit:componentID>
+            <audit:responsibility>fedoraAdmin</audit:responsibility>
+            <audit:date>2015-02-25T18:45:38.059Z</audit:date>
+            <audit:justification />
+          </audit:record>
+          <audit:record ID="AUDREC13">
+            <audit:process type="Fedora API-M" />
+            <audit:action>modifyDatastreamByValue</audit:action>
+            <audit:componentID>DCA-ADMIN</audit:componentID>
+            <audit:responsibility>fedoraAdmin</audit:responsibility>
+            <audit:date>2015-07-27T23:56:31.157Z</audit:date>
+            <audit:justification />
+          </audit:record>
+          <audit:record ID="AUDREC14">
+            <audit:process type="Fedora API-M" />
+            <audit:action>modifyDatastreamByValue</audit:action>
+            <audit:componentID>DCA-ADMIN</audit:componentID>
+            <audit:responsibility>fedoraAdmin</audit:responsibility>
+            <audit:date>2015-09-02T17:25:44.391Z</audit:date>
+            <audit:justification />
+          </audit:record>
+          <audit:record ID="AUDREC15">
+            <audit:process type="Fedora API-M" />
+            <audit:action>modifyDatastreamByValue</audit:action>
+            <audit:componentID>DCA-ADMIN</audit:componentID>
+            <audit:responsibility>fedoraAdmin</audit:responsibility>
+            <audit:date>2015-09-02T17:25:45.974Z</audit:date>
+            <audit:justification />
+          </audit:record>
+          <audit:record ID="AUDREC16">
+            <audit:process type="Fedora API-M" />
+            <audit:action>modifyDatastreamByReference</audit:action>
+            <audit:componentID>RECORD-XML</audit:componentID>
+            <audit:responsibility>fedoraAdmin</audit:responsibility>
+            <audit:date>2015-09-02T17:25:46.085Z</audit:date>
+            <audit:justification />
+          </audit:record>
+          <audit:record ID="AUDREC17">
+            <audit:process type="Fedora API-M" />
+            <audit:action>modifyDatastreamByValue</audit:action>
+            <audit:componentID>DCA-ADMIN</audit:componentID>
+            <audit:responsibility>fedoraAdmin</audit:responsibility>
+            <audit:date>2015-09-02T17:27:22.294Z</audit:date>
+            <audit:justification />
+          </audit:record>
+          <audit:record ID="AUDREC18">
+            <audit:process type="Fedora API-M" />
+            <audit:action>modifyDatastreamByValue</audit:action>
+            <audit:componentID>DCA-ADMIN</audit:componentID>
+            <audit:responsibility>fedoraAdmin</audit:responsibility>
+            <audit:date>2015-09-02T17:54:35.811Z</audit:date>
+            <audit:justification />
+          </audit:record>
+        </audit:auditTrail>
+      </foxml:xmlContent>
+    </foxml:datastreamVersion>
+  </foxml:datastream>
+  <foxml:datastream CONTROL_GROUP="X" ID="RELS-EXT" STATE="A" VERSIONABLE="true">
+    <foxml:datastreamVersion CREATED="2006-06-23T20:07:38.965Z" FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0" ID="RELS-EXT.0" LABEL="RDF Relationship Metadata" MIMETYPE="application/rdf+xml" SIZE="948">
+      <foxml:xmlContent>
+        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rel="info:fedora/fedora-system:def/relations-external#">
+          <rdf:Description rdf:about="info:fedora/tufts:nj.sheriff.hunterdon.1792">
+            <fedora-model:hasModel rdf:resource="info:fedora/cm:VotingRecord" xmlns:fedora-model="info:fedora/fedora-system:def/model#" />
+            <itemID xmlns="http://www.openarchives.org/OAI/2.0/">oai:tufts:nj.sheriff.hunterdon.1792</itemID>
+            <rel:isMemberOfCollection rdf:resource="info:fedora/tufts:UA069.006.DO.MS115.002.NJ.1792" xmlns:fedora-model="info:fedora/fedora-system:def/relations-external#" />
+            <fedora-model:hasModel rdf:resource="info:fedora/cm:VotingRecord" xmlns:fedora-model="info:fedora/fedora-system:def/model#" />
+          </rdf:Description>
+        </rdf:RDF>
+      </foxml:xmlContent>
+    </foxml:datastreamVersion>
+    <foxml:datastreamVersion CREATED="2014-01-29T17:42:35.798Z" FORMAT_URI="info:fedora/fedora-system:FedoraRELSExt-1.0" ID="RELS-EXT.1" LABEL="RDF Relationship Metadata" MIMETYPE="application/rdf+xml" SIZE="948">
+      <foxml:xmlContent>
+        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rel="info:fedora/fedora-system:def/relations-external#">
+          <rdf:Description rdf:about="info:fedora/tufts:nj.sheriff.hunterdon.1792">
+            <fedora-model:hasModel rdf:resource="info:fedora/cm:VotingRecord" xmlns:fedora-model="info:fedora/fedora-system:def/model#" />
+            <itemID xmlns="http://www.openarchives.org/OAI/2.0/"> oai:tufts:nj.sheriff.hunterdon.1792</itemID>
+            <rel:isMemberOfCollection rdf:resource="info:fedora/tufts:UA069.006.DO.MS115.002.NJ.1792" xmlns:rel="info:fedora/fedora-system:def/relations-external#" />
+            <fedora-model:hasModel rdf:resource="info:fedora/cm:VotingRecord" xmlns:fedora-model="info:fedora/fedora-system:def/model#" />
+          </rdf:Description>
+        </rdf:RDF>
+      </foxml:xmlContent>
+    </foxml:datastreamVersion>
+  </foxml:datastream>
+  <foxml:datastream CONTROL_GROUP="X" ID="DC" STATE="A" VERSIONABLE="true">
+    <foxml:datastreamVersion CREATED="2006-06-23T20:08:15.351Z" FORMAT_URI="http://www.openarchives.org/OAI/2.0/oai_dc/" ID="DC.0" LABEL="Dublin Core Metadata" MIMETYPE="text/xml" SIZE="1153">
+      <foxml:xmlContent>
+        <oai_dc:dc oai_dc:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+          <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">New Jersey 1792 Sheriff, Hunterdon County</dc:title>
+          <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Philip Lampi</dc:creator>
+          <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tufts University Digital Collections and Archives</dc:creator>
+          <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">American Antiquarian Society</dc:creator>
+          <dc:subject xmlns:dc="http://purl.org/dc/elements/1.1/">Sheriff</dc:subject>
+          <dc:subject xmlns:dc="http://purl.org/dc/elements/1.1/">New Jersey</dc:subject>
+          <dc:subject xmlns:dc="http://purl.org/dc/elements/1.1/">Election districts New Jersey</dc:subject>
+          <dc:description xmlns:dc="http://purl.org/dc/elements/1.1/">New Jersey 1792 Sheriff, Hunterdon County. The permanent URL for this resource is: http://hdl.handle.net/10427/58563</dc:description>
+          <dc:publisher xmlns:dc="http://purl.org/dc/elements/1.1/">Digital Collections and Archives, Tufts University</dc:publisher>
+          <dc:date xmlns:dc="http://purl.org/dc/elements/1.1/">1792</dc:date>
+          <dc:type xmlns:dc="http://purl.org/dc/elements/1.1/">dataset</dc:type>
+          <dc:format xmlns:dc="http://purl.org/dc/elements/1.1/">text/xml</dc:format>
+          <dc:identifier xmlns:dc="http://purl.org/dc/elements/1.1/">tufts:nj.sheriff.hunterdon.1792</dc:identifier>
+          <dc:source xmlns:dc="http://purl.org/dc/elements/1.1/">MS115</dc:source>
+          <dc:rights xmlns:dc="http://purl.org/dc/elements/1.1/">http://dca.tufts.edu/ua/access/rights-pd.html</dc:rights>
+        </oai_dc:dc>
+      </foxml:xmlContent>
+    </foxml:datastreamVersion>
+  </foxml:datastream>
+  <foxml:datastream CONTROL_GROUP="X" ID="DCA-ADMIN" STATE="A" VERSIONABLE="true">
+    <foxml:datastreamVersion CREATED="2006-06-23T20:08:15.351Z" ID="DCA-ADMIN.0" LABEL="DCA Adminstrative Metadata" MIMETYPE="text/xml" SIZE="312">
+      <foxml:xmlContent>
+        <dca_admin:admin xmlns:dca_admin="http://nils.lib.tufts.edu/dca_admin/" />
+      </foxml:xmlContent>
+    </foxml:datastreamVersion>
+    <foxml:datastreamVersion CREATED="2013-03-27T21:16:49.046Z" ID="DCA-ADMIN.1" LABEL="DCA Administrative Metadata" MIMETYPE="text/xml" SIZE="266">
+      <foxml:xmlContent>
+        <dca_admin:admin xmlns:dca_admin="http://nils.lib.tufts.edu/dca_admin/" />
+      </foxml:xmlContent>
+    </foxml:datastreamVersion>
+    <foxml:datastreamVersion CREATED="2014-01-29T17:42:36.464Z" ID="DCA-ADMIN.2" LABEL="DCA Administrative Metadata" MIMETYPE="text/xml" SIZE="266">
+      <foxml:xmlContent>
+        <dca_admin:admin xmlns:dca_admin="http://nils.lib.tufts.edu/dca_admin/" />
+      </foxml:xmlContent>
+    </foxml:datastreamVersion>
+    <foxml:datastreamVersion CREATED="2015-01-26T20:53:20.363Z" ID="DCA-ADMIN.3" LABEL="DCA Administrative Metadata" MIMETYPE="text/xml" SIZE="325">
+      <foxml:xmlContent>
+        <admin>
+          <dca_admin:steward xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">dca</dca_admin:steward>
+          <dca_admin:displays xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">dl</dca_admin:displays>
+          <dca_admin:displays xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">elections</dca_admin:displays>
+          <dca_admin:createdby xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">nnv</dca_admin:createdby>
+          <dca_admin:editedAt xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">2015-01-26T20:53:20Z</dca_admin:editedAt>
+        </admin>
+      </foxml:xmlContent>
+    </foxml:datastreamVersion>
+    <foxml:datastreamVersion CREATED="2015-02-25T18:45:37.550Z" ID="DCA-ADMIN.4" LABEL="DCA Administrative Metadata" MIMETYPE="text/xml" SIZE="325">
+      <foxml:xmlContent>
+        <admin>
+          <dca_admin:steward xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">dca</dca_admin:steward>
+          <dca_admin:displays xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">dl</dca_admin:displays>
+          <dca_admin:displays xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">elections</dca_admin:displays>
+          <dca_admin:createdby xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">nnv</dca_admin:createdby>
+          <dca_admin:editedAt xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">2015-02-25T18:45:37Z</dca_admin:editedAt>
+        </admin>
+      </foxml:xmlContent>
+    </foxml:datastreamVersion>
+    <foxml:datastreamVersion CREATED="2015-02-25T18:45:37.994Z" ID="DCA-ADMIN.5" LABEL="DCA Administrative Metadata" MIMETYPE="text/xml" SIZE="325">
+      <foxml:xmlContent>
+        <admin>
+          <dca_admin:steward xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">dca</dca_admin:steward>
+          <dca_admin:displays xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">dl</dca_admin:displays>
+          <dca_admin:displays xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">elections</dca_admin:displays>
+          <dca_admin:createdby xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">nnv</dca_admin:createdby>
+          <dca_admin:editedAt xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">2015-02-25T18:45:37Z</dca_admin:editedAt>
+        </admin>
+      </foxml:xmlContent>
+    </foxml:datastreamVersion>
+    <foxml:datastreamVersion CREATED="2015-07-27T23:56:31.157Z" ID="DCA-ADMIN.6" LABEL="DCA Administrative Metadata" MIMETYPE="text/xml" SIZE="387">
+      <foxml:xmlContent>
+        <admin>
+          <dca_admin:steward xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">dca</dca_admin:steward>
+          <dca_admin:displays xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">dl</dca_admin:displays>
+          <dca_admin:displays xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">elections</dca_admin:displays>
+          <dca_admin:createdby xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">nnv</dca_admin:createdby>
+          <dca_admin:editedAt xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">2015-07-27T23:56:31Z</dca_admin:editedAt>
+          <dca_admin:publishedAt xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">2015-07-27T23:56:31Z</dca_admin:publishedAt>
+        </admin>
+      </foxml:xmlContent>
+    </foxml:datastreamVersion>
+    <foxml:datastreamVersion CREATED="2015-09-02T17:25:44.391Z" ID="DCA-ADMIN.7" LABEL="DCA Administrative Metadata" MIMETYPE="text/xml" SIZE="424">
+      <foxml:xmlContent>
+        <admin>
+          <dca_admin:steward xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">dca</dca_admin:steward>
+          <dca_admin:displays xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">dl</dca_admin:displays>
+          <dca_admin:displays xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">elections</dca_admin:displays>
+          <dca_admin:createdby xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">nnv</dca_admin:createdby>
+          <dca_admin:editedAt xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">2015-09-02T17:25:44Z</dca_admin:editedAt>
+          <dca_admin:publishedAt xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">2015-07-27T23:56:31Z</dca_admin:publishedAt>
+          <dca_admin:batchID xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">398</dca_admin:batchID>
+        </admin>
+      </foxml:xmlContent>
+    </foxml:datastreamVersion>
+    <foxml:datastreamVersion CREATED="2015-09-02T17:25:45.974Z" ID="DCA-ADMIN.8" LABEL="DCA Administrative Metadata" MIMETYPE="text/xml" SIZE="362">
+      <foxml:xmlContent>
+        <admin>
+          <dca_admin:steward xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">dca</dca_admin:steward>
+          <dca_admin:displays xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">dl</dca_admin:displays>
+          <dca_admin:displays xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">elections</dca_admin:displays>
+          <dca_admin:createdby xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">nnv</dca_admin:createdby>
+          <dca_admin:editedAt xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">2015-09-02T17:25:45Z</dca_admin:editedAt>
+          <dca_admin:batchID xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">398</dca_admin:batchID>
+        </admin>
+      </foxml:xmlContent>
+    </foxml:datastreamVersion>
+    <foxml:datastreamVersion CREATED="2015-09-02T17:27:22.294Z" ID="DCA-ADMIN.9" LABEL="DCA Administrative Metadata" MIMETYPE="text/xml" SIZE="362">
+      <foxml:xmlContent>
+        <admin>
+          <dca_admin:steward xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">dca</dca_admin:steward>
+          <dca_admin:displays xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">dl</dca_admin:displays>
+          <dca_admin:displays xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">elections</dca_admin:displays>
+          <dca_admin:createdby xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">nnv</dca_admin:createdby>
+          <dca_admin:editedAt xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">2015-09-02T17:27:21Z</dca_admin:editedAt>
+          <dca_admin:batchID xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">398</dca_admin:batchID>
+        </admin>
+      </foxml:xmlContent>
+    </foxml:datastreamVersion>
+    <foxml:datastreamVersion CREATED="2015-09-02T17:54:35.811Z" ID="DCA-ADMIN.10" LABEL="DCA Administrative Metadata" MIMETYPE="text/xml" SIZE="424">
+      <foxml:xmlContent>
+        <admin>
+          <dca_admin:steward xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">dca</dca_admin:steward>
+          <dca_admin:displays xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">dl</dca_admin:displays>
+          <dca_admin:displays xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">elections</dca_admin:displays>
+          <dca_admin:createdby xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">nnv</dca_admin:createdby>
+          <dca_admin:editedAt xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">2015-09-02T17:54:35Z</dca_admin:editedAt>
+          <dca_admin:batchID xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">398</dca_admin:batchID>
+          <dca_admin:publishedAt xmlns:dca_admin="http://nils.lib.tufts.edu/dcaadmin/">2015-09-02T17:54:35Z</dca_admin:publishedAt>
+        </admin>
+      </foxml:xmlContent>
+    </foxml:datastreamVersion>
+  </foxml:datastream>
+  <foxml:datastream CONTROL_GROUP="X" ID="DCA-META" STATE="A" VERSIONABLE="true">
+    <foxml:datastreamVersion CREATED="2006-06-23T20:07:38.965Z" ID="DCA-META.0" LABEL="DCA Descriptive Metadata" MIMETYPE="text/xml" SIZE="1972">
+      <foxml:xmlContent>
+        <dca_dc:dc xmlns:dca_dc="http://nils.lib.tufts.edu/dca_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dcatech="http://nils.lib.tufts.edu/dcatech/" xmlns:dcadesc="http://nils.lib.tufts.edu/dcadesc/">
+          <dc:title>New Jersey 1792 Sheriff, Hunterdon County</dc:title>
+          <dc:creator>Philip Lampi</dc:creator>
+          <dc:creator>Tufts University Digital Collections and Archives</dc:creator>
+          <dc:creator>American Antiquarian Society</dc:creator>
+          <dc:subject>Sheriff</dc:subject>
+          <dc:subject>Election districts New Jersey</dc:subject>
+          <dc:date.created>1792</dc:date.created>
+          <dc:date.issued>2010-11-02</dc:date.issued>
+          <dc:temporal>1792</dc:temporal>
+          <dc:type>dataset</dc:type>
+          <dc:format>text/xml</dc:format>
+          <dc:source>MS115</dc:source>
+          <dc:bibliographicCitation>American Antiquarian Society and Tufts University Digital Collections and Archives. "New Jersey 1792 Sheriff, Hunterdon County." 2010. Tufts University. Digital Collections and Archives. Medford, MA. http://hdl.handle.net/10427/58563</dc:bibliographicCitation>
+          <dc:publisher>Digital Collections and Archives, Tufts University</dc:publisher>
+          <dc:rights>http://dca.tufts.edu/ua/access/rights-pd.html</dc:rights>
+          <dc:identifier>http://hdl.handle.net/10427/58563</dc:identifier>
+          <dcterms:extent>2444 bytes</dcterms:extent>
+          <dcatech:fileSize>2444 bytes</dcatech:fileSize>
+          <dcadesc:geogname>New Jersey</dcadesc:geogname>
+          <dcadesc:funder>National Endowment for the Humanities</dcadesc:funder>
+          <dcadesc:persname>John Anderson</dcadesc:persname>
+        </dca_dc:dc>
+      </foxml:xmlContent>
+    </foxml:datastreamVersion>
+    <foxml:datastreamVersion CREATED="2013-03-27T21:16:48.873Z" ID="DCA-META.1" LABEL="DCA Descriptive Metadata" MIMETYPE="text/xml" SIZE="1388">
+      <foxml:xmlContent>
+        <dca_dc:dc xmlns:dca_dc="http://nils.lib.tufts.edu/dca_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dcatech="http://nils.lib.tufts.edu/dcatech/" xmlns:dcadesc="http://nils.lib.tufts.edu/dcadesc/">
+          <dc:title>New Jersey 1792 Sheriff, Hunterdon County</dc:title>
+          <dc:creator>Philip Lampi</dc:creator>
+          <dc:creator>Tufts University Digital Collections and Archives</dc:creator>
+          <dc:creator>American Antiquarian Society</dc:creator>
+          <dc:subject>Sheriff</dc:subject>
+          <dc:subject>Election districts New Jersey</dc:subject>
+          <dc:date.created>1792</dc:date.created>
+          <dc:date.issued>2010-11-02</dc:date.issued>
+          <dc:temporal>1792</dc:temporal>
+          <dc:type>dataset</dc:type>
+          <dc:format>text/xml</dc:format>
+          <dc:source>MS115</dc:source>
+          <dc:publisher>Digital Collections and Archives, Tufts University</dc:publisher>
+          <dc:rights>http://dca.tufts.edu/ua/access/rights-pd.html</dc:rights>
+          <dc:identifier>http://hdl.handle.net/10427/58563</dc:identifier>
+          <dcterms:extent>2444 bytes</dcterms:extent>
+          <dcatech:fileSize>2444 bytes</dcatech:fileSize>
+          <dcadesc:geogname>New Jersey</dcadesc:geogname>
+          <dcadesc:funder>National Endowment for the Humanities</dcadesc:funder>
+          <dcadesc:persname>John Anderson</dcadesc:persname>
+        </dca_dc:dc>
+      </foxml:xmlContent>
+    </foxml:datastreamVersion>
+    <foxml:datastreamVersion CREATED="2014-01-29T17:42:36.601Z" ID="DCA-META.2" LABEL="DCA Descriptive Metadata" MIMETYPE="text/xml" SIZE="1388">
+      <foxml:xmlContent>
+        <dca_dc:dc xmlns:dca_dc="http://nils.lib.tufts.edu/dca_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dcatech="http://nils.lib.tufts.edu/dcatech/" xmlns:dcadesc="http://nils.lib.tufts.edu/dcadesc/">
+          <dc:title>New Jersey 1792 Sheriff, Hunterdon County</dc:title>
+          <dc:creator>Philip Lampi</dc:creator>
+          <dc:creator>Tufts University Digital Collections and Archives</dc:creator>
+          <dc:creator>American Antiquarian Society</dc:creator>
+          <dc:subject>Sheriff</dc:subject>
+          <dc:subject>Election districts New Jersey</dc:subject>
+          <dc:date.created>1792</dc:date.created>
+          <dc:date.issued>2010-11-02</dc:date.issued>
+          <dc:temporal>1792</dc:temporal>
+          <dc:type>dataset</dc:type>
+          <dc:format>text/xml</dc:format>
+          <dc:source>MS115</dc:source>
+          <dc:publisher>Digital Collections and Archives, Tufts University</dc:publisher>
+          <dc:rights>http://dca.tufts.edu/ua/access/rights-pd.html</dc:rights>
+          <dc:identifier>http://hdl.handle.net/10427/58563</dc:identifier>
+          <dcterms:extent>2444 bytes</dcterms:extent>
+          <dcatech:fileSize>2444 bytes</dcatech:fileSize>
+          <dcadesc:geogname>New Jersey</dcadesc:geogname>
+          <dcadesc:funder>National Endowment for the Humanities</dcadesc:funder>
+          <dcadesc:persname>John Anderson</dcadesc:persname>
+        </dca_dc:dc>
+      </foxml:xmlContent>
+    </foxml:datastreamVersion>
+  </foxml:datastream>
+  <foxml:datastream CONTROL_GROUP="X" ID="RECORD-XML" STATE="A" VERSIONABLE="true">
+    <foxml:datastreamVersion CREATED="2015-02-25T18:45:38.059Z" ID="RECORD-XML.0" LABEL="Voting record XML data" MIMETYPE="text/xml">
+      <foxml:xmlContent>
+<election_record label="New Jersey 1792 Sheriff, Hunterdon County" type="General" iteration="First Ballot" date="1792" election_id="nj.sheriff.hunterdon.1792" handle="10427/58563" xmlns="http://dca.tufts.edu/aas" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://dca.tufts.edu/aas http://dca.tufts.edu/schema/aas/electionRecord.xsd">
+	<office name="Sheriff" office_id="ON100" scope="County">
+		<role title="Sheriff" scope="County">
+			<ballot>
+				<candidate name="John Anderson" name_id="AJ0156" affiliation="null" affiliation_id="null" candidate_num="1"><note resp="Philip Lampi">Elected.</note></candidate>
+			</ballot>
+			<overview status="Version 0.5" modified="2013-02-19">
+				<candidate_summary candidate_ref="1" vote_total="109" resp="Philip Lampi"/>
+			</overview>
+			<admin_unit type="State" name="New Jersey" geog_id="null">
+				<sub_unit type="County" name="Hunterdon" geog_id="null">
+					<result candidate_ref="1" vote="109" resp="Philip Lampi"/>
+					<sub_unit type="Township" name="Alexandria" geog_id="null">
+						<result candidate_ref="1" resp="Philip Lampi"/>
+					</sub_unit>
+					<sub_unit type="Township" name="Amwell" geog_id="null">
+						<result candidate_ref="1" vote="16" resp="Philip Lampi"/>
+					</sub_unit>
+					<sub_unit type="Township" name="Bethlehem" geog_id="null">
+						<result candidate_ref="1" vote="4" resp="Philip Lampi"/>
+					</sub_unit>
+					<sub_unit type="Township" name="Hopewell" geog_id="null">
+						<result candidate_ref="1" vote="3" resp="Philip Lampi"/>
+					</sub_unit>
+					<sub_unit type="Township" name="Kingwood" geog_id="null">
+						<result candidate_ref="1" vote="4" resp="Philip Lampi"/>
+					</sub_unit>
+					<sub_unit type="Township" name="Lebanon" geog_id="null">
+						<result candidate_ref="1" vote="28" resp="Philip Lampi"/>
+					</sub_unit>
+					<sub_unit type="Township" name="Maidenhead" geog_id="null">
+						<result candidate_ref="1" vote="4" resp="Philip Lampi"/>
+					</sub_unit>
+					<sub_unit type="Township" name="Readington" geog_id="null">
+						<result candidate_ref="1" resp="Philip Lampi"/>
+					</sub_unit>
+					<sub_unit type="Township" name="Tewksbury" geog_id="null">
+						<result candidate_ref="1" resp="Philip Lampi"/>
+					</sub_unit>
+					<sub_unit type="Township" name="Trenton" geog_id="null">
+						<result candidate_ref="1" vote="50" resp="Philip Lampi"/>
+					</sub_unit>
+				</sub_unit>
+			</admin_unit>
+		</role>
+	</office>
+	<reference type="citation" resp="Philip Lampi">Original Election Returns.  New Jersey State Library, Trenton.</reference>
+</election_record>
+      </foxml:xmlContent>
+    </foxml:datastreamVersion>
+    <foxml:datastreamVersion CREATED="2015-09-02T17:25:46.085Z" ID="RECORD-XML.1" LABEL="Voting record XML data" MIMETYPE="text/xml">
+      <foxml:xmlContent>
+<election_record label="New Jersey 1792 Sheriff, Hunterdon County" type="General" iteration="First Ballot" date="1792" election_id="nj.sheriff.hunterdon.1792" handle="10427/58563" xmlns="http://dca.tufts.edu/aas" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://dca.tufts.edu/aas http://dca.tufts.edu/schema/aas/electionRecord.xsd">
+	<office name="Sheriff" office_id="ON100" scope="County">
+		<role title="Sheriff" scope="County">
+			<ballot>
+				<candidate name="John Anderson" name_id="AJ0156" affiliation="null" affiliation_id="null" candidate_num="1"><note resp="Philip Lampi">Elected.</note></candidate>
+			</ballot>
+			<overview status="Version 0.5" modified="2013-02-19">
+				<candidate_summary candidate_ref="1" vote_total="109" resp="Philip Lampi"/>
+			</overview>
+			<admin_unit type="State" name="New Jersey" geog_id="null">
+				<sub_unit type="County" name="Hunterdon" geog_id="null">
+					<result candidate_ref="1" vote="109" resp="Philip Lampi"/>
+					<sub_unit type="Township" name="Alexandria" geog_id="null">
+						<result candidate_ref="1" resp="Philip Lampi"/>
+					</sub_unit>
+					<sub_unit type="Township" name="Amwell" geog_id="null">
+						<result candidate_ref="1" vote="16" resp="Philip Lampi"/>
+					</sub_unit>
+					<sub_unit type="Township" name="Bethlehem" geog_id="null">
+						<result candidate_ref="1" vote="4" resp="Philip Lampi"/>
+					</sub_unit>
+					<sub_unit type="Township" name="Hopewell" geog_id="null">
+						<result candidate_ref="1" vote="3" resp="Philip Lampi"/>
+					</sub_unit>
+					<sub_unit type="Township" name="Kingwood" geog_id="null">
+						<result candidate_ref="1" vote="4" resp="Philip Lampi"/>
+					</sub_unit>
+					<sub_unit type="Township" name="Lebanon" geog_id="null">
+						<result candidate_ref="1" vote="28" resp="Philip Lampi"/>
+					</sub_unit>
+					<sub_unit type="Township" name="Maidenhead" geog_id="null">
+						<result candidate_ref="1" vote="4" resp="Philip Lampi"/>
+					</sub_unit>
+					<sub_unit type="Township" name="Readington" geog_id="null">
+						<result candidate_ref="1" resp="Philip Lampi"/>
+					</sub_unit>
+					<sub_unit type="Township" name="Tewksbury" geog_id="null">
+						<result candidate_ref="1" resp="Philip Lampi"/>
+					</sub_unit>
+					<sub_unit type="Township" name="Trenton" geog_id="null">
+						<result candidate_ref="1" vote="50" resp="Philip Lampi"/>
+					</sub_unit>
+				</sub_unit>
+			</admin_unit>
+		</role>
+	</office>
+	<reference type="citation" resp="Philip Lampi">Original Election Returns.  New Jersey State Library, Trenton.</reference>
+</election_record>
+      </foxml:xmlContent>
+    </foxml:datastreamVersion>
+  </foxml:datastream>
+</foxml:digitalObject>
