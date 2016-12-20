@@ -18,9 +18,9 @@ before_script:
   - cp spec/fixtures/authorities/candidates.xml tmp/candidates.xml
 #  - cp config/secrets.yml.sample config/secrets.yml
   - cp config/database.yml.sample config/database.yml
-#  - sed -i 's:db/test.sqlite3:elections_test:' config/database.yml
-#  - sed -i 's:sqlite3:mysql:' config/database.yml
-#  - mysql -e 'create database elections_test'
+  - sed -i 's:db/test.sqlite3:elections_test:' config/database.yml
+  - sed -i 's:sqlite3:mysql:' config/database.yml
+  - mysql -e 'create database elections_test'
 #  - bundle exec rake db:setup
 #  - bundle exec rake tufts:fixtures:refresh
   - RAILS_ENV=test bundle exec rake db:migrate

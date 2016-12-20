@@ -30,6 +30,7 @@ gem 'devise'
 gem 'active-fedora', '~> 6.7.7'
 #gem 'solrizer','3.1.1'
 gem 'google-analytics-rails'
+gem 'mysql'
 
 group :development, :test do
   gem 'jettywrapper', '1.8.3'

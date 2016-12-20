@@ -171,6 +171,7 @@ GEM
     mini_portile2 (2.1.0)
     minitest (5.10.1)
     multipart-post (2.0.0)
+    mysql (2.9.1)
     net-http-digest_auth (1.4)
     net-http-persistent (2.9.4)
     netrc (0.11.0)
@@ -352,6 +353,7 @@ DEPENDENCIES
   jettywrapper (= 1.8.3)
   jquery-rails
   jruby-openssl
+  mysql
   om (~> 3.0.4)
   rails (= 4.2)
   rdf
