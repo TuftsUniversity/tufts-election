@@ -12,15 +12,12 @@ notifications:
 before_script:
   - mkdir -p tmp && export TMPDIR=tmp
   - cp spec/fixtures/authorities/candidates.xml tmp/candidates.xml
-#  - cp config/fedora.yml.sample config/fedora.yml
   - cp config/blacklight.yml.sample config/blacklight.yml
   - cp config/devise.yml.sample config/devise.yml
-#  - cp config/jetty.yml.sample config/jetty.yml
   - cp config/database.yml.sample config/database.yml
   - sed -i 's:db/test.sqlite3:elections_test:' config/database.yml
   - sed -i 's:sqlite3:mysql:' config/database.yml
   - mysql -e 'create database elections_test'
-#  - RAILS_ENV=test bundle exec rake db:migrate
 env:
   global:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
