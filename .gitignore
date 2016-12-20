@@ -50,3 +50,5 @@ public/assets
 
 # ignore ide files
 .idea/
+
+.byebug_history

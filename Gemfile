@@ -37,6 +37,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'rspec-its'
   gem 'codesake-dawn', :require=>false
+  gem 'byebug'
 end
 
 gem 'rsolr', '~> 1.0'
