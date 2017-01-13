@@ -18,7 +18,7 @@ gem 'blacklight_range_limit'
 gem 'blacklight'
 gem 'devise'
 gem 'google-analytics-rails'
-gem 'mysql2'
+gem 'mysql'
 
 # Need to remove dependency on this
 gem 'active-fedora', '~> 6.7.7'
