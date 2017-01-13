@@ -17,7 +17,7 @@ before_script:
   - cp config/database.yml.sample config/database.yml
   - cp config/secrets.yml.sample config/secrets.yml
   - sed -i 's:db/test.sqlite3:elections_test:' config/database.yml
-  - sed -i 's:sqlite3:mysql:' config/database.yml
+  - sed -i 's:sqlite3:mysql2:' config/database.yml
   - mysql -e 'create database elections_test'
 env:
   global:
