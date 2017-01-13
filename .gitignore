@@ -38,6 +38,7 @@ config/database.yml
 config/solr.yml
 config/jetty.yml
 config/devise.yml
+config/secrets.yml
 
 # ignore utils directory only used on dev
 /utils/*
