@@ -13,7 +13,7 @@ class CatalogController < ApplicationController
     ## Model that maps search index responses to the blacklight response model
     # config.response_model = Blacklight::Solr::Response
 
-    before_filter :enforce_show_permissions, :only=>:show
+    before_action :enforce_show_permissions, :only=>:show
 
     ## Default parameters to send to solr for all search-like requests. See also SearchBuilder#processed_parameters
     config.default_solr_params = {

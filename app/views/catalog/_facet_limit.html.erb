@@ -1,8 +1,19 @@
+<% facet_link = link_to(
+  t('blacklight.search.facets.more'),
+  params.permit().merge(
+    :id => solr_field,
+    :action=>"facet",
+    :page => nil,
+    :"facet.sort" => 'count'
+  ),
+  :class => "more_facets_link"
+)
+%>
 <ul class="facet-values list-unstyled">
   <% paginator = facet_paginator(facet_field, display_facet) %>
   <%= render_facet_limit_list paginator, solr_field %>
 
   <% unless paginator.last_page? || params[:action] == "facet" %>
-<li class="more_facets_link"><%= link_to(t('blacklight.search.facets.more'), params.merge(:id => solr_field, :action=>"facet", :page => nil, :"facet.sort" => 'count'), :class => "more_facets_link") %></li>
+<li class="more_facets_link"><%= facet_link %></li>
   <% end %>
 </ul>
