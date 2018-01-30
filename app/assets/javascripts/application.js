@@ -11,7 +11,6 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
-//= require jquery.browser
 //= require jquery_ujs
 //= require blacklight/blacklight
 //= require blacklight_range_limit
