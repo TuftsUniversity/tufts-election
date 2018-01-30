@@ -14,7 +14,6 @@ gem 'jquery-rails'
 gem 'rdf'
 gem 'blacklight_range_limit'
 gem 'blacklight'
-#gem 'devise'
 gem 'google-analytics-rails'
 gem 'mysql2'
 

@@ -24,8 +24,6 @@ TuftsElection::Application.routes.draw do
     end
   end
 
-  devise_for :users
-
   match '/catalog/:id/track', :to => 'catalog#track', id: /.*/, via: [:get, :post], :as =>'catalog'
   resources :candidates, only: [:index]
 
