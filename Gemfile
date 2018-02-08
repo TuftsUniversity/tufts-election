@@ -17,6 +17,8 @@ gem 'blacklight_range_limit'
 gem 'mysql2'
 gem 'rsolr', '~> 1.0'
 
+gem 'therubyracer', :platforms => :ruby 
+
 group :development do
   gem 'sqlite3'
   gem 'byebug'
