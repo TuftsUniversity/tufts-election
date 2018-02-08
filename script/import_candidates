@@ -6,9 +6,8 @@ require File.expand_path(File.join(File.dirname(__FILE__), '../config/environmen
 
 ####### Overarching variables #######
 solr_config = Rails.root.join("config", "blacklight.yml")
-xml_dir = 'tmp'
-candidate_source = 'http://dl.tufts.edu/file_assets/generic/tufts:MS115.003.001.00002.00001/0'
-candidate_file = Rails.root.join(xml_dir, 'candidates.xml')
+candidate_source = 'https://dl.tufts.edu/file_assets/generic/tufts:MS115.003.001.00002.00001/0'
+candidate_file = Rails.root.join('tmp', 'candidates.xml')
 
 ####### Functions #######
 #@function
@@ -44,17 +43,20 @@ end
 # @param {str} dest_file
 #   The file to copy the authorities into.
 def get_authority_file(source_uri, dest_file)
-    require 'net/http'
-    log_and_puts("Downloading candidate names authority from #{source_uri}", :info)
+  require 'net/http'
+  log_and_puts("Downloading candidate names authority from #{source_uri}", :info)
 
-    response = Net::HTTP.get_response(URI(source_uri))
-    if response.code == '200'
+  response = Net::HTTP.get_response(URI(source_uri))
+  case(response)
+    when Net::HTTPSuccess then
       File.open(dest_file, 'w') do |file|
         file.write response.body
       end
+    when Net::HTTPRedirection then
+      get_authority_file(response['location'], dest_file)
     else
       log_and_puts("Warning: Could not load #{source_uri} (HTTP response: #{response.code}). Attempting to read local cached copy.")
-    end
+  end
 end
 
 #@function
@@ -62,17 +64,15 @@ end
 #
 # @param {str} xml_dir
 #   The directory the xml files are stored in.
-def collect_candidate_authorities(xml_dir)
+def collect_candidate_authorities(candidate_file)
   docs = []
 
   # Gather the authorities.
-  Dir.glob(File.join(xml_dir, '*.xml')).each do |filename|
-    log_and_puts("Gathering authorities from #{filename}", :info)
-    input = Nokogiri::XML(File.new(filename))
-    input.root.xpath('//auth:candidate', 'auth' => 'http://dca.tufts.edu/aas/auth').each do |candidate_node|
-      name = candidate_node.attribute('name').value
-      docs << {'name_tesim' => name, 'title_tesim' => name, 'title_ssi' => name, 'title_tesim' => name, 'candidate_last_name_letter_sim' => name.first.upcase, 'id' => candidate_node.attribute('id').value, 'format_ssim' => 'Candidate', 'all_text_timv' => name}
-    end
+  log_and_puts("Gathering authorities from #{candidate_file}", :info)
+  input = Nokogiri::XML(File.new(candidate_file))
+  input.root.xpath('//auth:candidate', 'auth' => 'http://dca.tufts.edu/aas/auth').each do |candidate_node|
+    name = candidate_node.attribute('name').value
+    docs << {'name_tesim' => name, 'title_tesim' => name, 'title_ssi' => name, 'title_tesim' => name, 'candidate_last_name_letter_sim' => name.first.upcase, 'id' => candidate_node.attribute('id').value, 'format_ssim' => 'Candidate', 'all_text_timv' => name}
   end
 
   docs
@@ -106,7 +106,7 @@ else
 end
 
 if(File::readable?(candidate_file))
-  docs = collect_candidate_authorities(xml_dir)
+  docs = collect_candidate_authorities(candidate_file)
   if(docs.empty?)
     log_and_puts("Did not find any candidates in #{candidate_file}")
   else
