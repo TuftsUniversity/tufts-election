@@ -13,8 +13,10 @@ candidate_file = Rails.root.join('tmp', 'candidates.xml')
 #@function
 # Puts and Logs an error
 #
-# @param msg
+# @param {str} msg
 #   The error message.
+# @param {sym} level
+#   warn, info, severe, etc.
 def log_and_puts(msg, level = :warn)
   Rails.logger.public_send(level, msg)
   puts "\n" + msg
@@ -62,8 +64,8 @@ end
 #@function
 # Aggregates all the candidate info.
 #
-# @param {str} xml_dir
-#   The directory the xml files are stored in.
+# @param {str} candidate_file
+#   The path to candidates.xml.
 def collect_candidate_authorities(candidate_file)
   docs = []
 
@@ -95,7 +97,7 @@ end
 ####### Procedure #######
 conn = connect_to_solr(solr_config)
 unless(conn)
-  log_and_puts("Failed connecting to solr. Check connection settings.")
+  log_and_puts("Failed connecting to Solr. Check connection settings.")
   exit 1
 end
 
@@ -112,4 +114,6 @@ if(File::readable?(candidate_file))
   else
     import_candidate_authorities(docs, conn)
   end
+else
+  log_and_puts("#{candidate_file} does not exist or is not readable.")
 end
