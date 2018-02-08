@@ -15,6 +15,7 @@ gem 'blacklight'
 gem 'blacklight_range_limit'
 
 gem 'mysql2'
+gem 'rsolr', '~> 1.0'
 
 group :development do
   gem 'sqlite3'
@@ -22,7 +23,6 @@ group :development do
 end
 
 group :development, :test do
-  gem 'rsolr', '~> 1.0'
   gem 'rspec-rails'
   gem 'rspec-its'
 end

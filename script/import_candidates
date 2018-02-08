@@ -1,20 +1,115 @@
 #!/usr/bin/env ruby
 # encoding: utf-8
 
-path = ARGV[0]
-raise ArgumentError, "Must provide the directory with the authority files as an argument" unless path
+####### Setup environment #######
 require File.expand_path(File.join(File.dirname(__FILE__), '../config/environment.rb'))
 
-Dir.glob(File.join(path, '*.xml')).each do |filename|
-  puts "Importing #{filename}"
-  input = Nokogiri::XML(File.new(filename))
-  input.root.xpath('//auth:candidate', 'auth' => 'http://dca.tufts.edu/aas/auth').each do |candidate_node|
-    name = candidate_node.attribute('name').value
-    doc = {'name_tesim' => name, 'title_tesim' => name, 'title_ssi' => name, 'title_tesim' => name, 'candidate_last_name_letter_sim' => name.first.upcase, 'id' => candidate_node.attribute('id').value, 'format_ssim' => 'Candidate', 'all_text_timv' => name}
-    ActiveFedora::SolrService.instance.conn.add(doc)
+####### Overarching variables #######
+solr_config = Rails.root.join("config", "blacklight.yml")
+xml_dir = 'tmp'
+candidate_source = 'http://dl.tufts.edu/file_assets/generic/tufts:MS115.003.001.00002.00001/0'
+candidate_file = Rails.root.join(xml_dir, 'candidates.xml')
+
+####### Functions #######
+#@function
+# Puts and Logs an error
+#
+# @param msg
+#   The error message.
+def log_and_puts(msg, level = :warn)
+  Rails.logger.public_send(level, msg)
+  puts "\n" + msg
+end
+
+#@function
+# Creates the solr connection.
+#
+# @param config_file
+#   The solr configuration yaml file.
+def connect_to_solr(config_file)
+  solr_url = YAML::load(File.open(config_file))[Rails.env]["url"]
+  if(solr_url.nil?)
+    log_and_puts("Couldn't find solr configuration! Set up a blacklight.yml file!")
+    false
+  else
+    RSolr.connect(url: solr_url)
   end
 end
 
-ActiveFedora::SolrService.commit
+#@function
+# Retrieves the authorities fom dl.tufts.
+#
+# @param {str} source_uri
+#   The uri of the authority xml file.
+# @param {str} dest_file
+#   The file to copy the authorities into.
+def get_authority_file(source_uri, dest_file)
+    require 'net/http'
+    log_and_puts("Downloading candidate names authority from #{source_uri}", :info)
+
+    response = Net::HTTP.get_response(URI(source_uri))
+    if response.code == '200'
+      File.open(dest_file, 'w') do |file|
+        file.write response.body
+      end
+    else
+      log_and_puts("Warning: Could not load #{source_uri} (HTTP response: #{response.code}). Attempting to read local cached copy.")
+    end
+end
+
+#@function
+# Aggregates all the candidate info.
+#
+# @param {str} xml_dir
+#   The directory the xml files are stored in.
+def collect_candidate_authorities(xml_dir)
+  docs = []
+
+  # Gather the authorities.
+  Dir.glob(File.join(xml_dir, '*.xml')).each do |filename|
+    log_and_puts("Gathering authorities from #{filename}", :info)
+    input = Nokogiri::XML(File.new(filename))
+    input.root.xpath('//auth:candidate', 'auth' => 'http://dca.tufts.edu/aas/auth').each do |candidate_node|
+      name = candidate_node.attribute('name').value
+      docs << {'name_tesim' => name, 'title_tesim' => name, 'title_ssi' => name, 'title_tesim' => name, 'candidate_last_name_letter_sim' => name.first.upcase, 'id' => candidate_node.attribute('id').value, 'format_ssim' => 'Candidate', 'all_text_timv' => name}
+    end
+  end
+
+  docs
+end
+
+#@function
+# Updates Solr with the candidate info.
+#
+# @param {arr} docs
+#   The authorities to update solr with.
+# @param {obj?} connection
+#   The solr connection.
+def import_candidate_authorities(docs, connection)
+  log_and_puts("Updating Solr", :info)
+  connection.add(docs)
+  connection.commit
+end
 
 
+####### Procedure #######
+conn = connect_to_solr(solr_config)
+unless(conn)
+  log_and_puts("Failed connecting to solr. Check connection settings.")
+  exit 1
+end
+
+if (Rails.env.development? || Rails.env.test?) && File.exist?(candidate_file)
+  log_and_puts("Skipping candidate authority file download", :info)
+else
+  get_authority_file(candidate_source, candidate_file)
+end
+
+if(File::readable?(candidate_file))
+  docs = collect_candidate_authorities(xml_dir)
+  if(docs.empty?)
+    log_and_puts("Did not find any candidates in #{candidate_file}")
+  else
+    import_candidate_authorities(docs, conn)
+  end
+end
