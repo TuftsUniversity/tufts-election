@@ -9,7 +9,7 @@ class SearchBuilder < Blacklight::SearchBuilder
   # @param user_parameters the current user-subitted parameters
   def exclude_unwanted_models(solr_parameters)
     solr_parameters[:fq] ||= []
-    solr_parameters[:fq] << "has_model_ssim:\"info:fedora/cm:VotingRecord\" OR format_ssim:Candidate"
+    solr_parameters[:fq] << "has_model_ssim:\"VotingRecord\" OR format_ssim:Candidate"
   end
 
   def exclude_drafts(solr_parameters)

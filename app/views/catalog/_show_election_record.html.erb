@@ -1,7 +1,7 @@
 <div class="details">
   <dl class="defList">
     <dt>Office:</dt>
-    <dd><%= document.first("office_name_tesim") %> (<%= document.first("office_scope_tesim") %>)</dd>
+    <dd><%= document.first("office_name_tesim") %> (<%= document.first("jurisdiction_tesim") %>)</dd>
     <dt>Title:</dt>
     <dd><%= document.first("office_role_title_tesim") %></dd>
     <dt>Jurisdiction:</dt>
@@ -15,10 +15,10 @@
    <a class="accordian-toggle collapsed"  data-toggle="collapse" href="#collapseOne">View more information</a>
         </div>
       <div id="collapseOne" class="accordion-body collapse">
-           <div class="accordion-inner">
+          <div class="accordion-inner">
   <dl class="defList">
     <dt>Label:</dt>
-    <dd><%= document.first("label_tesim") %></dd>
+    <dd><%= document.first("title_tesim") %></dd>
     <dt>Date:</dt>
     <dd><%= document.first("date_isi") %></dd>
     <dt>State:</dt>
@@ -31,11 +31,11 @@
     <dd><%= (document.first("office_name_tesim")||'') + "/" + (document.first("office_role_title_tesim")||'') %></dd>
     <% unless document.first("candidate_name_tesim").nil? %>
       <dt>Candidates:</dt>
-      <dd><%= document.first("candidate_name_tesim") %></dd>
+      <dd><%= document["candidate_name_tesim"].join(', ') %></dd>
     <% end %>
     <% unless document.first("elector_name_tesim").nil? %>
       <dt>Electors:</dt>
-      <dd><%= document.first("elector_name_tesim") %></dd>
+      <dd><%= document["elector_name_tesim"].join(', ')  %></dd>
     <% end %>
   </dl>
              </div>
