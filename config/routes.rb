@@ -1,6 +1,8 @@
 ALLOW_DOTS ||= /[a-zA-Z0-9_\-.:]*/
 
 TuftsElection::Application.routes.draw do
+  mount Qa::Engine => '/qa'
+
 
   mount Blacklight::Engine => '/'
 
