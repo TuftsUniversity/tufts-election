@@ -19,6 +19,8 @@ gem 'rsolr', '~> 1.0'
 
 gem 'therubyracer', :platforms => :ruby 
 
+gem 'qa'
+
 group :development do
   gem 'sqlite3'
   gem 'byebug'
