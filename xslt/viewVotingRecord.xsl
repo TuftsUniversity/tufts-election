@@ -9,7 +9,7 @@
               encoding="US-ASCII" />
 
 
-  <xsl:template match="/aas:election_record">
+  <xsl:template match="/election_record">
 
       <xsl:apply-templates/>
 
@@ -25,7 +25,7 @@
   </xsl:template>
 
 
-  <xsl:template match="aas:role" xmlns="http://www.w3.org/1999/xhtml">
+  <xsl:template match="role" xmlns="http://www.w3.org/1999/xhtml">
 
      <div id="election-results">
 
@@ -47,10 +47,10 @@
       <div id="record-header">
          <span class="text8"><xsl:value-of select="@label"/></span>
          <div id="record-subheader" class="text1">
-           <span class="label">Office: </span><xsl:value-of select="//aas:office/@name"/>
-                   (<xsl:value-of select="//aas:office/@scope"/>)<br/>
-           <span class="label">Title: </span><xsl:value-of select="//aas:role/@title"/><br/>
-           <span class="label">Jurisdiction: </span><xsl:value-of select="//aas:role/@scope"/><br/>
+           <span class="label">Office: </span><xsl:value-of select="//office/@name"/>
+                   (<xsl:value-of select="//office/@scope"/>)<br/>
+           <span class="label">Title: </span><xsl:value-of select="//role/@title"/><br/>
+           <span class="label">Jurisdiction: </span><xsl:value-of select="//role/@scope"/><br/>
 
            <xsl:if test="not(/elections/@style = 'print')">
              <a href="more-info.xq?id={@election_id}"
@@ -75,7 +75,7 @@
 
   </xsl:template>
 
-  <xsl:template match="aas:role"  xmlns="http://www.w3.org/1999/xhtml">
+  <xsl:template match="role"  xmlns="http://www.w3.org/1999/xhtml">
 
      <!-- The main presentation of results -->
 
@@ -83,12 +83,12 @@
          <thead>
 
          <xsl:choose>
-           <xsl:when test="//aas:elector">
+           <xsl:when test="//elector">
 
            <!-- Electoral election: We display a few things a little differently when we have an electoral election -->
            <tr class="candidate-row">
-             <th scope="row" class="row-label">Electors: <xsl:apply-templates select="/aas:election_record/aas:office/aas:role/aas:ballot/aas:note"/></td>
-             <xsl:for-each select="/aas:election_record/aas:office/aas:role/aas:ballot/aas:elector">
+             <th scope="row" class="row-label">Electors: <xsl:apply-templates select="/election_record/office/role/ballot/note"/></td>
+             <xsl:for-each select="/election_record/office/role/ballot/elector">
                <xsl:sort select="@elector_num" data-type="number" order="ascending"/>
                <th scop="col">
                        <xsl:choose>
@@ -99,14 +99,14 @@
                             <xsl:value-of select="@name"/>
              </xsl:otherwise>
                  </xsl:choose>
-                 <xsl:apply-templates select="aas:note"/>
+                 <xsl:apply-templates select="note"/>
                      </th>
              </xsl:for-each>
            </tr>
 
            <tr class="affiliation-row">
                    <th scope="row" class="row-label">Affiliation:</td>
-             <xsl:for-each select="//aas:election_record/aas:office/aas:role/aas:ballot/aas:elector">
+             <xsl:for-each select="//election_record/office/role/ballot/elector">
                <xsl:sort select="@elector_num" data-type="number" order="ascending"/>
                <td>
                        <xsl:if test="normalize-space(@affiliation) != '' and normalize-space(@affiliation) != 'null'">
@@ -118,7 +118,7 @@
 
            <tr class="declared-for-row">
              <th scope="row" class="row-label">Presidential Candidate:</td>
-             <xsl:for-each select="//aas:election_record/aas:office/aas:role/aas:ballot/aas:elector">
+             <xsl:for-each select="//election_record/office/role/ballot/elector">
                <xsl:sort select="@elector_num" data-type="number" order="ascending"/>
                <td>
                        <xsl:if test="normalize-space(@declared_for) != '' and normalize-space(@declared_for) != 'null'">
@@ -129,13 +129,13 @@
            </tr>
 
            <tr class="overview-row">
-             <th scope="row">Final Result: <xsl:apply-templates select="//aas:election_record/aas:office/aas:role/aas:overview/aas:note"/></th>
-             <xsl:for-each select="//aas:election_record/aas:office/aas:role/aas:ballot/aas:elector">
+             <th scope="row">Final Result: <xsl:apply-templates select="//election_record/office/role/overview/note"/></th>
+             <xsl:for-each select="//election_record/office/role/ballot/elector">
                <xsl:sort select="@elector_num" data-type="number" order="ascending"/>
                <xsl:variable name="elec_id" select="@elector_num"/>
                
                <xsl:variable name="x">
-                 <xsl:value-of select="//aas:election_record/aas:office/aas:role/aas:overview/aas:elector_summary[@elector_ref=$elec_id]/@vote_total"/>
+                 <xsl:value-of select="//election_record/office/role/overview/elector_summary[@elector_ref=$elec_id]/@vote_total"/>
                </xsl:variable>
                
                <xsl:choose>
@@ -153,8 +153,8 @@
             <!-- Normal candidatorial election -->
 
            <tr class="candidate-row">
-             <th scope="row" class="row-label">Candidates: <xsl:apply-templates select="/aas:election_record/aas:office/aas:role/aas:ballot/aas:note"/></td>
-             <xsl:for-each select="/aas:election_record/aas:office/aas:role/aas:ballot/aas:candidate">
+             <th scope="row" class="row-label">Candidates: <xsl:apply-templates select="/election_record/office/role/ballot/note"/></td>
+             <xsl:for-each select="/election_record/office/role/ballot/candidate">
                <xsl:sort select="@candidate_num" data-type="number" order="ascending"/>
                <th scop="col">
 
@@ -167,7 +167,7 @@
                     </xsl:otherwise>
                  </xsl:choose>
 
-                 <xsl:apply-templates select="aas:note"/>
+                 <xsl:apply-templates select="note"/>
 
                </th>
              </xsl:for-each>
@@ -175,7 +175,7 @@
 
            <tr class="affiliation-row">
                    <th scope="row" class="row-label">Affiliation:</td>
-             <xsl:for-each select="/aas:election_record/aas:office/aas:role/aas:ballot/aas:candidate">
+             <xsl:for-each select="/election_record/office/role/ballot/candidate">
                <xsl:sort select="@candidate_num" data-type="number" order="ascending"/>
 
                <td>
@@ -187,13 +187,13 @@
            </tr>
 
            <tr class="overview-row">
-             <th scope="row">Final Result: <xsl:apply-templates select="/aas:election_record/aas:office/aas:role/aas:overview/aas:note"/></th>
-             <xsl:for-each select="/aas:election_record/aas:office/aas:role/aas:ballot/aas:candidate">
+             <th scope="row">Final Result: <xsl:apply-templates select="/election_record/office/role/overview/note"/></th>
+             <xsl:for-each select="/election_record/office/role/ballot/candidate">
                <xsl:sort select="@candidate_num" data-type="number" order="ascending"/>
                <xsl:variable name="cand_id" select="@candidate_num"/>
                
                <xsl:variable name="x">
-                 <xsl:value-of select="/aas:election_record/aas:office/aas:role/aas:overview/aas:candidate_summary[@candidate_ref=$cand_id]/@vote_total"/>
+                 <xsl:value-of select="/election_record/office/role/overview/candidate_summary[@candidate_ref=$cand_id]/@vote_total"/>
                </xsl:variable>
                
                <xsl:choose>
@@ -210,7 +210,7 @@
 
         </thead>
 
-        <xsl:apply-templates select="aas:admin_unit"/>
+        <xsl:apply-templates select="admin_unit"/>
 
       </table>
 
@@ -218,7 +218,7 @@
 
 
   
-  <xsl:template match="aas:sub_unit"  xmlns="http://www.w3.org/1999/xhtml">
+  <xsl:template match="sub_unit"  xmlns="http://www.w3.org/1999/xhtml">
     <xsl:variable name="sub_unit" select="."/>
     <xsl:variable name="depth">
       <xsl:call-template name="sub_unit_depth"/>
@@ -244,19 +244,19 @@
     	  <xsl:call-template name="unit_name">
 	    <xsl:with-param name="name" select="@name"/>
 	    <xsl:with-param name="type" select="@type"/>
-	  </xsl:call-template><xsl:apply-templates select="aas:note"/>
+	  </xsl:call-template><xsl:apply-templates select="note"/>
       </th>
 
      <xsl:choose>
-       <xsl:when test="//aas:elector">
+       <xsl:when test="//elector">
 
 
-      <xsl:for-each select="//aas:election_record/aas:office/aas:role/aas:ballot/aas:elector">
+      <xsl:for-each select="//election_record/office/role/ballot/elector">
 	<xsl:sort select="@elector_num" data-type="number" order="ascending"/>
 	<xsl:variable name="elec_id" select="@elector_num"/>
 	     
 	<xsl:variable name="x">
-	  <xsl:value-of select="$sub_unit/aas:result[@elector_ref=$elec_id]/@vote"/>
+	  <xsl:value-of select="$sub_unit/result[@elector_ref=$elec_id]/@vote"/>
 	</xsl:variable>
 	     
 	<xsl:choose>
@@ -269,12 +269,12 @@
        </xsl:when>
        <xsl:otherwise>
 
-      <xsl:for-each select="/aas:election_record/aas:office/aas:role/aas:ballot/aas:candidate">
+      <xsl:for-each select="/election_record/office/role/ballot/candidate">
 	<xsl:sort select="@candidate_num" data-type="number" order="ascending"/>
 	<xsl:variable name="cand_id" select="@candidate_num"/>
 	     
 	<xsl:variable name="x">
-	  <xsl:value-of select="$sub_unit/aas:result[@candidate_ref=$cand_id]/@vote"/>
+	  <xsl:value-of select="$sub_unit/result[@candidate_ref=$cand_id]/@vote"/>
 	</xsl:variable>
 	     
 	<xsl:choose>
@@ -289,37 +289,37 @@
 
     </tr>
 
-    <xsl:apply-templates select="aas:sub_unit"/>
+    <xsl:apply-templates select="sub_unit"/>
 
   </xsl:template>
 
   <xsl:template name="election_title">
-    <xsl:variable name="scope"><xsl:value-of select="/aas:election_record/aas:office/aas:role/@scope"/></xsl:variable>
+    <xsl:variable name="scope"><xsl:value-of select="/election_record/office/role/@scope"/></xsl:variable>
 
     <xsl:choose>
-      <xsl:when test="//aas:sub_unit[@type = $scope]">
+      <xsl:when test="//sub_unit[@type = $scope]">
 	<xsl:call-template name="unit_name">
-	  <xsl:with-param name="name" select="//aas:sub_unit[@type = $scope]/@name"/>
+	  <xsl:with-param name="name" select="//sub_unit[@type = $scope]/@name"/>
 	  <xsl:with-param name="type" select="$scope"/>
 	</xsl:call-template>
       </xsl:when>
       <xsl:otherwise>
 	<xsl:call-template name="unit_name">
-	  <xsl:with-param name="name" select="/aas:election_record/aas:office/aas:role/aas:admin_unit/@name"/>
-	  <xsl:with-param name="type" select="/aas:election_record/aas:office/aas:role/aas:admin_unit/@type"/>
+	  <xsl:with-param name="name" select="/election_record/office/role/admin_unit/@name"/>
+	  <xsl:with-param name="type" select="/election_record/office/role/admin_unit/@type"/>
 	</xsl:call-template>
       </xsl:otherwise>
     </xsl:choose>
 
     <xsl:text> </xsl:text>
-    <xsl:value-of select="/aas:election_record/@date"/>
+    <xsl:value-of select="/election_record/@date"/>
     <xsl:text> </xsl:text>
-    <xsl:value-of select="/aas:election_record/@type"/>
+    <xsl:value-of select="/election_record/@type"/>
     <xsl:text> Election for </xsl:text>
-    <xsl:value-of select="/aas:election_record/aas:office/aas:role/@title"/>
-    <xsl:if test="/aas:election_record/@iteration != '' and /aas:election_record/@iteration != 'null' and /aas:election_record/@iteration != 'First Ballot'">
+    <xsl:value-of select="/election_record/office/role/@title"/>
+    <xsl:if test="/election_record/@iteration != '' and /election_record/@iteration != 'null' and /election_record/@iteration != 'First Ballot'">
       <xsl:text> : </xsl:text>
-      <xsl:value-of select="/aas:election_record/@iteration"/>
+      <xsl:value-of select="/election_record/@iteration"/>
     </xsl:if>
   </xsl:template>
 
@@ -371,8 +371,8 @@
   <xsl:template name="sub_unit_depth"  xmlns="http://www.w3.org/1999/xhtml">
     <xsl:param name="depth" select="0"/>
     <xsl:choose>
-      <xsl:when test="parent::aas:sub_unit">
-	<xsl:for-each select="parent::aas:sub_unit">
+      <xsl:when test="parent::sub_unit">
+	<xsl:for-each select="parent::sub_unit">
 	  <xsl:call-template name="sub_unit_depth"><xsl:with-param name="depth" select="$depth+1"/></xsl:call-template>
 	</xsl:for-each>
       </xsl:when>
@@ -380,12 +380,12 @@
     </xsl:choose>
   </xsl:template>
 
-  <xsl:template match="aas:reference"  xmlns="http://www.w3.org/1999/xhtml">
+  <xsl:template match="reference"  xmlns="http://www.w3.org/1999/xhtml">
   </xsl:template>
 
 
 <!-- Templates to put the footnote references in the candidate row -->
-<xsl:template match="aas:note"  xmlns="http://www.w3.org/1999/xhtml">
+<xsl:template match="note"  xmlns="http://www.w3.org/1999/xhtml">
     <xsl:call-template name="inlineNote">
       <xsl:with-param name="node-id" select="generate-id(.)"/>
     </xsl:call-template>
@@ -405,10 +405,10 @@
 
 <!-- Templates to put the footnotes beneath the table -->
 <xsl:template name="footnotes"  xmlns="http://www.w3.org/1999/xhtml">
-    <xsl:if test="//aas:note">
+    <xsl:if test="//note">
       <div id="electionNotes">
       	<h2>Notes:</h2>
-        <xsl:for-each select="//aas:note">
+        <xsl:for-each select="//note">
           <xsl:variable name="note-text" select="normalize-space(string(.))"/>
           <xsl:variable name="note-pos">
               <xsl:number level="any" />
@@ -425,10 +425,10 @@
 </xsl:template>
 
   <xsl:template name="references"  xmlns="http://www.w3.org/1999/xhtml">
-    <xsl:if test="//aas:reference[@type='citation']">
+    <xsl:if test="//reference[@type='citation']">
       <div id="electionReferences">
       	<h2>References:</h2>
-        <xsl:for-each select="//aas:reference[@type='citation' and not(./text() = preceding::aas:reference/text())]">
+        <xsl:for-each select="//reference[@type='citation' and not(./text() = preceding::reference/text())]">
           <div class="reference-citation">
             <xsl:value-of select="."/>
           </div>
@@ -439,9 +439,9 @@
 
 
   <xsl:template name="page-images">
-    <xsl:if test="//aas:reference[@type='page_image']">
+    <xsl:if test="//reference[@type='page_image']">
       <h2>Page Images:</h2>
-      <xsl:for-each select="//aas:reference[@type='page_image' and not (./@urn = preceding::aas:reference/@urn)]">
+      <xsl:for-each select="//reference[@type='page_image' and not (./@urn = preceding::reference/@urn)]">
       <figure class="page-image">
         <xsl:variable name="uri" select="substring(@urn, 24)" />
         <img src="http://dl.tufts.edu/file_assets/tufts{$uri}" alt="handwritten notes" />
