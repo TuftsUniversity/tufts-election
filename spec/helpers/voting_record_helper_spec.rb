@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 describe VotingRecordHelper do
+  before { skip("Waiting for migration to finalize") }
   describe "voting_record_xml_to_table" do
     before {
       @src = File.read(fixture("election_records/al_staterepresentative_madisoncounty_1820_RECORD-XML.xml"))
