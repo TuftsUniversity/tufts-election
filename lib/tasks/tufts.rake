@@ -42,19 +42,18 @@ end
 namespace :tufts do
   desc "Execute Continuous Integration build (docs, tests with coverage)"
   task :ci => :environment do
-    require 'jettywrapper'
-    Jettywrapper.unzip
-    Rake::Task["tufts:jetty:config"].invoke
-    jetty_params = Jettywrapper.load_config #.merge({:jetty_home => File.expand_path(File.join(Rails.root, 'jetty'))})
-
-    error = nil
-    error = Jettywrapper.wrap(jetty_params) do
-      sleep(90)
-      Rake::Task["index"].invoke
-#      Rake::Task['ci:setup:rspec'].invoke
-      Rake::Task["db:migrate"].invoke
+#    require 'jettywrapper'
+#    Jettywrapper.unzip
+#    Rake::Task["tufts:jetty:config"].invoke
+#    jetty_params = Jettywrapper.load_config #.merge({:jetty_home => File.expand_path(File.join(Rails.root, 'jetty'))})
+#
+#    error = nil
+#    error = Jettywrapper.wrap(jetty_params) do
+#      sleep(90)
+#      Rake::Task["index"].invoke
+#      Rake::Task["db:migrate"].invoke
       Rake::Task['spec'].invoke
-    end
+#    end
     raise "test failures: #{error}" if error
   end
 
