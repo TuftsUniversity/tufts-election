@@ -14,12 +14,15 @@ gem 'jquery-rails'
 gem 'blacklight'
 gem 'blacklight_range_limit'
 
-gem 'mysql2'
+gem 'mysql2', '~> 0.4.10'
 gem 'rsolr', '~> 1.0'
 
 gem 'therubyracer', :platforms => :ruby 
 
 gem 'qa'
+# Matching MIRA's versions
+gem 'active-fedora', '~> 11.5'
+gem 'active_fedora-noid', '~> 2.2'
 
 group :development do
   gem 'sqlite3'
