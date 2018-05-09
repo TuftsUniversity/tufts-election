@@ -54,7 +54,6 @@ namespace :tufts do
 #      Rake::Task["db:migrate"].invoke
       Rake::Task['spec'].invoke
 #    end
-    raise "test failures: #{error}" if error
   end
 
   namespace :jetty do
