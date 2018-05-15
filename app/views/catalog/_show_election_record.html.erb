@@ -12,40 +12,40 @@
     <div class="accordion-group">
       <div class="accordion-heading">
 
-   <a class="accordian-toggle collapsed"  data-toggle="collapse" href="#collapseOne">View more information</a>
-        </div>
+        <a class="accordian-toggle collapsed"  data-toggle="collapse" href="#collapseOne">View more information</a>
+      </div>
       <div id="collapseOne" class="accordion-body collapse">
-          <div class="accordion-inner">
-  <dl class="defList">
-    <dt>Label:</dt>
-    <dd><%= document.first("title_tesim") %></dd>
-    <dt>Date:</dt>
-    <dd><%= document.first("date_isi") %></dd>
-    <dt>State:</dt>
-    <dd><%= document.first("state_name_tesim") %></dd>
-    <dt>Type:</dt>
-    <dd><%= document.first("election_type_tesim") %></dd>
-    <dt>Iteration:</dt>
-    <dd><%= document.first("iteration_tesim") %></dd>
-    <dt>Office/Role:</dt>
-    <dd><%= (document.first("office_name_tesim")||'') + "/" + (document.first("office_role_title_tesim")||'') %></dd>
-    <% unless document.first("candidate_name_tesim").nil? %>
-      <dt>Candidates:</dt>
-      <dd><%= document["candidate_name_tesim"].join(', ') %></dd>
-    <% end %>
-    <% unless document.first("elector_name_tesim").nil? %>
-      <dt>Electors:</dt>
-      <dd><%= document["elector_name_tesim"].join(', ')  %></dd>
-    <% end %>
-  </dl>
-             </div>
+        <div class="accordion-inner">
+          <dl class="defList">
+            <dt>Label:</dt>
+            <dd><%= document.first("title_tesim") %></dd>
+            <dt>Date:</dt>
+            <dd><%= document.first("date_isi") %></dd>
+            <dt>State:</dt>
+            <dd><%= document.first("state_name_tesim") %></dd>
+            <dt>Type:</dt>
+            <dd><%= document.first("election_type_tesim") %></dd>
+            <dt>Iteration:</dt>
+            <dd><%= document.first("iteration_tesim") %></dd>
+            <dt>Office/Role:</dt>
+            <dd><%= (document.first("office_name_tesim")||'') + "/" + (document.first("office_role_title_tesim")||'') %></dd>
+          <% unless document.first("candidate_name_tesim").nil? %>
+            <dt>Candidates:</dt>
+            <dd><%= document["candidate_name_tesim"].join(', ') %></dd>
+          <% end %>
+          <% unless document.first("elector_name_tesim").nil? %>
+            <dt>Electors:</dt>
+            <dd><%= document["elector_name_tesim"].join(', ')  %></dd>
+          <% end %>
+          </dl>
         </div>
       </div>
     </div>
   </div>
-
 </div>
 
-<%= voting_record_xml_to_table(document.first("voting_record_xml_tesi")) %>
+<%= voting_record_xml_to_html(document.first("voting_record_xml_tesi")) %>
+
+<%= render partial: 'voting_record_page_images' %>
 
 <p id="record-message"><%=render :partial=>'shared/released_message' %></p>

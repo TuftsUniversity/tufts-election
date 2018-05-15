@@ -15,8 +15,6 @@
     <xsl:call-template name="footnotes"/>
     <!-- REFERENCES -->
     <xsl:call-template name="references"/>
-    <!-- PAGE IMAGES -->
-    <xsl:call-template name="page-images"/>
   </xsl:template>
 
 
@@ -380,19 +378,6 @@
           </div>
         </xsl:for-each>
       </div>
-    </xsl:if>
-  </xsl:template>
-
-  <xsl:template name="page-images">
-    <xsl:if test="//reference[@type='page_image']">
-      <h2>Page Images:</h2>
-      <xsl:for-each select="//reference[@type='page_image' and not (./@urn = preceding::reference/@urn)]">
-        <figure class="page-image">
-          <xsl:variable name="uri" select="substring(@urn, 24)" />
-          <img src="http://dl.tufts.edu/file_assets/tufts{$uri}" alt="handwritten notes" />
-          <figcaption>Phil's original notebook pages that were used to compile this election. These notes are considered a draft of the electronic version. Therefore, the numbers may not match. To verify numbers you will need to check the original sources cited. Some original source material is available at the <a href="http://www.americanantiquarian.org">American Antiquarian Society</a>).</figcaption>
-        </figure>
-      </xsl:for-each>
     </xsl:if>
   </xsl:template>
 </xsl:stylesheet>
