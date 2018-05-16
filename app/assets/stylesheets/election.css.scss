@@ -309,6 +309,18 @@ a:link.constraint-value {
 
 /* Search results list */
 
-#search-results .document-title-heading {
-  margin-bottom: 6px;
+#search-results {
+  margin-top: 20px;
+
+  .document-title-heading {
+    margin-bottom: 6px;
+  }
+
+  li {
+    margin-top: 15px;
+  }
+}
+
+.catalog {
+  list-style-type: none;
 }
