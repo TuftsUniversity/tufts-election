@@ -24,9 +24,6 @@ gem 'qa'
 gem 'hyrax', '2.0.0'
 gem 'tufts-curation', github: 'TuftsUniversity/tufts-curation', tag: 'v1.0.8'
 gem 'riiif'
-# Matching MIRA's versions
-#gem 'active-fedora', '~> 11.5'
-#gem 'active_fedora-noid', '~> 2.2'
 
 group :development do
   gem 'sqlite3'
