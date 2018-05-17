@@ -1,5 +1,5 @@
-<% if(@document.key?("page_image_urn_ssim"))
-  page_images = urns_to_iiif(@document.fetch("page_image_urn_ssim")) %>
+<% if(@document.key?("iiif_page_images_ssim"))
+  page_images = @document.fetch("iiif_page_images_ssim") %>
 
 <div id="page_images">
   <h2>Page Images</h2>
