@@ -1,7 +1,7 @@
 # Import the state authority data
 
 require 'net/http'
-uri_for_state_file = 'http://dl.tufts.edu/file_assets/generic/tufts:state-authority/0'
+uri_for_state_file = 'https://dl.tufts.edu/file_assets/generic/tufts:state-authority/0'
 
 filename = Rails.root.join('tmp', 'state-authorities.xml')
 

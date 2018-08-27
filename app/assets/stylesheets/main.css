@@ -512,6 +512,11 @@ dl {
     padding: 0;
 }
 
+/* Search results are h3.index_title but they do need the padding. */
+h3.index_title.col-md-12 {
+  padding-left: 15px;
+}
+
 .document {
     border-bottom: 1px dotted #ccc;
     clear: both;
@@ -645,7 +650,6 @@ span.page.current {
 #facets h3 {
     color: #555;
     cursor: pointer;
-    font-weight: 400;
     margin-bottom: 0;
     text-align: justify;
 }

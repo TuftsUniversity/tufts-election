@@ -1,14 +1,12 @@
 class CandidatesController < ApplicationController
   include Blacklight::Catalog
 
-  # This filters out objects that you want to exclude from search results, like FileAssets
-  CandidatesController.solr_search_params_logic += [:exclude_unwanted_models, :exclude_drafts]
-
   configure_blacklight do |config|
-    config.default_solr_params = { 
+    config.default_solr_params = {
       :qt => 'search',
-      :rows => 100
     }
+
+    config.default_per_page = 100
 
     # solr field configuration for search results/index views
     config.index.title_field = 'title_tesim'
@@ -49,28 +47,15 @@ class CandidatesController < ApplicationController
     config.add_index_field 'date_tesim', :label => 'Year:'
     config.add_index_field 'state_name_tesim', :label => 'State:'
 
-    
+
     config.add_search_field 'all_fields', :label => 'All Fields'
-    
+
 
     config.add_sort_field 'title_ssi asc', :label => 'Name'
 
     # If there are more than this many search results, no spelling ("did you 
     # mean") suggestion is offered.
     config.spell_max = 5
-  end
-
-  # This filters out objects that you want to exclude from search results.  By default it only excludes FileAssets
-  # @param solr_parameters the current solr parameters
-  # @param user_parameters the current user-subitted parameters
-  def exclude_unwanted_models(solr_parameters, user_parameters)
-    solr_parameters[:fq] ||= []
-    solr_parameters[:fq] << "format_ssim:Candidate"
-  end
-
-  def exclude_drafts(solr_parameters,user_parameters)
-    solr_parameters[:fq] ||= []
-    solr_parameters[:fq] << "-id:draft*"
   end
 
 end

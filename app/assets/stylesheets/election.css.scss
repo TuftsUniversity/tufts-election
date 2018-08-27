@@ -304,3 +304,23 @@ a:link.constraint-value {
 .facet-label.glyphicon {
   background: red;
 }
+
+/** Added by Travis in 2018 */
+
+/* Search results list */
+
+#search-results {
+  margin-top: 20px;
+
+  .document-title-heading {
+    margin-bottom: 6px;
+  }
+
+  li {
+    margin-top: 15px;
+  }
+}
+
+.catalog {
+  list-style-type: none;
+}

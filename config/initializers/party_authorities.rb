@@ -2,7 +2,7 @@
 
 require 'net/http'
 
-uri_for_party_file = 'http://dl.tufts.edu/file_assets/generic/tufts:party-authority/0'
+uri_for_party_file = 'https://dl.tufts.edu/file_assets/generic/tufts:party-authority/0'
 filename = Rails.root.join('tmp', 'party-authority.xml')
 
 # Download the party authority file

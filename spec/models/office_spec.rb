@@ -1,7 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe Office do
-
   let(:alderman) {{ id: 'ON001', name: 'Alderman', description: 'Desc for Alderman' }}
   let(:clerk) {{ id: 'ON016', name: 'Clerk', description: 'Desc for Clerk' }}
   let(:selectman) {{ id: 'ON146', name: 'Selectman', description: 'Desc for Selectman' }}

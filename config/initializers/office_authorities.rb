@@ -1,7 +1,7 @@
 # Import the offices authority data
 
 require 'net/http'
-uri_for_offices_file = 'http://dl.tufts.edu/file_assets/generic/tufts:MS115.003.001.00003.00001/0'
+uri_for_offices_file = 'https://dl.tufts.edu/file_assets/generic/tufts:MS115.003.001.00003.00001/0'
 
 filename = Rails.root.join('tmp', 'offices.xml')
 

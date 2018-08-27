@@ -1,0 +1,20 @@
+<% if(@document.key?("iiif_page_images_ssim"))
+  page_images = @document.fetch("iiif_page_images_ssim") %>
+
+<div id="page_images">
+  <h2>Page Images</h2>
+  <% page_images.each do |id| %>
+    <figure class="page-image">
+      <% url = Riiif::Engine.routes.url_helpers.image_url(id, host: request.base_url, size: "400,") %>
+      <%= image_tag(url, alt: "handwritten notes") %>
+      <figcaption>
+        Phil's original notebook pages that were used to compile this election.
+        These notes are considered a draft of the electronic version. Therefore, the numbers may not match.
+        To verify numbers you will need to check the original sources cited.
+        Some original source material is available at the
+        <a href="http://www.americanantiquarian.org">American Antiquarian Society</a>).
+      </figcaption>
+    </figure>
+  <% end %>
+</div>
+<% end %>
