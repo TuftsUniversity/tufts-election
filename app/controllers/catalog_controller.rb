@@ -90,7 +90,8 @@ class CatalogController < ApplicationController
     #   :years_25 => { label: 'within 25 Years', fq: "pub_date:[#{Time.zone.now.year - 25 } TO *]" }
     #}
     config.add_facet_field 'state_name_sim', :label => 'State', :sort => 'index', :limit => 50
-    config.add_facet_field 'date_sim', :label => 'Year', :range => true, :sort => 'index'
+    #config.add_facet_field 'date_sim', :label => 'Year', :range => true, :sort => 'index'
+    config.add_facet_field 'pub_date_facet_isim', :label => 'Year', :range => true, :sort => 'index'
     config.add_facet_field 'office_id_ssim', :label => 'Office', :limit => 20, helper_method: :office_name
     config.add_facet_field 'jurisdiction_sim', :label => 'Jurisdiction', :limit => 15
     config.add_facet_field 'party_affiliation_id_ssim', :label => 'Party', :limit => 15, helper_method: :party_name
