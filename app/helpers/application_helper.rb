@@ -12,6 +12,10 @@ module ApplicationHelper
     end
   end
 
+  def ga_track
+    javascript_tag("if(window.ga != undefined){ga('send', 'pageview');}")
+  end
+
   def office_name(id)
     office = Office.find(id)
     office.blank? ? id : office.name
