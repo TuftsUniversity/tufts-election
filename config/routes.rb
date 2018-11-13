@@ -1,6 +1,7 @@
 ALLOW_DOTS ||= /[a-zA-Z0-9_\-.:]*/
 
 TuftsElection::Application.routes.draw do
+  concern :range_searchable, BlacklightRangeLimit::Routes::RangeSearchable.new
   mount Riiif::Engine => '/page_images', as: 'riiif'
 
   mount Qa::Engine => '/qa'
@@ -17,6 +18,8 @@ TuftsElection::Application.routes.draw do
   concern :searchable, Blacklight::Routes::Searchable.new
   resource :catalog, id: ALLOW_DOTS, only: [:index], as: 'catalog', path: '/catalog', controller: 'catalog' do
     concerns :searchable
+    concerns :range_searchable
+
   end
 
   resources :bookmarks do
