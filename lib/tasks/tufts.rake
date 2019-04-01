@@ -18,7 +18,7 @@ namespace :tufts do
   desc "Execute Continuous Integration build (docs, tests with coverage)"
   task :ci => :environment do
     SolrWrapper.wrap do |solr|
-      solr.with_collection(dir: Rails.root.join('solr/config/'), name: 'hydra-test') do
+      solr.with_collection(dir: Rails.root.join('solr/conf/'), name: 'hydra-test') do
         Rake::Task['tufts::index_fixtures'].invoke
         Rake::Task['spec'].invoke
       end
