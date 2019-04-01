@@ -1,5 +1,15 @@
 require 'tufts/solr_fixture_loader'
 
+if(Rails.env == "test" || Rails.env == "development")
+  SolrWrapper.default_instance_options = {
+    verbose: true,
+    port: 8984,
+    version: '6.3.0',
+    instance_dir: 'solr/install'
+  }
+end
+require 'solr_wrapper/rake_task'
+
 Rake::Task[:default].prerequisites.clear
 task :default => 'tufts:ci'
 
@@ -7,26 +17,16 @@ task :default => 'tufts:ci'
 namespace :tufts do
   desc "Execute Continuous Integration build (docs, tests with coverage)"
   task :ci => :environment do
-    Rake::Task['spec'].invoke
+    SolrWrapper.wrap do |solr|
+      solr.with_collection(dir: Rails.root.join('solr/config/'), name: 'hydra-test') do
+        Rake::Task['tufts::index_fixtures'].invoke
+        Rake::Task['spec'].invoke
+      end
+    end
   end
 
   desc "index elections fixtures"
   task :index_fixtures => :environment do
     Tufts::SolrFixtureLoader.new.load_all_fixtures
   end
-
-  #namespace :jetty do
-  #  desc "Copies the default Solr & Fedora configs into the bundled Hydra Testing Server"
-  #  task :config do
-  #    Rake::Task["tufts:jetty:config_solr"].invoke
-  #  end
-
-  #  desc "Copies the contents of solr_conf into the Solr development-core and test-core of Testing Server"
-  #  task :config_solr do
-  #    FileList['solr_conf/conf/*'].each do |f|  
-  #      cp("#{f}", 'jetty/solr/development-core/conf/', :verbose => true)
-  #      cp("#{f}", 'jetty/solr/test-core/conf/', :verbose => true)
-  #    end
-  #  end
-  #end
 end
