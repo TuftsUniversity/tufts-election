@@ -3,7 +3,7 @@ require 'tufts/solr_fixture_loader'
 if(Rails.env == "test" || Rails.env == "development")
   SolrWrapper.default_instance_options = {
     verbose: true,
-    port: 8984,
+    port: 8983,
     version: '6.3.0',
     instance_dir: 'solr/install'
   }
