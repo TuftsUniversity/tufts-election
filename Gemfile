@@ -11,7 +11,7 @@ gem 'uglifier'
 gem 'sass-rails'
 gem 'jquery-rails'
 
-gem 'blacklight'
+gem 'blacklight', '~> 6.14'
 gem 'blacklight_range_limit'
 
 gem 'mysql2', '~> 0.4.10'
@@ -23,7 +23,7 @@ gem 'qa'
 gem 'riiif'
 
 # Matching MIRA's versions
-gem 'active-fedora', '~> 11.5'
+gem 'active-fedora', '~> 11.5', '>= 11.5.2'
 gem 'active_fedora-noid', '~> 2.2'
 
 group :development do
