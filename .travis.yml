@@ -2,7 +2,7 @@ language: ruby
 rvm:
   - 2.5.0
 jdk:
-  - oraclejdk9
+  - openjdk8
 sudo: false
 cache: bundler
 
