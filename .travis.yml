@@ -8,7 +8,9 @@ cache: bundler
 notifications:
   email:
     - tdl-commiters@googlegroups.com
-
+before_install:
+  - rvm @global do gem uninstall bundler -a -x
+  - rvm @global do gem install bundler -v 1.17.3
 before_script:
   - mkdir -p tmp && export TMPDIR=tmp
   - cp spec/fixtures/authorities/*.xml tmp
