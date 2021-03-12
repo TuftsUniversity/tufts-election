@@ -207,6 +207,7 @@ GEM
     noid (0.9.0)
     nokogiri (1.10.2)
       mini_portile2 (~> 2.4.0)
+    okcomputer (1.18.4)
     parslet (1.8.2)
     public_suffix (3.0.3)
     qa (4.0.0)
@@ -416,6 +417,7 @@ DEPENDENCIES
   byebug
   jquery-rails
   mysql2 (~> 0.4.10)
+  okcomputer
   qa
   rails (~> 5.0)
   riiif
