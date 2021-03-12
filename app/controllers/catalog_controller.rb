@@ -5,6 +5,17 @@ class CatalogController < ApplicationController
 
   include Blacklight::Catalog
 
+  def show
+
+    if ((params[:id].start_with?('tufts')) && (Rails.env == 'production'))
+      h = Net::HTTP.new('tdrsearch-prod-01.uit.tufts.edu', 8983)
+      http_response = h.get("/solr/mira_prod/select?fl=id&indent=on&q=legacy_pid_tesim:\"#{params[:id]}\"&wt=ruby")
+      rsp = eval(http_response.body)
+      params[:id] = rsp['response']['docs'][0]['id']
+    end
+    super
+  end
+
   configure_blacklight do |config|
     ## Class for sending and receiving requests from a search index
     # config.repository_class = Blacklight::Solr::Repository
@@ -161,7 +172,7 @@ class CatalogController < ApplicationController
     config.add_search_field 'all_fields', label: 'All Fields'
 
     config.add_search_field('Candidate') do |field|
-      field.solr_local_parameters = { 
+      field.solr_local_parameters = {
         :qf => 'name_tesim',
         :pf => 'name_tesim',
       }
