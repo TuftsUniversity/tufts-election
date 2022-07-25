@@ -81,9 +81,9 @@ jobs:
     #- name: Rubbocop
     #  run: |
     #    bundle exec rubocop
-    - name: Compile assets
-      run: |
-        bundle exec rails assets:precompile &> /dev/null
+    #- name: Compile assets
+    #  run: |
+    #    bundle exec rails assets:precompile &> /dev/null
     - name: Refresh fixtures
       run: bundle exec rake tufts:index_fixtures
       env:
