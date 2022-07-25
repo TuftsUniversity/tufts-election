@@ -18,7 +18,7 @@ gem 'mysql2', '~> 0.4.10'
 gem 'okcomputer'
 gem 'rsolr', '~> 1.0'
 
-gem 'therubyracer', :platforms => :ruby 
+gem 'therubyracer', :platforms => :ruby
 
 gem 'qa'
 gem 'riiif'
@@ -35,6 +35,8 @@ end
 group :development, :test do
   gem 'rspec-rails'
   gem 'rspec-its'
+  gem 'simplecov'
+  gem 'simplecov-lcov', '~> 0.8.0'
 end
 
 group :test do
