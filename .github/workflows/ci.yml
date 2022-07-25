@@ -83,13 +83,9 @@ jobs:
     #    bundle exec rubocop
     #- name: Compile assets
     #  run: |
-    #    bundle exec rails assets:precompile &> /dev/null
-    - name: Refresh fixtures
-      run: bundle exec rake tufts:index_fixtures
-      env:
-        RAILS_ENV: test
+    #     bundle exec rails assets:precompile &> /dev/null
     - name: Run tests
-      run: bundle exec rake spec
+      run: bundle exec rake tufts:ci
       env:
         RAILS_ENV: test
         TMPDIR: /tmp
