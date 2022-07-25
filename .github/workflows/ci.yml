@@ -23,7 +23,7 @@ jobs:
       RAILS_MAX_THREADS: 5
       DB_HOST: localhost
       DB_PORT: 3306
-
+      CI: true
     strategy:
       fail-fast: false
       matrix:
