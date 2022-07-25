@@ -67,6 +67,13 @@ jobs:
         cp config/blacklight.yml.sample config/blacklight.yml
         cp config/solr.yml.sample config/solr.yml
         cp config/secrets.yml.sample config/secrets.yml
+    - name: Create folder
+      run: |
+        mkdir -p tmp
+        cp authority_files/candidates.xml tmp/candidates.xml
+        cp authority_files/offices.xml tmp/offices.xml
+        cp authority_files/party-authority.xml tmp/party-authority.xml
+        cp authority_files/state-authorities.xml tmp/state-authorities.xml
     - name: Create database
       run: |
         RAILS_ENV=test bundle exec rake db:create
