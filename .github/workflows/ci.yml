@@ -84,8 +84,10 @@ jobs:
     #- name: Compile assets
     #  run: |
     #     bundle exec rails assets:precompile &> /dev/null
+    - name: Run index fixtures
+      run: bundle exec rake tufts:index_fixtures
     - name: Run tests
-      run: bundle exec rake tufts:ci
+      run: bundle exec rake spec
       env:
         RAILS_ENV: test
         TMPDIR: /tmp
