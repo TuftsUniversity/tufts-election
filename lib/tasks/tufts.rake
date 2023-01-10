@@ -1,14 +1,15 @@
 require 'tufts/solr_fixture_loader'
 
-if(Rails.env == "test" || Rails.env == "development")
+if(Rails.env == "test")
   SolrWrapper.default_instance_options = {
     verbose: true,
     port: 8985,
     version: '6.3.0',
     instance_dir: 'solr/install'
   }
+  require 'solr_wrapper/rake_task'
 end
-require 'solr_wrapper/rake_task'
+
 
 Rake::Task[:default].prerequisites.clear
 task :default => 'tufts:ci'
