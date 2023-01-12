@@ -36,7 +36,7 @@ module Tufts
       end
 
       def solr
-        @solr ||= RSolr.connect(url: ActiveFedora.solr_config[:url])
+        @solr ||= RSolr.connect(url: Blacklight.blacklight_yml["test"]["url"])
       end
   end
 end
