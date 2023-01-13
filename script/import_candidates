@@ -27,7 +27,7 @@ end
 # @param config_file
 #   The solr configuration yaml file.
 def connect_to_solr
-  solr_url = Blacklight.blacklight_yml["#{Rails.env}"]["url"]
+  solr_url = Blacklight.blacklight_yml[Rails.env]["url"]
   if(solr_url.nil?)
     log_and_puts("Couldn't find solr configuration! Set up a blacklight.yml file!")
     false
