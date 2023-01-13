@@ -1,25 +1,58 @@
-h1. Setting up Tufts Election development environment:
+# Setting up Tufts Election development environment:
 
-# Copy the *.sample files in config/ to the appropriate .yml filenames.
-# Copy config/initializers/secret_token.rb.sample to config/initializers/secret_token.rb, generate a new secret token using 'rake secret', and paste the new token into the secret_token.rb.
-# Initialize hydra-jetty for development environments
-  <pre>rake jetty:clean</pre>
-# Start Jetty:
-  <pre>rake jetty:start</pre>
-# Import candidates - parameter is the directory containing all the candidate authority files.
-  <pre>mkdir tmp</pre>
-  <pre>./script/import_candidates spec/fixtures/candidates/</pre>
-# Import election result records from spec/fixtures/election_records
-  <pre>rake index</pre>
-# Migrate your database:
-  <pre>rake db:migrate</pre>
-# Start rails:
-  <pre>rails s</pre>
+This is a short guide to setting up New Nation Votes locally on your development machine.
 
-h3. Running the specs
-# Make sure jetty is running
-# <pre> RAILS_ENV=test rake index </pre>
-# <pre> bundle exec rake spec </pre>
+##  Set up Mira
+NNV depends on [Mira](https://github.com/TuftsUniversity/mira_on_hyrax) already existing on your computer because of shared assets.
+Go to https://github.com/TuftsUniversity/mira_on_hyrax and follow the steps to set up Mira.
+
+## Get Code:
+Clone the code locally. Decide what folder you want the code to be in and run this at that level.
+```
+git clone https://github.com/TuftsUniversity/tdl_on_hyrax.git
+```
+
+## Run preinit script
+`./preinit_new_environment.sh`
+
+## Build the Docker Container
+```
+docker-compose build
+```
+
+## Bring up the Docker Container
+```
+docker-compose up server
+```
+
+# Check it out
+Go to `http://localhost:4050` to see that NNV is working locally.
+
+# Importing Fixtures
+NNV ships with some fixtures that can be used for dev and test
+
+## These can be imported running the following commands
+
+```
+docker exec -it tufts-election-server-1 /bin/bash
+root@52c99bb737c4:/data# rake tufts:index_fixtures
+root@52c99bb737c4:/data# script/import_candidates
+```
+
+
+
+# Running the specs
+
+## Bring up the Docker Container
+```
+docker-compose up test
+```
+
+## import fixtures and run tests
+```
+root@52c99bb737c4:/data# rake tufts:index_fixtures
+root@52c99bb737c4:/data# rspec
+```
 
 h3. Importing authorities
 
