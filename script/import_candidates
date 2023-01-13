@@ -5,7 +5,6 @@
 require File.expand_path(File.join(File.dirname(__FILE__), '../config/environment.rb'))
 
 ####### Overarching variables #######
-solr_config = Rails.root.join("config", "blacklight.yml")
 candidate_source = 'https://dl.tufts.edu/file_assets/generic/tufts:MS115.003.001.00002.00001/0'
 candidate_file = Rails.root.join('tmp', 'candidates.xml')
 
@@ -27,8 +26,8 @@ end
 #
 # @param config_file
 #   The solr configuration yaml file.
-def connect_to_solr(config_file)
-  solr_url = YAML::load(File.open(config_file))[Rails.env]["url"]
+def connect_to_solr
+  solr_url = Blacklight.blacklight_yml[Rails.env]["url"]
   if(solr_url.nil?)
     log_and_puts("Couldn't find solr configuration! Set up a blacklight.yml file!")
     false
@@ -95,7 +94,7 @@ end
 
 
 ####### Procedure #######
-conn = connect_to_solr(solr_config)
+conn = connect_to_solr
 unless(conn)
   log_and_puts("Failed connecting to Solr. Check connection settings.")
   exit 1
