@@ -36,7 +36,7 @@ module Tufts
       end
 
       def solr
-        @solr ||= RSolr.connect(url: Blacklight.blacklight_yml["test"]["url"])
+        @solr ||= RSolr.connect(url: Blacklight.blacklight_yml[Rails.env]["url"])
       end
   end
 end
