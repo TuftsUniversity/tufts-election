@@ -51,4 +51,10 @@ public/assets
 # ignore ide files
 .idea/
 
+# env file
+.env
+
 .byebug_history
+
+# ignore converage files
+coverage/

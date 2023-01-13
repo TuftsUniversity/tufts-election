@@ -27,11 +27,11 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        ruby-version: ['2.5']
+        ruby-version: ['2.6']
         experimental: [false]
-        include:
-          - ruby-version: 2.6
-            experimental: true
+        #include:
+        #  - ruby-version: 2.6
+        #    experimental: true
 
     steps:
     - name: Install OS packages

@@ -1,0 +1,117 @@
+version: '3'
+
+networks:
+  external:
+    name: external-network
+    external: true
+  internal:
+    name: internal-network
+    external: true
+
+volumes:
+  db-dev:
+  solr-dev:
+  bundled:
+
+services:
+  ##
+  # Basic Rails application build image
+  elections-app: &elections-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    user: root
+    volumes:
+      - .:/data # mount current directory into the image
+      - bundled:/usr/local/bundle
+    networks:
+      external:
+      internal:
+    # use tmpfs for tmp and log for performance and to allow
+    # multiple builds in parallel. Both directories are mounted
+    # into the image AFTER the working directory is mounted.
+    tmpfs:
+      - /data/log
+
+  ##
+  # Development environment for application
+  elections-dev: &elections-dev
+    <<: *elections-app
+    environment:
+      - DB_NAME=development
+      - DB_HOST=elections-db-dev
+      - DB_PASSWORD=postgres
+      - DB_PORT='3306'
+      - DB_USERNAME=postgres
+      - RAILS_ENV=development
+      - RAILS_LOG_TO_STDOUT=true
+      - SECRET_KEY_BASE=bobross
+      - SOLR_URL=http://solr-dev:8983/solr/development
+    depends_on:
+      - elections-db-dev
+    expose:
+      - 5000
+  server:
+    <<: *elections-dev
+    command: >
+      bash -c "./build/entrypoint.sh &&
+      bundle exec rails s -p 4050 -b '0.0.0.0'"
+    ports:
+       - "${SERVER_PORTS}"
+    expose:
+       - "${SERVER_EXPOSE}"
+  ##
+  # Test environment for application
+  test: &elections-test
+    <<: *elections-app
+    environment:
+      - IN_DOCKER=true
+      - HUB_URL=http://chrome:4444/wd/hub
+      - DB_NAME=test
+      - DB_HOST=elections-db-test
+      - DB_PASSWORD=postgres
+      - DB_PORT='3306'
+      - DB_USERNAME=postgres
+      - RAILS_ENV=test
+      - SECRET_KEY_BASE=bobross
+      - SOLR_URL=http://solr-test:8983/solr/test
+    depends_on:
+      - elections-db-test
+    volumes:
+      - .:/data # mount current directory into the image
+      - ./tmp:/tmp
+      - bundled:/usr/local/bundle
+    command: >
+      bash -c "./build/entrypoint.sh &&
+      RAILS_ENV=test bundle exec rails s -p 4051 -b '0.0.0.0'"
+    ports:
+      - "${TEST_PORTS}"
+    expose:
+      - "${TEST_EXPOSE}"
+##
+  # Mariadb database server
+  db: &db
+    image: mariadb:10
+    networks:
+      internal:
+  elections-db-dev:
+    <<: *db
+    environment:
+      - MYSQL_DATABASE=development
+      - MYSQL_USER=postgres
+      - MYSQL_PASSWORD=postgres
+      - MYSQL_ROOT_PASSWORD=postgres
+    ports:
+      - 33070:3307
+    volumes:
+      - db-dev:/var/lib/mysql
+  elections-db-test:
+    <<: *db
+    environment:
+      - MYSQL_DATABASE=test
+      - MYSQL_USER=postgres
+      - MYSQL_PASSWORD=postgres
+      - MYSQL_ROOT_PASSWORD=postgres
+    ports:
+      - 33080:3308
+    tmpfs: /var/lib/mysql
