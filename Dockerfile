@@ -33,10 +33,6 @@ WORKDIR /data
 ADD Gemfile /data
 ADD Gemfile.lock /data
 RUN mkdir /data/tmp
-COPY ./fixtures/candidates.xml /data/tmp
-COPY ./fixtures/offices.xml /data/tmp
-COPY ./fixtures/party-authority.xml /data/tmp
-COPY ./fixtures/state-authorities.xml /data/tmp
 RUN mkdir /data/build
 ADD ./build/install_gems.sh /data/build
 RUN ./build/install_gems.sh
