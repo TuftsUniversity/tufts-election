@@ -18,8 +18,6 @@ gem 'mysql2', '~> 0.4.10'
 gem 'okcomputer'
 gem 'rsolr', '~> 1.0'
 
-gem 'therubyracer', :platforms => :ruby
-
 gem 'qa'
 gem 'riiif'
 
