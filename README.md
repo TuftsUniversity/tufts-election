@@ -54,24 +54,33 @@ root@52c99bb737c4:/data# rake tufts:index_fixtures
 root@52c99bb737c4:/data# rspec
 ```
 
-h3. Importing authorities
+## Importing Office, Party, State authorities
 
-There is an initializer script that will load the candidate names authorities every time the server is restarted.  The initializer downloads the names authority into a temp file, and then reads the temp file to index the data in solr.  This takes a long time to run, so it is disabled in development mode.  If the script detects that the data has already been downloaded, it will skip the indexing.
+There is an initializer script that will load the office, state and party authorities every time the server is restarted.  The initializer expects to find the authority files in the `tmp` directory under the rails root when the server starts. If you ran the pre-init script in your development enviroment these files have been put in place by that.
 
-If you want to force it to re-load the candidate names, you can remove the temp file that the data is downloaded to:
-<pre> rm tmp/candidates.xml </pre>
+If you want to force it to re-load the party and office names, you can remove the temp file that the data is downloaded to:
 
-There are similar initializer scripts for the offices, parties, and states authority files.
+```
+    rm tmp/offices.xml
+    rm tmp/party-authority.xml
+    rm tmp/state-authority.xml
+```
 
-*Note:*  If you see office IDs appear in the facet list instead of the office names, that means that the office authorities aren't loaded.  This might happen frequently in development mode if you are editing files, because Rails might re-load the Office class without re-running the initializer scripts, which will clear out the in-memory cache.
+## Importing Candidate authorities
 
-The names will re-appear if you restart your Rails server.  Or, if you need to temporarily disable the class re-loading, you can set config.cache_classes in your config/environments/development.rb.
+Candidate authorties are imported via a shell script, the script is located at:
+    script/import_candidates.
 
-h1. Setting up Tufts Election search:
-# solrize objects
+Run that script if you need the candidate authorities.  The script expects to find the candidates authority file in the `tmp` directory under the rails root. If you ran the pre-init script in your development enviroment this file has been put in place by that script.
+
+
+## Setting up Tufts Election search in production and stage:
+### solrize objects
   <pre>INDEX_LIST=pids.csv RAILS_ENV=production rake solrizer:fedora:solrize_objects</pre>
 
 What should be in the pids.csv?
 
-Tufts' production fedora environment contains other objects besides what should be displayed in the New Nation Votes site.  The pids.csv should contain a list of all the PIDs that you want to index in solr for this front end.  For a development environment, it's probably just a list of all the pids in your fedora.
+Tufts' production fedora environment contains other objects besides what should be displayed in the New Nation Votes site.  The pids.csv should contain a list of all the PIDs that you want to index in solr for this front end.
 
+## Adding objects in dockerized dev environment
+Objects can be added to MIRA using the `VotingRecord` content model the displays_in set to: `elections`
