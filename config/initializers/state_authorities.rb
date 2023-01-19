@@ -7,7 +7,7 @@ filename = Rails.root.join('tmp', 'state-authorities.xml')
 if File.exist?(filename)
   Rails.logger.info "Using existing states authority: #{filename}"
 else
-  Rails.logger.warn "ERROR: State authority file missing."
+  Rails.logger.error "State authority file missing, looking for file: #{filename}"
 end
 
 # Load the states

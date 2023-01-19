@@ -8,7 +8,7 @@ filename = Rails.root.join('tmp', 'party-authority.xml')
 if File.exist?(filename)
   Rails.logger.info "Using existing parties authority: #{filename}"
 else
-  Rails.logger.warn "ERROR: Party authority file missing."
+  Rails.logger.error "Party authority file missing, looking for file: #{filename}"
 end
 
 # Load the parties

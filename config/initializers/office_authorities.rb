@@ -7,7 +7,7 @@ filename = Rails.root.join('tmp', 'offices.xml')
 if File.exist?(filename)
   Rails.logger.info "Using existing offices authority: #{filename}"
 else
-  Rails.logger.warn "ERROR: Office authority file missing."
+  Rails.logger.error "Office authority file missing, looking for file: #{filename}"
 end
 
 # Load the offices
