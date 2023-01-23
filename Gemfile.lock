@@ -164,7 +164,6 @@ GEM
     ldpath (1.0.0)
       linkeddata (~> 2.0)
       parslet
-    libv8 (3.16.14.19)
     link_header (0.0.8)
     linkeddata (2.2.4)
       equivalent-xml (~> 0.6)
@@ -302,7 +301,6 @@ GEM
       rdf (~> 3.0)
     rdf-xsd (3.0.1)
       rdf (~> 3.0)
-    ref (2.0.0)
     retriable (3.1.2)
     riiif (2.0.0)
       deprecation (>= 1.0.0)
@@ -395,9 +393,6 @@ GEM
     temple (0.8.1)
     tether-rails (1.4.0)
       rails (>= 3.1)
-    therubyracer (0.12.3)
-      libv8 (~> 3.16.14.15)
-      ref
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.9)
@@ -437,7 +432,6 @@ DEPENDENCIES
   simplecov-lcov (~> 0.8.0)
   solr_wrapper (>= 0.3)
   sqlite3
-  therubyracer
   uglifier
 
 BUNDLED WITH
