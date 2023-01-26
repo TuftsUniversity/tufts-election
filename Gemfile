@@ -25,6 +25,10 @@ gem 'riiif'
 gem 'active-fedora', '~> 11.5', '>= 11.5.2'
 gem 'active_fedora-noid', '~> 2.2'
 
+group :production, :electionsdev do
+  gem 'mini_racer'
+end
+
 group :development do
   gem 'sqlite3'
   gem 'byebug'
