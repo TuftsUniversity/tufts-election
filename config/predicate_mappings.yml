@@ -46,7 +46,7 @@
     :has_model: hasModel
   http://www.openarchives.org/OAI/2.0/: 
     :oai_item_id: itemID
-  http://tarc.lib.tufts.edu/ontology/rcr#:
+  http://dca.lib.tufts.edu/ontology/rcr#:
     :reports_to: reportsTo
     :has_report: hasReport
     :is_part_of: isPartOf
