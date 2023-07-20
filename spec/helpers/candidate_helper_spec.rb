@@ -7,10 +7,10 @@ describe CandidateHelper do
   end
 
   describe "#list_elections" do
-    subject {
+    subject do
       params[:id] = 'AJ0156'
       helper.list_elections
-    }
+    end
 
     it {
       is_expected.to eq(

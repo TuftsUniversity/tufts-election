@@ -30,9 +30,9 @@ Layout/LineLength:
     - spec/**/*
 
 # Temp to make fixing quicker
-Style/BlockDelimiters:
-  Exclude:
-    - spec/**/*
+# Style/BlockDelimiters:
+#   Exclude:
+#     - spec/**/*
 
 # Temp to make fixing quicker
 Metrics/CyclomaticComplexity:
