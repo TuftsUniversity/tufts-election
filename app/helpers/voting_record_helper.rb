@@ -1,5 +1,5 @@
+# frozen_string_literal: true
 module VotingRecordHelper
-
   ##
   # Return the transformed voting record as HTML.
   #

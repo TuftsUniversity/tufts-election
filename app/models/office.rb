@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class Office
   attr_reader :id, :name, :description
 
@@ -16,5 +17,4 @@ class Office
   def self.find(office_id)
     @offices[office_id.to_s]
   end
-
 end

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
@@ -8,8 +9,7 @@ Bundler.require(*Rails.groups)
 
 module TuftsElection
   class Application < Rails::Application
-
-    config.autoload_paths += %W(#{config.root}/app/modules/datastreams)
+    config.autoload_paths += %W[#{config.root}/app/modules/datastreams]
     config.filter_parameters += [:password]
 
     # Settings in config/environments/* take precedence over those specified here.
@@ -25,6 +25,6 @@ module TuftsElection
     # config.i18n.default_locale = :de
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
-    #config.active_record.raise_in_transactional_callbacks = true
+    # config.active_record.raise_in_transactional_callbacks = true
   end
 end

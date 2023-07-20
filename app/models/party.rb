@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class Party
   attr_reader :id, :name, :description
 
@@ -21,4 +22,3 @@ class Party
     @parties
   end
 end
-

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 TuftsElection::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
@@ -33,7 +34,7 @@ TuftsElection::Application.configure do
 
   # Do not compress assets
   config.assets.compress = true
-  #config.assets.precompile += %w( *.css *.erb *.scss *.js *.coffee *.png *.jpg *.ico *.gif)
+  # config.assets.precompile += %w( *.css *.erb *.scss *.js *.coffee *.png *.jpg *.ico *.gif)
 
   # Adds additional error checking when serving assets at runtime.
   # Checks for improperly declared sprockets dependencies.

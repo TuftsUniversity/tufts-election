@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # Import the offices authority data
 
 require 'net/http'
@@ -18,19 +19,16 @@ input = Nokogiri::XML(File.new(filename))
 namespaces = { 'auth' => 'http://dca.tufts.edu/aas/auth' }
 
 input.root.xpath('//auth:office', namespaces).each do |office_node|
-
-
-    office_node.xpath('//xref:office').each do |xref|
-      xref.namespace = nil
-      xref.name = 'a'
-      xref['href'] = "/catalog?f%5Boffice_id_ssim%5D%5B%5D=#{xref['id']}"
+  office_node.xpath('//xref:office').each do |xref|
+    xref.namespace = nil
+    xref.name = 'a'
+    xref['href'] = "/catalog?f%5Boffice_id_ssim%5D%5B%5D=#{xref['id']}"
   end
 
-    name = office_node.attribute('name').value
+  name = office_node.attribute('name').value
   id = office_node.attribute('id').value
   desc = office_node.xpath('./auth:description', namespaces).children.to_s.strip
 
   office_attrs = { name: name, id: id, description: desc }
   Office.register(office_attrs)
 end
-

@@ -1,5 +1,5 @@
+# frozen_string_literal: true
 module ModelNameHelper
-
   # map_model_name() is called from modified copy of lib/active_fedora/model.rb's classname_from_uri() and to_class_uri();
   # classname_from_uri() is called when the fedora objects are being indexed.  to_class_uri() doesn't
   # actually appear to be called from anywhere.
@@ -8,7 +8,6 @@ module ModelNameHelper
   # map_model_name() is also called from modified copy of app/helpers/hydra/hydra_assets_helper_behavior.rb's
   # document_type() to fix the document type displayed on the search results page.
   # map_model_names() is called from app/controllers/file_assets_controller.rb.
-
 
   def self.map_model_name(model_name)
     result = model_name
@@ -52,20 +51,17 @@ module ModelNameHelper
       end
     end
 
-    return result
+    result
   end
-
 
   # iterate through an array of model names and call map_model_name() for each element
   def self.map_model_names(model_names)
     mapped_model_names = []
 
-    model_names.each { |model_name|
+    model_names.each do |model_name|
       mapped_model_names << map_model_name(model_name)
-    }
+    end
 
-    return mapped_model_names
+    mapped_model_names
   end
-
-
 end

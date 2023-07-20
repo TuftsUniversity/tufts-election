@@ -1,4 +1,68 @@
 inherit_gem:
   bixby: bixby_default.yml
 AllCops:
-  TargetRubyVersion: 2.5
+  TargetRubyVersion: 3
+  Exclude:
+    - db/**/*
+    - script/**/*
+    - spec/fixtures/**/*
+    - vendor/**/*
+
+# Temp to make fixing quicker
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
+    - app/**/*
+
+# Temp to make fixing quicker
+Metrics/MethodLength:
+  Exclude:
+    - app/**/*
+
+Metrics/ModuleLength:
+  Exclude:
+    - app/**/*
+
+# Temp to make fixing quicker
+Layout/LineLength:
+  Exclude:
+    - app/**/*
+    - spec/**/*
+
+# Temp to make fixing quicker
+Style/BlockDelimiters:
+  Exclude:
+    - spec/**/*
+
+# Temp to make fixing quicker
+Metrics/CyclomaticComplexity:
+  Exclude:
+    - app/**/*
+
+# Temp to make fixing quicker
+Metrics/PerceivedComplexity:
+  Exclude:
+    - app/**/*
+
+# Temp to make fixing quicker
+Metrics/AbcSize:
+  Exclude:
+    - app/**/*
+
+# Temp to make fixing quicker
+Rails/Output:
+  Exclude:
+    - config/**/*
+    - app/**/*
+
+# Temp to make fixing quicker
+Rails/OutputSafety:
+  Exclude:
+    - config/**/*
+    - app/**/*
+
+# Temp to make fixing quicker
+Lint/AssignmentInCondition:
+  Exclude:
+    - app/**/*
+

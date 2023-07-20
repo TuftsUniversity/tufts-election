@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # Import the state authority data
 
 require 'net/http'
@@ -24,5 +25,3 @@ Nokogiri::XML(File.new(filename)).root.xpath('//xhtml:authority', namespaces).ea
 
   State.register(name: name, history: history, bibliography: bibliography)
 end
-
-

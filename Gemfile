@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
@@ -7,9 +8,9 @@ end
 
 gem 'rails', '~> 5.0'
 
-gem 'uglifier'
-gem 'sass-rails'
 gem 'jquery-rails'
+gem 'sass-rails'
+gem 'uglifier'
 
 gem 'blacklight', '~> 6.14'
 gem 'blacklight_range_limit'
@@ -26,13 +27,14 @@ gem 'active-fedora', '~> 11.5', '>= 11.5.2'
 gem 'active_fedora-noid', '~> 2.2'
 
 group :development do
-  gem 'sqlite3'
   gem 'byebug'
+  gem 'sqlite3'
 end
 
 group :development, :test do
-  gem 'rspec-rails'
+  gem 'bixby'
   gem 'rspec-its'
+  gem 'rspec-rails'
   gem 'simplecov'
   gem 'simplecov-lcov', '~> 0.8.0'
 end
@@ -40,4 +42,3 @@ end
 group :test do
   gem 'solr_wrapper', '>= 0.3'
 end
-

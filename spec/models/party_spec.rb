@@ -1,7 +1,7 @@
+# frozen_string_literal: true
 require 'rails_helper'
 
 describe Party do
-
   describe 'creating a Party' do
     let(:party_attrs) {
       { id: 'A123', name: 'Foo party', description: 'a big party description' }
@@ -58,5 +58,4 @@ describe Party do
       expect(party.description).to eq('A duplicate of Third Party')
     end
   end
-
 end
