@@ -22,10 +22,14 @@ gem 'rsolr', '~> 1.0'
 gem 'qa'
 gem 'riiif'
 
+
+gem 'nokogiri'
 # Matching MIRA's versions
 # Neither of theses are in mira anymore....
-# gem 'active-fedora', '~> 11.5', '>= 11.5.2'
-# gem 'active_fedora-noid', '~> 2.2'
+# Dropping these cause ruby 2.6 tests to fail
+gem 'active-fedora', '~> 11.5', '>= 11.5.2'
+gem 'active_fedora-noid', '~> 2.2'
+
 
 group :development do
   gem 'byebug'
