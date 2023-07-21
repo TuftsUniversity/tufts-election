@@ -23,8 +23,9 @@ gem 'qa'
 gem 'riiif'
 
 # Matching MIRA's versions
-gem 'active-fedora', '~> 11.5', '>= 11.5.2'
-gem 'active_fedora-noid', '~> 2.2'
+# Neither of theses are in mira anymore....
+# gem 'active-fedora', '~> 11.5', '>= 11.5.2'
+# gem 'active_fedora-noid', '~> 2.2'
 
 group :development do
   gem 'byebug'
