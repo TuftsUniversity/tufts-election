@@ -25,6 +25,8 @@ gem 'rsolr', '>= 1.0'
 gem 'qa'
 gem 'riiif'
 
+gem 'psych', '~> 4'
+
 
 # Matching MIRA's versions
 # Neither of theses are in mira anymore....

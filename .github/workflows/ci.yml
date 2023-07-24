@@ -74,10 +74,10 @@ jobs:
         cp authority_files/offices.xml tmp/offices.xml
         cp authority_files/party-authority.xml tmp/party-authority.xml
         cp authority_files/state-authorities.xml tmp/state-authorities.xml
-    # - name: Create database
-    #   run: |
-    #     RAILS_ENV=test bundle exec rake db:create
-    #     RAILS_ENV=test bundle exec rake db:migrate --trace
+    - name: Create database
+      run: |
+        RAILS_ENV=test bundle exec rake db:create
+        RAILS_ENV=test bundle exec rake db:migrate --trace
     # - name: Rubbocop
     #   run: |
     #     bundle exec rubocop
