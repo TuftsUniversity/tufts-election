@@ -10,7 +10,7 @@ module Tufts
     def load_all_fixtures
       files = Dir.glob(solr_fixtures_path)
       files.each do |f|
-        doc = YAML.load_file(f)
+        doc = YAML.load_file(f, aliases: true)
         load_fixture(doc, false)
       end
       solr.commit
