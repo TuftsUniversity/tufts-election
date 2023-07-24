@@ -51,3 +51,45 @@ jobs:
       run: |
         gem update --system
         gem install bundler:2.1.4
+
+    - name: Set up JDK 1.8
+      uses: actions/setup-java@v1
+      with:
+        java-version: 1.8
+
+    - name: Set up MySQL
+      run: |
+        sudo /etc/init.d/mysql start
+        mysql -e 'CREATE DATABASE ${{ env.DB_NAME }};' -u${{ env.DB_USERNAME }} -p${{ env.DB_PASSWORD }}
+    - name: Configure test environment
+      run: |
+        cp config/database.yml.sample config/database.yml
+        cp config/blacklight.yml.sample config/blacklight.yml
+        cp config/solr.yml.sample config/solr.yml
+        cp config/secrets.yml.sample config/secrets.yml
+    - name: Create folder
+      run: |
+        mkdir -p tmp
+        cp authority_files/candidates.xml tmp/candidates.xml
+        cp authority_files/offices.xml tmp/offices.xml
+        cp authority_files/party-authority.xml tmp/party-authority.xml
+        cp authority_files/state-authorities.xml tmp/state-authorities.xml
+    - name: Create database
+      run: |
+        RAILS_ENV=test bundle exec rake db:create
+        RAILS_ENV=test bundle exec rake db:migrate --trace
+    - name: Rubbocop
+      run: |
+        bundle exec rubocop
+    #- name: Compile assets
+    #  run: |
+    #     bundle exec rails assets:precompile &> /dev/null
+    - name: Run tests
+      run: bundle exec rake tufts:ci
+      env:
+        RAILS_ENV: test
+        TMPDIR: /tmp
+    - name: Coveralls
+      uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
