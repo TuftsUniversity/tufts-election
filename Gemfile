@@ -1,27 +1,29 @@
 # frozen_string_literal: true
 source 'https://rubygems.org'
 
+ruby '2.7'
+
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
 
-# gem 'rails', '~> 5.0'
+gem 'rails', '~> 5.2'
 
-# gem 'jquery-rails'
-# gem 'sass-rails'
-# gem 'uglifier'
+gem 'jquery-rails'
+gem 'sass-rails'
+gem 'uglifier'
 
-# gem 'blacklight', '~> 6.14'
-# temp removal 
-#gem 'blacklight_range_limit'
+gem 'blacklight', '6.24.0'
+gem 'blacklight_range_limit'
 
-# gem 'mysql2', '~> 0.4.10'
-# gem 'okcomputer'
-# gem 'rsolr', '~> 1.0'
+# removed pinned verision of '~> 0.4.10'
+gem 'mysql2'
+gem 'okcomputer'
+gem 'rsolr', '>= 1.0'
 
-# gem 'qa'
-# gem 'riiif'
+gem 'qa'
+gem 'riiif'
 
 
 # Matching MIRA's versions
@@ -29,9 +31,9 @@ end
 # Dropping these cause ruby 2.6 tests to fail
 # gem 'active-fedora', '~> 11.5', '>= 11.5.2'
 # gem 'active_fedora-noid', '~> 2.2'
-
-# gem 'nokogiri', '1.10.9'
-
+# removed pinned verision.
+gem 'active-fedora'
+gem 'active_fedora-noid'
 
 group :development do
   gem 'byebug'
