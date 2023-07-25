@@ -2,6 +2,7 @@ inherit_gem:
   bixby: bixby_default.yml
 AllCops:
   TargetRubyVersion: 3
+  NewCops: true
   Exclude:
     - db/**/*
     - script/**/*
@@ -28,11 +29,6 @@ Layout/LineLength:
   Exclude:
     - app/**/*
     - spec/**/*
-
-# Temp to make fixing quicker
-# Style/BlockDelimiters:
-#   Exclude:
-#     - spec/**/*
 
 # Temp to make fixing quicker
 Metrics/CyclomaticComplexity:
