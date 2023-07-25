@@ -272,7 +272,7 @@ GEM
       ast (~> 2.4.1)
       racc
     parslet (2.0.0)
-    psych (5.1.0)
+    psych (4.0.6)
       stringio
     public_suffix (5.0.3)
     qa (5.10.0)
@@ -560,6 +560,7 @@ DEPENDENCIES
   jquery-rails
   mysql2
   okcomputer
+  psych (~> 4)
   qa
   rails (~> 5.2)
   riiif
@@ -574,7 +575,7 @@ DEPENDENCIES
   uglifier
 
 RUBY VERSION
-   ruby 2.7.0p0
+   ruby 2.7.5p203
 
 BUNDLED WITH
-   2.1.2
+   2.1.4
