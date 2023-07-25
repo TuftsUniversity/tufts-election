@@ -46,7 +46,7 @@ module ModelNameHelper
       end
 
       if mapped_model_name != ""
-        Rails.logger.debug("map_model_name() has mapped #{model_name} to #{mapped_model_name}")
+        Rails.logger.debug { "map_model_name() has mapped #{model_name} to #{mapped_model_name}" }
         result = mapped_model_name
       end
     end
