@@ -272,8 +272,7 @@ GEM
       ast (~> 2.4.1)
       racc
     parslet (2.0.0)
-    psych (4.0.6)
-      stringio
+    psych (3.3.4)
     public_suffix (5.0.3)
     qa (5.10.0)
       activerecord-import
@@ -514,7 +513,6 @@ GEM
       sprockets (>= 3.0.0)
     sqlite3 (1.6.3)
       mini_portile2 (~> 2.8.0)
-    stringio (3.0.7)
     sxp (1.2.4)
       matrix (~> 0.4)
       rdf (~> 3.2)
@@ -560,7 +558,7 @@ DEPENDENCIES
   jquery-rails
   mysql2
   okcomputer
-  psych (~> 4)
+  psych (< 4)
   qa
   rails (~> 5.2)
   riiif
