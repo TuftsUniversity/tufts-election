@@ -83,7 +83,7 @@ jobs:
         bundle exec rubocop
     - name: Compile assets
       run: |
-        bundle exec rails assets:precompile &> /dev/null
+        bundle exec rails assets:precompile --trace
     - name: Run tests
       run: bundle exec rake tufts:ci
       env:
