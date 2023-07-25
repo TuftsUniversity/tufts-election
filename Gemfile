@@ -25,6 +25,7 @@ gem 'rsolr', '>= 1.0'
 gem 'qa'
 gem 'riiif'
 
+# Note this will have to be updated. :/
 gem 'psych', '< 4'
 
 
