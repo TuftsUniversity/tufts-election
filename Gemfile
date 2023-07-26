@@ -26,7 +26,7 @@ gem 'qa'
 gem 'riiif'
 
 # Note this will have to be updated. :/
-#gem 'psych', '< 4'
+# gem 'psych', '< 4'
 
 # Matching MIRA's versions
 # Neither of theses are in mira anymore....
