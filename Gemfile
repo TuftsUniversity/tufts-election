@@ -34,7 +34,7 @@ gem 'riiif'
 # gem 'active-fedora', '~> 11.5', '>= 11.5.2'
 # gem 'active_fedora-noid', '~> 2.2'
 # removed pinned verision.
-gem 'active-fedora'
+gem 'active-fedora', '12.2.4'
 # gem 'active_fedora-noid'
 
 group :development do

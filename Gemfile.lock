@@ -24,17 +24,17 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
-    active-fedora (11.5.2)
+    active-fedora (12.2.4)
       active-triples (>= 0.11.0, < 2.0.0)
-      activemodel (>= 4.2, < 6)
-      activesupport (>= 4.2.4, < 6)
+      activemodel (>= 4.2.10, < 5.3)
+      activesupport (>= 4.2.4, < 5.3)
       deprecation
-      faraday (~> 0.12.1)
+      faraday (~> 0.12)
       faraday-encoding (= 0.0.4)
-      ldp (~> 0.7.0)
+      ldp (>= 0.7.0, < 2)
+      rdf-vocab (< 3.1.5)
       rsolr (>= 1.1.2, < 3)
       ruby-progressbar (~> 1.0)
-      solrizer (>= 3.4, < 5)
     active-triples (1.2.0)
       activemodel (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -109,7 +109,7 @@ GEM
       unicode-types (~> 1.8)
     erubi (1.12.0)
     execjs (2.8.1)
-    faraday (0.12.2)
+    faraday (0.17.6)
       multipart-post (>= 1.2, < 3)
     faraday-encoding (0.0.4)
       faraday
@@ -161,7 +161,7 @@ GEM
       activerecord
       kaminari-core (= 1.2.2)
     kaminari-core (1.2.2)
-    ldp (0.7.2)
+    ldp (1.0.3)
       deprecation
       faraday
       http_logger
@@ -266,8 +266,8 @@ GEM
     rdf-turtle (3.2.1)
       ebnf (~> 2.3)
       rdf (~> 3.2)
-    rdf-vocab (3.2.7)
-      rdf (~> 3.2, >= 3.2.4)
+    rdf-vocab (3.1.4)
+      rdf (~> 3.1)
     regexp_parser (2.8.1)
     retriable (3.1.2)
     rexml (3.2.5)
@@ -343,10 +343,6 @@ GEM
       minitar
       retriable
       ruby-progressbar
-    solrizer (4.1.0)
-      activesupport
-      nokogiri
-      xml-simple
     sprockets (4.2.0)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -381,14 +377,12 @@ GEM
     websocket-driver (0.7.6)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
-    xml-simple (1.1.9)
-      rexml
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  active-fedora
+  active-fedora (= 12.2.4)
   bixby
   blacklight (= 6.24.0)
   blacklight_range_limit
