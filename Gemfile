@@ -31,11 +31,11 @@ gem 'psych', '< 4'
 # Matching MIRA's versions
 # Neither of theses are in mira anymore....
 # Dropping these cause ruby 2.6 tests to fail
-# gem 'active-fedora', '~> 11.5', '>= 11.5.2'
-# gem 'active_fedora-noid', '~> 2.2'
+gem 'active-fedora', '~> 11.5', '>= 11.5.2'
+gem 'active_fedora-noid', '~> 2.2'
 # removed pinned verision.
-gem 'active-fedora'
-gem 'active_fedora-noid'
+# gem 'active-fedora'
+# gem 'active_fedora-noid'
 
 group :development do
   gem 'byebug'
