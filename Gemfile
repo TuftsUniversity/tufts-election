@@ -35,7 +35,7 @@ gem 'riiif'
 # gem 'active_fedora-noid', '~> 2.2'
 # removed pinned verision.
 gem 'active-fedora', '12.2.4'
-# gem 'active_fedora-noid'
+gem 'active_fedora-noid'
 
 group :development do
   gem 'byebug'
