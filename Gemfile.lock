@@ -40,10 +40,6 @@ GEM
       activesupport (>= 3.0.0)
       rdf (>= 2.0.2, < 4.0)
       rdf-vocab (>= 2.0, < 4.0)
-    active_fedora-noid (2.2.0)
-      active-fedora (>= 9.7, < 12)
-      noid (~> 0.9)
-      rails (>= 5.0.0, < 6)
     activejob (5.2.8.1)
       activesupport (= 5.2.8.1)
       globalid (>= 0.3.6)
@@ -212,7 +208,6 @@ GEM
     net-smtp (0.3.3)
       net-protocol
     nio4r (2.5.9)
-    noid (0.9.0)
     nokogiri (1.15.3)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
@@ -222,7 +217,6 @@ GEM
       ast (~> 2.4.1)
       racc
     parslet (2.0.0)
-    psych (3.3.4)
     public_suffix (5.0.3)
     qa (5.10.0)
       activerecord-import
@@ -394,8 +388,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  active-fedora (~> 11.5, >= 11.5.2)
-  active_fedora-noid (~> 2.2)
+  active-fedora
   bixby
   blacklight (= 6.24.0)
   blacklight_range_limit
@@ -403,7 +396,6 @@ DEPENDENCIES
   jquery-rails
   mysql2
   okcomputer
-  psych (< 4)
   qa
   rails (~> 5.2)
   riiif
