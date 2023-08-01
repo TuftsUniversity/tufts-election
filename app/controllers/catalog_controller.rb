@@ -4,6 +4,7 @@ class CatalogController < ApplicationController
 
   include Blacklight::Catalog
 
+  # rubocop:disable Security/Eval
   def show
     if params[:id].start_with?('tufts') && Rails.env.production?
       h = Net::HTTP.new('tdrsearch-prod-01.uit.tufts.edu', 8983)
@@ -14,6 +15,7 @@ class CatalogController < ApplicationController
     super
   end
 
+  # rubocop:disable Rails/I18nLocaleTexts
   configure_blacklight do |config|
     ## Class for sending and receiving requests from a search index
     # config.repository_class = Blacklight::Solr::Repository
@@ -234,15 +236,19 @@ class CatalogController < ApplicationController
     config.autocomplete_enabled = true
     config.autocomplete_path = 'suggest'
 
+    # rubocop:disable Metrics/MethodLength
     def enforce_show_permissions(_opts = {})
       id = params[:id]
       # is this equivilant?
-      # unless id.nil?
-      if id.nil? return
+      return false if id.nil?
+      # void value expression issue with line below
+      # if id.nil? return
       if id[/^draft/]
-      flash[:alert] = "Draft objects are not available."
-      redirect_to(action: 'index', q: nil, f: nil) and return false
+        flash[:alert] = "Draft objects are not available."
+        redirect_to(action: 'index', q: nil, f: nil) and return false
       end
+      # is this right return value?
+      true
     end
   end
 end
