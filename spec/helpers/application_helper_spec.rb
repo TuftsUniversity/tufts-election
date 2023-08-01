@@ -16,7 +16,7 @@ describe ApplicationHelper do
   end
 
   describe '#party_name' do
-    let(:party) { { id: 'A123', name: 'Foo party'} }
+    let(:party) { { id: 'A123', name: 'Foo party' } }
     before { Party.register(party) }
 
     it 'returns the name of the office' do
@@ -42,7 +42,7 @@ describe ApplicationHelper do
 
   describe '#us_states' do
     it 'has all 50 states' do
-      expect(helper.us_states.length()).to be >= 50
+      expect(helper.us_states.length).to be >= 50
     end
   end
 end
