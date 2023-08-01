@@ -33,6 +33,7 @@ module ModelNameHelper
         mapped_model_name = "info:fedora/afmodel:TuftsPdf"
       elsif model_name == "info:fedora/cm:Object.Generic"
         mapped_model_name = "info:fedora/afmodel:TuftsGenericObject"
+      # Note we should probably remove this
       elsif model_name == "info:fedora/cm:Text.EAD"
         mapped_model_name = "info:fedora/afmodel:TuftsEAD"
       elsif model_name == "info:fedora/cm:Text.TEI-Fragmented"
