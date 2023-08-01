@@ -63,9 +63,7 @@ describe Party do
       puts parties
       puts parties.first
       puts "test"
-      expect(parties.keys).to include(*['A123', 'B456', 'C987'])
-      #expect(parties.map { |party| party["id"] }).to match_array(['A123', 'B456', 'C987'])
-
+      expect(parties.keys).to include('A123', 'B456', 'C987')
     end
   end
 end
