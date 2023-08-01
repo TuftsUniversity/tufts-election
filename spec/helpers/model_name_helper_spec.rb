@@ -6,7 +6,6 @@ describe ModelNameHelper do
     it 'maps non expected name to it self' do
       expect(described_class.map_model_name("random class name")).to eq "random class name"
     end
-
     it 'maps Audio' do
       expect(described_class.map_model_name("info:fedora/cm:Audio")).to eq "info:fedora/afmodel:TuftsAudio"
     end
@@ -43,6 +42,14 @@ describe ModelNameHelper do
     end
     it 'maps Voting Record' do
       expect(described_class.map_model_name("info:fedora/cm:VotingRecord")).to eq "info:fedora/afmodel:TuftsVotingRecord"
+    end
+  end
+
+  describe '#map_model_names' do
+    it 'maps model names' do
+      model_names = ["info:fedora/cm:Audio", "info:fedora/cm:Audio.OralHistory", "info:fedora/cm:Image.3DS", "info:fedora/cm:Image.4DS", "info:fedora/cm:Text.RCR", "info:fedora/cm:VotingRecord"]
+      mapped_names = ["info:fedora/afmodel:TuftsAudio", "info:fedora/afmodel:TuftsAudioText", "info:fedora/afmodel:TuftsImage", "info:fedora/afmodel:TuftsImage", "info:fedora/afmodel:TuftsRCR", "info:fedora/afmodel:TuftsVotingRecord"]
+      expect(described_class.map_model_names(model_names)).to eq mapped_names
     end
   end
 end
