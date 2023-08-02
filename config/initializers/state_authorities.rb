@@ -13,7 +13,6 @@ end
 
 # Load the states
 Rails.logger.info "Importing states from #{filename}"
-puts "Importing states from #{filename}"
 
 namespaces = { 'xhtml' => 'http://www.w3.org/1999/xhtml' }
 

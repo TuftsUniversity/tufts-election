@@ -9,56 +9,11 @@ AllCops:
     - spec/fixtures/**/*
     - vendor/**/*
 
-# Temp to make fixing quicker
-Metrics/BlockLength:
-  Exclude:
-    - spec/**/*
-    - app/**/*
-
-# Temp to make fixing quicker
 Metrics/MethodLength:
   Exclude:
-    - app/**/*
+    - app/helpers/application_helper.rb
+    - app/helpers/model_name_helper.rb
 
 Metrics/ModuleLength:
   Exclude:
-    - app/**/*
-
-# Temp to make fixing quicker
-Layout/LineLength:
-  Exclude:
-    - app/**/*
-    - spec/**/*
-
-# Temp to make fixing quicker
-Metrics/CyclomaticComplexity:
-  Exclude:
-    - app/**/*
-
-# Temp to make fixing quicker
-Metrics/PerceivedComplexity:
-  Exclude:
-    - app/**/*
-
-# Temp to make fixing quicker
-Metrics/AbcSize:
-  Exclude:
-    - app/**/*
-
-# Temp to make fixing quicker
-Rails/Output:
-  Exclude:
-    - config/**/*
-    - app/**/*
-
-# Temp to make fixing quicker
-Rails/OutputSafety:
-  Exclude:
-    - config/**/*
-    - app/**/*
-
-# Temp to make fixing quicker
-Lint/AssignmentInCondition:
-  Exclude:
-    - app/**/*
-
+    - app/helpers/application_helper.rb

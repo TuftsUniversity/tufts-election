@@ -13,7 +13,6 @@ end
 
 # Load the parties
 Rails.logger.info "Importing parties from #{filename}"
-puts "Importing parties from #{filename}"
 
 namespaces = { 'auth' => 'http://dca.tufts.edu/aas/auth' }
 

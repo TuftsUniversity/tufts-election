@@ -10,47 +10,23 @@ module ModelNameHelper
   # map_model_names() is called from app/controllers/file_assets_controller.rb.
 
   def self.map_model_name(model_name)
-    result = model_name
+    map = { "info:fedora/cm:Audio" => "info:fedora/afmodel:TuftsAudio",
+            "info:fedora/cm:Audio.OralHistory" => "info:fedora/afmodel:TuftsAudioText",
+            "info:fedora/cm:Image.3DS" => "info:fedora/afmodel:TuftsImage",
+            "info:fedora/cm:Image.4DS" => "info:fedora/afmodel:TuftsImage",
+            "info:fedora/cm:Image.HTML" => "info:fedora/afmodel:TuftsImageText",
+            "info:fedora/cm:WP" => "info:fedora/afmodel:TuftsWP",
+            "info:fedora/cm:Text.FacPub" => "info:fedora/afmodel:TuftsFacultyPublication",
+            "info:fedora/cm:Text.PDF" => "info:fedora/afmodel:TuftsPdf",
+            "info:fedora/cm:Object.Generic" => "info:fedora/afmodel:TuftsGenericObject",
+            "info:fedora/cm:Text.EAD" => "info:fedora/afmodel:TuftsEAD",
+            "info:fedora/cm:Text.TEI-Fragmented" => "info:fedora/afmodel:TuftsTeiFragmented",
+            "info:fedora/cm:Text.TEI" => "info:fedora/afmodel:TuftsTEI",
+            "info:fedora/cm:Text.RCR" => "info:fedora/afmodel:TuftsRCR",
+            "info:fedora/cm:VotingRecord" => "info:fedora/afmodel:TuftsVotingRecord" }
+    result = map[model_name].nil? ? model_name : map[model_name]
 
-    if model_name[0, 15] == "info:fedora/cm:"
-      mapped_model_name = ""
-
-      if model_name == "info:fedora/cm:Audio"
-        mapped_model_name = "info:fedora/afmodel:TuftsAudio"
-      elsif model_name == "info:fedora/cm:Audio.OralHistory"
-        mapped_model_name = "info:fedora/afmodel:TuftsAudioText"
-      elsif model_name == "info:fedora/cm:Image.3DS"
-        mapped_model_name = "info:fedora/afmodel:TuftsImage"
-      elsif model_name == "info:fedora/cm:Image.4DS"
-        mapped_model_name = "info:fedora/afmodel:TuftsImage"
-      elsif model_name == "info:fedora/cm:Image.HTML"
-        mapped_model_name = "info:fedora/afmodel:TuftsImageText"
-      elsif model_name == "info:fedora/cm:WP"
-        mapped_model_name = "info:fedora/afmodel:TuftsWP"
-      elsif model_name == "info:fedora/cm:Text.FacPub"
-        mapped_model_name = "info:fedora/afmodel:TuftsFacultyPublication"
-      elsif model_name == "info:fedora/cm:Text.PDF"
-        mapped_model_name = "info:fedora/afmodel:TuftsPdf"
-      elsif model_name == "info:fedora/cm:Object.Generic"
-        mapped_model_name = "info:fedora/afmodel:TuftsGenericObject"
-      # Note we should probably remove this
-      elsif model_name == "info:fedora/cm:Text.EAD"
-        mapped_model_name = "info:fedora/afmodel:TuftsEAD"
-      elsif model_name == "info:fedora/cm:Text.TEI-Fragmented"
-        mapped_model_name = "info:fedora/afmodel:TuftsTeiFragmented"
-      elsif model_name == "info:fedora/cm:Text.TEI"
-        mapped_model_name = "info:fedora/afmodel:TuftsTEI"
-      elsif model_name == "info:fedora/cm:Text.RCR"
-        mapped_model_name = "info:fedora/afmodel:TuftsRCR"
-      elsif model_name == "info:fedora/cm:VotingRecord"
-        mapped_model_name = "info:fedora/afmodel:TuftsVotingRecord"
-      end
-
-      if mapped_model_name != ""
-        Rails.logger.debug { "map_model_name() has mapped #{model_name} to #{mapped_model_name}" }
-        result = mapped_model_name
-      end
-    end
+    Rails.logger.debug { "map_model_name() has mapped #{model_name} to #{result}" } if result != model_name
 
     result
   end

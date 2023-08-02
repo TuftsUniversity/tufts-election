@@ -7,7 +7,8 @@ module ApplicationHelper
       content_tag(:span, class: "facet-label") do
         content_tag(:span, facet_display_value(facet_solr_field, item), class: "selected") + render_facet_count(item.hits) +
           # remove link
-          link_to(content_tag(:span, '', class: "glyphicon glyphicon-remove") + content_tag(:span, '[remove]', class: 'sr-only'), search_action_path(remove_facet_params(facet_solr_field, item, params)), class: "remove")
+          link_to(content_tag(:span, '', class: "glyphicon glyphicon-remove") + content_tag(:span, '[remove]', class: 'sr-only'),
+search_action_path(remove_facet_params(facet_solr_field, item, params)), class: "remove")
       end
     end
   end
@@ -44,7 +45,7 @@ module ApplicationHelper
 
   def selected_party_facets
     Array(params[:f]['party_affiliation_id_ssim']).each do |facet_value|
-      if party = Party.find(facet_value)
+      if (party = Party.find(facet_value))
         yield party if block_given?
       end
     end
@@ -52,7 +53,7 @@ module ApplicationHelper
 
   def selected_office_facets
     Array(params[:f]['office_id_ssim']).each do |facet_value|
-      if office = Office.find(facet_value)
+      if (office = Office.find(facet_value))
         yield office if block_given?
       end
     end
@@ -60,14 +61,14 @@ module ApplicationHelper
 
   def selected_state_facets
     Array(params[:f]['state_name_sim']).each do |facet_value|
-      if state = State.find(facet_value)
+      if (state = State.find(facet_value))
         yield state if block_given?
       end
     end
   end
 
   def state_thumbnail(name)
-    if abbr = us_states[name]
+    if (abbr = us_states[name])
       image_tag "state_images/#{abbr.downcase}.gif", class: "stateThumbnail", alt: "Map of #{name}", title: "Map of #{name}"
     else
       ''

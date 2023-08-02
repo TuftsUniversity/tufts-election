@@ -7,6 +7,7 @@ module VotingRecordHelper
   #   The xml of this VotingRecord
   # @return {str}
   #   The translated html output.
+  # rubocop:disable Rails/OutputSafety
   def voting_record_xml_to_html(vr_xml)
     src = Nokogiri::XML(vr_xml)
     xslt = Nokogiri::XSLT(File.read("#{::Rails.root}/xslt/viewVotingRecord.xsl"))

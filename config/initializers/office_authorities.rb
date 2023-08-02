@@ -13,7 +13,6 @@ end
 
 # Load the offices
 Rails.logger.info "Importing offices from #{filename}"
-puts "Importing offices from #{filename}"
 
 input = Nokogiri::XML(File.new(filename))
 namespaces = { 'auth' => 'http://dca.tufts.edu/aas/auth' }
