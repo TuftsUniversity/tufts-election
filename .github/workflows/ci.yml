@@ -45,7 +45,7 @@ jobs:
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: ${{ matrix.ruby-version }}
-        bundler: "2.1.4" # 2.1.4 for ruby 2.7 | and 1.17.3 for ruby 2.6
+        bundler: "2.1.4"
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: Update rubygems
       run: |

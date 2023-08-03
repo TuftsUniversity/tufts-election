@@ -239,15 +239,11 @@ class CatalogController < ApplicationController
     # rubocop:disable Metrics/MethodLength
     def enforce_show_permissions(_opts = {})
       id = params[:id]
-      # is this equivilant?
       return false if id.nil?
-      # void value expression issue with line below
-      # if id.nil? return
       if id[/^draft/]
         flash[:alert] = "Draft objects are not available."
         redirect_to(action: 'index', q: nil, f: nil) and return false
       end
-      # is this right return value?
       true
     end
   end
