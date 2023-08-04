@@ -63,7 +63,7 @@ GEM
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-    addressable (2.8.4)
+    addressable (2.8.5)
       public_suffix (>= 2.0.2, < 6.0)
     arel (9.0.0)
     ast (2.4.2)
@@ -221,6 +221,9 @@ GEM
       ast (~> 2.4.1)
       racc
     parslet (2.0.0)
+    passenger (6.0.18)
+      rack
+      rake (>= 0.8.1)
     public_suffix (5.0.3)
     qa (5.10.0)
       activerecord-import
@@ -232,7 +235,7 @@ GEM
       rails (>= 5.0, < 7.1)
       rdf
     racc (1.7.1)
-    rack (2.2.7)
+    rack (2.2.8)
     rack-test (2.1.0)
       rack (>= 1.3)
     rails (5.2.8)
@@ -248,7 +251,7 @@ GEM
       bundler (>= 1.3.0)
       railties (= 5.2.8)
       sprockets-rails (>= 2.0.0)
-    rails-dom-testing (2.1.1)
+    rails-dom-testing (2.2.0)
       activesupport (>= 5.0.0)
       minitest
       nokogiri (>= 1.6)
@@ -274,7 +277,7 @@ GEM
       rdf (~> 3.1)
     regexp_parser (2.8.1)
     retriable (3.1.2)
-    rexml (3.2.5)
+    rexml (3.2.6)
     riiif (2.4.0)
       deprecation (>= 1.0.0)
       iiif-image-api (>= 0.1.0)
@@ -395,6 +398,7 @@ DEPENDENCIES
   jquery-rails
   mysql2
   okcomputer
+  passenger
   qa
   rails (= 5.2.8)
   riiif

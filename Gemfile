@@ -29,6 +29,10 @@ gem 'riiif'
 gem 'active-fedora', '12.2.4'
 gem 'active_fedora-noid'
 
+group :production do
+  gem 'passenger'
+end
+
 group :development do
   gem 'byebug'
   gem 'sqlite3'
