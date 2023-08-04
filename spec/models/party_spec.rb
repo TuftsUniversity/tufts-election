@@ -60,9 +60,6 @@ describe Party do
 
     it 'should have all registered accessable' do
       parties = Party.all
-      puts parties
-      puts parties.first
-      puts "test"
       expect(parties.keys).to include('A123', 'B456', 'C987')
     end
   end
