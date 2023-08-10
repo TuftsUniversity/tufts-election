@@ -239,12 +239,10 @@ class CatalogController < ApplicationController
     # rubocop:disable Metrics/MethodLength
     def enforce_show_permissions(_opts = {})
       id = params[:id]
-      return false if id.nil?
-      if id[/^draft/]
-        flash[:alert] = "Draft objects are not available."
-        redirect_to(action: 'index', q: nil, f: nil) and return false
-      end
-      true
+      return if id.nil?
+      return unless id[/^draft/]
+      flash[:alert] = "Draft objects are not available."
+      redirect_to(action: 'index', q: nil, f: nil) and return false
     end
   end
 end
