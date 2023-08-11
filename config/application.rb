@@ -9,7 +9,6 @@ Bundler.require(*Rails.groups)
 
 module TuftsElection
   class Application < Rails::Application
-    config.autoload_paths += %W[#{config.root}/app/modules/datastreams]
     config.filter_parameters += [:password]
 
     # Settings in config/environments/* take precedence over those specified here.
