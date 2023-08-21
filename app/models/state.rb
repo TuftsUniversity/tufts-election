@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class State
   attr_reader :name, :history, :bibliography
 
@@ -17,5 +18,3 @@ class State
     @states[name.to_s]
   end
 end
-
-

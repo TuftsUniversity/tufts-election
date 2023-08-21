@@ -417,7 +417,7 @@ a.link4:visited {
     display: inline;
     float: right;
     margin-right: 0;
-    #margin-left: -0.5em;
+    margin-left: -0.5em;
 }
 
 #bd {
@@ -438,7 +438,7 @@ a.link4:visited {
     display: inline;
     float: right;
     margin-right: 0;
-    #margin-left: -0.5em;
+    margin-left: -0.5em;
 }
 
 #bd #sidebar {

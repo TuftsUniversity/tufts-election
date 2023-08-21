@@ -17,9 +17,9 @@ class SolrDocument
   # Recommendation: Use field names from Dublin Core
   use_extension(Blacklight::Document::DublinCore)
   field_semantics.merge!(
-                         :title => "title_tesi",
-                         :author => "author_tesim",
-                         :language => "language_ssim",
-                         :format => "format_ssim"
-                         )
+                         title: "title_tesi",
+                         author: "author_tesim",
+                         language: "language_ssim",
+                         format: "format_ssim"
+                       )
 end

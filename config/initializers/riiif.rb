@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 Riiif::Image.file_resolver = Riiif::HTTPFileResolver.new
 Riiif::Image.info_service = lambda do |id, _file|
   # id will look like a path to a pcdm:file
@@ -20,9 +21,9 @@ end
 
 Riiif::Image.file_resolver.basic_auth_credentials = [ActiveFedora::Fedora.instance.user, ActiveFedora::Fedora.instance.password]
 
-#Riiif::Image.authorization_service = IIIFAuthorizationService
+# Riiif::Image.authorization_service = IIIFAuthorizationService
 #
-#Riiif.not_found_image = Rails.root.join('app', 'assets', 'images', 'us_404.svg')
-#Riiif.unauthorized_image = Rails.root.join('app', 'assets', 'images', 'us_404.svg')
+# Riiif.not_found_image = Rails.root.join('app', 'assets', 'images', 'us_404.svg')
+# Riiif.unauthorized_image = Rails.root.join('app', 'assets', 'images', 'us_404.svg')
 
 Riiif::Engine.config.cache_duration_in_days = 365

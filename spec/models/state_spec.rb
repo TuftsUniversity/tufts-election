@@ -1,10 +1,10 @@
+# frozen_string_literal: true
 require 'rails_helper'
 describe State do
-
   describe 'creating a State' do
-    let(:state_attrs) {
+    let(:state_attrs) do
       { name: 'Foo state', history: 'state history', bibliography: 'state bibliography' }
-    }
+    end
 
     let(:state) { State.new(state_attrs) }
 
@@ -26,14 +26,14 @@ describe State do
   end
 
   describe 'registering states' do
-    let(:states) {
+    let(:states) do
       [
         { name: 'Foo state', history: 'a big state history', bibliography: 'foo state bibliography' },
-        { name: 'Some other state', history: 'another state', bibliography: 'other state bibliography'    },
+        { name: 'Some other state', history: 'another state', bibliography: 'other state bibliography' },
         { name: 'Third state', history: 'Some third state', bibliography: 'third state bibliography' },
         { name: 'Third state', history: 'A duplicate of Third State', bibliography: 'third state duplicate bibliography' }
       ]
-    }
+    end
 
     before do
       states.each { |attrs| State.register(attrs) }
@@ -57,6 +57,4 @@ describe State do
       expect(state.history).to eq('A duplicate of Third State')
     end
   end
-
 end
-

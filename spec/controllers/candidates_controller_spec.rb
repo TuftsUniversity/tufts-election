@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'rails_helper'
 
 describe CandidatesController do
@@ -5,5 +6,4 @@ describe CandidatesController do
     get :index, params: { candidate_last_name_letter: 'A' }
     expect(response).to be_success
   end
-
 end

@@ -1,10 +1,10 @@
+# frozen_string_literal: true
 require 'rails_helper'
 
 describe Office do
-  let(:alderman) {{ id: 'ON001', name: 'Alderman', description: 'Desc for Alderman' }}
-  let(:clerk) {{ id: 'ON016', name: 'Clerk', description: 'Desc for Clerk' }}
-  let(:selectman) {{ id: 'ON146', name: 'Selectman', description: 'Desc for Selectman' }}
-
+  let(:alderman) { { id: 'ON001', name: 'Alderman', description: 'Desc for Alderman' } }
+  let(:clerk) { { id: 'ON016', name: 'Clerk', description: 'Desc for Clerk' } }
+  let(:selectman) { { id: 'ON146', name: 'Selectman', description: 'Desc for Selectman' } }
 
   describe 'creating an Office' do
     let(:office) { Office.new(alderman) }
@@ -46,7 +46,7 @@ describe Office do
     end
 
     context 'with duplicate entries' do
-      let(:duplicate) {{ id: 'ON146', name: 'Selectman 2', description: 'Duplicate Selectman Entry' }}
+      let(:duplicate) { { id: 'ON146', name: 'Selectman 2', description: 'Duplicate Selectman Entry' } }
 
       before do
         [selectman, duplicate].each { |attrs| Office.register(attrs) }
@@ -59,5 +59,4 @@ describe Office do
       end
     end
   end
-
 end

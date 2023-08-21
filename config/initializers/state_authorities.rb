@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # Import the state authority data
 
 require 'net/http'
@@ -12,7 +13,6 @@ end
 
 # Load the states
 Rails.logger.info "Importing states from #{filename}"
-puts "Importing states from #{filename}"
 
 namespaces = { 'xhtml' => 'http://www.w3.org/1999/xhtml' }
 
@@ -24,5 +24,3 @@ Nokogiri::XML(File.new(filename)).root.xpath('//xhtml:authority', namespaces).ea
 
   State.register(name: name, history: history, bibliography: bibliography)
 end
-
-

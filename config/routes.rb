@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 ALLOW_DOTS ||= /[a-zA-Z0-9_\-.:]*/
 
 TuftsElection::Application.routes.draw do
@@ -19,7 +20,6 @@ TuftsElection::Application.routes.draw do
   resource :catalog, id: ALLOW_DOTS, only: [:index], as: 'catalog', path: '/catalog', controller: 'catalog' do
     concerns :searchable
     concerns :range_searchable
-
   end
 
   resources :bookmarks do
@@ -30,7 +30,7 @@ TuftsElection::Application.routes.draw do
     end
   end
 
-  match '/catalog/:id/track', :to => 'catalog#track', id: /.*/, via: [:get, :post], :as =>'catalog'
+  match '/catalog/:id/track', to: 'catalog#track', id: /.*/, via: [:get, :post], as: 'catalog'
   resources :candidates, only: [:index]
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -87,5 +87,4 @@ TuftsElection::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-
 end

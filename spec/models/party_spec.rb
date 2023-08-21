@@ -1,11 +1,11 @@
+# frozen_string_literal: true
 require 'rails_helper'
 
 describe Party do
-
   describe 'creating a Party' do
-    let(:party_attrs) {
+    let(:party_attrs) do
       { id: 'A123', name: 'Foo party', description: 'a big party description' }
-    }
+    end
 
     let(:party) { Party.new(party_attrs) }
 
@@ -27,14 +27,14 @@ describe Party do
   end
 
   describe 'registering parties' do
-    let(:parties) {
+    let(:parties) do
       [
         { id: 'A123', name: 'Foo party', description: 'a big party description' },
         { id: 'B456', name: 'Some other party', description: 'another party' },
         { id: 'C987', name: 'Third party', description: 'Some third party' },
         { id: 'C987', name: 'Third party', description: 'A duplicate of Third Party' }
       ]
-    }
+    end
 
     before do
       parties.each { |attrs| Party.register(attrs) }
@@ -57,6 +57,10 @@ describe Party do
 
       expect(party.description).to eq('A duplicate of Third Party')
     end
-  end
 
+    it 'should have all registered accessable' do
+      parties = Party.all
+      expect(parties.keys).to include('A123', 'B456', 'C987')
+    end
+  end
 end
