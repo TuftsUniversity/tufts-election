@@ -1,20 +1,24 @@
 # frozen_string_literal: true
 source 'https://rubygems.org'
 
-ruby '2.7.5'
+ruby '3.2.2'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'rails', '5.2.8'
+# changed rails version
+# do we want 6.1 or 7.0
+
+gem 'rails', '7.0.2'
 
 gem 'jquery-rails'
 gem 'sass-rails'
 gem 'uglifier'
 
-gem 'blacklight', '6.24.0'
+# changed blacklight version
+gem 'blacklight', '7.24.0'
 gem 'blacklight_range_limit'
 
 # removed pinned verision of '~> 0.4.10'
@@ -26,8 +30,17 @@ gem 'qa'
 gem 'riiif'
 
 # Matching MIRA's versions
-gem 'active-fedora', '12.2.4'
+# change active-fedora version
+gem 'active-fedora', '14.0.0'
 gem 'active_fedora-noid'
+
+# Do we need theses?
+# gem 'view_component', '3.4.0'
+gem 'thin'
+gem 'puma'
+# gem 'reel'
+gem 'http'
+gem 'webrick'
 
 group :production do
   gem 'passenger'
