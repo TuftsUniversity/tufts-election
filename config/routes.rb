@@ -2,6 +2,8 @@
 ALLOW_DOTS ||= /[a-zA-Z0-9_\-.:]*/
 
 TuftsElection::Application.routes.draw do
+  concern :searchable, Blacklight::Routes::Searchable.new
+
   concern :range_searchable, BlacklightRangeLimit::Routes::RangeSearchable.new
   mount Riiif::Engine => '/page_images', as: 'riiif'
 

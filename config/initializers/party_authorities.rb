@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 # Import the party authority data
+require_dependency Rails.root.join('app', 'models', 'party.rb')
 
 require 'net/http'
 

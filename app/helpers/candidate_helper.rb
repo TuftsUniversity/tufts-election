@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 module CandidateHelper
-  include Blacklight::SearchHelper
+
 
   def list_elections
-    docs = search_results({
+    docs = search_service.search_results({
                             qt: "standard",
                             q: "(candidate_id_ssim:#{params[:id]} OR elector_id_ssim:#{params[:id]}) AND format_ssim:\"Election Record\"",
                             fq: '-id:draft*',

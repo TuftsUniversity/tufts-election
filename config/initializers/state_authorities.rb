@@ -2,6 +2,7 @@
 # Import the state authority data
 
 require 'net/http'
+require_dependency Rails.root.join('app', 'models', 'state.rb')
 
 filename = Rails.root.join('tmp', 'state-authorities.xml')
 
