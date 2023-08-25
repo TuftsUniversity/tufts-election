@@ -12,8 +12,8 @@ class CatalogController < ApplicationController
       h = Net::HTTP.new('tdrsearch-prod-01.uit.tufts.edu', 8983)
       http_response = h.get("/solr/mira_prod/select?fl=id&indent=on&q=legacy_pid_tesim:\"#{params[:id]}\"&wt=ruby")
       rsp = eval(http_response.body)
-      #params[:id] = rsp['response']['docs'][0]['id']
-      params[:id] = rsp['response']['docs'][0]['id'] if rsp['response']['docs'] && !rsp['response']['docs'].empty?
+      # params[:id] = rsp['response']['docs'][0]['id']
+      params[:id] = rsp['response']['docs'][0]['id'] if rsp['response']['docs'].present?
     end
     super
   end
