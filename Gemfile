@@ -24,7 +24,7 @@ gem 'blacklight_range_limit'
 # removed pinned verision of '~> 0.4.10'
 gem 'mysql2'
 gem 'okcomputer'
-gem 'rsolr', '>= 1.0'
+# gem 'rsolr', '>= 1.0'
 
 gem 'qa'
 gem 'riiif'
@@ -58,6 +58,16 @@ group :development, :test do
   gem 'simplecov-lcov', '~> 0.8.0'
 end
 
-group :test do
-  gem 'solr_wrapper', '>= 0.3'
+group :development, :test do
+  gem "solr_wrapper", ">= 0.3"
 end
+gem "rsolr", ">= 1.0", "< 3"
+
+group :development, :test do
+  gem "solr_wrapper", ">= 0.3"
+end
+gem "rsolr", ">= 1.0", "< 3"
+gem "bootstrap", "~> 4.0"
+gem "twitter-typeahead-rails", "0.11.1.pre.corejavascript"
+gem "sassc-rails", "~> 2.1"
+gem "jquery-rails"

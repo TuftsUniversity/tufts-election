@@ -8,3 +8,5 @@ require File.expand_path('../config/application', __FILE__)
 TuftsElection::Application.load_tasks
 
 require 'solr_wrapper/rake_task'
+
+require 'solr_wrapper/rake_task' unless Rails.env.production?
