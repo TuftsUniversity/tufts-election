@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 # Import the offices authority data
+require_dependency Rails.root.join('app', 'models', 'office.rb')
 
 require 'net/http'
 
