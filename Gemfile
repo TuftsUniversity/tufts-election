@@ -36,8 +36,8 @@ gem 'active_fedora-noid'
 
 # Do we need theses?
 # gem 'view_component', '3.4.0'
-gem 'thin'
 gem 'puma'
+gem 'thin'
 # gem 'reel'
 gem 'http'
 gem 'webrick'
@@ -64,5 +64,5 @@ end
 gem "rsolr", ">= 1.0", "< 3"
 
 gem "bootstrap", "~> 4.0"
-gem "twitter-typeahead-rails", "0.11.1.pre.corejavascript"
 gem "sassc-rails", "~> 2.1"
+gem "twitter-typeahead-rails", "0.11.1.pre.corejavascript"
