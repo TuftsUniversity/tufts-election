@@ -1,6 +1,15 @@
 # frozen_string_literal: true
+
 module CandidateHelper
+  # instantiate helper in a class
+  include Blacklight::Searchable
   def list_elections
+    # puts(Blacklight::Searchable.methods)
+    # class_attribute :search_service_class
+    # self.search_service_class = Blacklight::SearchService
+    # Blacklight::Searchable.
+    #puts (search_service_class.to_s)
+    puts (search_service)
     docs = search_service.search_results({
                                            qt: "standard",
                                            q: "(candidate_id_ssim:#{params[:id]} OR elector_id_ssim:#{params[:id]}) AND format_ssim:\"Election Record\"",
