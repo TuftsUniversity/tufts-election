@@ -2,14 +2,30 @@
 require 'rails_helper'
 
 describe CandidateHelper do
+
+  # Create a mock model to include the concern for testing purposes
+  subject(:model_instance) { test_model.new(params) }
+
+  let(:test_model) do
+    Class.new do
+      include CandidateHelper
+      include Blacklight::Searchable
+
+      attr_accessor :params
+      def initialize(params = {})
+        @params = params
+      end
+    end
+  end
+
   before(:each) do
-    allow(helper).to receive(:blacklight_config).and_return(Blacklight::Configuration.new)
+    allow(model_instance).to receive(:blacklight_config).and_return(Blacklight::Configuration.new)
   end
 
   describe "#list_elections" do
     subject do
       params[:id] = 'AJ0156'
-      helper.list_elections
+      model_instance.list_elections
     end
 
     it {
