@@ -11,14 +11,24 @@ describe CandidateHelper do
       include CandidateHelper
       include Blacklight::Searchable
 
+      class_attribute :search_service_class
+
       attr_accessor :params
       def initialize(params = {})
         @params = params
+
+        self.search_service_class = Blacklight::SearchService
+      end
+
+      def search_state
+        
+        @search_state ||= Blacklight::SearchState.new(params, blacklight_config, self)
       end
     end
   end
 
   before(:each) do
+    allow(model_instance).to receive(:search_state).and_return(nil)
     allow(model_instance).to receive(:blacklight_config).and_return(Blacklight::Configuration.new)
   end
 
