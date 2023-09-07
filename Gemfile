@@ -18,7 +18,7 @@ gem 'sass-rails'
 gem 'uglifier'
 
 # changed blacklight version
-gem 'blacklight', '7.24.0'
+gem 'blacklight', '7.33.0'
 gem 'blacklight_range_limit'
 
 # removed pinned verision of '~> 0.4.10'
