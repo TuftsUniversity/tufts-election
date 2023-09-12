@@ -1,14 +1,19 @@
 # frozen_string_literal: true
 require 'rails_helper'
 
+
 describe CandidateHelper do
 
   # Create a mock model to include the concern for testing purposes
   subject(:model_instance) { test_model.new(params) }
 
   let(:test_model) do
-    ApplicationController.new do 
+    Class.new do 
+      #include ApplicationController
       include CandidateHelper
+      include ActionView::Helpers::TagHelper
+      include ActionView::Helpers::UrlHelper
+      include Rails.application.routes.url_helpers
       include Blacklight::Searchable
 
       class_attribute :search_service_class

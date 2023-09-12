@@ -3,13 +3,8 @@
 module CandidateHelper
   # instantiate helper in a class
   include Blacklight::Searchable
+
   def list_elections
-    # puts(Blacklight::Searchable.methods)
-    # class_attribute :search_service_class
-    # self.search_service_class = Blacklight::SearchService
-    # Blacklight::Searchable.
-    # puts (search_service_class.to_s)
-    # puts (search_service)
     self.params = {
                   qt: "standard",
                   q: "(candidate_id_ssim:#{params[:id]} OR elector_id_ssim:#{params[:id]}) AND format_ssim:\"Election Record\"",
@@ -19,10 +14,17 @@ module CandidateHelper
                   sort: 'title_ssi asc'
                   }
     docs = search_service.search_results[1]
-    content_tag(:ul) do
-      docs.collect do |election|
-        concat(content_tag(:li, link_to(election['title_ssi'], catalog_path(election['id']))))
-      end
+    html = String.new
+    docs.collect do |election|
+      link = catalog_path(election['id'])
+      link_text = link_to(election['title_ssi'], link)
+      html.concat(content_tag(:li, link_text))
+    end 
+
+    unless html.blank?
+      html = ("<ul>" + html + "</ul>").html_safe
     end
+
+    html
   end
 end
