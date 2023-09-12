@@ -7,7 +7,7 @@ describe CandidateHelper do
   subject(:model_instance) { test_model.new(params) }
 
   let(:test_model) do
-    Class.new do
+    ApplicationController.new do 
       include CandidateHelper
       include Blacklight::Searchable
 
