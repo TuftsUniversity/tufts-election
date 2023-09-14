@@ -2,6 +2,8 @@
 class CandidatesController < ApplicationController
   include Blacklight::Catalog
 
+  # TODO: revaluate these disables
+  # rubocop:disable Metrics/BlockLength
   configure_blacklight do |config|
     config.default_solr_params = {
       qt: 'search'

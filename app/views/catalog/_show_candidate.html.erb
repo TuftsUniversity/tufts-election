@@ -1,5 +1,10 @@
 <div class="details">
   <h2>Elections</h2>
-  <%= list_elections %>
+  <% related_elections.each do |election|%>
+    <ul>
+      <%= link_to(election['title_ssi'], election['id']) %>
+    </ul>
+  <% end %>
+
 </div>
 

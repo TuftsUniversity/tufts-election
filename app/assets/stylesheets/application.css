@@ -399,7 +399,8 @@ table.election-results-table thead tr.candidate-row {
 
 .appliedFilter .filterName:after {
   content: "\276F";
-  padding-left: 4px;
+  /* Not sure if this should be commentent out facets after are no alligned right*/
+  /*padding-left: 4px;*/
 }
 
 .appliedFilter a.remove, .appliedFilter a.remove .glyphicon-remove {

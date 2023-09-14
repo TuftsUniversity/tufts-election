@@ -16,23 +16,52 @@ text-align:center;}
     color: #666;
 }
 
+/* Don't want the above padding in facets labels */
+.facet-label span.selected, span.selected.facet-count {
+    padding: 0px;
+}
+
 span.facet-label > a:link.remove {
     background: none;
+}
+
+span.facets-header > a:link.remove {
+    background: none;
+    display: none;
 }
 
 div.facet_pagination.top {
     display:none;
 }
 
-.panel-title a {
+/*.card-header .button {
     text-decoration: none;
+}*/
+
+/* temp */
+.card-header {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: inherit;
 }
 
 .facet-count {
-    float: right;
+  float: right;
+  /* temp */
+  /* looks like the text size is being set in the style*/
+  /*width: 23px;*/
 }
 
-#facets .top-panel-heading {
+#facets {
+  box-sizing: border-box;
+}
+
+card-header *::before,*::after {
+   box-sizing:inherit;
+}
+
+#facets .facets-header {
   display: none;
 }
 
@@ -44,25 +73,30 @@ div.facet_pagination.top {
     text-decoration: none;
 }
 
-#facet-panel-collapse .panel .panel-heading {
+#facet-panel-collapse .card .card-header .button {
     background-color: #F4F4E9;
     padding: 4px 10px;
 }
 
-.panel-group .panel {
-    border-radius: 0;
+/*.facet-limit {
+  background-color: #F4F4E9;
+}*/
+
+#facet-panel-collapse .card {
+  margin-bottom: 0;
+  border-radius: 0;
 }
 
-.panel-group .panel:first-child {
+#facet-panel-collapse .card:first-child {
     border-radius: 5px 5px 0 0;
 }
 
-.panel-group .panel:last-child {
+#facet-panel-collapse .card:last-child {
     border-radius: 0 0 5px 5px;
 }
 
-.panel-group .panel + .panel {
-    margin-top: -1px;
+#facet-panel-collapse .card + .card {
+    margin-top: 0px;
 }
 
 #facet-panel-collapse .panel .collapse-toggle .toggleIcon {
@@ -75,7 +109,7 @@ div.facet_pagination.top {
 }
 
 /* selector from blacklight.css for compatibility */
-.btn-danger:hover, .appliedFilter .remove:hover, .btn-danger:focus, .appliedFilter .remove:focus:hover, .appliedFilter .remove:focus:active, .appliedFilter .remove:active, .btn-danger.active, .appliedFilter .active.remove:hover, .appliedFilter .active.remove:active, .open > .btn-danger.dropdown-toggle, .appliedFilter .open > .dropdown-toggle.remove:hover, .appliedFilter .open > .dropdown-toggle.remove:active {
+.btn-danger:hover, .applied-filter .remove:hover, .btn-danger:focus, .applied-filter .remove:focus:hover, .applied-filter .remove:focus:active, .applied-filter .remove:active, .btn-danger.active, .applied-filter .active.remove:hover, .applied-filter .active.remove:active, .open > .btn-danger.dropdown-toggle, .applied-filter .open > .dropdown-toggle.remove:hover, .applied-filter .open > .dropdown-toggle.remove:active {
   background-color: #E2EDFE;
   color: #666;
   border-color: #C4DAFE;
@@ -86,4 +120,59 @@ div.facet_pagination.top {
   background-color: inherit;
   border: none;
 }
+
+
+#test-label {
+  color: red;
+}
+
+/*.facets-header {
+  display: none;
+}
+
+.facets-heading {
+  display: none;
+}*/
+
+/*#facet-panel-collapse {
+    background-color: #F4F4E9;
+    padding: 4px 10px;
+}*/
+
+/* Thsi is the part that pops out all the choices
+.facet-content {
+  background-color: #F4F4E9;
+}*/
+
+/*.facet-field-heading {
+  background-color: #F4F4E9;
+}
+
+.collapse {
+  background-color: #F4F4E9;
+}*/
+
+/*#facets {
+  background-color: #F4F4E9;
+} */
+
+/*#facet-panel-collapse{
+  background-color: #F4F4E9;
+} */
+
+/*.facet-limit{
+  background-color: #F4F4E9;
+} */
+
+/*.facet-field-heading {
+  background-color: #F4F4E9;
+}
+
+*/
+/*test*/
+
+/*.facet-limit {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}*/
 

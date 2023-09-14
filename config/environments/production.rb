@@ -80,4 +80,11 @@ TuftsElection::Application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # Rails.application.config.middleware.use(
+  #   ExceptionNotification::Rack,
+  #   # Blacklight uses its own 404 extension we need to ignore separately
+  #   ignore_exceptions: ['Blacklight::Exceptions::RecordNotFound'] + ExceptionNotifier.ignored_exceptions
+  #   )
+  # end
 end

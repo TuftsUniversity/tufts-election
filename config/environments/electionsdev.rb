@@ -40,4 +40,15 @@ TuftsElection::Application.configure do
   # Checks for improperly declared sprockets dependencies.
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
+
+  # Rails.application.config.middleware.use(
+  #   ExceptionNotification::Rack,
+  #   # Blacklight uses its own 404 extension we need to ignore separately
+  #   ignore_exceptions: ['Blacklight::Exceptions::RecordNotFound'] + ExceptionNotifier.ignored_exceptions)
+  # end
+
+  # temp while debug ui
+  config.assets.compress = false
+  config.assets.debug = true
+  config.assets.concat = false
 end

@@ -639,7 +639,7 @@ span.page.current {
 }
 
 #facets {
-    font-size: 93%;
+    font-size: 73%;
     padding: 1em 0 0 1em;
 }
 
@@ -651,6 +651,15 @@ span.page.current {
     color: #555;
     cursor: pointer;
     margin-bottom: 0;
+    text-align: justify;
+}
+
+#facets h3 button {
+    color: #555;
+    background-color: #F4F4E9;
+    cursor: pointer;
+    margin-bottom: 0;
+    font-size:12px;
     text-align: justify;
 }
 
@@ -668,8 +677,8 @@ span.page.current {
     text-align: right;
 }
 
-#facets span.selected {
-    color: green;
+#facets span.facet-label span.selected {
+    color: red;
 }
 
 .facet_extended_list .sort_options {
