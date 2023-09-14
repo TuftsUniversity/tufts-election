@@ -18,7 +18,7 @@ module CandidateHelper
     docs.collect do |election|
       html.concat(content_tag(:li, link_to(election['title_ssi'], catalog_path(election['id']))))
     end
-    safe_join("<ul>", html, "</ul>")
-    #("<ul>" + html + "</ul>").html_safe
+    #safe_join("<ul>", html, "</ul>")
+    ("<ul>" + html + "</ul>").html_safe
   end
 end
