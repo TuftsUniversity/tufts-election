@@ -6,7 +6,7 @@ module CandidateHelper
   include ActionView::Helpers::TagHelper
   include ActionView::Helpers::UrlHelper
   include Rails.application.routes.url_helpers
-  include Rails.application.routes.
+  include Rails.application.routes
 
   def list_elections
     self.params = {
