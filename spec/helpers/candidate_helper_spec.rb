@@ -3,7 +3,7 @@ require 'rails_helper'
 
 describe CandidateHelper do
   # Create a mock model to include the concern for testing purposes
-  subject(:model_instance) { test_model.new(params) }
+  subject(:model_instance) { CandidateController.new(params) }
 
   let(:test_model) do
     Class.new do
