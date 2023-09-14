@@ -1,15 +1,13 @@
 # frozen_string_literal: true
 require 'rails_helper'
 
-
 describe CandidateHelper do
-
   # Create a mock model to include the concern for testing purposes
   subject(:model_instance) { test_model.new(params) }
 
   let(:test_model) do
-    Class.new do 
-      #include ApplicationController
+    Class.new do
+      # include ApplicationController
       include CandidateHelper
       include ActionView::Helpers::TagHelper
       include ActionView::Helpers::UrlHelper
@@ -26,7 +24,6 @@ describe CandidateHelper do
       end
 
       def search_state
-        
         @search_state ||= Blacklight::SearchState.new(params, blacklight_config, self)
       end
     end
