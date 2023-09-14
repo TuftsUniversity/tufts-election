@@ -24,5 +24,4 @@ module CandidateHelper
     safe_join("<ul>", html, "</ul>")
     #("<ul>" + html + "</ul>").html_safe
   end
-  end
 end
