@@ -3,6 +3,8 @@
 module CandidateHelper
   # instantiate helper in a class
   include Blacklight::Searchable
+  include ActionView::Helpers::TagHelper
+  include ActionView::Helpers::UrlHelper
   include Rails.application.routes.url_helpers
 
   def list_elections
