@@ -2,10 +2,10 @@
 require 'rails_helper'
 
 describe CandidateHelper do
-  include CandidateController
+  #include CandidateController
 
   # Create a mock model to include the concern for testing purposes
-  subject(:model_instance) { CandidateController.new(params) }
+  subject(:model_instance) { CandidatesController.new(params) }
 
   let(:test_model) do
     Class.new do
