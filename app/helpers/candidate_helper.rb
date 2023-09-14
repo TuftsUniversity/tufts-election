@@ -24,7 +24,7 @@ module CandidateHelper
       html.concat(content_tag(:li, link_text))
     end
 
-    safe_join(["<ul>", html, "</ul>"])
-    #("<ul>" + html + "</ul>").html_safe
+    #safe_join(["<ul>", html, "</ul>"])
+    ("<ul>" + html + "</ul>").html_safe
   end
 end
