@@ -10,7 +10,7 @@ describe CandidateHelper do
       include CandidateHelper
       include ActionView::Helpers::TagHelper
       include ActionView::Helpers::UrlHelper
-      include Rails.application.routes.url_helpers
+      # include Rails.application.routes.url_helpers
       include Blacklight::Searchable
 
       class_attribute :search_service_class
