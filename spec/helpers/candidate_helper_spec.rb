@@ -5,7 +5,7 @@ describe CandidateHelper do
   #include CandidateController
 
   # Create a mock model to include the concern for testing purposes
-  subject(:model_instance) { CandidatesController.new(params) }
+  subject(:model_instance) { CandidatesController.new() }
 
   let(:test_model) do
     Class.new do
