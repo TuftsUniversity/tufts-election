@@ -19,7 +19,7 @@ module CandidateHelper
     docs = search_service.search_results[1]
     html = String.new
     docs.collect do |election|
-      link = catalog_path(election['id'])
+      link = "google.com" #catalog_path(election['id'])
       link_text = link_to(election['title_ssi'], link)
       html.concat(content_tag(:li, link_text))
     end
