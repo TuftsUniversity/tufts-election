@@ -7,7 +7,7 @@ describe CandidateHelper do
 
   let(:test_model) do
     Class.new do
-      # include ApplicationController
+      include ApplicationController
       include CandidateHelper
       include ActionView::Helpers::TagHelper
       include ActionView::Helpers::UrlHelper
