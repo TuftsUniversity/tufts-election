@@ -16,9 +16,13 @@ module CandidateHelper
     docs = search_service.search_results[1]
     html = String.new
     docs.collect do |election|
-      html.concat(content_tag(:li, link_to(election['title_ssi'], catalog_path(election['id']))))
+      link = catalog_path(election['id'])
+      link_text = link_to(election['title_ssi'], link)
+      html.concat(content_tag(:li, link_text))
     end
-    #safe_join("<ul>", html, "</ul>")
-    ("<ul>" + html + "</ul>").html_safe
+
+    safe_join("<ul>", html, "</ul>")
+    #("<ul>" + html + "</ul>").html_safe
+  end
   end
 end
