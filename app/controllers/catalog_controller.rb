@@ -15,7 +15,11 @@ class CatalogController < ApplicationController
       # params[:id] = rsp['response']['docs'][0]['id']
       params[:id] = rsp['response']['docs'][0]['id'] if rsp['response']['docs'].present?
     end
-    super
+    begin
+        super
+    rescue Blacklight::Exceptions::RecordNotFound
+        "blaaa"
+    end 
   end
 
   # rubocop:disable Rails/I18nLocaleTexts
