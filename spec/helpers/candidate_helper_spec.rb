@@ -27,7 +27,7 @@ describe CandidateHelper do
   describe "#list_elections" do
     subject do
       params[:id] = 'AJ0156'
-      model_instance.list_elections
+      test_model.list_elections
     end
     it {
       is_expected.to eq(
