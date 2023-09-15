@@ -2,13 +2,11 @@
 require 'rails_helper'
 
 describe CandidateHelper do
-  #include CandidateController
-
   # Create a mock model to include the concern for testing purposes
-  subject(:model_instance) { CandidatesController.new() }
+  subject(:model_instance) { test_model.new(params) }
 
   let(:test_model) do
-    Class.new do
+    CandidatesController.new do
       include CandidateHelper
       include ActionView::Helpers::TagHelper
       include ActionView::Helpers::UrlHelper
