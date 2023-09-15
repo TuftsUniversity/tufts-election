@@ -19,7 +19,7 @@ describe CandidateHelper do
       def initialize(params = {})
         @params = params
 
-        link = catalog_path(election['id'])
+        link = catalog_path("4j03d0249")
 
         self.search_service_class = Blacklight::SearchService
       end
