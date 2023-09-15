@@ -10,7 +10,7 @@ describe CandidateHelper do
       include CandidateHelper
       include ActionView::Helpers::TagHelper
       include ActionView::Helpers::UrlHelper
-      # include Rails.application.routes.url_helpers
+      include Rails.application.routes.url_helpers
       include Blacklight::Searchable
 
       class_attribute :search_service_class
@@ -18,6 +18,8 @@ describe CandidateHelper do
       attr_accessor :params
       def initialize(params = {})
         @params = params
+
+        link = catalog_path(election['id'])
 
         self.search_service_class = Blacklight::SearchService
       end
