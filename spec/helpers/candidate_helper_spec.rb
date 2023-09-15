@@ -19,7 +19,7 @@ describe CandidateHelper do
       def initialize(params = {})
         @params = params
 
-        #self.search_service_class = Blacklight::SearchService
+        self.search_service_class = Blacklight::SearchService
       end
 
       def search_state
@@ -29,7 +29,7 @@ describe CandidateHelper do
   end
 
   before(:each) do
-    allow(model_instance).to receive(:search_state).and_return(nil)
+    #allow(model_instance).to receive(:search_state).and_return(nil)
     allow(model_instance).to receive(:blacklight_config).and_return(Blacklight::Configuration.new)
   end
 
