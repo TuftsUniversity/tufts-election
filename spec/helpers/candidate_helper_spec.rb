@@ -6,7 +6,7 @@ describe CandidateHelper do
   subject(:model_instance) { test_model.new(params) }
 
   let(:test_model) do
-    CandidatesController.new do
+    Class.new do
       include CandidateHelper
       include ActionView::Helpers::TagHelper
       include ActionView::Helpers::UrlHelper
