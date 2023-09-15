@@ -19,7 +19,7 @@ describe CandidateHelper do
       def initialize(params = {})
         @params = params
 
-        self.search_service_class = Blacklight::SearchService
+        #self.search_service_class = Blacklight::SearchService
       end
 
       def search_state
