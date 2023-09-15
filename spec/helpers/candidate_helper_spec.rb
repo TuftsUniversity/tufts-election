@@ -12,7 +12,7 @@ describe CandidateHelper do
 
     # Mock necessary methods and attributes
     allow(controller).to receive(:blacklight_config).and_return(Blacklight::Configuration.new)
-    controller.params = {} # Set params to an empty hash or provide relevant params
+    controller.params = {id: 'AJ0156'} # Set params to an empty hash or provide relevant params
 
     controller
   end
