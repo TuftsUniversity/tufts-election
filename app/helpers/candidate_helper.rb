@@ -20,10 +20,12 @@ module CandidateHelper
     html = String.new
     docs.collect do |election|
       #include Rails.application.routes.url_helpers
-      link = election['id']
+  #    link = election['id']
       #link = catalog_path(election['id'])
-      link_text = link_to(election['title_ssi'], link)
-      html.concat(content_tag(:li, link_text))
+#      link_text = link_to(election['title_ssi'], link)
+      concat(content_tag(:li, link_to(election['title_ssi'], catalog_path(election['id']))))
+
+ #     html.concat(content_tag(:li, link_text))
     end
 
     #safe_join(["<ul>", html, "</ul>"])
