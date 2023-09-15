@@ -9,9 +9,13 @@ class CatalogController < ApplicationController
   # rubocop:disable Security/Eval
   def show
     if params[:id].start_with?('tufts') && Rails.env.production?
+      puts "Start"
       h = Net::HTTP.new('tdrsearch-prod-01.uit.tufts.edu', 8983)
+      puts h
       http_response = h.get("/solr/mira_prod/select?fl=id&indent=on&q=legacy_pid_tesim:\"#{params[:id]}\"&wt=ruby")
+      puts http_response
       rsp = eval(http_response.body)
+      puts rsp
       # params[:id] = rsp['response']['docs'][0]['id']
       params[:id] = rsp['response']['docs'][0]['id'] if rsp['response']['docs'].present?
     end
