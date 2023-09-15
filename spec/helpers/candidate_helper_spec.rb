@@ -22,7 +22,7 @@ describe CandidateHelper do
   end
   before(:each) do
     #allow(model_instance).to receive(:search_state).and_return(nil)
-    allow(model_instance).to receive(:blacklight_config).and_return(Blacklight::Configuration.new)
+    allow(test_model).to receive(:blacklight_config).and_return(Blacklight::Configuration.new)
   end
   describe "#list_elections" do
     subject do
