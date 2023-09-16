@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 require 'rails_helper'
+include Blacklight::Searchable
 
 describe CandidateHelper do
   # Create a mock model to include the concern for testing purposes
