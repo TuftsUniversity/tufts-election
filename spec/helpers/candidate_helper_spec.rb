@@ -33,8 +33,9 @@ describe CandidateHelper do
 
   before(:each) do
     #allow(model_instance.controller).to receive(:search_service_class).and_return(Blacklight::SearchService)
-    search_state = Blacklight::SearchState.new(params, blacklight_config, self)
-    allow(model_instance.controller).to receive(:search_state).and_return(search_state)
+    #search_state = Blacklight::SearchState.new(params, blacklight_config, self)
+    #allow(model_instance.controller).to receive(:search_state).and_return(search_state)
+    allow(model_instance.controller).to receive(:search_state).and_return(nil)
     allow(model_instance).to receive(:blacklight_config).and_return(Blacklight::Configuration.new)
   end
 
