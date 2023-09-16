@@ -7,11 +7,11 @@ describe CandidateHelper do
 
   let(:test_model) do
     Class.new do
-      include CandidateHelper
-      include ActionView::Helpers::TagHelper
-      include ActionView::Helpers::UrlHelper
-      include Rails.application.routes.url_helpers
-      include Blacklight::Searchable
+      controller = CandidatesController.new
+      controller.extend(CandidateHelper)
+      controller.extend(ActionView::Helpers::TagHelper)
+      controller.extend(ActionView::Helpers::UrlHelper)
+      controller.extend(Blacklight::Searchable)
 
       class_attribute :search_service_class
 
@@ -19,9 +19,9 @@ describe CandidateHelper do
       def initialize(params = {})
         @params = params
 
-        link = catalog_path("4j03d0249")
+        #link = catalog_path("4j03d0249")
 
-        self.search_service_class = Blacklight::SearchService
+        self.controller.search_service_class = Blacklight::SearchService
       end
 
       def search_state
@@ -31,14 +31,16 @@ describe CandidateHelper do
   end
 
   before(:each) do
-    #allow(model_instance).to receive(:search_state).and_return(nil)
+    #allow(model_instance.controller).to receive(:search_service_class).and_return(Blacklight::SearchService)
+    search_state = Blacklight::SearchState.new(params, blacklight_config, self)
+    allow(model_instance.controller).to receive(:search_state).and_return(search_state)
     allow(model_instance).to receive(:blacklight_config).and_return(Blacklight::Configuration.new)
   end
 
   describe "#list_elections" do
     subject do
       params[:id] = 'AJ0156'
-      model_instance.list_elections
+      model_instance.controller.list_elections
     end
 
     it {
