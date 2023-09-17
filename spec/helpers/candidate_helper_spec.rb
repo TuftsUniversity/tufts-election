@@ -8,11 +8,6 @@ describe CandidateHelper do
 
   let(:test_model) do
     Class.new do
-      controller = CandidatesController.new
-      controller.extend(CandidateHelper)
-      controller.extend(ActionView::Helpers::TagHelper)
-      controller.extend(ActionView::Helpers::UrlHelper)
-      controller.extend(Blacklight::Searchable)
 
       class_attribute :search_service_class
 
@@ -21,6 +16,11 @@ describe CandidateHelper do
         @params = params
 
         #link = catalog_path("4j03d0249")
+        self.controller = CandidatesController.new
+        self.controller.extend(CandidateHelper)
+        self.controller.extend(ActionView::Helpers::TagHelper)
+        self.controller.extend(ActionView::Helpers::UrlHelper)
+        self.controller.extend(Blacklight::Searchable)
 
         self.controller.search_service_class = Blacklight::SearchService
       end
