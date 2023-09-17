@@ -22,7 +22,7 @@ describe CandidateHelper do
         self.controller.extend(ActionView::Helpers::UrlHelper)
         self.controller.extend(Blacklight::Searchable)
 
-        self.controller.search_service_class = Blacklight::SearchService
+        #self.controller.search_service_class = Blacklight::SearchService
       end
 
       def search_state
@@ -32,7 +32,7 @@ describe CandidateHelper do
   end
 
   before(:each) do
-    #allow(model_instance.controller).to receive(:search_service_class).and_return(Blacklight::SearchService)
+    allow(model_instance.controller).to receive(:search_service_class).and_return(Blacklight::SearchService)
     #search_state = Blacklight::SearchState.new(params, blacklight_config, self)
     #allow(model_instance.controller).to receive(:search_state).and_return(search_state)
     allow(model_instance.controller).to receive(:search_state).and_return(nil)
