@@ -22,9 +22,9 @@ describe CandidatesController do
   # end
   describe "#show" do
     it "renders the list of elections" do
-      params = { id: 'AJ0156' }
+      #params = { id: 'AJ0156' }
       
-      get :show, params: params
+      get :show #, params: params
 
       # Assuming that the controller action sets up the elections_list instance variable
       expect(assigns(:elections_list)).to eq(
