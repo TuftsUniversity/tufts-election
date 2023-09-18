@@ -33,7 +33,7 @@ TuftsElection::Application.routes.draw do
   end
 
   match '/catalog/:id/track', to: 'catalog#track', id: /.*/, via: [:get, :post], as: 'catalog'
-  resources :candidates, only: [:index]
+  resources :candidates, only: [:index, :show]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
