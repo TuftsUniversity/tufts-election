@@ -33,6 +33,5 @@ describe CandidatesController do
     end
   end
 end
-end
 
 
