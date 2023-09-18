@@ -7,19 +7,32 @@ describe CandidatesController do
     expect(response).to be_success
   end
 
-  describe "#list_elections" do
-    subject do
-      params[:id] = 'AJ0156'
-      model_instance.controller.list_elections
-    end
+  # describe "#list_elections" do
+  #   subject do
+  #     params[:id] = 'AJ0156'
+  #     described_class.list_elections
+  #   end
 
-    it {
-      is_expected.to eq(
-      '<ul><li><a href="/catalog/4j03d0249/track">New Jersey 1792 Sheriff, Hunterdon County</a></li><li><a href="/catalog/vt150j84n/track">New Jersey 1793 Sheriff, Hunterdon County</a></li></ul>'
-    )
-    }
-    it { is_expected.to be_html_safe }
+  #   it {
+  #     is_expected.to eq(
+  #     '<ul><li><a href="/catalog/4j03d0249/track">New Jersey 1792 Sheriff, Hunterdon County</a></li><li><a href="/catalog/vt150j84n/track">New Jersey 1793 Sheriff, Hunterdon County</a></li></ul>'
+  #   )
+  #   }
+  #   it { is_expected.to be_html_safe }
+  # end
+  describe "#show" do
+    it "renders the list of elections" do
+      params = { id: 'AJ0156' }
+      
+      get :show, params: params
+
+      # Assuming that the controller action sets up the elections_list instance variable
+      expect(assigns(:elections_list)).to eq(
+        '<ul><li><a href="/catalog/4j03d0249/track">New Jersey 1792 Sheriff, Hunterdon County</a></li><li><a href="/catalog/vt150j84n/track">New Jersey 1793 Sheriff, Hunterdon County</a></li></ul>'
+      )
+    end
   end
+end
 end
 
 
