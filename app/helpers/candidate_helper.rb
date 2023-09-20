@@ -10,10 +10,11 @@ module CandidateHelper
   def list_elections
 
     unless params.nil? 
-      #return "prarams: #{params}"
+      return "prarams: #{params[:id]}"
       if params[:id].nil?
         params[:id] = params["id"]
       end
+
       params = {
         qt: "standard",
         q: "(candidate_id_ssim:#{params[:id]} OR elector_id_ssim:#{params[:id]}) AND format_ssim:\"Election Record\"",
