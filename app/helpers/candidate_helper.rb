@@ -14,15 +14,23 @@ module CandidateHelper
       if params[:id].nil?
         params[:id] = params["id"]
       end
+      id = params[:id]
+      params[:qt] = "standard"
+      params[:q] = "(candidate_id_ssim:#{params[:id]} OR elector_id_ssim:#{params[:id]}) AND format_ssim:\"Election Record\""
+      params[:fq] = '-id:draft*'
+      params[:fl] = 'title_ssi id'
+      params[:rows] = '1000'
+      params[:sort] = 'title_ssi asc'
 
-      params = {
-        qt: "standard",
-        q: "(candidate_id_ssim:#{params[:id]} OR elector_id_ssim:#{params[:id]}) AND format_ssim:\"Election Record\"",
-        fq: '-id:draft*',
-        fl: 'title_ssi id',
-        rows: '1000',
-        sort: 'title_ssi asc'
-      }
+
+      # params = {
+      #   qt: "standard",
+      #   q: "(candidate_id_ssim:#{params[:id]} OR elector_id_ssim:#{params[:id]}) AND format_ssim:\"Election Record\"",
+      #   fq: '-id:draft*',
+      #   fl: 'title_ssi id',
+      #   rows: '1000',
+      #   sort: 'title_ssi asc'
+      # }
       docs = search_service.search_results[1]
       html = String.new
       docs.collect do |election|
