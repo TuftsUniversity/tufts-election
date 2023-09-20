@@ -6,6 +6,7 @@ module CandidateHelper
   include ActionView::Helpers::TagHelper
   include ActionView::Helpers::UrlHelper
   include Rails.application.routes.url_helpers
+  include Blacklight::Catalog
 
   def list_elections
 
