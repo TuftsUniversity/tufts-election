@@ -10,7 +10,7 @@ module CandidateHelper
   def list_elections
 
     unless params.nil? 
-      return "prarams: #{params[:id]}"
+      #return "prarams: #{params[:id]}"
       if params[:id].nil?
         params[:id] = params["id"]
       end
