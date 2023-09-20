@@ -7,24 +7,30 @@ class CatalogController < ApplicationController
   include Blacklight::DefaultComponentConfiguration
 
   # rubocop:disable Security/Eval
-  def show
-    if params[:id].start_with?('tufts') && Rails.env.production?
-      puts "Start"
-      h = Net::HTTP.new('tdrsearch-prod-01.uit.tufts.edu', 8983)
-      puts h
-      http_response = h.get("/solr/mira_prod/select?fl=id&indent=on&q=legacy_pid_tesim:\"#{params[:id]}\"&wt=ruby")
-      puts http_response
-      rsp = eval(http_response.body)
-      puts rsp
-      # params[:id] = rsp['response']['docs'][0]['id']
-      params[:id] = rsp['response']['docs'][0]['id'] if rsp['response']['docs'].present?
-    end
-    begin
-        super
-    rescue Blacklight::Exceptions::RecordNotFound
-        "blaaa"
-    end 
-  end
+  # def show
+  #   puts params[:id]
+  #   puts "Why nothing else?"
+  #   #super
+  #   if params[:id].start_with?('tufts') && Rails.env.production?
+  #     puts "Start"
+  #     h = Net::HTTP.new('tdrsearch-prod-01.uit.tufts.edu', 8983)
+  #     puts h
+  #     http_response = h.get("/solr/mira_prod/select?fl=id&indent=on&q=legacy_pid_tesim:\"#{params[:id]}\"&wt=ruby")
+  #     puts http_response
+  #     rsp = eval(http_response.body)
+  #     puts rsp
+  #     # params[:id] = rsp['response']['docs'][0]['id']
+  #     params[:id] = rsp['response']['docs'][0]['id'] if rsp['response']['docs'].present?
+  #   end
+  #   begin
+  #       super params
+  #       puts "super?"
+  #   rescue Blacklight::Exceptions::RecordNotFound
+  #       puts "record not found"
+  #       "blaaa"
+  #   end 
+  #   puts "End?"
+  # end
 
   # rubocop:disable Rails/I18nLocaleTexts
   configure_blacklight do |config|
@@ -72,6 +78,12 @@ class CatalogController < ApplicationController
     config.show.title_field = 'title_tesim'
     # config.show.display_type_field = 'format'
     config.show.display_type_field = 'format_ssim'
+
+
+    # new for blacklight 7
+    config.add_results_collection_tool(:sort_widget)
+    config.add_results_collection_tool(:per_page_widget)
+    config.add_results_collection_tool(:view_type_group)
 
     # solr fields that will be treated as facets by the blacklight application
     #   The ordering of the field names is the order of the display
@@ -259,9 +271,9 @@ class CatalogController < ApplicationController
     # new blacklight configure for version 7
     config.add_results_document_tool(:bookmark, partial: 'bookmark_control', if: :render_bookmarks_control?)
 
-    config.add_results_collection_tool(:sort_widget)
-    config.add_results_collection_tool(:per_page_widget)
-    config.add_results_collection_tool(:view_type_group)
+    # config.add_results_collection_tool(:sort_widget)
+    # config.add_results_collection_tool(:per_page_widget)
+    # config.add_results_collection_tool(:view_type_group)
 
     config.add_show_tools_partial(:bookmark, partial: 'bookmark_control', if: :render_bookmarks_control?)
     config.add_show_tools_partial(:email, callback: :email_action, validator: :validate_email_params)
