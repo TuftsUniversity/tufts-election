@@ -11,7 +11,6 @@ module CandidateHelper
   def list_elections
 
     unless params.nil? 
-      return "class: #{self.class} \n methods: #{self.methods} "
       if params[:id].nil?
         params[:id] = params["id"]
       end
@@ -22,6 +21,17 @@ module CandidateHelper
       params[:fl] = 'title_ssi id'
       params[:rows] = '1000'
       params[:sort] = 'title_ssi asc'
+
+      new_search_state = self.search_state.reset({
+        qt: "standard",
+        q: "(candidate_id_ssim:#{params[:id]} OR elector_id_ssim:#{params[:id]}) AND format_ssim:\"Election Record\"",
+        fq: '-id:draft*',
+        fl: 'title_ssi id',
+        rows: '1000',
+        sort: 'title_ssi asc'
+      })
+
+      return "class: #{self.class} \n methods: #{self.methods} "
 
 
       # params = {
