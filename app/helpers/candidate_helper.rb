@@ -32,7 +32,7 @@ module CandidateHelper
       #   rows: '1000',
       #   sort: 'title_ssi asc'
       # }
-      docs = search_service.search_results[1]
+      docs = self.search_service.search_results[1]
       html = String.new
       docs.collect do |election|
         #include Rails.application.routes.url_helpers
