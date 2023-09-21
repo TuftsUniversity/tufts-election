@@ -11,7 +11,7 @@ module CandidateHelper
   def list_elections
 
     unless params.nil? 
-      #return "prarams: #{params[:id]}"
+      return "class: #{self.class} \n methods: #{self.methods} "
       if params[:id].nil?
         params[:id] = params["id"]
       end
