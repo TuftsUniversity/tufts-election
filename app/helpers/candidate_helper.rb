@@ -39,7 +39,7 @@ module CandidateHelper
       #                        sort: 'title_ssi asc'
       #                      })[1]
 
-      #return "class: #{self.class} \n search_session methods: #{self.search_session.methods} "
+      return "class: #{self.class} \n methods: #{self.methods} \n search_session methods: #{self.search_session.methods} "
 
       docs = self.fetch()
       # params = {
