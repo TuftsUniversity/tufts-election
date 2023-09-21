@@ -39,9 +39,9 @@ module CandidateHelper
       #                        sort: 'title_ssi asc'
       #                      })[1]
 
-      return "class: #{self.class} \n search_session methods: #{self.search_session.methods} "
+      #return "class: #{self.class} \n search_session methods: #{self.search_session.methods} "
 
-
+      docs = self.fetch()
       # params = {
       #   qt: "standard",
       #   q: "(candidate_id_ssim:#{params[:id]} OR elector_id_ssim:#{params[:id]}) AND format_ssim:\"Election Record\"",
