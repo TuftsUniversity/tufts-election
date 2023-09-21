@@ -31,7 +31,7 @@ module CandidateHelper
         sort: 'title_ssi asc'
       })
 
-      return "class: #{self.class} \n methods: #{self.methods} "
+      #return "class: #{self.class} \n methods: #{self.methods} "
 
 
       # params = {
