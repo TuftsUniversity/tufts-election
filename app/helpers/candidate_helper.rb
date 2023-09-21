@@ -30,16 +30,16 @@ module CandidateHelper
         rows: '1000',
         sort: 'title_ssi asc'
       })
-      docs = search_results({
-                             qt: "standard",
-                             q: "(candidate_id_ssim:#{params[:id]} OR elector_id_ssim:#{params[:id]}) AND format_ssim:\"Election Record\"",
-                             fq: '-id:draft*',
-                             fl: 'title_ssi id',
-                             rows: '1000',
-                             sort: 'title_ssi asc'
-                           })[1]
+      # docs = search_results({
+      #                        qt: "standard",
+      #                        q: "(candidate_id_ssim:#{params[:id]} OR elector_id_ssim:#{params[:id]}) AND format_ssim:\"Election Record\"",
+      #                        fq: '-id:draft*',
+      #                        fl: 'title_ssi id',
+      #                        rows: '1000',
+      #                        sort: 'title_ssi asc'
+      #                      })[1]
 
-      #return "class: #{self.class} \n methods: #{self.methods} "
+      return "class: #{self.class} \n methods: #{self.methods} "
 
 
       # params = {
