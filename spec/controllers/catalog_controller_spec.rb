@@ -5,7 +5,7 @@ describe CatalogController, type: :controller do
 
   describe "GET /show" do
     it 'enforces random as id' do
-      get :show, params: { id: "1" }
+      get :show, params: { id: "vt150j84n" }
       expect(response).not_to be_successful
     end
 
@@ -20,7 +20,7 @@ describe CatalogController, type: :controller do
     it "renders the list of elections" do
       puts "test"
       params = { id: 'AJ0156' }
-      
+
       get :show, params: params
 
       expect(response).to be_successful

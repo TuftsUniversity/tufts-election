@@ -50,7 +50,7 @@ services:
     depends_on:
       - elections-db-dev
     expose:
-      - 5000
+      - 4050
   server:
     <<: *elections-dev
     command: >
