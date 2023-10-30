@@ -11,6 +11,7 @@ end
 # changed rails version
 # do we want 6.1 or 7.0
 
+# see if rails 6 fixes this
 gem 'rails', '7.0.2'
 
 gem 'jquery-rails'
@@ -19,7 +20,9 @@ gem 'uglifier'
 
 # changed blacklight version
 gem 'blacklight', '7.24.0'
-gem 'blacklight_range_limit'
+# temp for rails 6
+# gem 'blacklight', '7.14.0'
+gem 'blacklight_range_limit', '7.8.0'
 
 # removed pinned verision of '~> 0.4.10'
 gem 'mysql2'
