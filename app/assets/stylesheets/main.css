@@ -677,10 +677,6 @@ span.page.current {
     text-align: right;
 }
 
-#facets span.facet-label span.selected {
-    color: red;
-}
-
 .facet_extended_list .sort_options {
     text-align: right;
 }

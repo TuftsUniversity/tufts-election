@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 class SearchBuilder < Blacklight::SearchBuilder
   include Blacklight::Solr::SearchBuilderBehavior
-  # this might have some issues
   include BlacklightRangeLimit::RangeLimitBuilder
 
   self.default_processor_chain += [:exclude_unwanted_models, :exclude_drafts]

@@ -34,11 +34,6 @@ div.facet_pagination.top {
     display:none;
 }
 
-/*.card-header .button {
-    text-decoration: none;
-}*/
-
-/* temp */
 .card-header {
     margin-top: 0;
     margin-bottom: 0;
@@ -48,9 +43,6 @@ div.facet_pagination.top {
 
 .facet-count {
   float: right;
-  /* temp */
-  /* looks like the text size is being set in the style*/
-  /*width: 23px;*/
 }
 
 #facets {
@@ -77,10 +69,6 @@ card-header *::before,*::after {
     background-color: #F4F4E9;
     padding: 4px 10px;
 }
-
-/*.facet-limit {
-  background-color: #F4F4E9;
-}*/
 
 #facet-panel-collapse .card {
   margin-bottom: 0;
@@ -120,59 +108,3 @@ card-header *::before,*::after {
   background-color: inherit;
   border: none;
 }
-
-
-#test-label {
-  color: red;
-}
-
-/*.facets-header {
-  display: none;
-}
-
-.facets-heading {
-  display: none;
-}*/
-
-/*#facet-panel-collapse {
-    background-color: #F4F4E9;
-    padding: 4px 10px;
-}*/
-
-/* Thsi is the part that pops out all the choices
-.facet-content {
-  background-color: #F4F4E9;
-}*/
-
-/*.facet-field-heading {
-  background-color: #F4F4E9;
-}
-
-.collapse {
-  background-color: #F4F4E9;
-}*/
-
-/*#facets {
-  background-color: #F4F4E9;
-} */
-
-/*#facet-panel-collapse{
-  background-color: #F4F4E9;
-} */
-
-/*.facet-limit{
-  background-color: #F4F4E9;
-} */
-
-/*.facet-field-heading {
-  background-color: #F4F4E9;
-}
-
-*/
-/*test*/
-
-/*.facet-limit {
-    margin-top: 0px;
-    margin-bottom: 0px;
-}*/
-

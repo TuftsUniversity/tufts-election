@@ -34,7 +34,7 @@ WORKDIR /data
 # Pre-install gems so we aren't reinstalling all the gems when literally any
 # filesystem change happens
 ADD Gemfile /data
-# ADD Gemfile.lock /data
+ADD Gemfile.lock /data
 RUN mkdir /data/tmp
 RUN mkdir /data/build
 ADD ./build/install_gems.sh /data/build

@@ -9,13 +9,6 @@ describe CatalogController, type: :controller do
       expect(response.status).to be(404)
     end
 
-    # I would like to add this test, but need to find an id that won't 404
-    # it 'shows an item' do
-    #   get :show, params: { id: 'AJ0156' }
-    #   expect(response.status).to be(200)
-    #   expect(response).to be_successful
-    # end
-
     it 'does not show draft objects' do
       get :show, params: { id: "draft_book" }
       expect(response.status).to be(302)

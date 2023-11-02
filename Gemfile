@@ -8,26 +8,19 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-# changed rails version
-# do we want 6.1 or 7.0
-
-# see if rails 6 fixes this
 gem 'rails', '7.0.2'
 
 gem 'jquery-rails'
 gem 'sass-rails'
 gem 'uglifier'
 
-# changed blacklight version
 gem 'blacklight', '7.24.0'
-# temp for rails 6
-# gem 'blacklight', '7.14.0'
+# pinned  to not move to version 8, which breaks our custom javascript
 gem 'blacklight_range_limit', '7.8.0'
 
 # removed pinned verision of '~> 0.4.10'
 gem 'mysql2'
 gem 'okcomputer'
-# gem 'rsolr', '>= 1.0'
 
 gem 'qa'
 gem 'riiif'
@@ -37,11 +30,9 @@ gem 'riiif'
 gem 'active-fedora', '14.0.0'
 gem 'active_fedora-noid'
 
-# Do we need theses?
-# gem 'view_component', '3.4.0'
+#previously prepackaged gems in ruby 2
 gem 'puma'
 gem 'thin'
-# gem 'reel'
 gem 'http'
 gem 'webrick'
 

@@ -4,7 +4,6 @@ require 'rails_helper'
 describe CandidatesController, api: true do
   render_views
 
-  # TODO: need to solve why a sucess
   it "should have index" do
     get :index, params: { candidate_last_name_letter: 'A' }
     expect(response.status).to be(200)

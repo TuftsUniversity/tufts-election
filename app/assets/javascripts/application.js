@@ -8,7 +8,6 @@
 //= require bootstrap
 //= require blacklight/blacklight
 
-// temp
 //= require blacklight_range_limit
 //= require_tree .
 //
@@ -22,5 +21,3 @@ $(document).ready(function () {
         }
     });
 });
-
-
