@@ -34,13 +34,13 @@
     clear: none;
 }
 
-
 body {
     background: none;
     padding: 0;
     min-width: 1080px;
     background-color: #707070;
-    font: 0.7em Verdana, "Lucida Grande", "Lucida Sans Unicode", "Arial Unicode MS", Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
     line-height: 1.4;
     margin: 0;
 
@@ -433,3 +433,24 @@ div.accordian {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+.dl-invert dt {
+    float: left;
+    width: 160px;
+    clear: left;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.dl-invert dd {
+    margin-left: 180px;
+}
+/* default values to not use general row css */
+.dl-invert.row {
+    display: block;
+    flex-wrap: nowrap; 
+    margin-right: 0px; 
+    margin-left: 0px; 
+}
+
