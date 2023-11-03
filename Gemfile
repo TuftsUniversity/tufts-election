@@ -30,10 +30,10 @@ gem 'riiif'
 gem 'active-fedora', '14.0.0'
 gem 'active_fedora-noid'
 
-#previously prepackaged gems in ruby 2
+# previously prepackaged gems in ruby 2
+gem 'http'
 gem 'puma'
 gem 'thin'
-gem 'http'
 gem 'webrick'
 
 group :production do
