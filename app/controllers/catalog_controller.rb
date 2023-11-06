@@ -8,10 +8,7 @@ class CatalogController < ApplicationController
   include CandidateHelper
   helper_method :related_elections
 
-  # TODO: revaluate these disables
   # rubocop:disable Security/Eval
-
-  # rubocop:disable Metrics/AbcSize
   def show
     if params[:id].start_with?('tufts') && Rails.env.production?
       h = Net::HTTP.new('tdrsearch-prod-01.uit.tufts.edu', 8983)
