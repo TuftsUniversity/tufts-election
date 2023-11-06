@@ -13,17 +13,10 @@ class CatalogController < ApplicationController
 
   # rubocop:disable Metrics/AbcSize
   def show
-    Rails.logger.debug params[:id]
-    Rails.logger.debug "Why nothing else?"
     if params[:id].start_with?('tufts') && Rails.env.production?
-      Rails.logger.debug "Start"
       h = Net::HTTP.new('tdrsearch-prod-01.uit.tufts.edu', 8983)
-      Rails.logger.debug h
       http_response = h.get("/solr/mira_prod/select?fl=id&indent=on&q=legacy_pid_tesim:\"#{params[:id]}\"&wt=ruby")
-      Rails.logger.debug http_response
       rsp = eval(http_response.body)
-      Rails.logger.debug rsp
-      # params[:id] = rsp['response']['docs'][0]['id']
       params[:id] = rsp['response']['docs'][0]['id'] if rsp['response']['docs'].present?
     end
     super

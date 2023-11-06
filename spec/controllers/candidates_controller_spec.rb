@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 require 'rails_helper'
 
-describe CandidatesController, api: true do
+describe CandidatesController do
   render_views
 
   it "should have index" do

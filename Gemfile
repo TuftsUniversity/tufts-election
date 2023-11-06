@@ -15,7 +15,7 @@ gem 'sass-rails'
 gem 'uglifier'
 
 gem 'blacklight', '7.24.0'
-# pinned  to not move to version 8, which breaks our custom javascript
+# pinned to not move to version 8, which breaks our custom javascript
 gem 'blacklight_range_limit', '7.8.0'
 
 # removed pinned verision of '~> 0.4.10'
