@@ -34,7 +34,7 @@ gem 'active_fedora-noid'
 gem 'http'
 gem 'puma'
 gem 'thin'
-gem 'webrick'
+#gem 'webrick'
 
 group :production do
   gem 'passenger'
