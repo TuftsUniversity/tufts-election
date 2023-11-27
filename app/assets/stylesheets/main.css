@@ -835,7 +835,7 @@ td {
 
 
 /* blacklight override */
-#sortAndPerPage, #previousNextDocument {
+#sortAndPerPage, .pagination-search-widgets {
   margin-bottom: -1em;
 }
 

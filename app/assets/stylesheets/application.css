@@ -310,7 +310,7 @@ h2.search {
     float: left;
 }
 
-#previousNextDocument {
+.pagination-search-widgets {
     background-color: #f0f0f0;
     border: 1px solid #aaa;
     margin-bottom: 1.5em;
