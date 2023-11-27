@@ -34,7 +34,6 @@ gem 'active_fedora-noid'
 gem 'http'
 gem 'puma'
 gem 'thin'
-#gem 'webrick'
 
 group :production do
   gem 'passenger'
@@ -50,6 +49,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'simplecov'
   gem 'simplecov-lcov', '~> 0.8.0'
+  gem 'webrick'
 end
 
 group :development, :test do
