@@ -52,9 +52,10 @@ group :development, :test do
   gem 'webrick'
 end
 
-group :development, :test do
+group :test do
   gem "solr_wrapper", ">= 0.3"
 end
+
 gem "rsolr", ">= 1.0", "< 3"
 
 gem "bootstrap", "~> 4.0"
