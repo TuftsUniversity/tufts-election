@@ -1,4 +1,4 @@
-FROM ruby:2.7.5
+FROM ruby:3.2.2
 
 ARG RAILS_ENV
 ARG SECRET_KEY_BASE
@@ -13,17 +13,20 @@ ENV LC_ALL C.UTF-8
 #  echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
 
 # --allow-unauthenticated needed for yarn package
-RUN apt-get update && apt-get upgrade -y && \
-  apt-get install --no-install-recommends -y ca-certificates nodejs \
-  build-essential libpq-dev unzip vim \
-  libqt5webkit5-dev xvfb xauth default-jre-headless --fix-missing --allow-unauthenticated
+RUN apt-get update 
+RUN apt-get upgrade -y
+RUN apt-get install build-essential -y
+RUN apt-get install --no-install-recommends -y ca-certificates nodejs
+# RUN apt-get install vim 
+RUN apt-get install --no-install-recommends -y build-essential libpq-dev unzip vim
+RUN apt-get install --no-install-recommends -y libqt5webkit5-dev xvfb xauth default-jre-headless --fix-missing --allow-unauthenticated
 
 RUN apt-get install chromium -y
 
 # Increase stack size limit to help working with large works
 ENV RUBY_THREAD_MACHINE_STACK_SIZE 8388608
 
-#RUN gem update --system
+RUN gem update --system
 
 RUN mkdir /data
 WORKDIR /data

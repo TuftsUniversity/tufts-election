@@ -8,9 +8,7 @@
     <%= render 'constraints', :params => current_search_session.try(:query_params) || {} %>
 <% end %>
 
-<% if @previous_document || @next_document %>
-  <%= render 'previous_next_doc' %>
-<% end %>
+<%= render(Blacklight::SearchContextComponent.new(search_context: @search_context, search_session: search_session)) %>
 
 <%# this should be in a partial -%>
 <div id="document" class="<%= render_document_class %>">

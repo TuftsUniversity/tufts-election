@@ -2,6 +2,8 @@
 ALLOW_DOTS ||= /[a-zA-Z0-9_\-.:]*/
 
 TuftsElection::Application.routes.draw do
+  concern :searchable, Blacklight::Routes::Searchable.new
+
   concern :range_searchable, BlacklightRangeLimit::Routes::RangeSearchable.new
   mount Riiif::Engine => '/page_images', as: 'riiif'
 
@@ -30,8 +32,15 @@ TuftsElection::Application.routes.draw do
     end
   end
 
-  match '/catalog/:id/track', to: 'catalog#track', id: /.*/, via: [:get, :post], as: 'catalog'
-  resources :candidates, only: [:index]
+  match '/catalog/:id/track', to: 'catalog#track', id: ALLOW_DOTS, via: [:get, :post], as: 'catalog' do
+    concerns :searchable
+  end
+  match '/candidates/:id/track', to: 'candidates#track', id: ALLOW_DOTS, via: [:get, :post], as: 'track_candidates' do
+    concerns :searchable
+  end
+  resources :candidates, only: [:index] do
+    concerns :searchable
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

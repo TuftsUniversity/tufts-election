@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 # Import the state authority data
+require_dependency Rails.root.join('app', 'models', 'state.rb')
 
 require 'net/http'
 

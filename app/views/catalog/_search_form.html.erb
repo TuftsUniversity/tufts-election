@@ -3,7 +3,7 @@
   <%= form_tag search_action_url(:protocol => protocol), :method => :get, :class => 'search-query-form form-inline clearfix' do %>
       <%= render_hash_as_hidden_fields(search_state.params_for_search().except(:q, :search_field, :qt, :page, :utf8)) %>
       <%= text_field_tag :q, params[:q], :placeholder => t('blacklight.search.form.search.placeholder'), :class => "search_q q", :id => "q", :autofocus => should_autofocus_on_search_box? %>
-      <label for="search_field"> in </label>
+      <label for="search_field" class="ml-1 mr-1"> in </label>
       <% unless search_fields.empty? %>
           <%= select_tag(:search_field, options_for_select(search_fields, h(params[:search_field])), :title => t('blacklight.search.form.search_field.title'), :class => "search_field input-small") %>
       <% end %>

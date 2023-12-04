@@ -4,14 +4,17 @@ class CatalogController < ApplicationController
 
   include Blacklight::Catalog
 
+  include Blacklight::DefaultComponentConfiguration
+  include CandidateHelper
+  helper_method :related_elections
+
   # rubocop:disable Security/Eval
   def show
     if params[:id].start_with?('tufts') && Rails.env.production?
       h = Net::HTTP.new('tdrsearch-prod-01.uit.tufts.edu', 8983)
       http_response = h.get("/solr/mira_prod/select?fl=id&indent=on&q=legacy_pid_tesim:\"#{params[:id]}\"&wt=ruby")
       rsp = eval(http_response.body)
-      #params[:id] = rsp['response']['docs'][0]['id']
-      params[:id] = rsp['response']['docs'][0]['id'] if rsp['response']['docs'] && !rsp['response']['docs'].empty?
+      params[:id] = rsp['response']['docs'][0]['id'] if rsp['response']['docs'].present?
     end
     super
   end
@@ -62,6 +65,11 @@ class CatalogController < ApplicationController
     config.show.title_field = 'title_tesim'
     # config.show.display_type_field = 'format'
     config.show.display_type_field = 'format_ssim'
+
+    # new for blacklight 7
+    config.add_results_collection_tool(:sort_widget)
+    config.add_results_collection_tool(:per_page_widget)
+    config.add_results_collection_tool(:view_type_group)
 
     # solr fields that will be treated as facets by the blacklight application
     #   The ordering of the field names is the order of the display
@@ -245,5 +253,23 @@ class CatalogController < ApplicationController
       flash[:alert] = "Draft objects are not available."
       redirect_to(action: 'index', q: nil, f: nil) and return false
     end
+
+    # new blacklight configure for version 7
+    config.add_results_document_tool(:bookmark, partial: 'bookmark_control', if: :render_bookmarks_control?)
+
+    # config.add_results_collection_tool(:sort_widget)
+    # config.add_results_collection_tool(:per_page_widget)
+    # config.add_results_collection_tool(:view_type_group)
+
+    config.add_show_tools_partial(:bookmark, partial: 'bookmark_control', if: :render_bookmarks_control?)
+    config.add_show_tools_partial(:email, callback: :email_action, validator: :validate_email_params)
+    config.add_show_tools_partial(:sms, if: :render_sms_action?, callback: :sms_action, validator: :validate_sms_params)
+    config.add_show_tools_partial(:citation)
+
+    config.add_nav_action(:bookmark, partial: 'blacklight/nav/bookmark', if: :render_bookmarks_control?)
+    config.add_nav_action(:search_history, partial: 'blacklight/nav/search_history')
   end
+
+  # Handles errors when ids have been removed by returning a 404 page
+  rescue_from Blacklight::Exceptions::RecordNotFound, with: -> { render status: :not_found, layout: false, template: 'errors/not_found' }
 end
