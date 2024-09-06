@@ -58,3 +58,6 @@ public/assets
 
 # ignore converage files
 coverage/
+
+# vendor'd files
+vendor/
