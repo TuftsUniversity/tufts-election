@@ -1,5 +1,5 @@
 <div id="search" class="search">
-  <% protocol = ((Rails.env == 'electionsdev' || Rails.env == 'production') ? 'https': 'http')%>
+  <% protocol = ((Rails.env == 'stage' || Rails.env == 'production') ? 'https': 'http')%>
   <%= form_tag search_action_url(:protocol => protocol), :method => :get, :class => 'search-query-form form-inline clearfix' do %>
       <%= render_hash_as_hidden_fields(search_state.params_for_search().except(:q, :search_field, :qt, :page, :utf8)) %>
       <%= text_field_tag :q, params[:q], :placeholder => t('blacklight.search.form.search.placeholder'), :class => "search_q q", :id => "q", :autofocus => should_autofocus_on_search_box? %>
