@@ -2,7 +2,10 @@
 
 if [ "${RAILS_ENV}" = 'production' ] || [ "${RAILS_ENV}" = 'staging' ]; then
   echo "Bundle install without development or test gems."
-  bundle install --without development test
+  bundle config set without 'development'
+  bundle config set without 'test'
+  bundle install
 else
-  bundle install --without production
+  bundle config set without 'production'
+  bundle install
 fi
